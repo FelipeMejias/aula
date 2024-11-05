@@ -24,14 +24,14 @@ p{
   color: white; 
   padding: 20px; 
   box-sizing:border-box;
-  border-radius: 5px; 
+  border-radius: 10px; 
   overflow-x: auto; 
+  white-space: pre-wrap;
   overflow-y: scroll; 
   height:100%;
   font-family: 'Courier New', Courier, monospace; 
-  white-space: pre; 
   line-height: 24px; 
   font-size:16px;
-  width:100%;max-width:600px;
+  width:100%;max-width:100vw;
   text-align: left
 `

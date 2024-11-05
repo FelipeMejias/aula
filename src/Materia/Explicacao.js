@@ -1,14 +1,19 @@
 import styled from "styled-components"
-import { materia } from "./materia/topicos"
+import { materia } from "../materiaPython/topics"
 import { useParams } from "react-router-dom"
 import CodeBlock from "./CodeBox"
 import { useState } from "react"
-import Menu from "./Menu"
+import Menu from "../Menu"
 export default function Explicacao(){
     const {topico,subtopico}=useParams()
     const top=materia[topico-1]
     const subtop=top.subtopicos[subtopico-1]
     const [num,setNum]=useState(0)
+    function conv(texto){
+        return <p>
+            {texto.map((t,i)=>i%2==0?<small>{t}</small>:t)}
+        </p>
+    }
     return (
         <Tudo>
             <Menu numeros={[parseInt(topico),parseInt(subtopico)]}/>
@@ -25,7 +30,7 @@ export default function Explicacao(){
                 </Aberto>:<></>}
             </Esq>
             <Dir>
-                <CodeBlock texto={subtop[2]} />
+                <CodeBlock texto={conv(subtop[2])} />
             </Dir>
             </main>
         </Tudo>
@@ -34,23 +39,34 @@ export default function Explicacao(){
 const Tudo=styled.div`
 width:100%;height:100%;
 flex-direction:column;
-main{width:100%;
+main{
+width:100%;
 height:calc(100% - 64px);
 display:flex;
 align-items:center;
+overflow:hidden;
+overflow-y:scroll;
 }
 h2{
 color:#35A5AD;
 font-size:18px;
 margin:15px 0 0 0;;
 }
+
+@media(max-width:1000px){
+main{flex-direction: column-reverse}
+}
+
 `
 const Esq=styled.div`
-height:100%;width:calc(100% - 610px);
+max-height:100vh;width:calc(100% - 610px);
 flex-direction:column;
+@media(max-width:1000px){
+width:610px;
+}
 `
 const Dir=styled.div`
-height:100%;width:600px;
+max-height:100vh;width:600px;
 flex-direction:column;
 `
 const ListaEx=styled.div`

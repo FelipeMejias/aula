@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { materia } from "./materia/topicos"
 import { useNavigate, useParams } from "react-router-dom"
 import CodeBlock from "./CodeBox"
-import Menu from "./Menu"
+import Menu from "../Menu"
+import { materia } from "../materiaPython/topics"
 
 export default function SubTopicos(){
     const {topico}=useParams()

@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import { materia } from "./materia/topicos"
+import { materia } from "../materiaPython/topics"
 import { useNavigate } from "react-router-dom"
-import Menu from "./Menu"
+import Menu from "../Menu"
 
 export default function Topicos(){
     function buscarQtd(subs){
