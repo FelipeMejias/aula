@@ -119,8 +119,8 @@ margin-left:10px;
 img{
 height:50%;
 }
-h3{margin:0 0 0 0;
-font-size:16px;font-weight:300;min-width:100%;
+h3{margin:0 0 0 0;line-height:14px;
+font-size:14px;font-weight:300;min-width:100%;
 strong{
 color:green;font-weight:300;
 }
