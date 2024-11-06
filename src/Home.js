@@ -34,7 +34,7 @@ export default function Home(){
                 
                 <section>
                 {aula.arquivos.map((arquivo,iArquivo)=><Arq onClick={()=>navigate(`/${aluno}/aula${iAula+1}/arquivo${iArquivo+1}`)}>
-                    <img src={file}></img>
+                    <img src={arquivo.img}></img>
                     <h3>{arquivo.titulo}</h3>
                 </Arq>)}
                 {/*[][iAula].map((arquivo,iArquivo)=><Arq onClick={()=>navigate(`/${aluno}/aula${iAula+1}/arquivo${iArquivo+1}`)}>
@@ -113,13 +113,13 @@ align-items:flex-start;
 justify-content:center;
 cursor:pointer;
 width:100px;
-height:70px;
+height:100px;
 border-radius:15px;
 margin-left:10px;
 img{
-height:50%;
+height:40px;margin-bottom:5px;
 }
-h3{margin:0 0 0 0;line-height:14px;
+h3{margin:0 0 0 0;line-height:14px;height:30px;
 font-size:14px;font-weight:300;min-width:100%;
 strong{
 color:green;font-weight:300;

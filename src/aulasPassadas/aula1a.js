@@ -1,6 +1,9 @@
+import js from '../imgs/js.png'
+import nd from '../imgs/node.png'
+import re from '../imgs/react.png'
 export const arquivos1Antonio=[
     {
-        titulo:'função',
+        titulo:'função',img:js,
         texto:`
 // Funcao e um bloco de codigo executado quando seu nome e chamado
 
@@ -17,7 +20,7 @@ function minhaFuncao(){
 
 minhaFuncao()
     `},{
-        titulo:'função-parâmetro',
+        titulo:'função-parâmetro',img:js,
         texto:`
 // Os parametros sao escolhidos na criacao da funcao
 
@@ -45,7 +48,7 @@ compareOsDois( 7 , 5 )
 compareOsDois( 4 , 4 )
         `
     },{
-        titulo:'variáveis',
+        titulo:'variáveis',img:js,
         texto:`
 // Varaveis são criadas para guardarem um valor
 
@@ -70,7 +73,7 @@ const minhaFruta = 'melancia'
 const statusAtivo = True
         `
     },{
-        titulo:'condicionais',
+        titulo:'condicionais',img:js,
         texto:`
 // If executa o bloco de código caso a condicao seja True
 
@@ -107,7 +110,7 @@ if( quantidade > 10 ){
 }
         `
     },{
-        titulo:'Funções dentro de funções',
+        titulo:'Funções dentro de funções',img:js,
         texto:`
 function calcularMedia(p1,p2){
     const somaTotal=soma(p1,p2)
@@ -130,7 +133,7 @@ const media=calcularMedia(notaDaP1, notaDaP2 )
 console.log(media)
         `
     },{
-        titulo:'Componente React',
+        titulo:'Componente React',img:re,
         texto:`
 import styled from "styled-components"
 
@@ -146,7 +149,7 @@ const Conteudo=styled.div'
 '
         `
     },{
-        titulo:'Rect-index.js',
+        titulo:'Rect-index.js',img:re,
         texto:`
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
@@ -201,7 +204,7 @@ overflow:auto;
         
         `
     },{
-        titulo:'React-Item.js',
+        titulo:'React-Item.js',img:re,
         texto:`
 import styled from "styled-components"
 
@@ -229,7 +232,7 @@ Ou seja,
 se a condição der True é usada a resposta1, se der False é usada a resposta2
         `
     },{
-        titulo:'React- api.js',
+        titulo:'React- api.js',img:re,
         texto:`
 import axios from "axios"
 
@@ -244,7 +247,7 @@ e coloca dentro de cada função o nome da rota igual o que voce escolheu no bac
         `
     },
     {
-        titulo:'Node',
+        titulo:'Node Comidas',img:nd,
         texto:`
 import cors from 'cors'
 import Express, {json} from 'express'
