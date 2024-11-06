@@ -1,6 +1,7 @@
+import py from '../imgs/file.png'
 export const arquivos1Clarissa=[
     {
-        titulo:'exercicio1',
+        titulo:'exercicio1',img:py,
         texto:`
 # 1) Considere uma lista de valores numéricos ou textuais, construa 
 # uma função que receba esta lista e um texto, retornando quantas 
@@ -20,7 +21,7 @@ def contarOcorrencias(lis,texto):
 
 
 {
-        titulo:'exercicio2',
+        titulo:'exercicio2',img:py,
         texto:`
 # 2) Considere uma lista estruturada,onde cada elemento é 
 # da seguinte forma: [nome, dtNasc,alt, peso]

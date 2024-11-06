@@ -1,6 +1,7 @@
+import py from '../imgs/file.png'
 export const arquivos2Clarissa=[
     {
-        titulo:'exercicio1',
+        titulo:'exercicio1',img:py,
         texto:`
 '''
 Exercício 1 : Mostre, por hora do dia, a quantidade de visitas a um site 
@@ -52,7 +53,7 @@ visitasPorHora(acessos)
 '''
 `
     },{
-        titulo:'exercicio3',
+        titulo:'exercicio3',img:py,
         texto:`
 vendas_funcionarios = [
     [1001, [200, 300, 250, 400, 150, 320, 280]],   # Funcionário 1001
