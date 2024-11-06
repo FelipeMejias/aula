@@ -49,7 +49,7 @@ def contarAniversariantes(lis,data):
 print(f'quantidade de aniversariantes: {contarAniversariantes(lista2,"15/11/97")}')
 `
 },{
-    titulo:'camadas aninhadas',img:py,
+    titulo:'camada mais profunda Listas Aninhadas',img:py,
     texto:`
 lAninhadas= [[2,9,[[5,8]]],3,5,6,[8,[6,[6,9,[7,6]],8],9]]
 
