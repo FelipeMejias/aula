@@ -1,0 +1,13 @@
+import { listaComidas } from "./cardapio.js"
+
+export function informarInicio(){
+    console.log('ouvindo porta 4000')
+}
+// export serve para a função ficar
+// disponível no seu index.js
+
+export function enviarComidas(req,res){
+    res.status(200).send(listaComidas)
+}
+//req vem de request(requisição)
+//res vem de response(resposta)

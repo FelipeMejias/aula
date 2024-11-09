@@ -1,0 +1,6 @@
+export const listaComidas=[
+    {nome:'Costela', preco:35},
+    {nome:'Salada' , preco:22},
+    {nome:'Guaraná', preco:9},
+    {nome:'Sorvete', preco:15},
+]

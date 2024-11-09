@@ -11,40 +11,45 @@ import ant6 from './imgs/ant6.png'
 import ant7 from './imgs/ant7.png'
 import ant8 from './imgs/ant8.png'
 import ant9 from './imgs/ant9.png'
+
 export const arquivos1Antonio=[
 {   
     titulo:'package.json',icone:nd,
     img:ant1,coment:[
-'Adicionar o textinho da 8ª linha e a vírgula no final da 7ª',
+'Adicionar o texto da 1ª linha',
+'Adicionar o texto da 8ª linha e a vírgula no final da 7ª',
 'Instalar as dependências: npm install express cors nodemon',
-'Rodar o código: npm start']
+'Rodar o código: npm start'
+    ]
 ,
 },{
     titulo:'index.js',icone:nd,
-    img:ant2,
+    img:ant2,texto:'/textos/ant2.txt'
 },{
     titulo:'funcoes.js',icone:nd,
-    img:ant3,
+    img:ant3,texto:'/textos/ant3.txt'
 },{
     titulo:'cardapio.js',icone:nd,
-    img:ant4,
+    img:ant4,texto:'/textos/ant4.txt'
 },{
     titulo:'App.css',icone:re,
     img:ant5,coment:[
-'Só colei o que estava no index.css'
-        ]
+'Só colei o que estava no index.css',
+'Instalar as dependências: npm install styled-components axios',
+'Rodar o código: npm start'
+    ]
 },{
     titulo:'index.js',icone:re,
-    img:ant6,
+    img:ant6,texto:'/textos/ant6.txt'
 },{
     titulo:'App.js',icone:re,
-    img:ant7,
+    img:ant7,texto:'/textos/ant7.txt'
 },{
     titulo:'Item.js',icone:re,
-    img:ant8,
+    img:ant8,texto:'/textos/ant8.txt'
 },{
     titulo:'api.js',icone:re,
-    img:ant9,
+    img:ant9,texto:'/textos/ant9.txt'
 }
 ]
 

@@ -1,0 +1,20 @@
+import Express, {json} from 'express'
+import cors from 'cors'
+import { enviarComidas, informarInicio } from './funcoes.js'
+const app=Express()
+app.use(cors()) 
+app.use(json()) 
+// Não se preocupe em entender essas 6 primeiras linhas
+
+app.get( '/comidas' , enviarComidas )
+/* Aqui faremos novas rotas, exemplos:
+app.post('/comidas', funcao )
+app.put('/comidas', funcao )
+app.delete('/comidas', funcao )*/
+
+
+const porta = 4000
+app.listen( porta , informarInicio )
+// Essa função informarInicio não é necessária
+// Se apagar ela e a vírgula, funciona
+// Só nao avisa no console que começou a funcionar

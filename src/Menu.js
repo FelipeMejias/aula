@@ -93,7 +93,7 @@ background-color:${props=>props.transp?'transparent':'#35a5ad'};
 justify-content:center;
 `
 const Real=styled.div`
-width:100%;max-width:700px;height:100%;
+width:100%;max-width:400px;height:100%;
 justify-content:space-between;
 `
 const Botao=styled.div`background-color:;flex-direction:column;

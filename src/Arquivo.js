@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import Menu from "./Menu"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { centralAulas } from "./aulasPassadas/central"
 import file from './imgs/file.png'
 import CodeBlock from "./Materia/CodeBox"
@@ -12,11 +12,30 @@ export default function Arquivo(){
     const iAula=parseInt(aula.replace('aula',''))-1
     const iArquivo=parseInt(arquivo.replace('arquivo',''))-1
     const info=centralAulas[listaAlunos.indexOf(aluno)][iAula].arquivos[iArquivo]
+
+    const [fileContent, setFileContent] = useState('');
+    const [copiado, setCopiado] = useState(false);
+    function copiarTexto(){
+      navigator.clipboard.writeText(fileContent)
+        .then(() => {
+          setCopiado(true);
+          setTimeout(() => setCopiado(false), 2000); // Reset feedback após 2 segundos
+        })
+        .catch(err => console.error('Erro ao copiar o texto: ', err));
+    };
+    
+
+  useEffect(() => {
+    fetch(info.texto).then((response) => response.text()).then((data) => setFileContent(data));  // Exibe o conteúdo do arquivo no console
+  }, []);
     return (
         <Tudo>
             {/*<Menu copia={info.texto} />*/}
             <img src={info.img}/>
             {info.coment?<Balao>{info.coment.map(p=><p>{p}</p>)}</Balao>:<></>}
+            <Copiar onClick={copiarTexto}>
+               <p>{copiado ? 'Texto copiado!' : 'Copiar Texto'}</p> 
+            </Copiar>
             {/*
             <Dir>
                 <Nome>{info.titulo}</Nome>
@@ -26,6 +45,20 @@ export default function Arquivo(){
         </Tudo>
     )
 }
+const Copiar=styled.section`cursor:pointer;
+align-items:flex-start;
+display:flex;
+position:fixed;left:30px;top:20px;
+flex-direction:column;
+padding:20px;
+background-color: rgba(0, 0, 0, 0.6);;
+p{margin:0;
+color:white;
+display: inline-block;
+}
+border-radius:10px;
+box-sizing:border-box;
+`
 const Balao=styled.section`
 align-items:flex-start;
 display:flex;
