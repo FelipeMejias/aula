@@ -43,7 +43,7 @@ box-sizing:border-box;
 const Tudo=styled.div`
 width:100%;height:100vh;
 flex-direction:column;
-justify-content:center;
+justify-content:flex-start;
 align-items:center;
 img {
   width: calc( 100vw - 17px ); 
