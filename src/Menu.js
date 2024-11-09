@@ -3,6 +3,7 @@ import styled, { ThemeConsumer } from "styled-components"
 import { useState } from "react"
 import iconeAgendar from './imgs/agendar.png'
 import iconeMateria from './imgs/materia.png'
+import iconeLivro from './imgs/livro.png'
 export default function Menu({copia}){
     const {aluno}=useParams()
     let alunoM=aluno[0].toUpperCase()
@@ -43,19 +44,24 @@ export default function Menu({copia}){
 
         {!copia?
         <Real>
-            <Botao im={70} onClick={()=>navigate(`/${aluno}`)}>
+            <Botao im={36} onClick={()=>navigate(`/${aluno}`)}>
                 <img src={iconeMateria}/>
-                <aside>
-                    <h2>Aulas Feitas</h2>
-                    <h3>ver material</h3>
-                </aside>
-            </Botao>{/*
-            <Botao im={80} onClick={()=>navigate(`/${aluno}`)}>
-                <aside>
-                    <h2>Aulas Marcadas</h2>
-                    <h3>ver horários disponíveis</h3>
-                </aside>
+                <h2>Aulas Feitas</h2>
+                <h3>ver material</h3>
+            </Botao>
+            <Botao im={42} onClick={()=>navigate(`/${aluno}/materia`)}>
+                <img src={iconeLivro}/>
+                <h2>Conteúdo</h2>
+                <h3>{
+aluno=='antonio'?'javascript':
+aluno=='victoria'?'javascript':
+aluno=='clarissa'?'python':''
+            }</h3>
+            </Botao>
+            {/*<Botao im={42} onClick={()=>navigate(`/${aluno}/horarios`)}>
                 <img src={iconeAgendar}/>
+                <h2>Aulas Marcadas</h2>
+                <h3>horários disponíveis</h3>
             </Botao>*/}
         </Real>:
         <ButCop onClick={copiarTexto}>
@@ -79,24 +85,33 @@ width:120px;
 }
 `
 const Tudo=styled.div`
-width:100%;height:100%;height:64px;
+div{
+align-items:center;
+}
+width:100%;height:100%;height:75px;
 background-color:${props=>props.transp?'transparent':'#35a5ad'};
 justify-content:center;
 `
 const Real=styled.div`
-width:100%;max-width:500px;height:100%;
+width:100%;max-width:700px;height:100%;
 justify-content:space-between;
 `
-const Botao=styled.div`background-color:;
-cursor:pointer;width:210px;line-height:19px;
-justify-content:${props=>props.im==70?'flex-start':'flex-end'};
-color:white;font-size:17px;height:60px;
-img{max-height:${props=>props.im}%;margin:7px;}
+const Botao=styled.div`background-color:;flex-direction:column;
+cursor:pointer;width:150px;line-height:19px;
+margin:0 10px 0 10px;
+justify-content:${props=>props.im==71?'flex-start':'flex-end'};
+color:white;font-size:17px;height:75px;
+
+img{max-height:${props=>props.im}px;position:fixed;top:${props=>props.im==42?3:5}px}
+
+h2{height:15px;color:white;display:flex;font-size:16px;font-weight:500;margin:0 0 0 0;justify-content:${props=>props.im==70?'flex-start':'flex-end'};}
+h3{display:flex;font-size:14px;font-weight:300;margin:0 0 0 0;justify-content:${props=>props.im==70?'flex-start':'flex-end'};}
+
+
 aside{
-display:flex;flex-direction:column;
-justify-content:${props=>props.im==70?'flex-start':'flex-end'};
-height:60%;width:150px;
-h2{display:flex;font-size:18px;font-weight:500;margin:0 0 0 0;justify-content:${props=>props.im==70?'flex-start':'flex-end'};}
-h3{display:flex;font-size:15px;font-weight:300;margin:0 0 0 0;justify-content:${props=>props.im==70?'flex-start':'flex-end'};}
+    display:flex;flex-direction:column;
+    justify-content:${props=>props.im==70?'flex-start':'flex-end'};
+    height:60%;width:150px;
+    
 }
 `

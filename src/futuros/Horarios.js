@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import dayjs from 'dayjs'
 import styled from 'styled-components'
 import Board from './Board'
+import Menu from '../Menu'
 	
 export default function Horarios(){
     const navigate=useNavigate()
@@ -44,11 +45,7 @@ export default function Horarios(){
     return(
         <Content>
             
-            {/*<Header>
-                <Button onClick={()=>setPopUp('creating')}><ion-icon name="add-circle"></ion-icon></Button>
-                <h5><span>PlanerA</span></h5>
-                <Button onClick={()=>setPopUp('prefering')}><ion-icon name="settings"></ion-icon></Button>
-            </Header>*/}
+            <Menu/>
             <BoardContainer>
                     <NamesBoard>
                         {dayNames.map(word=>(

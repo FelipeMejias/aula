@@ -1,9 +1,57 @@
 import js from '../imgs/js.png'
 import nd from '../imgs/node.png'
 import re from '../imgs/react.png'
+import ant1 from './imgs/ant1.png'
+import ant2 from './imgs/ant2.png'
+import ant3 from './imgs/ant3.png'
+import ant4 from './imgs/ant4.png'
+
+import ant5 from './imgs/ant5.png'
+import ant6 from './imgs/ant6.png'
+import ant7 from './imgs/ant7.png'
+import ant8 from './imgs/ant8.png'
+import ant9 from './imgs/ant9.png'
 export const arquivos1Antonio=[
-    {
-        titulo:'função',img:js,
+{   
+    titulo:'package.json',icone:nd,
+    img:ant1,coment:[
+'Adicionar o textinho da 8ª linha e a vírgula no final da 7ª',
+'Instalar as dependências: npm install express cors nodemon',
+'Rodar o código: npm start']
+,
+},{
+    titulo:'index.js',icone:nd,
+    img:ant2,
+},{
+    titulo:'funcoes.js',icone:nd,
+    img:ant3,
+},{
+    titulo:'cardapio.js',icone:nd,
+    img:ant4,
+},{
+    titulo:'App.css',icone:re,
+    img:ant5,coment:[
+'Só colei o que estava no index.css'
+        ]
+},{
+    titulo:'index.js',icone:re,
+    img:ant6,
+},{
+    titulo:'App.js',icone:re,
+    img:ant7,
+},{
+    titulo:'Item.js',icone:re,
+    img:ant8,
+},{
+    titulo:'api.js',icone:re,
+    img:ant9,
+}
+]
+
+
+
+   /* {
+        titulo:'função',icone:js,
         texto:`
 // Funcao e um bloco de codigo executado quando seu nome e chamado
 
@@ -20,7 +68,7 @@ function minhaFuncao(){
 
 minhaFuncao()
     `},{
-        titulo:'função-parâmetro',img:js,
+        titulo:'função-parâmetro',icone:js,
         texto:`
 // Os parametros sao escolhidos na criacao da funcao
 
@@ -48,7 +96,7 @@ compareOsDois( 7 , 5 )
 compareOsDois( 4 , 4 )
         `
     },{
-        titulo:'variáveis',img:js,
+        titulo:'variáveis',icone:js,
         texto:`
 // Varaveis são criadas para guardarem um valor
 
@@ -73,7 +121,7 @@ const minhaFruta = 'melancia'
 const statusAtivo = True
         `
     },{
-        titulo:'condicionais',img:js,
+        titulo:'condicionais',icone:js,
         texto:`
 // If executa o bloco de código caso a condicao seja True
 
@@ -110,7 +158,7 @@ if( quantidade > 10 ){
 }
         `
     },{
-        titulo:'Funções dentro de funções',img:js,
+        titulo:'Funções dentro de funções',icone:js,
         texto:`
 function calcularMedia(p1,p2){
     const somaTotal=soma(p1,p2)
@@ -133,7 +181,8 @@ const media=calcularMedia(notaDaP1, notaDaP2 )
 console.log(media)
         `
     },{
-        titulo:'Componente React',img:re,
+        titulo:'Componente React',icone:re,
+   
         texto:`
 import styled from "styled-components"
 
@@ -149,7 +198,7 @@ const Conteudo=styled.div'
 '
         `
     },{
-        titulo:'Rect-index.js',img:re,
+        titulo:'Rect-index.js',icone:re,
         texto:`
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
@@ -188,10 +237,9 @@ Ou seja, ela começa vazia pois nao temos itens
   useEffect(funcaoQueSeraExecutada,[])
   return(
     <Container>
-        {/* itens é uma lista, existe uma função propria do javascript, a MAP que faz o seguinte:
-        faz uma nova lista, trocando cada item por uma nova coisa
-        no caso, ela pega o item e transforma em um componente react <Item />
-        */
+        {//itens é uma lista, existe uma função propria do javascript, a MAP que faz o seguinte:
+        //faz uma nova lista, trocando cada item por uma nova coisa
+        //no caso, ela pega o item e transforma em um componente react <Item />
         itens.map(item=><Item nome={item.nome} descricao={item.descricao} preco={item.preco}/>)}
       </Container>
   )
@@ -203,8 +251,7 @@ overflow:auto;
 '  
         
         `
-    },{
-        titulo:'React-Item.js',img:re,
+    },{titulo:'React-Item.js',icone:re,
         texto:`
 import styled from "styled-components"
 
@@ -232,7 +279,7 @@ Ou seja,
 se a condição der True é usada a resposta1, se der False é usada a resposta2
         `
     },{
-        titulo:'React- api.js',img:re,
+        titulo:'React- api.js',icone:re,
         texto:`
 import axios from "axios"
 
@@ -245,9 +292,7 @@ export const getComidas = async () => {
 /* Nao se preocupe em entender esse arquivo, veja apenas que voce coloca a url do back-end
 e coloca dentro de cada função o nome da rota igual o que voce escolheu no back-end: /comidas
         `
-    },
-    {
-        titulo:'Node Comidas',img:nd,
+    },{titulo:'Node',icone:re,
         texto:`
 import cors from 'cors'
 import Express, {json} from 'express'
@@ -269,6 +314,5 @@ app.get('/comidas',async(req,res)=>{
 })
 const port =process.env.PORT||4000
 app.listen(port,()=>console.log('listening on port 4000'))
-        `
-    }
-]
+`
+    },*/

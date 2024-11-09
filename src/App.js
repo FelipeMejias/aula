@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
+import './imgs/App.css';
 import styled from 'styled-components';
 import Menu from './Menu';
 import Home from './Home';
 import Arquivo from './Arquivo';
+import Topicos from './Materia/Topicos';
+import Explicacao from './Materia/Explicacao';
+import Horarios from './futuros/Horarios';
 
 function App() {
   const valorContexto={}
@@ -15,12 +18,13 @@ function App() {
         <BrowserRouter>
           <Tudo>
               <Routes>
-                {/*<Route path='/horarios' element={<Horarios/>}/>*/}
+                <Route path='/:aluno/horarios' element={<Horarios/>}/>
+                <Route path='/:aluno/materia' element={<Topicos/>}/>
+                <Route path='/:aluno/materia/:topico/:subtopico' element={<Explicacao/>} />
                 <Route path='/' element={<Home />}/>
                 <Route path='/:aluno' element={<Home />}/>
                 <Route path='/:aluno/:aula/:arquivo' element={<Arquivo />}/>
-                {/*<Route path='/:topico' element={<SubTopicos/>} />
-                <Route path='/:topico/:subtopico' element={<Explicacao/>} />*/}
+                
               </Routes>
           </Tudo>
         </BrowserRouter>
@@ -42,7 +46,7 @@ align-items:center;
 
 div{box-sizing:border-box;
   display:flex;
-  align-items:center;
+  
 }
 -webkit-tap-highlight-color: transparent;
 `

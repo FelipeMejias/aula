@@ -32,6 +32,6 @@ p{
   font-family: 'Courier New', Courier, monospace; 
   line-height: 24px; 
   font-size:16px;
-  width:100%;max-width:100vw;
+  width:100%;max-width:90vw;
   text-align: left
 `
