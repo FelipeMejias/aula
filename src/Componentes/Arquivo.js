@@ -1,17 +1,13 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
-import Menu from "./Menu"
 import { useEffect, useState } from "react"
-import { centralAulas } from "./aulasPassadas/central"
-import file from './imgs/file.png'
-import CodeBlock from "./Materia/CodeBox"
-const listaAlunos=['clarissa','antonio','victoria']
+import { gaveta, listaAlunos } from "../aulas/gaveta"
+
 export default function Arquivo(){
-    const navigate=useNavigate()
     const {aluno,aula,arquivo}=useParams()
     const iAula=parseInt(aula.replace('aula',''))-1
     const iArquivo=parseInt(arquivo.replace('arquivo',''))-1
-    const info=centralAulas[listaAlunos.indexOf(aluno)][iAula].arquivos[iArquivo]
+    const info=gaveta[listaAlunos.indexOf(aluno)][iAula].arquivos[iArquivo]
 
     const [fileContent, setFileContent] = useState('');
     const [copiado, setCopiado] = useState(false);
@@ -26,16 +22,18 @@ export default function Arquivo(){
     
 
   useEffect(() => {
-    fetch(info.texto).then((response) => response.text()).then((data) => setFileContent(data));  // Exibe o conteúdo do arquivo no console
+    if(info.texto){
+      fetch(info.texto).then((response) => response.text()).then((data) => setFileContent(data));  
+    }
   }, []);
     return (
         <Tudo>
             {/*<Menu copia={info.texto} />*/}
             <img src={info.img}/>
             {info.coment?<Balao>{info.coment.map(p=><p>{p}</p>)}</Balao>:<></>}
-            <Copiar onClick={copiarTexto}>
+            {fileContent?<Copiar onClick={copiarTexto}>
                <p>{copiado ? 'Texto copiado!' : 'Copiar Texto'}</p> 
-            </Copiar>
+            </Copiar>:<></>}
             {/*
             <Dir>
                 <Nome>{info.titulo}</Nome>

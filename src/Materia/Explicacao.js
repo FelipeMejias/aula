@@ -3,7 +3,7 @@ import { materia } from "./python"
 import { useParams } from "react-router-dom"
 import CodeBlock from "./CodeBox"
 import { useState } from "react"
-import Menu from "../Menu"
+import Menu from "../Componentes/Menu"
 export default function Explicacao(){
     const {topico,subtopico}=useParams()
     const top=materia[topico-1]

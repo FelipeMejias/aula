@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './imgs/App.css';
 import styled from 'styled-components';
-import Menu from './Menu';
-import Home from './Home';
-import Arquivo from './Arquivo';
+import Home from './Componentes/Home';
+import Arquivo from './Componentes/Arquivo';
 import Topicos from './Materia/Topicos';
 import Explicacao from './Materia/Explicacao';
-import Horarios from './futuros/Horarios';
+import Horarios from './Futuros/Horarios';
 
 function App() {
   const valorContexto={}

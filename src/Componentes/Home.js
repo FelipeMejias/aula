@@ -1,20 +1,13 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import Menu from "./Menu"
-import { useState } from "react"
-import { centralAulas } from "./aulasPassadas/central"
-import file from './imgs/file.png'
-import papel from './imgs/notass.jpg'
-import novo from './imgs/novo.png'
 import Identifique from "./Identifique"
-const listaAlunos=['clarissa','antonio','victoria']
+import { gaveta, listaAlunos } from "../aulas/gaveta"
 export default function Home(){
     const navigate=useNavigate()
-    
     const params=useParams()
     const aluno=params.aluno||''
-    const info=centralAulas[listaAlunos.indexOf(aluno)]
-    console.log(aluno)
+    const info=gaveta[listaAlunos.indexOf(aluno)]
     return (
         listaAlunos.includes(aluno)?
         <Tudo>
@@ -71,7 +64,7 @@ display:flex;
 flex-direction:column;
 align-items:flex-start;
 
-width:90%;max-width:500px;
+width:90%;max-width:450px;
 background-color:white;
 margin:15px 0 0 0;
 border-radius:15px;
@@ -89,7 +82,7 @@ flex-direction:column;
 align-items:flex-start;
 justify-content:center;
 cursor:pointer;
-width:100px;
+width:90px;
 height:100px;
 border-radius:15px;
 margin-left:10px;

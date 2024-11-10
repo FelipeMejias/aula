@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { centralAulas } from "./aulasPassadas/central"
 export default function Identifique({nomeTentado}){
     const navigate=useNavigate()
     const tentativa=nomeTentado

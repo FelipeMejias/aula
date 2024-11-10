@@ -1,21 +1,21 @@
 import js from '../imgs/js.png'
 import nd from '../imgs/node.png'
 import re from '../imgs/react.png'
-import ant1 from './imgs/ant1.png'
-import ant2 from './imgs/ant2.png'
-import ant3 from './imgs/ant3.png'
-import ant4 from './imgs/ant4.png'
+import i1 from './antonio/a1/i1.png'
+import i2 from './antonio/a1/i2.png'
+import i3 from './antonio/a1/i3.png'
+import i4 from './antonio/a1/i4.png'
 
-import ant5 from './imgs/ant5.png'
-import ant6 from './imgs/ant6.png'
-import ant7 from './imgs/ant7.png'
-import ant8 from './imgs/ant8.png'
-import ant9 from './imgs/ant9.png'
+import i5 from './antonio/a1/i5.png'
+import i6 from './antonio/a1/i6.png'
+import i7 from './antonio/a1/i7.png'
+import i8 from './antonio/a1/i8.png'
+import i9 from './antonio/a1/i9.png'
 
-export const arquivos1Antonio=[
+export const antonio1=[
 {   
     titulo:'package.json',icone:nd,
-    img:ant1,coment:[
+    img:i1,texto:'',coment:[
 'Adicionar o texto da 1ª linha',
 'Adicionar o texto da 8ª linha e a vírgula no final da 7ª',
 'Instalar as dependências: npm install express cors nodemon',
@@ -24,32 +24,32 @@ export const arquivos1Antonio=[
 ,
 },{
     titulo:'index.js',icone:nd,
-    img:ant2,texto:'/textos/ant2.txt'
+    img:i2,texto:'/textos/antonio/a1/t2.txt'
 },{
     titulo:'funcoes.js',icone:nd,
-    img:ant3,texto:'/textos/ant3.txt'
+    img:i3,texto:'/textos/antonio/a1/t3.txt'
 },{
     titulo:'cardapio.js',icone:nd,
-    img:ant4,texto:'/textos/ant4.txt'
+    img:i4,texto:'/textos/antonio/a1/t4.txt'
 },{
     titulo:'App.css',icone:re,
-    img:ant5,coment:[
+    img:i5,texto:'',coment:[
 'Só colei o que estava no index.css',
 'Instalar as dependências: npm install styled-components axios',
 'Rodar o código: npm start'
     ]
 },{
     titulo:'index.js',icone:re,
-    img:ant6,texto:'/textos/ant6.txt'
+    img:i6,texto:'/textos/antonio/a1/t6.txt'
 },{
     titulo:'App.js',icone:re,
-    img:ant7,texto:'/textos/ant7.txt'
+    img:i7,texto:'/textos/antonio/a1/t7.txt'
 },{
     titulo:'Item.js',icone:re,
-    img:ant8,texto:'/textos/ant8.txt'
+    img:i8,texto:'/textos/antonio/a1/t8.txt'
 },{
     titulo:'api.js',icone:re,
-    img:ant9,texto:'/textos/ant9.txt'
+    img:i9,texto:'/textos/antonio/a1/t9.txt'
 }
 ]
 
@@ -111,7 +111,7 @@ compareOsDois( 4 , 4 )
 
 // inteiro
 
-const minhaQuantidade = 6
+const minhaQua_1_idade = 6
 
  
 
@@ -132,9 +132,9 @@ const statusAtivo = True
 
 // Esse bloco e definido pelo que tem 1 Tab a mais que ele
 
-const quantidade = 13
+const qua_1_idade = 13
 
-if( quantidade > 10 ){
+if( qua_1_idade > 10 ){
     console.log('maior que 10' )
     }
  
@@ -143,20 +143,20 @@ if( quantidade > 10 ){
 
 // Nao tenha entrado no bloco de cima & a condicao seja True
 
-const quantidade = 7
+const qua_1_idade = 7
 
-if( quantidade > 10 ){
+if( qua_1_idade > 10 ){
     console.log( 'maior que 10' )
-}else if( quantidade > 5 ){
+}else if( qua_1_idade > 5 ){
     console.log( 'maior que 5' )
 }
  
 
 // Else executa o bloco de código caso todos os blocos derem False
 
-const quantidade = 7
+const qua_1_idade = 7
 
-if( quantidade > 10 ){
+if( qua_1_idade > 10 ){
     console.log( 'maior que 10' )
 }else{
     console.log( 'menor ou igual a 10' )

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { materia } from "./python"
 import { useNavigate, useParams } from "react-router-dom"
-import Menu from "../Menu"
+import Menu from "../Componentes/Menu"
 import { useState } from "react"
 import ch from '../imgs/check.png'
 import setaBaixo from '../imgs/seta.png'

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import dayjs from 'dayjs'
 import styled from 'styled-components'
 import Board from './Board'
-import Menu from '../Menu'
+import Menu from '../Componentes/Menu'
 	
 export default function Horarios(){
     const navigate=useNavigate()

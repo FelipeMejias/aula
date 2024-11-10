@@ -1,0 +1,23 @@
+// String (conjunto de caracteres: textos, datas...)
+const fruta1 = 'abacaxi'
+const fruta2 = 'laranja'
+
+
+const palavra = fruta1[3] + fruta2[5] // 'cj'
+
+const frase = fruta1 + ' & ' + fruta2 // 'abacaxi & laranja
+
+const fraseStringDinamica = `minha fruta preferida é: ${fruta}`
+// String dinâmica fechadas por crase permitem inserir código javascript
+// através do ${} Além de permitir pular linha
+
+
+// Conversão de String para (Int ou Float)
+const stringNum ='12'
+const num = parseInt(stringNum) // 12
+const stringNumQuebrado = '5.5'
+const numQuebrado = parseFloat(stringNumQuebrado) // 5.5
+
+// Conversão de (Int ou Float) para String
+const numero = 4
+const numeroString=numero.toString() // '4'
