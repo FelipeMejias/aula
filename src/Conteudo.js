@@ -1,11 +1,12 @@
 import styled from "styled-components"
-import { materia } from "./python"
+import { python } from "./aulas/python"
+import { javascript } from "./aulas/javascript"
 import { useNavigate, useParams } from "react-router-dom"
-import Menu from "../Componentes/Menu"
+import Menu from "./Menu"
 import { useState } from "react"
-import ch from '../imgs/check.png'
-import setaBaixo from '../imgs/seta.png'
-import setaCima from '../imgs/setacima.png'
+import ch from './imgs/check.png'
+import setaBaixo from './imgs/seta.png'
+import setaCima from './imgs/setacima.png'
 const listaFalses=[
     [false,false,false,false],
     [false,false,false,false],
@@ -14,7 +15,11 @@ const listaFalses=[
     [false,false,false,false],
 ]
 export default function Topicos(){
-    const {aluno}=useParams()
+    const {aluno,materia}=useParams()
+    const materiaEscolhida=(
+        materia=='python'?python:
+        materia=='javascript'?javascript:[]
+    )
     const [ab,setAbertos]=useState([true,false,false,false,false])
     
     const navigate=useNavigate()
@@ -24,7 +29,7 @@ export default function Topicos(){
         setAbertos(n)
     }
 
-    const [checks,setChecks]=useState(JSON.parse(localStorage.getItem('checks'))||listaFalses)
+    const [checks,setChecks]=useState(JSON.parse(localStorage.getItem(`check-${materia}`))||listaFalses)
     function setarChecks(iTop,iSubtop){
         const n=[]
         for(let k=0;k<5;k++){
@@ -33,14 +38,14 @@ export default function Topicos(){
             n.push(m)
         }
         setChecks(n)
-        localStorage.setItem('checks', JSON.stringify(n))
+        localStorage.setItem(`check-${materia}`, JSON.stringify(n))
     }
     return (
         <Tudo>
-            <Menu numeros={[]}/>
+            <Menu aluno={aluno||'convidado'}/>
             <Resto>
-            {materia.map((top,index)=>
-            <Topico ab={ab[index]} ult={index==materia.lenth-1}>
+            {materiaEscolhida.map((top,index)=>
+            <Topico ab={ab[index]?50+50*top.subtopicos.length:60} ult={index==materiaEscolhida.lenth-1}>
                 <Cab onClick={()=>setarAb(index)}><h6>{top.nome}</h6></Cab>
                 <aside onClick={()=>setarAb(index)}><img src={ab[index]?setaCima:setaBaixo}/></aside>
                 {ab[index]?<Caixa>
@@ -52,8 +57,8 @@ export default function Topicos(){
                     <HoldSub>
                         <Quadrado func={()=>setarChecks(index,ind)} marcado={marcado}/>
                         <Sub onClick={()=>{/*navigate(`/${aluno}/${index+1}/${ind+1}`)*/}} 
-                        color={bonus?(marcado?'b2e8b8':'B4D4EA'):(marcado?'46af48':'4787b2')} 
-                        tex={bonus?'black':'white'}>
+                        color={bonus&&false?(marcado?'b2e8b8':'B4D4EA'):(marcado?'46af48':'4787b2')} 
+                        tex={bonus&&false?'black':'white'}>
                         <p>{nome}</p>
                         </Sub>
                     </HoldSub>
@@ -119,11 +124,11 @@ display:flex;
 flex-direction:column;
 cursor:pointer;
 position:relative;
-width:90%; 
-max-width:400px;
+width:90%;max-width:450px;
+margin:15px 0 0 calc(50vw - 225px);
 background-color:white;
-min-height:${p=>p.ab?295:60}px;
-margin:15px 0 0 calc(50vw - 200px);
+min-height:${p=>p.alt}px;
+
 border-radius:15px;
 p{
     margin:0px 0 0 0px;text-align:left;

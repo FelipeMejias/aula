@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './imgs/App.css';
 import styled from 'styled-components';
-import Home from './Componentes/Home';
+import AulasFeitas from './AulasFeitas';
 import Arquivo from './Componentes/Arquivo';
-import Topicos from './Materia/Topicos';
-import Explicacao from './Materia/Explicacao';
-import Horarios from './Futuros/Horarios';
+import Topicos from './Conteudo';
+import Explicacao from './Explicacao';
+import Agendar from './Agendar';
+import Inicial from './Inicial';
 
 function App() {
   const valorContexto={}
@@ -17,12 +18,15 @@ function App() {
         <BrowserRouter>
           <Tudo>
               <Routes>
-                <Route path='/:aluno/horarios' element={<Horarios/>}/>
-                <Route path='/:aluno/materia' element={<Topicos/>}/>
-                <Route path='/:aluno/materia/:topico/:subtopico' element={<Explicacao/>} />
-                <Route path='/' element={<Home />}/>
-                <Route path='/:aluno' element={<Home />}/>
-                <Route path='/:aluno/:aula/:arquivo' element={<Arquivo />}/>
+                <Route path='/horarios' element={<Agendar/>}/>
+
+                <Route path='/conteudo' element={<Inicial/>}/>
+                <Route path='/conteudo/:materia' element={<Topicos/>}/>
+                <Route path='/conteudo/:materia/:topico/:subtopico' element={<Explicacao/>} />
+                
+                <Route path='/' element={<Inicial />}/>
+                <Route path='/aulas/:aluno' element={<AulasFeitas />}/>
+                <Route path='/aulas/:aluno/:aula/:arquivo' element={<Arquivo />}/>
                 
               </Routes>
           </Tudo>

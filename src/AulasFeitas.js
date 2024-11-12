@@ -2,16 +2,16 @@ import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import Menu from "./Menu"
 import Identifique from "./Identifique"
-import { gaveta, listaAlunos } from "../aulas/gaveta"
-export default function Home(){
+import { gaveta, listaAlunos } from "./aulas/gaveta"
+export default function AulasFeitas(){
     const navigate=useNavigate()
     const params=useParams()
-    const aluno=params.aluno||''
+    const aluno=params.aluno
     const info=gaveta[listaAlunos.indexOf(aluno)]
     return (
         listaAlunos.includes(aluno)?
         <Tudo>
-            <Menu />
+            <Menu aluno={aluno}/>
             <Resto>
             {info.map((aula,iAula)=>
             <Aula>
@@ -21,7 +21,7 @@ export default function Home(){
                 </Cab>
                 
                 <section>
-                {aula.arquivos.map((arquivo,iArquivo)=><Arq onClick={()=>navigate(`/${aluno}/aula${iAula+1}/arquivo${iArquivo+1}`)}>
+                {aula.arquivos.map((arquivo,iArquivo)=><Arq onClick={()=>navigate(`/aulas/${aluno}/aula${iAula+1}/arquivo${iArquivo+1}`)}>
                     <img src={arquivo.icone}></img>
                     <h3>{arquivo.titulo}</h3>
                 </Arq>)}
@@ -45,11 +45,9 @@ export default function Home(){
 const Tudo=styled.div`
 width:100%;height:100%;
 flex-direction:column;
-div{
-align-items:center;
-}
 `
 const Cab=styled.div`
+align-items:center;
 background-color:#d9dbad;width:100%;
 border-top-left-radius:15px;
 border-top-right-radius:15px;
@@ -59,14 +57,15 @@ p{small{13px}
 font-size:18px;margin:5px 0 7px 0px;
 }
 `
-const Aula=styled.article`
+const Aula=styled.div`
 display:flex;
 flex-direction:column;
 align-items:flex-start;
 
+min-height:${p=>p.ab?295:60}px;
 width:90%;max-width:450px;
+margin:15px 0 0 calc(50vw - 225px);
 background-color:white;
-margin:15px 0 0 0;
 border-radius:15px;
 
 section{width:100%;background-color:;
@@ -78,8 +77,9 @@ flex-wrap:wrap;
 
 const Arq=styled.div`background-color:;
 display:flex;
+align-items:center;
 flex-direction:column;
-align-items:flex-start;
+align-items:center;
 justify-content:center;
 cursor:pointer;
 width:90px;
@@ -97,7 +97,8 @@ color:green;font-weight:300;
 }
 `
 const Resto=styled.div`
-height:calc(100vh - 64px);width:100vw;
+align-items:flex-start;
+height:calc(100vh - 75px);width:100vw;
 flex-direction:column;
 overflow:hidden;
 overflow-y:scroll;

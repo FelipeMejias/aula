@@ -1,4 +1,4 @@
-import py from '../imgs/file.png'
+import py from '../../imgs/file.png'
 export const arquivos1Clarissa=[
     {
         titulo:'exercicio1',img:py,

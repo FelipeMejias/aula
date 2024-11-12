@@ -1,5 +1,5 @@
 
-export const materia=[
+export const python=[
 {
     nome:"Variável e condicional",
     subtopicos:[
@@ -46,7 +46,6 @@ else :
     print( 'menor ou igual a 10' )
 `]  
     },{nome:"Condicional dentro de outra",bonus:true,texto:''
-    },{nome:"Variável lista",bonus:true,texto:''
     }]
 },{
     nome:"Função",
@@ -99,17 +98,23 @@ compareOsDois( 4 , 4 )
     },{nome:"Parâmetro fixo",bonus:true,texto:''
     }]
 },{
+    nome:"Variável Lista",
+    subtopicos:[
+      {nome:"Estrutura",bonus:false,texto:''
+    },{nome:"Inserir e retirar",bonus:false,texto:''
+    },{nome:"Mapear e Filtrar",bonus:false,texto:''
+    }]
+},{
     nome:"Loops",
     subtopicos:[
-      {nome:"While",bonus:false,texto:''
-    },{nome:"For",bonus:false,texto:''
+      {nome:"While e For",bonus:false,texto:''
+    },{nome:"For ... in ...",bonus:false,texto:''
     },{nome:"Auxiliadores",bonus:false,texto:''
     }]
 },{
     nome:"Aprofundar loops em lista",
     subtopicos:[
-      {nome:"Adicionar na lista",bonus:false,texto:''
-    },{nome:"Separar string",bonus:false,texto:''
+      {nome:"Separar string",bonus:false,texto:''
     },{nome:"Ìndice variando em lista",bonus:false,texto:''
     },{nome:"For com índice",bonus:true,texto:''
     }]

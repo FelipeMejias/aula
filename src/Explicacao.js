@@ -1,12 +1,17 @@
 import styled from "styled-components"
-import { materia } from "./python"
+import { python } from "./aulas/python"
+import { javascript } from "./aulas/javascript"
 import { useParams } from "react-router-dom"
-import CodeBlock from "./CodeBox"
+import CodeBlock from "./Componentes/CodeBox"
 import { useState } from "react"
-import Menu from "../Componentes/Menu"
+import Menu from "./Menu"
 export default function Explicacao(){
-    const {topico,subtopico}=useParams()
-    const top=materia[topico-1]
+    const {topico,subtopico,materia}=useParams()
+    const materiaEscolhida=(
+        materia=='python'?python:
+        materia=='javascript'?javascript:[]
+    )
+    const top=materiaEscolhida[topico-1]
     const subtop=top.subtopicos[subtopico-1]
     const [num,setNum]=useState(0)
     function conv(texto){
