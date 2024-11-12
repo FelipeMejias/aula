@@ -42,7 +42,8 @@ export const listaAlunos=[
     'convidado',
     'clarissa', // python
     'antonio',  // javascript + react + node
-    'victoria'  // javascript + react
+    'victoria', // javascript + react
+    'eduardo'   // python + banco
 ]
 export const gaveta=[
     [//Convidado
@@ -83,6 +84,13 @@ export const gaveta=[
             status:'Solta',
             data:'Sem data',
             arquivos:victoria2
+        },
+    ],[//Eduardo
+        {
+            titulo:'Aula 1',
+            status:'Feito',
+            data:'Terça 12/11',
+            arquivos:[]
         },
     ]
 ]

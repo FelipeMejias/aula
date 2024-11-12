@@ -11,7 +11,7 @@ export default function Preco(){
     const d_aulas=0.022*(aulas)
     const d_semanas=tabela[semanas]
     const total=75*aulas
-    const desconto=parseFloat((total*d_aulas*d_semanas).toFixed(1))
+    const desconto=parseFloat((total*d_aulas*d_semanas).toFixed(0))
     const pacote=total-desconto
     const preco=pacote/aulas
     
@@ -22,22 +22,25 @@ export default function Preco(){
                     {aul.map((a,i)=><Option numero={a} selec={aulas==a} funcao={()=>setAulas(a)}>{a}</Option>)}
                 </Listinha>
                 
-                <h2>Semanas</h2>
+                <h2>Duração em Semanas</h2>
                 <Listinha wid={180}>
                     {sem.map((a,i)=><Option numero={a} selec={semanas==a} funcao={()=>setSemanas(a)}/>)}
                 </Listinha>
                 <Quadro>
                     <h2>$75 x {aulas} = ${total} </h2>
-                    <h4>desconto: {(desconto).toFixed(2)}</h4>
-                    <h3>novo valor: ${(pacote).toFixed(2)}</h3>
+                    <h4>desconto: ${desconto}</h4>
+                    <h3>novo valor: ${pacote}</h3>
                     <h2>cada aula sai a: ${(preco).toFixed(2)}</h2>
+                </Quadro>
+                <Quadro color={'#b5edad'}>
+                    <p>O valor é pago metade após a primeira aula e metade após o prazo de duração</p>
                 </Quadro>
         </Tudo>
     )
 }//{}
 const Quadro=styled.div`
-flex-direction:column;padding-bottom:25px;
-background-color:white;width:90%;
+flex-direction:column;padding-bottom:10px;
+background-color:${p=>p.color||'white'};width:90%;
 border-radius:10px;margin:25px 0 0 0;
 `
 function Option({selec,funcao,numero}){
@@ -57,9 +60,9 @@ justify-content:center;align-items:center;
 const Tudo=styled.div`
 width:50%;height:100%;
 flex-direction:column;align-items:center;
-h2{font-weight:600;margin:25px 0 10px 0;font-size:18px;}
-h3{font-weight:600;margin:10px 0 0px 0;color:green;font-size:18px;}
-h4{font-weight:600;margin:0;color:red;font-size:18px;}
+h2{font-weight:600;margin:7px 0 7px 0;font-size:18px;}
+h3{font-weight:600;margin:7px 0 7px 0;color:blue;font-size:18px;}
+h4{font-weight:600;margin:7px 0 7px 0;;color:green;font-size:18px;}
 `
 const Listinha=styled.div`
 max-width:${props=>props.wid}px;
