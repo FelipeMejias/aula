@@ -13,6 +13,7 @@ const listaFalses=[
     [false,false,false,false],
     [false,false,false,false],
     [false,false,false,false],
+    [false,false,false,false],
 ]
 export default function Topicos(){
     const {aluno,materia}=useParams()
@@ -20,21 +21,23 @@ export default function Topicos(){
         materia=='python'?python:
         materia=='javascript'?javascript:[]
     )
-    const [ab,setAbertos]=useState([true,false,false,false,false])
+    const qtdTopicos=materiaEscolhida.length
+    const [ab,setAbertos]=useState([true,false,false,false,false,false])
     
     const navigate=useNavigate()
     function setarAb(i){
         const n=[]
-        for(let k=0;k<5;k++)n.push(i==k?!ab[k]:ab[k])
+        for(let k=0;k<qtdTopicos;k++)n.push(i==k?!ab[k]:ab[k])
         setAbertos(n)
     }
 
     const [checks,setChecks]=useState(JSON.parse(localStorage.getItem(`check-${materia}`))||listaFalses)
     function setarChecks(iTop,iSubtop){
         const n=[]
-        for(let k=0;k<5;k++){
+        console.log(checks)
+        for(let k=0;k<qtdTopicos;k++){
             const m=[]
-            for(let j=0;j<4;j++)m.push(k==iTop&&j==iSubtop?!checks[k][j]:checks[k][j])
+            for(let j=0;j<4;j++)m.push(checks[k]?(k==iTop&&j==iSubtop?!checks[k][j]:checks[k][j]):false)
             n.push(m)
         }
         setChecks(n)
@@ -133,12 +136,15 @@ border-radius:15px;
 p{
     margin:0px 0 0 0px;text-align:left;
 }
+    @media(max-width:500px){
+margin:15px 0 0 5%;
+}
 `
 const Caixa=styled.div`background-color:;
 flex-direction:column;
 `
 const Sub=styled.div`background-color:#${p=>p.color};
-color:${p=>p.tex};width:240px;
+color:${p=>p.tex};width:220px;
 padding:9px;
 border-radius:4px;position:relative;
 display:flex;align-items:center;

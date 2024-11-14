@@ -46,7 +46,7 @@ function gerarEventos(){
             {daysData.map((day,index)=><Day>
                 <Data>{definirData(index)}</Data>
                 <h6>{daysNames[index]}</h6>
-                {index===(now.day-1)?<NowIndicator level={now.level*5.88+10}></NowIndicator>:<></>}
+                {index===(now.day-1)?<NowIndicator level={now.level*5.88+10}><Tag>AGORA</Tag></NowIndicator>:<></>}
                 {day.content.map((habit,i)=>{
                     const {floor,size,ocupado,title}=habit
                     return(
@@ -64,11 +64,15 @@ const Data=styled.div`
 position:absolute;top:px;
 `
 const NowIndicator=styled.div`
-height:3px;width:92%;background-color:red;
+height:5px;width:92%;background-color:red;
 position:absolute;top:calc(${props=>props.level}% - 1.5px);z-index:5;
-border-radius:1.5px
-`
+border-radius:2.5px
 
+`
+const Tag=styled.div`
+position:absolute;color:red;
+bottom:3px;font-weight:700;
+`
 const Habit=styled.div`
 cursor:pointer;
 border:0;opacity:${props=>props.opac}%;
