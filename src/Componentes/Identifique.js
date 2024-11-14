@@ -1,11 +1,11 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { listaAlunos } from "./aulas/gaveta"
+import { listaAlunos } from "../aulas/gaveta"
 export default function Identifique({nomeTentado}){
     const navigate=useNavigate()
     const tentativa=nomeTentado
-    const [title,setTitle]=useState(tentativa=='nome-de-acesso'?'':tentativa)
+    const [title,setTitle]=useState(tentativa=='sem-usuario'?'':tentativa)
     const [aviso,setAviso]=useState(false)
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
@@ -14,6 +14,7 @@ export default function Identifique({nomeTentado}){
       };
     function principal(){
         if(title&&listaAlunos.includes(title)){
+            localStorage.setItem(`usuario`, JSON.stringify(title.toLowerCase()))
             navigate(`/aulas/${title.toLowerCase()}`)
         }else{
             setAviso(true)
@@ -35,7 +36,10 @@ export default function Identifique({nomeTentado}){
                 onKeyDown={handleKeyDown}
                 onChange={(e)=>setTitle(e.target.value)} placeholder='' value={title}></input>
                 <button onClick={principal}>Entrar</button>
-                <Conv onClick={()=>navigate(`/aulas/${'convidado'}`)}>Entrar como convidado</Conv>
+                <Conv onClick={()=>{
+                    localStorage.setItem(`usuario`, JSON.stringify('convidado'))
+                    navigate(`/aulas/convidado`)
+                }}>Entrar como convidado</Conv>
             </Novo>
         </Tudo>
     )
@@ -49,6 +53,7 @@ cursor:pointer;
 const Tudo=styled.div`
 width:100%;height:100%;
 flex-direction:column;
+justify-content:center;
 align-items:center;
 div{
 align-items:center;
@@ -56,7 +61,7 @@ align-items:center;
 `
 const Novo=styled.div`
 position:relative;
-height:80%;width:80%;margin-top:10%;
+height:90%;width:90%;
 border-radius:25px;color:white;
 flex-direction:column;justify-content:center;
 input{

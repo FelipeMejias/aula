@@ -25,7 +25,7 @@ p{
   padding: 20px; 
   box-sizing:border-box;
   border-radius: 10px; 
-  overflow-x: auto; 
+  overflow-x: hidden; 
   white-space: pre-wrap;
   overflow-y: scroll; 
   height:100%;

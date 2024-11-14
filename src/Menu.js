@@ -4,28 +4,29 @@ import { useState } from "react"
 import iconeAgendar from './imgs/agendar.png'
 import iconeMateria from './imgs/materia.png'
 import iconeLivro from './imgs/livro.png'
-export default function Menu({aluno}){
+export default function Menu(){
+    const aluno=JSON.parse(localStorage.getItem('usuario'))||'sem-usuario'
     const navigate=useNavigate()
     return (
         <Tudo>
              <main>
             <Botao jus={'flex-start'}  im={36} top={'2px'} 
-            onClick={()=>navigate(`/aulas/nome-de-acesso`)}>
+            onClick={()=>navigate(`/aulas/${aluno}`)}>
                 <img src={iconeMateria}/>
-                <h2>Aulas Feitas</h2>
-                <h3>ver material</h3>
+                <h2>Arquivos</h2>
+                <h3>meu material</h3>
             </Botao>
             <Botao jus={'center'}  im={42}  
             onClick={()=>navigate(`/conteudo`)}>
                 <img src={iconeLivro}/>
-                <h2>Conteúdo</h2>
-                <h3>explicação e exercícios</h3>
+                <h2>Resumo</h2>
+                <h3>+ exercícios</h3>
             </Botao>
             <Botao jus={'flex-end'} im={38}  top={'2px'} 
-            onClick={()=>navigate(`/horarios`)}>
+            onClick={()=>navigate(`/horarios/${aluno}`)}>
                 <img src={iconeAgendar}/>
-                <h2>Agendar Aulas</h2>
-                <h3>preços e horários</h3>
+                <h2>Aulas</h2>
+                <h3>horários</h3>
             </Botao>
             </main>
         </Tudo>
@@ -46,7 +47,7 @@ display:flex;align-items:center;
 
 const Botao=styled.div`background-color:;
 align-items:center;
-flex-direction:column;
+flex-direction:column;width:100px;
 cursor:pointer;line-height:19px;
 margin:0 0px 0 0%;
 justify-content:flex-end;

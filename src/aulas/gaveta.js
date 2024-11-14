@@ -1,6 +1,6 @@
-import { arquivos1Clarissa } from "./clarissa/clarissa1";
+import { clarissa1 } from "./clarissa/clarissa1";
 import { antonio1 } from "./antonio/antonio1";
-import { arquivos2Clarissa } from "./clarissa/clarissa2";
+import { clarissa2 } from "./clarissa/clarissa2";
 import { victoria1 } from "./victoria/victoria1";
 import { victoria2 } from "./victoria/victoria2";
 import js from '../imgs/js.png'
@@ -29,15 +29,25 @@ export const genericos=[
     ]
 
 export const disponiveis=[
-    '108','110','113','115','117','119',
-    '208','210',   '214',   '217','219',
-    '308','310','313','315','317','319',
-    '408','410','413','415','417','419',
-    '508','510','513','515','517','519',
+    '108','110','114','116','118','120',
+    '208','210','214','216','218','220',
+    '308','310','314','316','318','320',
+    '408','410','414','416','418','420',
+    '508','510','514','516','518','520',
 ] 
 export const eventos=[
-        '214','217','313','319','410'
+        '214','218','314','320','410'
     ]
+export const disponiveis2=[
+    '108','110','114','116','118','120',
+    '208','210','214','216','218','220',
+    '308','310','314','316','318','320',
+    '408','410','414','416','418','420',
+    '508','510','514','516','518','520',
+] 
+export const eventos2=[
+    '214','218','314','320','410'
+]
 export const listaAlunos=[
     'convidado',
     'clarissa', // python
@@ -54,18 +64,18 @@ export const gaveta=[
             arquivos:genericos
         },
     ],
-    [//Clarissa/*
-       /* {
+    [//Clarissa
+        {
             titulo:'Aula 1',
             status:'Feito',
             data:'Quinta 24/10',
-            arquivos:arquivos1Clarissa
+            arquivos:clarissa1
         },{
             titulo:'Aula 2',
             status:'Feito',
             data:'Quinta 31/10',
-            arquivos:arquivos2Clarissa
-        },*/
+            arquivos:clarissa2
+        },
     ],[//Antonio
         {
             titulo:'Aula 1',

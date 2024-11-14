@@ -1,10 +1,10 @@
 import styled from "styled-components"
-import { python } from "./aulas/python"
-import { javascript } from "./aulas/javascript"
+import { python } from "../aulas/python"
+import { javascript } from "../aulas/javascript"
 import { useParams } from "react-router-dom"
-import CodeBlock from "./Componentes/CodeBox"
+import CodeBlock from "./CodeBox"
 import { useState } from "react"
-import Menu from "./Menu"
+import Menu from "../Menu"
 export default function Explicacao(){
     const {topico,subtopico,materia}=useParams()
     const materiaEscolhida=(

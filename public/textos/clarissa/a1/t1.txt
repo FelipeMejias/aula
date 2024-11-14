@@ -1,0 +1,14 @@
+# 1) Considere uma lista de valores numéricos ou textuais, construa 
+# uma função que receba esta lista e um texto, retornando quantas 
+# ocorrências deste texto há na lista.
+
+lista1=[3,7,'bh',87,3,9,'bh',5,9,'bj','nh','bh','jj',8]
+
+def contarOcorrencias(lis,texto):
+    c1=0
+    for el in lis:
+        if el==texto:
+            c1=c1+1
+    return c1
+
+#print(contarOcorrencias(lista1,'bh'))

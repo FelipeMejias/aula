@@ -1,0 +1,56 @@
+lAninhadas= [[2,9,[[5,8]]],3,5,6,[8,[6,[6,9,[7,6]],8],9]]
+
+def acharSequencia(el):
+    if type(el) is list:
+        i=0
+        maiorProfundidade=1
+        iEscolhido=-1
+        sequenciaEscolhida=None
+        for item in el:
+            adicional=acharSequencia(item)[0]
+            sequencia=acharSequencia(item)[1]
+            profundidade=1+adicional
+            if profundidade>maiorProfundidade:
+                maiorProfundidade=profundidade
+                iEscolhido=i
+                sequenciaEscolhida=sequencia
+            i+=1
+        if iEscolhido<0:
+            return [1,'']
+        else:
+            return [maiorProfundidade,str(iEscolhido)+sequenciaEscolhida]
+    else:
+        return [0,'']
+    
+resposta=acharSequencia(lAninhadas)
+qtdCamadas=resposta[0]
+sequencia=resposta[1]
+print('Camadas de lista: '+str(qtdCamadas))
+print('Sequencia para chegar na lista mais profunda: '+str(sequencia))
+
+def elementoZeroCamadaFinal(lis,seq):
+    x=lis
+    for indice in seq:
+        x=x[int(indice)]
+    return x[0]
+
+
+elemento=elementoZeroCamadaFinal(lAninhadas,sequencia)
+print('Primeiro elemento da lista mais profunda: '+str(elemento))
+
+lAninhadas= [[2,9,[[5,8]]],3,5,6,[8,[6,[6,9,[7,6]],8],9]]
+
+def contarCamadasAninhamento(el):
+    if type(el) is list:
+        maiorProfundidade=1
+        for item in el:
+            camadas=contarCamadasAninhamento(item)
+            profundidade=1+camadas
+            if profundidade>maiorProfundidade:
+                maiorProfundidade=profundidade
+        return maiorProfundidade
+    else:
+        return 0
+
+resposta=contarCamadasAninhamento(lAninhadas)
+print('Camadas de lista: '+str(resposta))

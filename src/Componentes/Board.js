@@ -1,10 +1,12 @@
 import { useState,useEffect, useContext } from "react"
 import styled from 'styled-components'
 import { graphicMark } from "./timeUtils"
-import { disponiveis, eventos } from "../aulas/gaveta";
+
+
+export default function Board({now,big,disponiveis,eventos}){
+
 const daysNames=[/*'SUN',*/'SEG','TER','QUA','QUI','SEX',/*'SAT'*/]
 const hours=[];for(let i=7;i<24;i++){hours.push(i)}
-export default function Board({now}){
 function separateHabits(){
         const habits=gerarEventos()
         let days=daysNames.map((name,index)=>({
@@ -12,8 +14,7 @@ function separateHabits(){
         }))
         setDaysData(days)
 
-    }
-
+}
 function gerarEventos(){
     const l=[]
     for(let codigo of disponiveis){
@@ -33,33 +34,35 @@ function gerarEventos(){
     }
     return l
 }
-
-
-const [daysData,setDaysData]=useState([])
-    const days=daysData.map((day,index)=>{
-
-        return(
-            <Day >
+    const [daysData,setDaysData]=useState([])
+    useEffect(separateHabits,[now])
+    function definirData(day){
+        console.log(now.weeks)
+        const {d,m}=now.weeks[day]
+        return`${d} / ${m}`
+    }
+    return (
+        <Content big={big?100:50} bigH={big?50:100}>
+            {daysData.map((day,index)=><Day>
+                <Data>{definirData(index)}</Data>
                 <h6>{daysNames[index]}</h6>
-                {index===(now.day-1)?<NowIndicator level={now.level*5.88+7}></NowIndicator>:<></>}
+                {index===(now.day-1)?<NowIndicator level={now.level*5.88+10}></NowIndicator>:<></>}
                 {day.content.map((habit,i)=>{
                     const {floor,size,ocupado,title}=habit
                     return(
-                    <Habit opac={ocupado?40:100} level={floor*0.0588+7} size={size*0.0588} 
+                    <Habit opac={ocupado?40:100} level={floor*0.0588+10} size={size*0.0588} 
                     color={'#719ef7'} 
                         onClick={()=>{}} >
                         <h1>{title[0]}<small>h - </small>{title[1]}<small>h</small></h1>
                     </Habit>
                 )})}
-            </Day>)
-    })
-    useEffect(separateHabits,[now])
-    return (
-        <Content>
-            {days}
+            </Day>)}
         </Content>
     )
 }
+const Data=styled.div`
+position:absolute;top:px;
+`
 const NowIndicator=styled.div`
 height:3px;width:92%;background-color:red;
 position:absolute;top:calc(${props=>props.level}% - 1.5px);z-index:5;
@@ -88,11 +91,11 @@ const Day =styled.div`
     background-color:#f7debb;
     display:flex;flex-direction:column;align-items:center;
     position:relative;
-h6{font-size:16px;font-weight:500;margin:20px 0 0 0}
+h6{font-size:16px;font-weight:500;margin:18px 0 0 0}
 
 `
 const Content=styled.div`
-width:50%;height:100%;
+width:${p=>p.big}%;height:${p=>p.bigH}%;
 box-sizing:border-box;
 background-color: #d3b28b;
 padding-left:11px;padding-right:11px;

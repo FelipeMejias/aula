@@ -5,9 +5,13 @@ import styled from 'styled-components';
 import AulasFeitas from './AulasFeitas';
 import Arquivo from './Componentes/Arquivo';
 import Topicos from './Conteudo';
-import Explicacao from './Explicacao';
+import Explicacao from './Componentes/Explicacao';
 import Agendar from './Agendar';
 import Inicial from './Inicial';
+import SalvarNome from './Componentes/SalvarNomes';
+import AdicionarEx from './Componentes/AdicionarEx';
+import Postado from './Postado';
+import Subtopico from './Componentes/Subtopico';
 
 function App() {
   const valorContexto={}
@@ -18,16 +22,24 @@ function App() {
         <BrowserRouter>
           <Tudo>
               <Routes>
-                <Route path='/horarios' element={<Agendar/>}/>
+                <Route path='/horarios/:aluno' element={<Agendar/>}/>
+                <Route path='/horarios-precos' element={<Agendar comPrecos={true}/>}/>
 
                 <Route path='/conteudo' element={<Inicial/>}/>
                 <Route path='/conteudo/:materia' element={<Topicos/>}/>
-                <Route path='/conteudo/:materia/:topico/:subtopico' element={<Explicacao/>} />
+                <Route path='/conteudo/:materia/:topico/:subtopico' element={<Subtopico/>} />
                 
                 <Route path='/' element={<Inicial />}/>
                 <Route path='/aulas/:aluno' element={<AulasFeitas />}/>
+                <Route path='/aulas/:aluno/adicionar' element={<AdicionarEx />}/>
+                <Route path='/aulas/:aluno/exercicios/:arquivo' element={<Postado />}/>
                 <Route path='/aulas/:aluno/:aula/:arquivo' element={<Arquivo />}/>
                 
+                <Route path='/clarissa' element={<SalvarNome nome='clarissa' />}/>
+                <Route path='/antonio' element={<SalvarNome nome='antonio' />}/>
+                <Route path='/victoria' element={<SalvarNome nome='victoria' />}/>
+                <Route path='/eduardo' element={<SalvarNome nome='eduardo' />}/>
+                <Route path='/isaac' element={<SalvarNome nome='isaac' />}/>
               </Routes>
           </Tudo>
         </BrowserRouter>

@@ -11,7 +11,7 @@ export default function Preco(){
     const d_aulas=0.022*(aulas)
     const d_semanas=tabela[semanas]
     const total=75*aulas
-    const desconto=parseFloat((total*d_aulas*d_semanas).toFixed(0))
+    const desconto=Math.ceil((total*d_aulas*d_semanas))
     const pacote=total-desconto
     const preco=pacote/aulas
     

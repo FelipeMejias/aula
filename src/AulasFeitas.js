@@ -1,45 +1,56 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import Menu from "./Menu"
-import Identifique from "./Identifique"
+import Identifique from "./Componentes/Identifique"
 import { gaveta, listaAlunos } from "./aulas/gaveta"
+import { useEffect } from "react"
+import novoExercicio from './imgs/novo.png'
+import file from './imgs/file.png'
 export default function AulasFeitas(){
     const navigate=useNavigate()
-    const params=useParams()
-    const aluno=params.aluno
+    const aluno=JSON.parse(localStorage.getItem('usuario'))
     const info=gaveta[listaAlunos.indexOf(aluno)]
+    const exercicios=JSON.parse(localStorage.getItem('exercicios'))||[]
     return (
         listaAlunos.includes(aluno)?
-        <Tudo>
-            <Menu aluno={aluno}/>
-            <Resto>
-            {info.map((aula,iAula)=>
+<Tudo>
+    <Menu aluno={aluno}/>
+    <Resto>
+        {aluno=='clarissa'?<Aula>
+            <Cab>
+                <p>Exercícios</p>
+            </Cab>
+            <section>
+                <Arq onClick={()=>navigate(`/aulas/${aluno}/adicionar`)}>
+                    <img src={novoExercicio}></img>
+                    <h3>Adicionar exercício</h3> 
+                </Arq>
+                {exercicios.map((arquivo,iArquivo)=>
+                    <Arq onClick={()=>navigate(`/aulas/${aluno}/exercicios/arquivo${iArquivo+1}`)}>
+                        <img src={file}></img>
+                        <h3>{arquivo.titulo}</h3>
+                    </Arq>)}
+            </section>
+        </Aula>:<></>}
+        {info.map((aula,iAula)=>
             <Aula>
                 <Cab>
-                <p>{aula.titulo}</p>
-                <p><small>{aula.data}</small></p>
+                    <p>{aula.titulo}</p>
+                    <p><small>{aula.data}</small></p>
                 </Cab>
-                
                 <section>
-                {aula.arquivos.map((arquivo,iArquivo)=><Arq onClick={()=>navigate(`/aulas/${aluno}/aula${iAula+1}/arquivo${iArquivo+1}`)}>
-                    <img src={arquivo.icone}></img>
-                    <h3>{arquivo.titulo}</h3>
-                </Arq>)}
-                {/*[][iAula].map((arquivo,iArquivo)=><Arq onClick={()=>navigate(`/${aluno}/aula${iAula+1}/arquivo${iArquivo+1}`)}>
-                    <img src={papel}></img>
-                    <h3>{arquivo.titulo}</h3>
-                </Arq>)}
-                <Arq onClick={()=>navigate(`/`)}>
-                    <img src={novo}></img>
-                    <h3><strong></strong></h3>
-                </Arq>*/}
+                    {aula.arquivos.map((arquivo,iArquivo)=>
+                        <Arq onClick={()=>navigate(`/aulas/${aluno}/aula${iAula+1}/arquivo${iArquivo+1}`)}>
+                            <img src={arquivo.icone}></img>
+                            <h3>{arquivo.titulo}</h3>
+                        </Arq>)}
                 </section>
-                
-            </Aula>)}
-            </Resto>
-        </Tudo>
-        :
-        <Identifique nomeTentado={aluno}/>
+            </Aula>
+        )}
+    </Resto>
+</Tudo>
+:
+<Identifique nomeTentado={aluno}/>
     )
 }
 const Tudo=styled.div`
@@ -103,3 +114,11 @@ flex-direction:column;
 overflow:hidden;
 overflow-y:scroll;
 `
+/*[][iAula].map((arquivo,iArquivo)=><Arq onClick={()=>navigate(`/${aluno}/aula${iAula+1}/arquivo${iArquivo+1}`)}>
+                    <img src={papel}></img>
+                    <h3>{arquivo.titulo}</h3>
+                </Arq>)}
+                <Arq onClick={()=>navigate(`/`)}>
+                    <img src={novo}></img>
+                    <h3><strong></strong></h3>
+                </Arq>*/
