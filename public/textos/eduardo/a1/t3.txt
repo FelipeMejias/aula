@@ -1,0 +1,13 @@
+#Booleano ( true ou false)
+idade = 45
+altura = 1.75
+
+mentira = idade == altura #false
+verdade = idade != altura #true
+
+#AND é representado por and (se 1 for false, tudo é false)
+#OR é representado por or (se 1 for true, tudo é true)
+
+combinado1 = mentira and verdade #false
+combinado2 = mentira or verdade #true
+combinado3 = (verdade and mentira) or verdade  #true

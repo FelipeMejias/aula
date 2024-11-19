@@ -1,0 +1,9 @@
+#FUNÇÃO
+
+def dizerOi(nome , idade, cidade='São Paulo' , dia =6):
+    print(f'Oi {nome}, como foi sua festa de {idade} anos em {cidade} dia {dia}')
+
+
+dizerOi('Bruno' , 45, 'Rio de Janeiro',12)
+dizerOi('Ana' , 16 , 'Bahia')
+dizerOi('Tulio' , 42 )

@@ -3,7 +3,7 @@ export const javascript=[
     {
         nome:"Variável e condicional",
         subtopicos:[
-        {nome:"Variáveis simples",bonus:false,texto:
+        {nome:"Variáveis simples",texto:
     [`'''
     Varaveis guardam um valor, como uma gaveta com uma etiqueta
     As 3 variáveis simples são:
@@ -17,7 +17,7 @@ export const javascript=[
     # booleano (True ou False)`,`
     statusAtivo = True
     `]
-        },{nome:"Condicionais (if,elif,else)",bonus:false,texto:
+        },{nome:"Condicionais (if,elif,else)",texto:
     [`'''
     If executa o bloco de código caso a condicao seja True
     Esse bloco é definido pelo que tem 1 Tab a mais que ele
@@ -45,12 +45,12 @@ export const javascript=[
     else :
         print( 'menor ou igual a 10' )
     `]  
-        },{nome:"Condicional dentro de outra",bonus:true,texto:''
+        },{nome:"Condicional dentro de outra",texto:''
         }]
     },{
         nome:"Função",
         subtopicos:[
-          {nome:"Criar e chamar",bonus:false,texto:
+          {nome:"Criar e chamar",texto:
     [`
     # Funçao é um bloco de codigo executado quando seu nome é chamado
      
@@ -61,7 +61,7 @@ export const javascript=[
     # Chamar funcao`,`
     minhaFuncao()
     `]
-        },{nome:"Parâmetros",bonus:false,texto:
+        },{nome:"Parâmetros",texto:
     [`'''
     Os parametros sao escolhidos na criacao da funcao
     E sao passados na hora de chamar a funcao, a ordem importa
@@ -94,36 +94,36 @@ export const javascript=[
     <p><strong>morango & laranja</strong></p>
         ]
     ]
-        },{nome:"Uma chamando outra",bonus:true,texto:''
-        },{nome:"Parâmetro fixo",bonus:true,texto:''
+        },{nome:"Uma chamando outra",texto:''
+        },{nome:"Parâmetro fixo",texto:''
         }]
     },{
         nome:"Variável Lista",
         subtopicos:[
-          {nome:"Estrutura",bonus:false,texto:''
-        },{nome:"Inserir e retirar",bonus:false,texto:''
-        },{nome:"Map e Filter",bonus:false,texto:''
+          {nome:"Estrutura",texto:''
+        },{nome:"Inserir e retirar",texto:''
+        },{nome:"Map e Filter",texto:''
         }]
     },{
         nome:"Loops",
         subtopicos:[
-          {nome:"While e For",bonus:false,texto:''
-        },{nome:"For ... of ...",bonus:false,texto:''
-        },{nome:"Auxiliadores",bonus:false,texto:''
+          {nome:"While e For",texto:''
+        },{nome:"For ... of ...",texto:''
+        },{nome:"Auxiliadores",texto:''
         }]
     },{
         nome:"Variável Objeto",
         subtopicos:[
-          {nome:"Estrutura",bonus:false,texto:''
-        },{nome:"Lista de Objetos",bonus:false,texto:''
+          {nome:"Estrutura",texto:''
+        },{nome:"Lista de Objetos",texto:''
         }]
     },/*{
         nome:"",
         subtopicos:[
-          {nome:"",bonus:false,texto:''
-        },{nome:"",bonus:false,texto:''
-        },{nome:"",bonus:true,texto:''
-        },{nome:"",bonus:true,texto:''
+          {nome:"",texto:''
+        },{nome:"",texto:''
+        },{nome:"",texto:''
+        },{nome:"",texto:''
         }]
     }*/
     ]

@@ -1,0 +1,26 @@
+#CONDICIONAL
+
+temperatura=45
+
+if(temperatura>30):
+    print(f'está calor pois fazem {temperatura} graus')
+elif(temperatura>15):
+    print('temperatura amena')
+else:
+    print('esta frio')
+
+#CONDICIONAL ANINHADA
+
+temperatura=40
+chovendo=True
+
+if(chovendo):
+    if(temperatura>20):
+        print('ta chovendo e calor')
+    else:
+        print('ta chovendo e frio')
+else:
+    if(temperatura>20):
+        print('ta sol e calor')
+    else:
+        print('ta sol e frio')

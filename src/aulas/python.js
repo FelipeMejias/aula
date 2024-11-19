@@ -3,7 +3,7 @@ export const python=[
 {
     nome:"Variável e condicional",
     subtopicos:[
-    {nome:"Variáveis simples",bonus:false,texto:
+    {nome:"Variáveis simples",texto:
 [`'''
 Varaveis guardam um valor, como uma gaveta com uma etiqueta
 As 3 variáveis simples são:
@@ -17,7 +17,7 @@ minhaFruta = 'melancia'`,`
 # booleano (True ou False)`,`
 statusAtivo = True
 `]
-    },{nome:"Condicionais (if,elif,else)",bonus:false,texto:
+    },{nome:"Condicionais (if,elif,else)",texto:
 [`'''
 If executa o bloco de código caso a condicao seja True
 Esse bloco é definido pelo que tem 1 Tab a mais que ele
@@ -45,12 +45,12 @@ if quantidade > 10 :
 else :
     print( 'menor ou igual a 10' )
 `]  
-    },{nome:"Condicional dentro de outra",bonus:true,texto:''
+    },{nome:"Condicional dentro de outra",texto:''
     }]
 },{
     nome:"Função",
     subtopicos:[
-      {nome:"Criar e chamar",bonus:false,texto:
+      {nome:"Criar e chamar",texto:
 [`
 # Funçao é um bloco de codigo executado quando seu nome é chamado
  
@@ -61,7 +61,7 @@ def minhaFuncao():
 # Chamar funcao`,`
 minhaFuncao()
 `]
-    },{nome:"Parâmetros",bonus:false,texto:
+    },{nome:"Parâmetros",texto:
 [`'''
 Os parametros sao escolhidos na criacao da funcao
 E sao passados na hora de chamar a funcao, a ordem importa
@@ -94,45 +94,37 @@ compareOsDois( 4 , 4 )
 <p><strong>morango & laranja</strong></p>
     ]
 ]
-    },{nome:"Uma chamando outra",bonus:true,texto:''
-    },{nome:"Parâmetro fixo",bonus:true,texto:''
+    },{nome:"Uma chamando outra",texto:''
+    },{nome:"Parâmetro fixo",texto:''
     }]
 },{
     nome:"Variável Lista",
     subtopicos:[
-      {nome:"Estrutura",bonus:false,texto:''
-    },{nome:"Inserir e retirar",bonus:false,texto:''
-    },{nome:"Mapear e Filtrar",bonus:false,texto:''
+      {nome:"Estrutura",texto:''
+    },{nome:"Inserir e retirar",texto:''
+    },{nome:"Mapear e Filtrar",texto:''
     }]
 },{
     nome:"Loops",
     subtopicos:[
-      {nome:"While e For",bonus:false,texto:''
-    },{nome:"For ... in ...",bonus:false,texto:''
-    },{nome:"Auxiliadores",bonus:false,texto:''
+      {nome:"While e For",texto:''
+    },{nome:"For ... in ...",texto:''
+    },{nome:"Auxiliadores",texto:''
     }]
 },{
     nome:"Aprofundar loops em lista",
     subtopicos:[
-      {nome:"Separar string",bonus:false,texto:''
-    },{nome:"Ìndice variando em lista",bonus:false,texto:''
-    },{nome:"For com índice",bonus:true,texto:''
+      {nome:"Separar string",texto:''
+    },{nome:"Ìndice variando em lista",texto:''
+    },{nome:"For com índice",texto:''
     }]
 },{
     nome:"Variável dicionário",
     subtopicos:[
-      {nome:"Estrutura",bonus:false,texto:''
-    },{nome:"Em contagem",bonus:false,texto:''
-    },{nome:"Em listas",bonus:false,texto:''
-    },{nome:"Contagem sem saber as chaves",bonus:true,texto:''
+      {nome:"Estrutura",texto:''
+    },{nome:"Em contagem",texto:''
+    },{nome:"Em listas",texto:''
+    },{nome:"Contagem sem saber as chaves",texto:''
     }]
-},/*{
-    nome:"",
-    subtopicos:[
-      {nome:"",bonus:false,texto:''
-    },{nome:"",bonus:false,texto:''
-    },{nome:"",bonus:true,texto:''
-    },{nome:"",bonus:true,texto:''
-    }]
-}*/
+},
 ]

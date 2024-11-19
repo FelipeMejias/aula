@@ -1,0 +1,17 @@
+# Int (números inteiros) & Float (números quebrados)
+moedas = 30
+preco = 5
+taxa = 4.7
+
+adic = moedas + preco # 35
+subt = moedas - preco # 25
+mult = moedas * preco # 150
+divi = moedas / preco # 6
+rest = moedas % 7     # 2
+# Resto da Divisão 
+# 30 / 7 = 28  
+# 30 - 28 = 2
+
+dizima = moedas / taxa # 6.382978723404255
+arredond1 = round(dizima)  # Arredonda para o inteiro mais próximo
+arredond2 = round(dizima, 2)  # Arredonda para 2 casas decimais

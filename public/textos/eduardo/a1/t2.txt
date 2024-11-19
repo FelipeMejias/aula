@@ -1,0 +1,19 @@
+#String (conjunto de caracteres: textos, datas...)
+fruta1 = 'abacaxi'
+fruta2 = 'laranja'
+
+
+palavra = fruta1[3] + fruta2[5] #'cj'
+
+frase = fruta1 + ' & ' + fruta2 #'abacaxi & laranja
+
+fraseStringDinamica = f'minha fruta preferida é: {palavra}'
+#String dinâmica fechadas por crase permitem inserir código javascript
+
+
+#Conversão de String para (Int ou Float)
+stringNum ='12'
+num = int(stringNum) #12
+
+numInteiro=14
+string=str(numInteiro)

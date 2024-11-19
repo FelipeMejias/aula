@@ -13,7 +13,7 @@ export default function Agendar({comPrecos}){
     const aluno=JSON.parse(localStorage.getItem('usuario'))
     const [now,setNow]=useState({day:null})
     const [now2,setNow2]=useState({day:null})
-    
+    const [page,setPage]=useState(1)
     function defineNow(){
         const nh=dayjs().format('HH:mm-d');
         const day=parseInt(nh[6])
@@ -52,25 +52,38 @@ export default function Agendar({comPrecos}){
         defineNow();
     },[])
     return(
-        comPrecos?
-        (<Content>
-            <Menu />
+        page==1?
+        <Content>
+            <Menu/>
             <Resto>
-                <Preco/>
-                <Board now={now}  />
+                <button onClick={()=>setPage(2)}>
+                Horários disponíveis
+                </button>
+                <button onClick={()=>setPage(3)}>
+                Precos
+                </button>
             </Resto>
+           
         </Content>
-    ):(listaAlunos.includes(aluno)?
-    <Content>
+        :page==2?
+        <Content>
 
             <Menu />
             <Resto>
                 <Board now={now} disponiveis={disponiveis} eventos={eventos} big={!comPrecos} />
                 <Board now={now2} disponiveis={disponiveis2} eventos={eventos2} big={!comPrecos} />
             </Resto>
+        </Content>:
+        <Content>
+            <Menu />
+            <Resto>
+                <Preco/>
+            </Resto>
         </Content>
-        :
-        <Identifique nomeTentado={aluno}/>)
+    //):(listaAlunos.includes(aluno)?
+   
+     //   :
+      //  <Identifique nomeTentado={aluno}/>)
     )
 }
 
@@ -87,6 +100,9 @@ flex-direction:column;overflow:auto;
 display:flex;
 align-items:center;
 justify-content:flex-start;
+}
+button{width:300px;border:0;font-size:16px;
+height:100px;margin-top:50px;background-color:white;border-radius:10px;
 }
 `
 

@@ -9,6 +9,7 @@ import nd from '../imgs/node.png'
 import py from '../imgs/python.png'
 import hc from '../imgs/html3.jpg'
 import sq from '../imgs/sql.jpg'
+import { eduardo1 } from "./eduardo/eduardo1";
 export const genericos=[
     {   
         titulo:'Javascript',icone:js,
@@ -33,7 +34,7 @@ export const disponiveis=[
     '208','210','214','216','218','220',
     '308','310','314','316','318','320',
     '408','410','414','416','418','420',
-    '508','510','514','516','','',
+    '508','510','514','516',
 ] 
 export const eventos=[
         '510'
@@ -46,7 +47,8 @@ export const disponiveis2=[
     '508','510','514','516','518','520',
 ] 
 export const eventos2=[
-    '216'
+    '216','108',
+    '508','518','520'
 ]
 export const listaAlunos=[
     'convidado',
@@ -100,7 +102,7 @@ export const gaveta=[
             titulo:'Aula 1',
             status:'Feito',
             data:'Terça 12/11',
-            arquivos:[]
+            arquivos:eduardo1
         },
     ]
 ]
