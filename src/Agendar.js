@@ -8,12 +8,11 @@ import Menu from './Menu'
 import { disponiveis2, eventos2, listaAlunos } from './aulas/gaveta'
 import Identifique from './Componentes/Identifique'
 import { disponiveis, eventos } from "./aulas/gaveta";
-export default function Agendar({comPrecos}){
+export default function Agendar({page}){
     const navigate=useNavigate()
     const aluno=JSON.parse(localStorage.getItem('usuario'))
     const [now,setNow]=useState({day:null})
     const [now2,setNow2]=useState({day:null})
-    const [page,setPage]=useState(1)
     function defineNow(){
         const nh=dayjs().format('HH:mm-d');
         const day=parseInt(nh[6])
@@ -56,11 +55,11 @@ export default function Agendar({comPrecos}){
         <Content>
             <Menu/>
             <Resto>
-                <button onClick={()=>setPage(2)}>
+                <button onClick={()=>navigate(`/agendar/${aluno}/horarios`)}>
                 Horários disponíveis
                 </button>
-                <button onClick={()=>setPage(3)}>
-                Precos
+                <button onClick={()=>navigate(`/agendar/${aluno}/pacotes`)}>
+                Pacotes
                 </button>
             </Resto>
            
@@ -70,8 +69,8 @@ export default function Agendar({comPrecos}){
 
             <Menu />
             <Resto>
-                <Board now={now} disponiveis={disponiveis} eventos={eventos} big={!comPrecos} />
-                <Board now={now2} disponiveis={disponiveis2} eventos={eventos2} big={!comPrecos} />
+                <Board now={now} disponiveis={disponiveis} eventos={eventos} big={true} />
+                <Board now={now2} disponiveis={disponiveis2} eventos={eventos2} big={true} />
             </Resto>
         </Content>:
         <Content>
@@ -102,7 +101,8 @@ align-items:center;
 justify-content:flex-start;
 }
 button{width:300px;border:0;font-size:16px;
-height:100px;margin-top:50px;background-color:white;border-radius:10px;
+height:100px;margin-top:50px;background-color:#D9DBAD;
+border-radius:50px;
 }
 `
 

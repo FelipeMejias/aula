@@ -23,7 +23,7 @@ export default function Menu(){
                 <h3>+ exercícios</h3>
             </Botao>
             <Botao jus={'flex-end'} im={38}  top={'2px'} 
-            onClick={()=>navigate(`/horarios/${aluno}`)}>
+            onClick={()=>navigate(`/agendar/${aluno}`)}>
                 <img src={iconeAgendar}/>
                 <h2>Aulas</h2>
                 <h3>horários</h3>

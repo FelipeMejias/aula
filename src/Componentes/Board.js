@@ -99,7 +99,7 @@ h6{font-size:16px;font-weight:500;margin:18px 0 0 0}
 
 `
 const Content=styled.div`
-width:${p=>p.big}%;height:${p=>p.bigH}%;
+width:90%;max-width:450px;height:${p=>p.bigH}%;
 box-sizing:border-box;
 background-color: #d3b28b;
 padding-left:11px;padding-right:11px;

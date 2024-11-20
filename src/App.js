@@ -22,8 +22,9 @@ function App() {
         <BrowserRouter>
           <Tudo>
               <Routes>
-                <Route path='/horarios/:aluno' element={<Agendar/>}/>
-                <Route path='/horarios-precos' element={<Agendar comPrecos={true}/>}/>
+                <Route path='/agendar/:aluno' element={<Agendar page={1}/>}/>
+                <Route path='/agendar/:aluno/pacotes' element={<Agendar page={3}/>}/>
+                <Route path='/agendar/:aluno/horarios' element={<Agendar page={2}/>}/>
 
                 <Route path='/conteudo' element={<Inicial/>}/>
                 <Route path='/conteudo/:materia' element={<Topicos/>}/>

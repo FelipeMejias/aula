@@ -3,8 +3,9 @@ import styled from "styled-components"
 
 export default function Preco(){
     const aul=[4,5,6,7,8,9,10]
-    const sem= [1,2,4,6,8]
+    const sem= [8,6,4,2,1]
     const [aulas,setAulas]=useState(6)
+    
     const [semanas,setSemanas]=useState(2)
     const tabela=[null,2.0,1.6,null,1.2,null,0.9,null,0.6]
     /////////////////// 1 // 2 ////// 4 /////// 6 /////// 8 
@@ -33,7 +34,9 @@ export default function Preco(){
                     <h2>cada aula sai a: ${(preco).toFixed(2)}</h2>
                 </Quadro>
                 <Quadro color={'#b5edad'}>
-                    <p>O valor é pago metade após a primeira aula e metade após o prazo de duração</p>
+                    <p>O valor é pago da seguinte forma:</p> 
+                    <p><strong>metade</strong> após a primeira aula</p>
+                    <p><strong>metade</strong> após o prazo de duração</p>
                 </Quadro>
         </Tudo>
     )
@@ -57,12 +60,15 @@ display:flex;cursor:pointer;color:white;
 justify-content:center;align-items:center;
 `
 
-const Tudo=styled.div`
-width:50%;height:100%;
+const Tudo=styled.div`max-width:450px;
+width:90%;height:100%;
 flex-direction:column;align-items:center;
 h2{font-weight:600;margin:7px 0 7px 0;font-size:18px;}
 h3{font-weight:600;margin:7px 0 7px 0;color:blue;font-size:18px;}
 h4{font-weight:600;margin:7px 0 7px 0;;color:green;font-size:18px;}
+p{font-weight:400;margin:7px 0 7px 0;font-size:18px;
+strong{font-weight:700;}
+}
 `
 const Listinha=styled.div`
 max-width:${props=>props.wid}px;
