@@ -19,14 +19,14 @@ export default function Menu(){
             <Botao jus={'center'}  im={42}  
             onClick={()=>navigate(`/conteudo`)}>
                 <img src={iconeLivro}/>
-                <h2>Resumo</h2>
-                <h3>+ exercícios</h3>
+                <h2>Linguagens</h2>
+                <h3>veja tópicos</h3>
             </Botao>
             <Botao jus={'flex-end'} im={38}  top={'2px'} 
             onClick={()=>navigate(`/agendar/${aluno}`)}>
                 <img src={iconeAgendar}/>
-                <h2>Aulas</h2>
-                <h3>horários</h3>
+                <h2>Horários</h2>
+                <h3>e pacotes</h3>
             </Botao>
             </main>
         </Tudo>
