@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
-import Menu from "./Menu"
 import Identifique from "./Componentes/Identifique"
 import { gaveta, listaAlunos } from "./aulas/gaveta"
 import { useEffect } from "react"
@@ -11,12 +10,19 @@ export default function AulasFeitas(){
     const aluno=JSON.parse(localStorage.getItem('usuario'))
     const info=gaveta[listaAlunos.indexOf(aluno)]
     const exercicios=JSON.parse(localStorage.getItem('exercicios'))||[]
+    function tamanho(qtd){
+        if(qtd<5){
+            return 1
+        }else if(qtd<9){
+            return 2
+        }else{
+            return 3
+        }
+    }
     return (
         listaAlunos.includes(aluno)?
 <Tudo>
-    <Menu aluno={aluno}/>
-    <Resto>
-        {aluno=='clarissa'?<Aula>
+        {aluno=='clarissa'?<Aula ab={20+tamanho(exercicios.length+1)*120}>
             <Cab>
                 <p>Exercícios</p>
             </Cab>
@@ -33,7 +39,7 @@ export default function AulasFeitas(){
             </section>
         </Aula>:<></>}
         {info.map((aula,iAula)=>
-            <Aula>
+            <Aula ab={20+tamanho(aula.arquivos.length)*120}>
                 <Cab>
                     <p>{aula.titulo}</p>
                     <p><small>{aula.data}</small></p>
@@ -47,7 +53,6 @@ export default function AulasFeitas(){
                 </section>
             </Aula>
         )}
-    </Resto>
 </Tudo>
 :
 <Identifique nomeTentado={aluno}/>
@@ -73,9 +78,9 @@ display:flex;
 flex-direction:column;
 align-items:flex-start;
 
-min-height:${p=>p.ab?295:60}px;
+min-height:${p=>p.ab}px;
 width:90%;max-width:450px;
-margin:15px 0 0 calc(50vw - 225px);
+margin:15px 0 0 calc(50% - 225px);
 background-color:white;
 border-radius:15px;
 
@@ -86,6 +91,9 @@ flex-wrap:wrap;
 }
 @media(max-width:500px){
 margin:15px 0 0 5%;
+}
+@media(min-width:750px){
+margin:15px 0 0 calc(50% - 225px);
 }
 `
 
@@ -112,10 +120,13 @@ color:green;font-weight:300;
 `
 const Resto=styled.div`
 align-items:flex-start;
-height:calc(100vh - 75px);width:100vw;
+height:calc(100vh - 75px);width:100%;
 flex-direction:column;
 overflow:hidden;
 overflow-y:scroll;
+@media(min-width:750px){
+height:100%;
+}
 `
 /*[][iAula].map((arquivo,iArquivo)=><Arq onClick={()=>navigate(`/${aluno}/aula${iAula+1}/arquivo${iArquivo+1}`)}>
                     <img src={papel}></img>

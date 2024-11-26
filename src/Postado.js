@@ -67,7 +67,7 @@ position:relative;
 `
 const Novo=styled.div`
 position:relative;align-items:center;
-height:90%;width:90%;
+height:90%;width:90%;max-width:450px;
 border-radius:25px;
 flex-direction:column;justify-content:space-evenly;
 background-color:#35a5ad;

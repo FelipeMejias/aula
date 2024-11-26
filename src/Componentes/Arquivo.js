@@ -2,7 +2,6 @@ import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { gaveta, listaAlunos } from "../aulas/gaveta"
-import Menu from "../Menu"
 import set from '../imgs/setaback.png'
 export default function Arquivo(){
   const navigate=useNavigate()
@@ -30,7 +29,6 @@ export default function Arquivo(){
   }, []);
     return (
         <Tudo>
-            <Menu/>
             <Resto>
               <Heder>
                 <main>
@@ -38,11 +36,10 @@ export default function Arquivo(){
                     <img src={set}/>
                   </Voltar>
                 <h1>{info.titulo}</h1>
+                </main>
                 {fileContent?<Copiar onClick={copiarTexto}>
                <p>{copiado ? 'Texto copiado!' : 'Copiar Texto'}</p> 
             </Copiar>:<></>}
-                </main>
-                
               </Heder>
             <img src={info.img}/>
             {info.coment?<Balao>{info.coment.map(p=><p>{p}</p>)}</Balao>:<></>}
@@ -60,56 +57,64 @@ export default function Arquivo(){
 }
 const Heder=styled.div`
 background-color:#91e4ea;position:sticky;top:0;
-height:50px;width:100%;justify-content:center;
+height:50px;width:100%;justify-content:space-between;
 h1{
-font-size:18px;
+font-size:18px;font-weight:500;
 }p{color:#35A5AD};
-main{background-color:;
-padding:0 35px 0 35px;box-sizing:border-box;
+background-color:;
+padding:0 15px 0 15px;
+box-sizing:border-box;
 display:flex;align-items:center;
-    width:100%;max-width:500px;height:100%;
-    justify-content:space-between;
-}
+  main{
+  display:flex;
+  align-items:center;
+  }
+
 `
 const Resto=styled.div`
-height:calc(100vh - 75px);width:100vw;
+height:calc(100vh - 75px);width:100%;
 overflow:hidden;
 overflow-y:scroll;position:relative;
 flex-direction:column;
 justify-content:flex-start;
 align-items:center;
 img {
-  width: calc( 100vw - 17px ); 
+  width: calc( 100% - 17px ); 
   max-width: 760px; 
   object-fit: cover; 
 }
 overflow:auto;
+@media(min-width:750px){
+height:100%;
+}
 `
 const Copiar=styled.section`cursor:pointer;
-align-items:flex-start;
+align-items:center;
 display:flex;
 flex-direction:column;
-padding:10px;
+padding:8px;
 background-color: #19848c;
 p{margin:0;
 color:white;
 display: inline-block;
 }
-border-radius:10px;margin:0 0 0 20px;
+border-radius:10px;
+width:130px;
 box-sizing:border-box;
 `
 const Voltar=styled.section`cursor:pointer;
 align-items:flex-start;
 display:flex;
 flex-direction:column;
-padding:10px;height:40px;width:40px;border-radius:50%;
+padding:10px;height:40px;width:40px;
+
 color:white;
 img{height:100%;width:100%;}
 p{margin:0;
 
 display: inline-block;
 }
-border-radius:10px;margin:0 20px 0 0px;
+border-radius:10px;margin:0 10px 0 0px;
 box-sizing:border-box;
 `
 const Balao=styled.section`
@@ -127,7 +132,7 @@ border-radius:10px;
 box-sizing:border-box;
 `
 const Tudo=styled.div`
-width:100%;height:100vh;
+width:100%;height:100%;
 flex-direction:column;
 justify-content:flex-start;
 align-items:center;

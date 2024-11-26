@@ -4,7 +4,6 @@ import { javascript } from "../aulas/javascript"
 import { useParams } from "react-router-dom"
 import CodeBlock from "./CodeBox"
 import { useState } from "react"
-import Menu from "../Menu"
 export default function Subtopico(){
     const {topico,subtopico,materia}=useParams()
     const materiaEscolhida=(
@@ -15,7 +14,6 @@ export default function Subtopico(){
     const subtop=top.subtopicos[subtopico-1]
     return (
         <Tudo>
-            <Menu/>
             <Resto>
                 <h1>{subtop.nome}</h1>
             </Resto>

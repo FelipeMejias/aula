@@ -1,9 +1,8 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import Menu from "../Menu"
 import CodeBlock from "./CodeBox"
-
+import {enviarEmail, postarExercicio} from './api'
 export default function AdicionarEx(){
     const {aluno}=useParams()
     const navigate=useNavigate()
@@ -24,6 +23,7 @@ export default function AdicionarEx(){
         const objeto={titulo,comentario,texto}
         const exercicios=JSON.parse(localStorage.getItem('exercicios'))||[]
         const novaLista=[...exercicios,objeto]
+        postarExercicio({titulo,comentario,texto})
         localStorage.setItem(`exercicios`, JSON.stringify(novaLista))
         navigate(`/aulas/${aluno}`)
     }
@@ -63,7 +63,7 @@ button{
 }
 `
 const Novo=styled.div`
-position:relative;align-items:center;
+position:relative;align-items:center;max-width:450px;
 height:90%;width:90%;
 border-radius:25px;color:white;
 flex-direction:column;justify-content:space-evenly;

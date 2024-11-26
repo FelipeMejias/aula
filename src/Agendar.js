@@ -4,7 +4,6 @@ import dayjs from 'dayjs'
 import styled from 'styled-components'
 import Board from './Componentes/Board'
 import Preco from './Componentes/Preco'
-import Menu from './Menu'
 import { disponiveis2, eventos2, listaAlunos } from './aulas/gaveta'
 import Identifique from './Componentes/Identifique'
 import { disponiveis, eventos } from "./aulas/gaveta";
@@ -53,31 +52,21 @@ export default function Agendar({page}){
     return(
         page==1?
         <Content>
-            <Menu/>
-            <Resto>
                 <button onClick={()=>navigate(`/agendar/${aluno}/horarios`)}>
                 Horários disponíveis
                 </button>
                 <button onClick={()=>navigate(`/agendar/${aluno}/pacotes`)}>
                 Pacotes
                 </button>
-            </Resto>
            
         </Content>
         :page==2?
         <Content>
-
-            <Menu />
-            <Resto>
                 <Board now={now} disponiveis={disponiveis} eventos={eventos} big={true} />
                 <Board now={now2} disponiveis={disponiveis2} eventos={eventos2} big={true} />
-            </Resto>
         </Content>:
         <Content>
-            <Menu />
-            <Resto>
                 <Preco/>
-            </Resto>
         </Content>
     //):(listaAlunos.includes(aluno)?
    
@@ -103,6 +92,9 @@ justify-content:flex-start;
 button{width:300px;border:0;font-size:16px;
 height:100px;margin-top:50px;background-color:#D9DBAD;
 border-radius:50px;
+}
+@media(min-width:750px){
+height:100%
 }
 `
 

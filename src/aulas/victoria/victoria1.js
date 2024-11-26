@@ -12,14 +12,14 @@ import i9 from './a1/i9.png'*/
 
 export const victoria1=[
 {   
-    titulo:'Var - Int e Float',icone:js,
-    img:i1,texto:'/textos/victoria/a1/t1.txt'
+    titulo:'Var - Int e Float',
+    icone:js,img:i1,texto:'/textos/victoria/a1/t1.txt'
 },{   
-    titulo:'Var - String',icone:js,
-    img:i2,texto:'/textos/victoria/a1/t2.txt'
+    titulo:'Var - String',
+    icone:js,img:i2,texto:'/textos/victoria/a1/t2.txt'
 },{   
-    titulo:'Var - Booleano',icone:js,
-    img:i3,texto:'/textos/victoria/a1/t3.txt'
+    titulo:'Var - Booleano',
+    icone:js,img:i3,texto:'/textos/victoria/a1/t3.txt'
 },
 
 ]

@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import Menu from "./Menu"
 import js from './imgs/js.png'
 import re from './imgs/react.png'
 import nd from './imgs/node.png'
@@ -57,8 +56,6 @@ export default function Inicial({}){
     },*/
     return (
         <Tudo>
-            <Menu aluno={aluno||'convidado'}/>
-            <Resto>
                 <main>
                     <Ope>
                         <Cab><h6>Rodagem</h6></Cab>
@@ -85,7 +82,6 @@ export default function Inicial({}){
                 func={()=>{navigate(`/conteudo/${passe}`)}} />
                 )}
                 </main>
-            </Resto>
         </Tudo>
     )
 }
@@ -170,16 +166,7 @@ p{
     font-size:15px;margin:20px 0 25px 0;
     width:90%;
 }
-`
-const Resto=styled.div`
-width:100%;height:calc(100% - 75px);
-flex-direction:column;
-flex-wrap:wrap;
-overflow:auto;
-display:flex;
-align-items:center;
-background-color:;
-justify-content:space-evenly;
+    justify-content:space-evenly;
 main{
     width:90%;max-width:450px;
     flex-direction:row;
@@ -190,4 +177,17 @@ main{
     justify-content:space-between;
     padding-bottom:30px;box-sizing:border-box;
 }
+@media(min-width:750px){
+height:100%;
+}
+`
+const Resto=styled.div`
+width:100%;height:calc(100% - 75px);
+flex-direction:column;
+flex-wrap:wrap;
+overflow:auto;
+display:flex;
+align-items:center;
+background-color:;
+
 `

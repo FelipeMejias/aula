@@ -37,7 +37,6 @@ function gerarEventos(){
     const [daysData,setDaysData]=useState([])
     useEffect(separateHabits,[now])
     function definirData(day){
-        console.log(now.weeks)
         const {d,m}=now.weeks[day]
         return`${d} / ${m}`
     }
@@ -65,7 +64,7 @@ position:absolute;top:px;
 `
 const NowIndicator=styled.div`
 height:5px;width:92%;background-color:red;
-position:absolute;top:calc(${props=>props.level}% - 1.5px);z-index:5;
+position:absolute;top:calc(${props=>props.level}% - 1.5px);z-index:4;
 border-radius:2.5px
 
 `

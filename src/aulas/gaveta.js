@@ -1,15 +1,21 @@
-import { clarissa1 } from "./clarissa/clarissa1";
-import { antonio1 } from "./antonio/antonio1";
-import { clarissa2 } from "./clarissa/clarissa2";
-import { victoria1 } from "./victoria/victoria1";
-import { victoria2 } from "./victoria/victoria2";
 import js from '../imgs/js.png'
 import re from '../imgs/react.png'
 import nd from '../imgs/node.png'
 import py from '../imgs/python.png'
 import hc from '../imgs/html3.jpg'
 import sq from '../imgs/sql.jpg'
+
+import { clarissa1 } from "./clarissa/clarissa1";
+import { clarissa2 } from "./clarissa/clarissa2";
+
+import { victoria1 } from "./victoria/victoria1";
+import { victoria2 } from "./victoria/victoria2";
+
+import { antonio1 } from "./antonio/antonio1";
+
 import { eduardo1 } from "./eduardo/eduardo1";
+
+
 export const genericos=[
     {   
         titulo:'Javascript',icone:js,
@@ -73,6 +79,16 @@ export const gaveta=[
             data:'Quinta 24/10',
             arquivos:clarissa1
         },{
+            titulo:'Aula 2',
+            status:'Feito',
+            data:'Quinta 31/10',
+            arquivos:clarissa2
+        },,{
+            titulo:'Aula 2',
+            status:'Feito',
+            data:'Quinta 31/10',
+            arquivos:clarissa2
+        },,{
             titulo:'Aula 2',
             status:'Feito',
             data:'Quinta 31/10',

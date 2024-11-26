@@ -12,14 +12,14 @@ import i9 from './a1/i9.png'
 */
 export const clarissa1=[
 {   
-    titulo:'Exercicio 1',icone:py,
-    img:i1,texto:'/textos/clarissa/a1/t1.txt'
+    titulo:'Exercicio 1',
+    icone:py,img:i1,texto:'/textos/clarissa/a1/t1.txt'
 },{   
-    titulo:'Exercicio 2',icone:py,
-    img:i2,texto:'/textos/clarissa/a1/t2.txt'
+    titulo:'Exercicio 2',
+    icone:py,img:i2,texto:'/textos/clarissa/a1/t2.txt'
 },{   
-    titulo:'Achar Lista mais profunda',icone:py,
-    img:i3,texto:'/textos/clarissa/a1/t3.txt'
+    titulo:'Achar Lista mais profunda',
+    icone:py,img:i3,texto:'/textos/clarissa/a1/t3.txt'
 },
 
 ]

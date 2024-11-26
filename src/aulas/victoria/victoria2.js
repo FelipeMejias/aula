@@ -12,17 +12,17 @@ import i9 from './a2/i9.png'*/
 
 export const victoria2=[
 {   
-    titulo:'index.html',icone:re,
-    img:i1,texto:'/textos/victoria/a2/t1.txt'
+    titulo:'index.html',
+    icone:re,img:i1,texto:'/textos/victoria/a2/t1.txt'
 },{   
-    titulo:'App.js',icone:re,
-    img:i2,texto:'/textos/victoria/a2/t2.txt'
+    titulo:'App.js',
+    icone:re,img:i2,texto:'/textos/victoria/a2/t2.txt'
 },{   
-    titulo:'loja.js',icone:re,
-    img:i3,texto:'/textos/victoria/a2/t3.txt'
+    titulo:'loja.js',
+    icone:re,img:i3,texto:'/textos/victoria/a2/t3.txt'
 },{   
-    titulo:'portes.js',icone:re,
-    img:i4,texto:'/textos/victoria/a2/t4.txt'
+    titulo:'portes.js',
+    icone:re,img:i4,texto:'/textos/victoria/a2/t4.txt'
 },
 
 ]

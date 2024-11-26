@@ -34,9 +34,11 @@ export default function Preco(){
                     <h2>cada aula sai a: ${(preco).toFixed(2)}</h2>
                 </Quadro>
                 <Quadro color={'#b5edad'}>
-                    <p>O valor é pago da seguinte forma:</p> 
+                    {/*<p>O valor é pago da seguinte forma:</p> 
                     <p><strong>metade</strong> após a primeira aula</p>
                     <p><strong>metade</strong> após o prazo de duração</p>
+                */}
+                    
                 </Quadro>
         </Tudo>
     )

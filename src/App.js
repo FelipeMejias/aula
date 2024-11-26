@@ -12,15 +12,27 @@ import SalvarNome from './Componentes/SalvarNomes';
 import AdicionarEx from './Componentes/AdicionarEx';
 import Postado from './Postado';
 import Subtopico from './Componentes/Subtopico';
-
+import Aba from './Menus/Aba';
+import MyContext from './Componentes/context';
+import MenuCel from './Menus/MenuCel'
+import MenuPc from './Menus/MenuPc'
 function App() {
-  const valorContexto={}
+  
+  const [aba,setAba]=useState(false)
+  const valorContexto={aba,setAba}
   return (
     <div className="App">
-      {/*<DarkContext.Provider value={valorContexto}>*/}
-
+      <MyContext.Provider value={valorContexto}>
         <BrowserRouter>
           <Tudo>
+
+            <MenuPc/>
+
+            <MenuCel/>
+            {aba?<Aba/>:<></>}
+
+<Resto>
+
               <Routes>
                 <Route path='/agendar/:aluno' element={<Agendar page={1}/>}/>
                 <Route path='/agendar/:aluno/pacotes' element={<Agendar page={3}/>}/>
@@ -41,11 +53,12 @@ function App() {
                 <Route path='/victoria' element={<SalvarNome nome='victoria' />}/>
                 <Route path='/eduardo' element={<SalvarNome nome='eduardo' />}/>
                 <Route path='/isaac' element={<SalvarNome nome='isaac' />}/>
+        
               </Routes>
+              </Resto>
           </Tudo>
         </BrowserRouter>
-
-      {/*</DarkContext.Provider>*/}
+        </MyContext.Provider>
     </div>
   );
 }
@@ -57,7 +70,7 @@ background-color:#f0f2b8;
 height:100vh;
 width:100vw;
 display:flex;
-flex-direction:column;
+
 align-items:center;
 
 div{box-sizing:border-box;
@@ -65,5 +78,19 @@ div{box-sizing:border-box;
   
 }
 -webkit-tap-highlight-color: transparent;
+@media(max-width:750px){
+height:100%;
+flex-direction:column;
+}
+`
+const Resto=styled.div`
+align-items:flex-start;
+height:calc(100vh - 75px);width:100%;
+flex-direction:column;
+overflow:hidden;
+overflow-y:scroll;
+@media(min-width:750px){
+height:100%;
+}
 `
 export default App;

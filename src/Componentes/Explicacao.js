@@ -4,7 +4,6 @@ import { javascript } from "../aulas/javascript"
 import { useParams } from "react-router-dom"
 import CodeBlock from "./CodeBox"
 import { useState } from "react"
-import Menu from "../Menu"
 export default function Explicacao(){
     const {topico,subtopico,materia}=useParams()
     const materiaEscolhida=(
@@ -21,8 +20,6 @@ export default function Explicacao(){
     }
     return (
         <Tudo>
-            <Menu numeros={[parseInt(topico),parseInt(subtopico)]}/>
-            <Resto>
             <h1>{subtop.nome}</h1>
             <main>
             <Esq>
@@ -39,7 +36,6 @@ export default function Explicacao(){
                 <CodeBlock texto={conv(subtop.texto)} />
             </Dir>
             </main>
-            </Resto>
         </Tudo>
     )
 }

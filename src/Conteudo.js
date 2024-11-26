@@ -2,7 +2,6 @@ import styled from "styled-components"
 import { python } from "./aulas/python"
 import { javascript } from "./aulas/javascript"
 import { useNavigate, useParams } from "react-router-dom"
-import Menu from "./Menu"
 import { useState } from "react"
 import ch from './imgs/check.png'
 import setaBaixo from './imgs/seta.png'
@@ -45,8 +44,6 @@ export default function Topicos(){
     }
     return (
         <Tudo>
-            <Menu aluno={aluno||'convidado'}/>
-            <Resto>
             {materiaEscolhida.map((top,index)=>
             <Topico ab={ab[index]?50+50*top.subtopicos.length:60} ult={index==materiaEscolhida.lenth-1}>
                 <Cab onClick={()=>setarAb(index)}><h6>{top.nome}</h6></Cab>
@@ -72,7 +69,6 @@ export default function Topicos(){
             </Topico>
             )}
             <Fantasma/>
-             </Resto>
         </Tudo>
     )
 }
@@ -81,7 +77,7 @@ function Quadrado({func,marcado}){
         <Qua onClick={func}>{marcado?<img src={ch}/>:<button/>}</Qua>
     )
 }
-const Qua=styled.div`
+const Qua=styled.div`background-color:;
 cursor:pointer;
 display:flex;
 align-items:center;justify-content:center;
@@ -90,7 +86,7 @@ img{height:48px;}
 button{
 cursor:pointer;background-color:transparent;
     border-radius:50%;width:30px;height:30px;
-    border: 4px #d3d3d3 solid;
+    border: 4px #d3d3d3 solid;margin:0;
 }
 `
 const HoldSub=styled.div`background-color:;
@@ -99,9 +95,21 @@ margin:0px 0 10px 20px;
 `
 const Fantasma=styled.div`min-height:50px;width:100%;`
 const Resto=styled.div`
-width:100%;height:calc(100% - 75px);
-flex-direction:column;overflow:auto;
-aside{background-color:;
+width:100%;
+flex-direction:row;overflow:auto;
+
+`
+
+const Tudo=styled.div`
+align-items:center;
+width:100%;
+height:calc(100% - 75px);
+flex-direction:column;
+h6{
+    margin:0 0 5px 0px;font-size:19px;font-weight:500;
+}
+aside{
+background-color:;
 display:flex;
 align-items:flex-end;justify-content:flex-start;
     font-size:14px;font-weight:500;
@@ -109,26 +117,20 @@ align-items:flex-end;justify-content:flex-start;
     height:40px;width:40px;
     img{height:18px;}
 }
-`
-const Tudo=styled.div`
-align-items:center;
-width:100%;
+    @media(min-width:750px){
 height:100%;
-flex-direction:column;
-h6{
-    margin:0 0 5px 0px;font-size:19px;font-weight:500;
 }
-    
 `
 
 const Topico=styled.div`
+
 align-items:flex-start;
 display:flex;
 flex-direction:column;
 cursor:pointer;
 position:relative;
 width:90%;max-width:450px;
-margin:15px 0 0 calc(50vw - 225px);
+margin:15px 0 0 calc(50% - 225px);
 background-color:white;
 min-height:${p=>p.alt}px;
 
@@ -136,8 +138,11 @@ border-radius:15px;
 p{
     margin:0px 0 0 0px;text-align:left;
 }
-    @media(max-width:500px){
+@media(max-width:500px){
 margin:15px 0 0 5%;
+}
+@media(min-width:750px){
+margin:15px 0 0 calc(50% - 225px);
 }
 `
 const Caixa=styled.div`background-color:;

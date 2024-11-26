@@ -12,10 +12,10 @@ import i9 from './a2/i9.png'
 */
 export const clarissa2=[
 {   
-    titulo:'Exercicio 1',icone:py,
-    img:i1,texto:'/textos/clarissa/a2/t1.txt'
+    titulo:'Exercicio 1',
+    icone:py,img:i1,texto:'/textos/clarissa/a2/t1.txt'
 },{   
-    titulo:'Exercicio 3',icone:py,
-    img:i2,texto:'/textos/clarissa/a2/t2.txt'
+    titulo:'Exercicio 3',
+    icone:py,img:i2,texto:'/textos/clarissa/a2/t2.txt'
 },
 ]

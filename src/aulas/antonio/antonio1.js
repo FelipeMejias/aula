@@ -14,50 +14,50 @@ import i9 from './a1/i9.png'
 
 export const antonio1=[
 {   
-    titulo:'package.json',icone:nd,
-    img:i1,texto:'',coment:[
+    titulo:'package.json',
+    icone:nd,img:i1,texto:'',coment:[
 'Adicionar o texto da 1ª linha',
 'Adicionar o texto da 8ª linha e a vírgula no final da 7ª',
 'Instalar as dependências: npm install express cors nodemon',
 'Rodar o código: npm start'
     ]
-,
 },{
-    titulo:'index.js',icone:nd,
-    img:i2,texto:'/textos/antonio/a1/t2.txt'
+    titulo:'index.js',
+    icone:nd,img:i2,texto:'/textos/antonio/a1/t2.txt'
 },{
-    titulo:'funcoes.js',icone:nd,
-    img:i3,texto:'/textos/antonio/a1/t3.txt'
+    titulo:'funcoes.js',
+    icone:nd,img:i3,texto:'/textos/antonio/a1/t3.txt'
 },{
-    titulo:'cardapio.js',icone:nd,
-    img:i4,texto:'/textos/antonio/a1/t4.txt'
+    titulo:'cardapio.js',
+    icone:nd,img:i4,texto:'/textos/antonio/a1/t4.txt'
 },{
-    titulo:'App.css',icone:re,
-    img:i5,texto:'',coment:[
+    titulo:'App.css',
+    icone:re,img:i5,texto:'',coment:[
 'Só colei o que estava no index.css',
 'Instalar as dependências: npm install styled-components axios',
 'Rodar o código: npm start'
     ]
 },{
-    titulo:'index.js',icone:re,
-    img:i6,texto:'/textos/antonio/a1/t6.txt'
+    titulo:'index.js',
+    icone:re,img:i6,texto:'/textos/antonio/a1/t6.txt'
 },{
-    titulo:'App.js',icone:re,
-    img:i7,texto:'/textos/antonio/a1/t7.txt'
+    titulo:'App.js',
+    icone:re,img:i7,texto:'/textos/antonio/a1/t7.txt'
 },{
-    titulo:'Item.js',icone:re,
-    img:i8,texto:'/textos/antonio/a1/t8.txt'
+    titulo:'Item.js',
+    icone:re,img:i8,texto:'/textos/antonio/a1/t8.txt'
 },{
-    titulo:'api.js',icone:re,
-    img:i9,texto:'/textos/antonio/a1/t9.txt'
+    titulo:'api.js',
+    icone:re,img:i9,texto:'/textos/antonio/a1/t9.txt'
 }
 ]
 
 
 
    /* {
-        titulo:'função',icone:js,
-        texto:`
+        titulo:'função',
+        icone:js,
+texto:`
 // Funcao e um bloco de codigo executado quando seu nome e chamado
 
  
@@ -73,8 +73,9 @@ function minhaFuncao(){
 
 minhaFuncao()
     `},{
-        titulo:'função-parâmetro',icone:js,
-        texto:`
+        titulo:'função-parâmetro',
+        icone:js,
+texto:`
 // Os parametros sao escolhidos na criacao da funcao
 
 // E sao passados na hora de chamar a funcao, a ordem importa
@@ -101,8 +102,9 @@ compareOsDois( 7 , 5 )
 compareOsDois( 4 , 4 )
         `
     },{
-        titulo:'variáveis',icone:js,
-        texto:`
+        titulo:'variáveis',
+        icone:js,
+texto:`
 // Varaveis são criadas para guardarem um valor
 
 // As 3 variáveis simples são:
@@ -126,8 +128,9 @@ const minhaFruta = 'melancia'
 const statusAtivo = True
         `
     },{
-        titulo:'condicionais',icone:js,
-        texto:`
+        titulo:'condicionais',
+        icone:js,
+texto:`
 // If executa o bloco de código caso a condicao seja True
 
 // Esse bloco e definido pelo que tem 1 Tab a mais que ele
@@ -163,8 +166,9 @@ if( qua_1_idade > 10 ){
 }
         `
     },{
-        titulo:'Funções dentro de funções',icone:js,
-        texto:`
+        titulo:'Funções dentro de funções',
+        icone:js,
+texto:`
 function calcularMedia(p1,p2){
     const somaTotal=soma(p1,p2)
     const resposta=divide(somaTotal,2)
@@ -186,8 +190,8 @@ const media=calcularMedia(notaDaP1, notaDaP2 )
 console.log(media)
         `
     },{
-        titulo:'Componente React',icone:re,
-   
+        titulo:'Componente React',
+        icone:re,
         texto:`
 import styled from "styled-components"
 
@@ -203,8 +207,9 @@ const Conteudo=styled.div'
 '
         `
     },{
-        titulo:'Rect-index.js',icone:re,
-        texto:`
+        titulo:'Rect-index.js',
+        icone:re,
+texto:`
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './App.css';
@@ -256,8 +261,8 @@ overflow:auto;
 '  
         
         `
-    },{titulo:'React-Item.js',icone:re,
-        texto:`
+    },{titulo:'React-Item.js',
+    icone:re,    texto:`
 import styled from "styled-components"
 
 export default function Item({nome,descricao,preco}){
@@ -284,8 +289,9 @@ Ou seja,
 se a condição der True é usada a resposta1, se der False é usada a resposta2
         `
     },{
-        titulo:'React- api.js',icone:re,
-        texto:`
+        titulo:'React- api.js',
+        icone:re,
+texto:`
 import axios from "axios"
 
 const api = axios.create({
@@ -297,8 +303,8 @@ export const getComidas = async () => {
 /* Nao se preocupe em entender esse arquivo, veja apenas que voce coloca a url do back-end
 e coloca dentro de cada função o nome da rota igual o que voce escolheu no back-end: /comidas
         `
-    },{titulo:'Node',icone:re,
-        texto:`
+    },{titulo:'Node',
+    icone:re,    texto:`
 import cors from 'cors'
 import Express, {json} from 'express'
 
