@@ -1,0 +1,27 @@
+idadesTurma1=[25,35,42,18,23]
+nomesTurma1=['Julia','Eduardo','Gabriel','Lucas','Ana']
+
+idadesTurma2=[20,30,40,18,23]
+nomesTurma2=['Vitor','Bruno','Biel','Heitor','Naiara']
+
+listaIndices = range(0, 5)
+'''
+Dada uma lista de idades e uma lista de nomes:
+Faça uma função que retorne uma lista de dicionáriosno formato:
+{ "idade":25 , "nome":"Julia" }
+'''
+
+def criaDict(idades, nomes):
+    final = []
+    for indice in listaIndices:
+        final.append({
+        "nome": nomes[indice],
+        "idade": idades[indice]
+    })
+    return final
+
+estudantesTurma1=criaDict(idadesTurma1, nomesTurma1)
+estudantesTurma2=criaDict(idadesTurma2, nomesTurma2)
+
+print(estudantesTurma1)
+print(estudantesTurma2)

@@ -1,0 +1,27 @@
+#- WHILE e FOR
+c=0
+while c<10:
+    if c==4: continue
+    if c==7: break
+    print(c)
+    c+=1
+# Printa: 0  1  2  3  5  6 
+
+# continue - pula para a róxima iteração
+# break - quebra o loop inteiro
+# pass - ignora a linha
+
+lista=['bruno','julia','pedro','ana']
+listaAprovados=[]
+
+for nome in lista:
+    print(f'Anotações sobre {nome} ')
+    if nome=='bruno':
+        print('Reprovado')
+    elif nome=='julia':
+        pass
+    else:
+        print('Nenhuma consideração')
+        listaAprovados.append(nome)
+
+print(listaAprovados)

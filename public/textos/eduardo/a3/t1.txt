@@ -1,0 +1,19 @@
+datasProvaDeFisica=['12/02/24','25/05/24','04/08/24','29/11/24']
+datasProvaDeIngles=['25/02/24','03/06/24','16/08/24','20/11/24']
+'''
+Dada uma lista de strings no formato:
+"13/10/97"
+Faça uma função que imprima uma lista de dicionários no formato:
+{ "dia":12 , "mes":2 , "ano":24 }
+'''
+def criarData(lista):
+    # escreva a função aqui
+    resposta=None # altere o valor da resposta
+    return resposta
+
+
+dicionarioFisica=criarData(datasProvaDeFisica)
+dicionarioIngles=criarData(datasProvaDeIngles)
+
+print(dicionarioFisica)
+print(dicionarioIngles)

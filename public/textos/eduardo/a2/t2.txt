@@ -1,0 +1,24 @@
+#ADICIONAR
+lista = [1, 2, 3]
+lista.append(4) 
+print(lista)  # [1, 2, 3, 4]
+
+lista.insert(0, 50)  
+print(lista)  # [1, 99, 2, 3, 4]
+
+
+#REMOVER
+
+lista = [1, 2, 3, 2]
+lista.remove(2)  # Remove o primeiro 2
+print(lista)  # [1, 3, 2]
+
+lista = [1, 2, 3]
+item_removido = lista.pop(1)  # Remove o item na posição 1
+print(lista)  # [1, 3]
+print(item_removido)  # 2
+
+
+lista = [1, 2, 3,4,5,6,7,8,9]
+lista = lista[:5] + lista[2:]  # Remove o elemento na posição 1
+print(lista)  # [1, 3]

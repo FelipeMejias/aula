@@ -1,0 +1,19 @@
+# DICIONÁRIO (composto por Chaves e Valores)
+aluno={
+    "nome":"Nubia",
+    "idade": 35,
+    "notas": [8,6]
+} 
+
+# Acessar o valor da chave "idade"
+idadeAluno= aluno["idade"]
+
+# Alterar o valor da chave "idade"
+aluno["idade"]=65
+
+
+print( aluno.keys() )
+# Printa: dict_keys(['nome', 'idade', 'notas'])
+
+print( aluno.values() )
+# Printa: dict_values(['Nubia', 65, [8, 6]])

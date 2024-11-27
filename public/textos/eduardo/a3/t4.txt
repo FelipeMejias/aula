@@ -1,0 +1,36 @@
+import psycopg2
+from psycopg2 import Error
+
+try:
+    # Configurações de conexão
+    connection = psycopg2.connect(
+        user="postgres",
+        password="postgres",
+        host="localhost",
+        port="5432",
+        database="nome_do_seu_banco"
+    )
+    # Criar um cursor para executar operações SQL
+    cursor = connection.cursor()
+
+    sql_query = "SELECT * FROM casas;"
+
+    # Executar a consulta
+    cursor.execute(sql_query)
+
+    # Recuperar todos os resultados da consulta
+    records = cursor.fetchall()
+
+    # Exibir os resultados
+    print(records)
+    for row in records:
+        print(row)
+
+except (Exception, Error) as error:
+    print("Erro ao conectar ao PostgreSQL", error)
+finally:
+    # Fechar a conexão se estiver aberta
+    if connection:
+        cursor.close()
+        connection.close()
+        print("Conexão ao PostgreSQL fechada")

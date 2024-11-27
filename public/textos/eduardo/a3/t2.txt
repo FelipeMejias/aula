@@ -1,0 +1,15 @@
+# DICA
+palavra='amora-pera-laranja-uva'
+separada=palavra.split('-')
+print(separada)
+# Printa ["amora","pera","laranja","uva"]
+
+
+# BONUS
+'''
+Dada uma lista de objetos no formato:
+{ "evento":"Rock in Rio" , "data":"13/05/2021" }
+
+Faça uma função que imprima uma lista de dicionários no formato:
+{ "evento":"Rock in Rio" , "mes":10 }
+'''

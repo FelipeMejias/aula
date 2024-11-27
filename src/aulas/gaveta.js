@@ -14,6 +14,8 @@ import { victoria2 } from "./victoria/victoria2";
 import { antonio1 } from "./antonio/antonio1";
 
 import { eduardo1 } from "./eduardo/eduardo1";
+import { eduardo2 } from './eduardo/eduardo2'
+import { eduardo3 } from './eduardo/eduardo3'
 
 
 export const genericos=[
@@ -119,6 +121,16 @@ export const gaveta=[
             status:'Feito',
             data:'Terça 12/11',
             arquivos:eduardo1
+        },{
+            titulo:'Aula 2',
+            status:'Feito',
+            data:'Terça 19/11',
+            arquivos:eduardo2
+        },{
+            titulo:'Aula 3',
+            status:'Feito',
+            data:'Terça 26/11',
+            arquivos:eduardo3
         },
     ]
 ]

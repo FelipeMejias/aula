@@ -1,0 +1,40 @@
+from flask import Flask, jsonify
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)  # Habilita CORS para todas as rotas
+
+# Rotas
+@app.route('/')
+def home():
+    return "Bem-vindo ao backend em Python!"
+
+@app.route('/api', methods=['GET'])
+def api():
+    string='Olá, fiz minha primeira api'
+    return jsonify(string)
+
+@app.route('/api2', methods=['GET'])
+def api2():
+    string='Olá, fiz minha segunda api'
+    return jsonify(string)
+
+# Iniciar o servidor
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
+
+
+'''
+@app.route('/api', methods=['GET', 'POST', 'PUT', 'DELETE'])
+def my_api():
+    if request.method == 'GET':
+        return jsonify({'message': 'Você fez uma requisição GET!'})
+    elif request.method == 'POST':
+        data = request.json  # Recebe JSON enviado no corpo da requisição
+        return jsonify({'message': 'Você fez uma requisição POST!', 'data': data})
+    elif request.method == 'PUT':
+        data = request.json  # Recebe JSON enviado no corpo da requisição
+        return jsonify({'message': 'Você fez uma requisição PUT!', 'data': data})
+    elif request.method == 'DELETE':
+        return jsonify({'message': 'Você fez uma requisição DELETE!'})
+    '''
