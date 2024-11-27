@@ -45,7 +45,7 @@ export const disponiveis=[
     '508','510','514','516',
 ] 
 export const eventos=[
-        '510'
+        '218','318','320','416','510'
     ]
 export const disponiveis2=[
     '108','110','114','116','118','120',
@@ -55,8 +55,7 @@ export const disponiveis2=[
     '508','510','514','516',
 ] 
 export const eventos2=[
-    '216','108',
-    '508','518','520'
+    '218',
 ]
 export const listaAlunos=[
     'convidado',
