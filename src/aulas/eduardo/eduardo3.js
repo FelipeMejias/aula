@@ -1,11 +1,13 @@
 import py from '../../imgs/python.png'
 import flet from '../../imgs/flet.png'
 import sql from '../../imgs/sql.jpg'
+import notas from '../../imgs/notass.jpg'
 import i1 from './a3/i1.png'
 import i2 from './a3/i2.png'
 import i3 from './a3/i3.png'
 import i4 from './a3/i4.png'
 import i5 from './a3/i5.png'
+import i6 from './a3/i6.png'
 export const eduardo3=[
 ,{   
     titulo:'Ex- Data de provas',
@@ -22,5 +24,8 @@ export const eduardo3=[
 },{   
     titulo:'Ex- Feito em aula',
     icone:py,img:i5,texto:'/textos/eduardo/a3/t5.txt'
+},{   
+    titulo:'Diferença Front e Back',
+    icone:notas,img:i6,texto:''
 }
 ]
