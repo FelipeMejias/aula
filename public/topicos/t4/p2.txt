@@ -1,0 +1,7 @@
+# Inserir e retirar elementos de uma lista
+lista = [1, 2, 3]
+lista.append(4)  # Adiciona no final
+print(lista)  # Saída: [1, 2, 3, 4]
+
+lista.pop()  # Remove o último elemento
+print(lista)  # Saída: [1, 2, 3]

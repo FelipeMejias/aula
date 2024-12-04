@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom"
 import styled, { ThemeConsumer } from "styled-components"
 import { useContext, useState } from "react"
-import menu from '../imgs/menu.png'
-import MyContext from '../Componentes/context'
+import menu from '../_imgs/menu.png'
+import MyContext from '../utils/context'
 export default function MenuCel(){
     const aluno=JSON.parse(localStorage.getItem('usuario'))||'sem-usuario'
     const navigate=useNavigate()
@@ -25,14 +25,14 @@ const QuadroCel=styled.article`
 background-color:;
 padding-left:20px;box-sizing:border-box;
 display:flex;align-items:center;
-    width:100%;max-width:500px;height:100%;
+    width:100%;max-width:520px;height:100%;
     justify-content:space-between;
 
 
 `
 
 const Tudo=styled.article`
-width:100%;height:75px;
+width:100%;height:60px;
 justify-content:center;
 background-color:#35A5AD;
 display:none;

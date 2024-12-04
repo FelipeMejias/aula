@@ -1,0 +1,4 @@
+# Função que imprime uma saudação
+def saudacao():
+    print("Olá, mundo!")
+saudacao()  # Chama a função saudacao

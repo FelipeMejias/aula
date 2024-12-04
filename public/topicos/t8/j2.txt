@@ -1,0 +1,2 @@
+// Lançar exceção personalizada em JavaScript
+throw new Error("Mensagem de erro personalizada.");

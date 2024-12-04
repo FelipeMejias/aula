@@ -1,0 +1,10 @@
+# Separar string em uma lista de palavras
+frase = "Eu amo programação"
+palavras = frase.split(" ")  # Separa por espaço
+print(palavras)  # Saída: ['Eu', 'amo', 'programação']
+
+
+# Separar uma data em partes
+data = "2024-11-21"
+partes = data.split("-")  # Separa a data por "-"
+print(partes)  # Saída: ['2024', '11', '21']

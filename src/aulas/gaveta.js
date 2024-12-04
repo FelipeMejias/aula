@@ -1,9 +1,9 @@
-import js from '../imgs/js.png'
-import re from '../imgs/react.png'
-import nd from '../imgs/node.png'
-import py from '../imgs/python.png'
-import hc from '../imgs/html3.jpg'
-import sq from '../imgs/sql.jpg'
+import js from '../_imgs/js.png'
+import re from '../_imgs/react.png'
+import nd from '../_imgs/node.png'
+import py from '../_imgs/python.png'
+import hc from '../_imgs/html3.jpg'
+import sq from '../_imgs/sql.jpg'
 
 import { clarissa1 } from "./clarissa/clarissa1";
 import { clarissa2 } from "./clarissa/clarissa2";

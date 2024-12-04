@@ -1,0 +1,11 @@
+6. Variável Objeto
+Objetos são usados para armazenar dados de forma estruturada. Vamos ver como criar e acessar objetos.
+
+A. Estrutura
+Objetos são compostos por pares chave/valor. Eles são úteis para armazenar dados relacionados de forma organizada.
+
+B. Lista de Objetos
+É possível ter uma lista que armazena objetos, permitindo manipular conjuntos de dados mais complexos.
+
+C. Métodos Úteis
+Os dicionários e objetos oferecem métodos úteis para manipulação de dados.

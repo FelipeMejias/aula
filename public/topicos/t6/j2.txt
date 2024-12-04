@@ -1,0 +1,6 @@
+// Lista de objetos
+let pessoas = [
+    { nome: "João", idade: 30 },
+    { nome: "Maria", idade: 25 }
+];
+console.log(pessoas);  // Exibe a lista de objetos

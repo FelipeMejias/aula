@@ -1,0 +1,3 @@
+# Adicionar conteúdo a um arquivo
+with open("arquivo.txt", "a") as arquivo:
+    arquivo.write("\nEste é um novo conteúdo adicionado.")

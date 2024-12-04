@@ -1,0 +1,7 @@
+# Mapear e filtrar listas
+lista = [1, 2, 3, 4]
+lista_quadrada = list(map(lambda x: x * x, lista))  # Mapeia e transforma os valores
+print(lista_quadrada)  # Saída: [1, 4, 9, 16]
+
+lista_filtrada = list(filter(lambda x: x > 2, lista))  # Filtra valores maiores que 2
+print(lista_filtrada)  # Saída: [3, 4]

@@ -1,0 +1,13 @@
+// Exemplo com Promises
+function minhaPromessa() {
+    return new Promise((resolve, reject) => {
+        let sucesso = true;
+        if (sucesso) {
+            resolve("Operação bem-sucedida");
+        } else {
+            reject("Erro na operação");
+        }
+    });
+}
+
+minhaPromessa().then(console.log).catch(console.error);

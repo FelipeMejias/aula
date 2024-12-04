@@ -1,0 +1,5 @@
+# Try/Except para capturar erro
+try:
+    x = 1 / 0  # Vai gerar erro de divisão por zero
+except ZeroDivisionError:
+    print("Não é possível dividir por zero.")

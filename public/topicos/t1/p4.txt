@@ -1,0 +1,6 @@
+# Validação de tipo: verifica se a variável contém um número válido
+idade = "25"  # A variável idade está como string
+if not idade.isdigit():  # Verifica se o valor não é um número
+    print("Idade inválida!")
+else:
+    print("Idade válida!")

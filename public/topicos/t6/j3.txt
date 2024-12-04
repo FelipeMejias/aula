@@ -1,0 +1,15 @@
+// Criando objeto
+let pessoa = {
+    nome: "João",
+    idade: 30,
+    ativo: true
+};
+
+// Obtendo as chaves
+console.log(Object.keys(pessoa));  // Saída: ["nome", "idade", "ativo"]
+
+// Obtendo os valores
+console.log(Object.values(pessoa));  // Saída: ["João", 30, true]
+
+// Obtendo os pares chave/valor
+console.log(Object.entries(pessoa));  // Saída: [["nome", "João"], ["idade", 30], ["ativo", true]]

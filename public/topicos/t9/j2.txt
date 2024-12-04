@@ -1,0 +1,10 @@
+// Exemplo com Async/Await
+async function minhaFuncaoAsync() {
+    try {
+        let resultado = await minhaPromessa();
+        console.log(resultado);
+    } catch (error) {
+        console.log(error);
+    }
+}
+minhaFuncaoAsync();

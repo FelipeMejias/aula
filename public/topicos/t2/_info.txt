@@ -1,0 +1,11 @@
+2. Condicionais
+As condicionais são usadas para executar diferentes blocos de código com base em uma condição específica. Vamos aprender a usar if, else, e elif para controlar o fluxo do programa.
+
+A. If/else
+A estrutura if/else permite executar um bloco de código se a condição for verdadeira, e outro bloco caso contrário.
+
+B. Elif
+Em Python, podemos usar o elif para adicionar mais de uma condição. O elif é executado apenas se a condição anterior for falsa e a nova for verdadeira.
+
+C. Condicionais aninhadas
+É possível usar condicionais dentro de outras, formando um teste hierárquico de condições.

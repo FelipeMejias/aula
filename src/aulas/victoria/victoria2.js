@@ -1,4 +1,4 @@
-import re from '../../imgs/react.png'
+import re from '../../_imgs/react.png'
 import i1 from './a2/i1.png'
 import i2 from './a2/i2.png'
 import i3 from './a2/i3.png'

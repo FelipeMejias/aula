@@ -11,8 +11,7 @@ export const javascript=[
   subtopicos:[
     {nome:'If+else'},
     {nome:'Else if'},
-    {nome:'Condicionais aninhadas'},
-    {nome:'Tipagem'},]
+    {nome:'Condicionais aninhadas'},]
 },{
   nome:'Função',
   subtopicos:[
@@ -41,18 +40,18 @@ export const javascript=[
     {nome:'Lista de Objetos'},
     {nome:'Métodos úteis'},]
 },{
-  nome:'Aprofundar Loops em Lista',
+  nome:'Iterações',
   subtopicos:[
     {nome:'Separar String'},
     {nome:'Índice variando em lista'},
     {nome:'For com índice '},]
 },{
-  nome:'Tratamento de Erros',
+  nome:'Tratar Erros',
   subtopicos:[
     {nome:'Try+Catch'},
     {nome:'Lançar exceções'},]
 },{
-  nome:'Funções assíncronas',
+  nome:'Funções Async',
   subtopicos:[
     {nome:'Promises'},
     {nome:'Async/Await '},]

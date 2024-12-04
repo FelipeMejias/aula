@@ -1,0 +1,11 @@
+// Exemplo com while
+let i = 0;
+while (i < 3) {  // Enquanto i for menor que 3
+    console.log(i);
+    i++;
+}
+
+// Exemplo com for
+for (let i = 0; i < 3; i++) {  // Repete 3 vezes
+    console.log(i);
+}

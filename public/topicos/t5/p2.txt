@@ -1,0 +1,4 @@
+# For ... in para iterar sobre lista
+lista = [1, 2, 3]
+for item in lista:  # Itera sobre cada item da lista
+    print(item)

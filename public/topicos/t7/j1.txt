@@ -1,0 +1,9 @@
+// Separar string em uma lista de palavras
+let frase = "Eu amo programação";
+let palavras = frase.split(" ");  // Separa por espaço
+console.log(palavras);  // Saída: ["Eu", "amo", "programação"]
+
+// Separar uma data em partes
+let data = "2024-11-21";
+let partes = data.split("-");  // Separa a data por "-"
+console.log(partes);  // Saída: ["2024", "11", "21"]

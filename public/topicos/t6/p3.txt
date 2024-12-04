@@ -1,0 +1,15 @@
+# Criando dicionário
+pessoa = {
+    "nome": "João",
+    "idade": 30,
+    "ativo": True
+}
+
+# Obtendo as chaves
+print(pessoa.keys())  # Saída: dict_keys(['nome', 'idade', 'ativo'])
+
+# Obtendo os valores
+print(pessoa.values())  # Saída: dict_values(['João', 30, True])
+
+# Obtendo os pares chave/valor
+print(pessoa.items())  # Saída: dict_items([('nome', 'João'), ('idade', 30), ('ativo', True)])

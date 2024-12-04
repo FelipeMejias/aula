@@ -1,0 +1,14 @@
+// Exemplo de uso do else if
+let nota = 85;
+
+// Testando múltiplas condições
+if (nota >= 90) {
+    console.log("Aprovado com distinção");
+} else if (nota >= 70) {
+    console.log("Aprovado");
+} else {
+    console.log("Reprovado");
+}
+
+// Explicação: A condição é avaliada sequencialmente. 
+// Se nota >= 90

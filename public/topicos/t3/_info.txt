@@ -1,0 +1,17 @@
+3. Função
+Funções são blocos de código reutilizáveis que realizam tarefas específicas. Vamos aprender como criá-las e usá-las com parâmetros e valores fixos.
+
+A. Criar e chamar
+Funções são criadas para serem reutilizadas, ou seja, podemos chamá-las várias vezes em diferentes partes do código.
+
+B. Parâmetros
+Funções podem aceitar parâmetros, que são valores passados para personalizar a execução.
+
+C. Funções aninhadas
+Funções podem chamar outras funções para dividir responsabilidades e reutilizar código.
+
+D. Parâmetro fixo
+Podemos atribuir um valor padrão a um parâmetro, que será usado caso o usuário não forneça nenhum valor.
+
+E. Funções anônimas (lambda/arrow function)
+Funções anônimas são aquelas que não possuem nome e podem ser usadas de forma compacta, muitas vezes passadas como argumento para outras funções.

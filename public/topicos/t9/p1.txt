@@ -1,0 +1,4 @@
+# Ler arquivo
+with open("arquivo.txt", "r") as arquivo:
+    conteudo = arquivo.read()  # Lê todo o conteúdo do arquivo
+    print(conteudo)

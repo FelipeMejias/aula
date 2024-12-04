@@ -1,0 +1,10 @@
+// Função que chama outra para realizar uma operação
+function multiplica(x, y) {
+    return x * y;
+}
+
+function quadrado(z) {
+    return multiplica(z, z);  // Chama a função multiplica
+}
+
+console.log(quadrado(4));  // Saída: 16

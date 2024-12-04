@@ -1,0 +1,3 @@
+# Função anônima (lambda)
+saudacao = lambda nome: print(f"Olá, {nome}!")
+saudacao("João")  # Saída: Olá, João!

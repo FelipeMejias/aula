@@ -1,0 +1,10 @@
+# Condicional dentro de outra para testar mais de uma condição
+idade = 20
+tem_cnh = True
+if idade >= 18:  # Se a idade for maior ou igual a 18
+    if tem_cnh:  # Se também tiver CNH
+        print("Você pode dirigir.")
+    else:
+        print("Você não tem habilitação.")
+else:
+    print("Você é menor de idade.")

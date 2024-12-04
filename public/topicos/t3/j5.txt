@@ -1,0 +1,3 @@
+// Função anônima usando arrow function
+const saudacao = (nome) => console.log(`Olá, ${nome}!`);
+saudacao("João");  // Saída: Olá, João!

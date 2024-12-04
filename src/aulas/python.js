@@ -40,18 +40,18 @@ export const python=[
         {nome:'Lista de Dicionários'},
         {nome:'Métodos úteis'},]
     },{
-      nome:'Aprofundar Loops em Lista',
+      nome:'Iterações',
       subtopicos:[
         {nome:'Separar String'},
         {nome:'Índice variando em lista'},
         {nome:'For com índice '},]
     },{
-      nome:'Tratamento de Erros',
+      nome:'Tratar de Erros',
       subtopicos:[
         {nome:'Try+Except'},
         {nome:'Lançamento de exceções '},]
     },{
-      nome:'Trabalhando com Arquivos',
+      nome:'Arquivos',
       subtopicos:[
         {nome:'Ler arquivos'},
         {nome:'Escrever em arquivos '},

@@ -1,0 +1,10 @@
+7. Aprofundar Loops em Lista
+
+7-A. Separar string
+Para separar uma string em uma lista de substrings, usamos o método split().
+
+7-B. Índice variando em lista
+Podemos manipular o índice de uma lista dentro de um loop.
+
+7-C. For com índice
+A forma de acessar o índice diretamente é usando o for ... in (Python) ou for ... of com um contador (JavaScript).

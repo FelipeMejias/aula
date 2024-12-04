@@ -1,0 +1,9 @@
+# Exemplo com while
+i = 0
+while i < 3:  # Enquanto i for menor que 3
+    print(i)
+    i += 1
+
+# Exemplo com for
+for i in range(3):  # Repete 3 vezes
+    print(i)

@@ -1,0 +1,4 @@
+# Índice variando em lista
+lista = [10, 20, 30, 40]
+for i in range(len(lista)):
+    print(i, lista[i])  # Exibe o índice e o valor

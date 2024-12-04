@@ -1,0 +1,5 @@
+// Função com parâmetro para saudação personalizada
+function saudacao(nome) {
+    console.log(`Olá, ${nome}!`);
+}
+saudacao("João");  // Saída: Olá, João!

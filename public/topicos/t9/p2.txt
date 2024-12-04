@@ -1,0 +1,3 @@
+# Escrever em arquivo
+with open("arquivo.txt", "w") as arquivo:
+    arquivo.write("Este é o conteúdo do arquivo.")  # Escreve no arquivo

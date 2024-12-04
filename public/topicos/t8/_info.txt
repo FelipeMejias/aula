@@ -1,0 +1,7 @@
+8. Tratamento de Erros e Exceções
+
+A. Try+Catch / Try+Except
+Em Python, usamos try/except para capturar e tratar erros.
+
+B. Lançamento de exceções 
+Tanto em Python quanto em JavaScript podemos lançar exceções manualmente.

@@ -1,0 +1,7 @@
+// Objeto com chaves e valores
+let pessoa = {
+    nome: "João",
+    idade: 30,
+    ativo: true
+};
+console.log(pessoa);  // Exibe o objeto completo

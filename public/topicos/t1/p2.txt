@@ -1,0 +1,4 @@
+# String armazena texto, que pode ser manipulado e exibido
+nome = "João"
+saudacao = "Olá, " + nome + "!"
+print(saudacao)  # Saída: Olá, João!

@@ -1,0 +1,5 @@
+// For ... of para iterar sobre lista
+let lista = [1, 2, 3];
+for (let item of lista) {  // Itera sobre cada item da lista
+    console.log(item);
+}

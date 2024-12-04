@@ -1,0 +1,4 @@
+# Função com parâmetro fixo (valor padrão)
+def saudacao(nome="Visitante"):
+    print(f"Olá, {nome}!")
+saudacao()  # Saída: Olá, Visitante!

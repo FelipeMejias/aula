@@ -1,0 +1,7 @@
+// Validação de tipo: verifica se a variável contém um número válido
+let idade = "25";  // A variável idade está como string
+if (isNaN(idade)) {  // Verifica se o valor não é um número
+    console.log("Idade inválida!");
+} else {
+    console.log("Idade válida!");
+}

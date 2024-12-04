@@ -1,0 +1,14 @@
+1. Variáveis Simples
+Variáveis simples são usadas para armazenar dados de tipos básicos como números, texto e valores lógicos. Vamos ver como cada tipo é representado e usado em programação.
+
+A. Int e Float
+Números inteiros (int) e de ponto flutuante (float) são usados para armazenar dados numéricos. O int é usado para números inteiros, enquanto o float é usado para números com casas decimais.
+
+B. String
+Strings são sequências de caracteres que podem ser usadas para armazenar textos. As strings podem ser definidas com aspas simples ou duplas, e podem ser concatenadas.
+
+C. Booleano
+Booleanos representam valores lógicos, sendo true (verdadeiro) ou false (falso). São usados em operações condicionais.
+
+D. Tipagem
+A tipagem se refere ao tipo de dado que uma variável pode armazenar. A validação de dados permite verificar se os dados inseridos são válidos para o tipo esperado.

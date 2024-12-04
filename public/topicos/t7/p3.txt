@@ -1,0 +1,4 @@
+# For com índice (usando o método enumerate)
+lista = ["a", "b", "c"]
+for index, value in enumerate(lista):
+    print(index, value)  # Exibe o índice e o valor

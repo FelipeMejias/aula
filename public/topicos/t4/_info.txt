@@ -1,0 +1,11 @@
+4. Variável Lista
+As listas são estruturas que armazenam vários valores. Vamos aprender como manipular listas de dados.
+
+A. Estrutura
+Uma lista pode armazenar diferentes tipos de dados, organizados em uma sequência.
+
+B. Inserir e retirar
+É possível adicionar ou remover elementos de uma lista.
+
+C. Mapear e Filtrar
+Com o map e filter, podemos transformar ou filtrar dados em uma lista.

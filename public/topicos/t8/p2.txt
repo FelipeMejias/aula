@@ -1,0 +1,2 @@
+# Lançar exceção personalizada em Python
+raise ValueError("Mensagem de erro personalizada.")

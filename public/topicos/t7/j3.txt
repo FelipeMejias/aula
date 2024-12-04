@@ -1,0 +1,5 @@
+// For com índice (usando o método entries)
+let lista = ["a", "b", "c"];
+for (let [index, value] of lista.entries()) {
+    console.log(index, value);  // Exibe o índice e o valor
+}

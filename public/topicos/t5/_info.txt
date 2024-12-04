@@ -1,0 +1,11 @@
+5. Loops
+Loops são estruturas que permitem repetir blocos de código várias vezes. Vamos aprender sobre loops for e while.
+
+A. While e For
+O while é utilizado para repetir um bloco de código enquanto uma condição for verdadeira. Já o for é utilizado para iterar sobre uma sequência, como uma lista.
+
+B. For ... of
+O loop for ... of é usado para iterar diretamente sobre os elementos de uma sequência (lista, string, etc.).
+
+C. Auxiliadores (comandos auxiliares: pass, break, continue)
+O break interrompe o loop, o continue pula para a próxima iteração, e o pass é usado quando não queremos fazer nada.

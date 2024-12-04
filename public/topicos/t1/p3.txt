@@ -1,0 +1,5 @@
+# Booleano armazena um valor lógico, podendo ser True ou False
+is_ativo = True  # True é um valor lógico verdadeiro
+is_adulto = False  # False é um valor lógico falso
+print(is_ativo)  # Saída: True
+print(is_adulto)  # Saída: False

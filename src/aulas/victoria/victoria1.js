@@ -1,4 +1,4 @@
-import js from '../../imgs/js.png'
+import js from '../../_imgs/js.png'
 import i1 from './a1/i1.png'
 import i2 from './a1/i2.png'
 import i3 from './a1/i3.png'/*

@@ -1,0 +1,4 @@
+# Função com parâmetro para saudação personalizada
+def saudacao(nome):
+    print(f"Olá, {nome}!")
+saudacao("João")  # Saída: Olá, João!

@@ -1,21 +1,19 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './imgs/App.css';
+import './_imgs/App.css';
 import styled from 'styled-components';
-import AulasFeitas from './AulasFeitas';
-import Arquivo from './Componentes/Arquivo';
-import Topicos from './Conteudo';
-import Explicacao from './Componentes/Explicacao';
-import Agendar from './Agendar';
-import Inicial from './Inicial';
-import SalvarNome from './Componentes/SalvarNomes';
-import AdicionarEx from './Componentes/AdicionarEx';
-import Postado from './Postado';
-import Subtopico from './Componentes/Subtopico';
+import AulasFeitas from './Material/AulasFeitas';
+import Arquivo from './Material/Arquivo';
+import Topicos from './Cursos/Conteudo';
+import Agendar from './Agendamento/Agendar';
+import SalvarNome from './utils/SalvarNomes';
+import Subtopico from './Cursos/Subtopico';
 import Aba from './Menus/Aba';
-import MyContext from './Componentes/context';
+import MyContext from './utils/context';
 import MenuCel from './Menus/MenuCel'
 import MenuPc from './Menus/MenuPc'
+import Linguagens from './Linguagens';
+import Inicial from './Menus/Inicial';
 function App() {
   
   const [aba,setAba]=useState(false)
@@ -25,45 +23,37 @@ function App() {
       <MyContext.Provider value={valorContexto}>
         <BrowserRouter>
           <Tudo>
-
             <MenuPc/>
-
             <MenuCel/>
             {aba?<Aba/>:<></>}
-
-<Resto>
-
+            <Resto>
               <Routes>
-                <Route path='/agendar/:aluno' element={<Agendar page={1}/>}/>
-                <Route path='/agendar/:aluno/pacotes' element={<Agendar page={3}/>}/>
-                <Route path='/agendar/:aluno/horarios' element={<Agendar page={2}/>}/>
+<Route path='/' element={<Inicial />}/>
+<Route path='/linguagens' element={<Linguagens/>}/>
 
-                <Route path='/conteudo' element={<Inicial/>}/>
-                <Route path='/conteudo/:materia' element={<Topicos/>}/>
-                <Route path='/conteudo/:materia/:topico/:subtopico' element={<Subtopico/>} />
+<Route path='/cursos/:materia' element={<Topicos/>}/>
+<Route path='/cursos/:materia/:topico/:subtopico' element={<Subtopico/>} />
                 
-                <Route path='/' element={<Inicial />}/>
-                <Route path='/aulas/:aluno' element={<AulasFeitas />}/>
-                <Route path='/aulas/:aluno/adicionar' element={<AdicionarEx />}/>
-                <Route path='/aulas/:aluno/exercicios/:arquivo' element={<Postado />}/>
-                <Route path='/aulas/:aluno/:aula/:arquivo' element={<Arquivo />}/>
+<Route path='/aulas' element={<AulasFeitas />}/>
+<Route path='/aulas/:aula/:arquivo' element={<Arquivo />}/>
                 
-                <Route path='/clarissa' element={<SalvarNome nome='clarissa' />}/>
-                <Route path='/antonio' element={<SalvarNome nome='antonio' />}/>
-                <Route path='/victoria' element={<SalvarNome nome='victoria' />}/>
-                <Route path='/eduardo' element={<SalvarNome nome='eduardo' />}/>
-                <Route path='/isaac' element={<SalvarNome nome='isaac' />}/>
-        
+<Route path='/pacotes' element={<Agendar page={3}/>}/>
+<Route path='/horarios' element={<Agendar page={2}/>}/>
+
+                {/* ativar código aluno */}
+<Route path='/clarissa' element={<SalvarNome nome='clarissa' />}/>
+<Route path='/antonio' element={<SalvarNome nome='antonio' />}/>
+<Route path='/victoria' element={<SalvarNome nome='victoria' />}/>
+<Route path='/eduardo' element={<SalvarNome nome='eduardo' />}/>
+<Route path='/isaac' element={<SalvarNome nome='isaac' />}/>
               </Routes>
-              </Resto>
+            </Resto>
           </Tudo>
         </BrowserRouter>
-        </MyContext.Provider>
+      </MyContext.Provider>
     </div>
   );
 }
-
-
 
 const Tudo=styled.div`
 background-color:#f0f2b8;
@@ -85,12 +75,12 @@ flex-direction:column;
 `
 const Resto=styled.div`
 align-items:flex-start;
-height:calc(100vh - 75px);width:100%;
+height:calc(100vh - 60px);width:100%;
 flex-direction:column;
-overflow:hidden;
-overflow-y:scroll;
+overflow:auto;
 @media(min-width:750px){
 height:100%;
+overflow:hidden;
 }
 `
 export default App;

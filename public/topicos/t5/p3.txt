@@ -1,0 +1,7 @@
+# Usando break, continue e pass
+for i in range(5):
+    if i == 3:
+        break  # Interrompe o loop quando i é igual a 3
+    if i == 2:
+        continue  # Pula a iteração quando i é igual a 2
+    print(i)

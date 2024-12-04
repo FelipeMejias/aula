@@ -1,0 +1,5 @@
+# int e float são usados para armazenar números inteiros e decimais
+idade = 25  # int: um número inteiro
+altura = 1.75  # float: um número com casas decimais
+print(idade)  # Saída: 25
+print(altura)  # Saída: 1.75

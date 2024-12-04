@@ -1,0 +1,8 @@
+# Função que chama outra para realizar uma operação
+def multiplica(x, y):
+    return x * y
+
+def quadrado(z):
+    return multiplica(z, z)  # Chama a função multiplica
+
+print(quadrado(4))  # Saída: 16

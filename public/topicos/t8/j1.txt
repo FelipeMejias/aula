@@ -1,0 +1,6 @@
+// Try/Catch para capturar erro
+try {
+    let x = 1 / 0;  // Vai gerar erro de divisão por zero
+} catch (e) {
+    console.log("Erro: " + e.message);
+}

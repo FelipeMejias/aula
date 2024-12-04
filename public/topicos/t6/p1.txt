@@ -1,0 +1,7 @@
+# Objeto com chaves e valores
+pessoa = {
+    "nome": "João",
+    "idade": 30,
+    "ativo": True
+}
+print(pessoa)  # Exibe o objeto completo

@@ -1,0 +1,6 @@
+# Lista de objetos
+pessoas = [
+    {"nome": "João", "idade": 30},
+    {"nome": "Maria", "idade": 25}
+]
+print(pessoas)  # Exibe a lista de objetos

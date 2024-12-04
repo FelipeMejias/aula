@@ -1,0 +1,17 @@
+9. Trabalhando com Arquivos (Python)
+
+A. Ler arquivos
+Python permite ler arquivos com o método open() e read().
+
+B. Escrever em arquivos
+Para escrever em arquivos, usamos o modo "w" ou "a" para criar ou adicionar dados.
+
+C. Manipulação de arquivos (adicionar, alterar)
+Adicionar ou alterar dados também é possível.
+
+
+9. Funções assíncronas (JavaScript)
+
+A. Promises
+
+B. Async/Await 

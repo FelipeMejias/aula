@@ -1,4 +1,4 @@
-import py from '../../imgs/python.png'
+import py from '../../_imgs/python.png'
 import i1 from './a2/i1.png'
 import i2 from './a2/i2.png'
 /*

@@ -1,0 +1,3 @@
+# Lista com diferentes tipos de dados
+lista = [1, "João", True, 3.14]
+print(lista)  # Saída: [1, "João", True, 3.14]

@@ -1,0 +1,7 @@
+// Mapear e filtrar listas
+let lista = [1, 2, 3, 4];
+let listaQuadrada = lista.map(x => x * x);  // Mapeia e transforma os valores
+console.log(listaQuadrada);  // Saída: [1, 4, 9, 16]
+
+let listaFiltrada = lista.filter(x => x > 2);  // Filtra valores maiores que 2
+console.log(listaFiltrada);  // Saída: [3, 4]

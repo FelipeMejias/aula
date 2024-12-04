@@ -1,0 +1,5 @@
+// Índice variando em lista
+let lista = [10, 20, 30, 40];
+for (let i = 0; i < lista.length; i++) {
+    console.log(i, lista[i]);  // Exibe o índice e o valor
+}
