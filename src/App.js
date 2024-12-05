@@ -29,8 +29,8 @@ function App() {
             {aba?<Aba/>:<></>}
             <Resto>
               <Routes>
-<Route path='/' element={<Inicial />}/>
-<Route path='/linguagens' element={<FEvsBE/>}/>
+<Route path='/' element={<Linguagens />}/>
+{/*<Route path='/linguagens' element={<FEvsBE/>}/>*/}
 
 <Route path='/cursos/:materia' element={<Topicos/>}/>
 <Route path='/cursos/:materia/:topico/:subtopico' element={<Subtopico/>} />
