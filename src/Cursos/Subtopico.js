@@ -6,6 +6,7 @@ import CodeBlock from "./CodeBox"
 import { useEffect, useState } from "react"
 import set from '../_imgs/setaback.png'
 import ch from '../_imgs/check.png'
+const listaFalses = Array.from({ length: 9 }, () => Array(5).fill(false));
 export default function Subtopico({}){
     const params=useParams()
     const materia=params.materia
@@ -15,7 +16,7 @@ export default function Subtopico({}){
         materia=='python'?python:
         materia=='javascript'?javascript:[]
     )
-    const checks=JSON.parse(localStorage.getItem(`check-${materia}`))||[]
+    const checks=JSON.parse(localStorage.getItem(`check-${materia}`))||listaFalses
     const top=materiaEscolhida[topico-1]
     const subtop=top?.subtopicos[subtopico-1]
     const navigate=useNavigate()
