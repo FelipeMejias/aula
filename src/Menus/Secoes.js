@@ -30,7 +30,7 @@ export default function Secoes({align}){
 
             <h1>Agendamento</h1>
             <Botao tex={'Horários Disponíveis'} sel={pathname.includes(`horarios`)} path={`/horarios`} />
-            <Botao tex={'Valor de Pacotes'} sel={pathname.includes(`pacotes`)} path={`/pacotes`} />
+            {/*<Botao tex={'Valor de Pacotes'} sel={pathname.includes(`pacotes`)} path={`/pacotes`} />*/}
 
             <BtWpp onClick={()=>{
                 const telefone = 5521984636151;
