@@ -5,7 +5,7 @@ import { gaveta, listaAlunos } from "../aulas/gaveta"
 import set from '../_imgs/setaback.png'
 export default function Arquivo({}){
   const navigate=useNavigate()
-  const aluno=JSON.parse(localStorage.getItem('usuario'))
+  const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado'
     const params=useParams()
     const aula=params.aula
     const arquivo=params.arquivo

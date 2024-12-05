@@ -9,7 +9,6 @@ import Identifique from '../utils/Identifique'
 import { disponiveis, eventos } from "../aulas/gaveta";
 export default function Agendar({page}){
     const navigate=useNavigate()
-    const aluno=JSON.parse(localStorage.getItem('usuario'))
     const [now,setNow]=useState({day:null})
     const [now2,setNow2]=useState({day:null})
     function defineNow(){

@@ -35,7 +35,6 @@ export default function Topicos(){
         setChecks(n)
         localStorage.setItem(`check-${materia}`, JSON.stringify(n))
     }
-    const [topSubtop,setTopSubtop]=useState([0,0])
     const vazio=true
     return (
         <Tudo vazio={vazio}>

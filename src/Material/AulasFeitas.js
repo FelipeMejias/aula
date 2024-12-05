@@ -10,10 +10,9 @@ import Arquivo from "./Arquivo"
 
 export default function AulasFeitas(){
     const navigate=useNavigate()
-    const aluno=JSON.parse(localStorage.getItem('usuario'))
+    const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado'
     const info=gaveta[listaAlunos.indexOf(aluno)]
    
-    const [aulaArq,setAulaArq]=useState([0,0])
     return (
         <Tudo>
             <Janela vazio={true}>
