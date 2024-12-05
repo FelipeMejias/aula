@@ -11,6 +11,7 @@ import py from '../_imgs/python.png'
 import hc from '../_imgs/html3.jpg'
 import sq from '../_imgs/sql.jpg'
 import wpp from '../_imgs/wpp.png'
+import dayjs from 'dayjs'
 export default function Secoes({align}){
     const aluno=JSON.parse(localStorage.getItem('usuario'))||'sem-usuario'
     const navigate=useNavigate()
@@ -34,7 +35,19 @@ export default function Secoes({align}){
 
             <BtWpp onClick={()=>{
                 const telefone = 5521984636151;
-                const encodedText = encodeURIComponent(`Olá!`);
+                const horaStr=dayjs().format('HH:mm')
+                const hora=parseInt(`${horaStr[0]}${horaStr[1]}`)
+                let texto
+                if(hora<5){
+                    texto='Boa noite! Cheguei através do site Portal Aulas'
+                }else if(hora<12){
+                    texto='Bom dia! Cheguei através do site Portal Aulas'
+                }else if(hora<18){
+                    texto='Boa tarde! Cheguei através do site Portal Aulas'
+                }else{
+                    texto='Boa noite! Cheguei através do site Portal Aulas'
+                }
+                const encodedText = encodeURIComponent(texto);
                 const urlWhatsapp = `https://wa.me/${telefone}?text=${encodedText}`;
                 window.open(urlWhatsapp);
             }}>
