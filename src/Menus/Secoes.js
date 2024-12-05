@@ -20,7 +20,7 @@ export default function Secoes({align}){
         <Tudo align={align}>
 
             <h1>Conteúdo</h1>
-            <Botao tex={'FrontEnd vs BackEnd'} sel={pathname=='/linguagens'} path={`/linguagens`} /> 
+            <Botao tex={'FrontEnd vs BackEnd'} sel={pathname=='/'} path={`/linguagens`} /> 
             <Botao tex={'Javascript'} sel={pathname.includes(`javascript`)} path={`/cursos/javascript`} img={js} />
             <Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} />
 
