@@ -19,14 +19,8 @@ export default function Secoes({align}){
     return (
         <Tudo align={align}>
 
-            <h1>Panorama Geral</h1>
-            <BtLing  sel={pathname=='/linguagens'}  onClick={()=>{setAba(false);navigate(`/linguagens`)}} >
-                <p>Linguagens</p>
-                <p style={{margin:'3px 0 3px 0'}}>FrontEnd vs BackEnd</p>
-                <p>FrameWorks</p>
-            </BtLing>
-
-            <h1>Resumos</h1>
+            <h1>Conteúdo</h1>
+            <Botao tex={'FrontEnd vs BackEnd'} sel={pathname=='/linguagens'} path={`/linguagens`} /> 
             <Botao tex={'Javascript'} sel={pathname.includes(`javascript`)} path={`/cursos/javascript`} img={js} />
             <Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} />
 
@@ -71,7 +65,8 @@ align-items:center;
 h1{
     font-size:20px;
     margin:19px 0 0 0px;
-    text-align:${p=>p.align?';':'left;'} ;color:#084f54
+    text-align:${p=>p.align?';':'left;'} ;
+    color:#53541d
 }
 width:100%;
 align-items:${p=>p.align?'center;':';'};

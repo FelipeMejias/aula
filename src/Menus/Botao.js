@@ -18,13 +18,14 @@ export default function Botao({sel,tex,img,path}){
     )}
 const Bt=styled.div`
 cursor:pointer;
-background-color:${p=>!p.sel?'#278389':'#096368'};
-color:white;
+background-color:${p=>!p.sel?'transparent':'#6c6d36'};
+color:${p=>!p.sel?'white':'white'};
 margin:8px 0px 0 0px;
 border-radius:5px;
 max-width:180px;
 min-width:180px;
 p{margin:5px;}
+transition: background-color 0.2s ease;
 img{
     height:25px;border-radius:5px;
     margin:3px 7px 3px 3px;

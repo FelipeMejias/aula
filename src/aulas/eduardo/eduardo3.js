@@ -26,6 +26,6 @@ export const eduardo3=[
     icone:py,img:i5,texto:'/textos/eduardo/a3/t5.txt'
 },{   
     titulo:'Diferença Front e Back',
-    icone:notas,img:i6,texto:''
+    icone:notas,img:i6
 }
 ]

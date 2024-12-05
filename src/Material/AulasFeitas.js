@@ -16,10 +16,9 @@ export default function AulasFeitas(){
     const [aulaArq,setAulaArq]=useState([0,0])
     return (
         <Tudo>
-            <Arquivo aulaArq={aulaArq}/>
-            <Janela vazio={aulaArq[0]==0}>
+            <Janela vazio={true}>
             {info.map((aula,iAula)=>
-                <Aula vazio={aulaArq[0]==0}>
+                <Aula vazio={true}>
                     <Cab>
                         <p>{aula.titulo}</p>
                         <p><small>{aula.data}</small></p>
@@ -30,11 +29,7 @@ export default function AulasFeitas(){
                                 <img src={arquivo.icone}></img>
                                 <h3>{arquivo.titulo}</h3>
                             </Arq>)}
-                        {aula.arquivos.map((arquivo,iArquivo)=>
-                            <ArqG tam={aulaArq[0]==0?33:50} onClick={()=>setAulaArq([iAula+1,iArquivo+1])}>
-                                <img src={arquivo.icone}></img>
-                                <h3>{arquivo.titulo}</h3>
-                            </ArqG>)}
+                        
                     </section>
                 </Aula>
             )}
@@ -113,44 +108,10 @@ strong{
 color:green;font-weight:300;
 }
 }
-@media(min-width:750px){
-display:none;
-}
+
 `
-const ArqG=styled.article`background-color:;
-display:flex;
-align-items:center;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-cursor:pointer;
-max-width:${p=>p.tam}%;
-min-width:${p=>p.tam}%;
-height:100px;
-border-radius:15px;
-img{
-height:40px;margin-bottom:5px;
-}
-h3{margin:0 0 0 0;line-height:14px;height:30px;
-font-size:14px;font-weight:300;max-width:80%;
-strong{
-color:green;font-weight:300;
-}
-}
-@media(max-width:750px){
-display:none;
-}
-`
-const Resto=styled.div`
-align-items:flex-start;
-height:calc(100vh - 75px);width:100%;
-flex-direction:column;
-overflow:hidden;
-overflow-y:scroll;
-@media(min-width:750px){
-height:100%;
-}
-`
+
+
 
 /*
 {aluno=='clarissa'?<Aula ab={20+tamanho(exercicios.length+1)*120}>

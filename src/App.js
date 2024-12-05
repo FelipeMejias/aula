@@ -12,8 +12,9 @@ import Aba from './Menus/Aba';
 import MyContext from './utils/context';
 import MenuCel from './Menus/MenuCel'
 import MenuPc from './Menus/MenuPc'
-import Linguagens from './Linguagens';
+import Linguagens from './Linguagens/Linguagens';
 import Inicial from './Menus/Inicial';
+import FEvsBE from './Linguagens/FEvsBE';
 function App() {
   
   const [aba,setAba]=useState(false)
@@ -29,7 +30,7 @@ function App() {
             <Resto>
               <Routes>
 <Route path='/' element={<Inicial />}/>
-<Route path='/linguagens' element={<Linguagens/>}/>
+<Route path='/linguagens' element={<FEvsBE/>}/>
 
 <Route path='/cursos/:materia' element={<Topicos/>}/>
 <Route path='/cursos/:materia/:topico/:subtopico' element={<Subtopico/>} />

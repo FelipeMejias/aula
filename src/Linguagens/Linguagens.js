@@ -1,12 +1,12 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import js from './_imgs/js.png'
-import re from './_imgs/react.png'
-import nd from './_imgs/node.png'
-import py from './_imgs/python.png'
-import hc from './_imgs/html3.jpg'
-import sq from './_imgs/sql.jpg'
+import js from '../_imgs/js.png'
+import re from '../_imgs/react.png'
+import nd from '../_imgs/node.png'
+import py from '../_imgs/python.png'
+import hc from '../_imgs/html3.jpg'
+import sq from '../_imgs/sql.jpg'
 export default function Linguagens({}){
     const navigate=useNavigate()
     const {aluno}=useParams()||'convidado'

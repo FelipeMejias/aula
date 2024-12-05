@@ -32,7 +32,8 @@ export default function MenuPc(){
 const Abafixa=styled.article`
 flex-direction:column;
 align-items:center;
-background-color:#35A5AD;
+color:white;
+background-color:#999b57;
 height:100%;
 
 max-width:260px;

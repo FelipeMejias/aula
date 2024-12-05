@@ -27,7 +27,6 @@ export default function Topicos(){
     const [checks,setChecks]=useState(JSON.parse(localStorage.getItem(`check-${materia}`))||listaFalses)
     function setarChecks(iTop,iSubtop){
         const n=[]
-        console.log(checks)
         for(let k=0;k<qtdTopicos;k++){
             const m=[]
             for(let j=0;j<4;j++)m.push(checks[k]?(k==iTop&&j==iSubtop?!checks[k][j]:checks[k][j]):false)
@@ -37,10 +36,9 @@ export default function Topicos(){
         localStorage.setItem(`check-${materia}`, JSON.stringify(n))
     }
     const [topSubtop,setTopSubtop]=useState([0,0])
-    const vazio=topSubtop[0]==0
+    const vazio=true
     return (
         <Tudo vazio={vazio}>
-             <Subtopico topSubtop={topSubtop} />
             <Janela vazio={vazio}>
             {materiaEscolhida.map((top,index)=>
             <Topico vazio={vazio} ab={ab[index]?50+50*top.subtopicos.length:60} ult={index==materiaEscolhida.lenth-1}>
@@ -59,11 +57,6 @@ export default function Topicos(){
                         tex={bonus&&false?'black':'white'}>
                         <p>{nome}</p>
                         </Sub>
-                        <SubG wid={vazio?250:145} onClick={()=>{setTopSubtop([index+1,ind+1])}}
-                        color={bonus&&false?(marcado?'b2e8b8':'B4D4EA'):(marcado?'46af48':'4787b2')} 
-                        tex={bonus&&false?'black':'white'}>
-                        <p>{nome}</p>
-                        </SubG>
                     </HoldSub>
                     )}
                 )
@@ -96,7 +89,6 @@ align-items:center;
 width:100%;
 height:100%;
 flex-direction:column;
-
 @media(min-width:750px){
 display:flex;
 overflow:auto;
@@ -143,36 +135,8 @@ width:220px;
 padding:9px;
 border-radius:4px;position:relative;
 display:flex;align-items:center;
-@media(min-width:750px){
-display:none;
-}
+
 `
-const SubG=styled.article`background-color:#${p=>p.color};
-color:${p=>p.tex};
-width:${p=>p.wid}px;
-max-width:calc(100% - 80px);
-padding:9px;
-border-radius:4px;position:relative;
-display:flex;align-items:center;
-@media(max-width:750px){
-display:none;
-}
-`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

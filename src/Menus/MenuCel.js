@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom"
 import styled, { ThemeConsumer } from "styled-components"
 import { useContext, useState } from "react"
-import menu from '../_imgs/menu.png'
+import menu from '../_imgs/menumarrom.png'
 import MyContext from '../utils/context'
 export default function MenuCel(){
     const aluno=JSON.parse(localStorage.getItem('usuario'))||'sem-usuario'
@@ -10,7 +10,9 @@ export default function MenuCel(){
     return (
         <Tudo>
             <QuadroCel>
-                <BotaoMenu onClick={()=>setAba(true)}><img src={menu}></img></BotaoMenu>
+                <BotaoMenu onClick={()=>setAba(true)}>
+                    <img src={menu}/>
+                </BotaoMenu>
             </QuadroCel>
         </Tudo>
     )
@@ -25,7 +27,7 @@ const QuadroCel=styled.article`
 background-color:;
 padding-left:20px;box-sizing:border-box;
 display:flex;align-items:center;
-    width:100%;max-width:520px;height:100%;
+    width:100%;height:100%;
     justify-content:space-between;
 
 
@@ -34,7 +36,7 @@ display:flex;align-items:center;
 const Tudo=styled.article`
 width:100%;height:60px;
 justify-content:center;
-background-color:#35A5AD;
+background-color:#999b57;
 display:none;
 
 @media(max-width:750px){
