@@ -58,22 +58,37 @@ export const eventos2=[
     '218',
 ]
 export const listaAlunos=[
-    'convidado',
+    'convidado-js',
+    'convidado-py',
     'clarissa', // python
     'antonio',  // javascript + react + node
     'victoria', // javascript + react
     'eduardo'   // python + banco
 ]
+export const listaLinguagens=[
+    'javascript',
+    'python',
+    'python',
+    'javascript',
+    'javascript',
+    'python',
+]
 export const gaveta=[
-    [//Convidado
+    [//Convidado = Javascript
         {
             titulo:'Aula 1 (Demonstração)',
             status:'Feito',
             data:'(Data)',
-            arquivos:genericos
+            arquivos:victoria1
         },
-    ],
-    [//Clarissa
+    ],[//Convidado = Python
+        {
+            titulo:'Aula 1 (Demonstração)',
+            status:'Feito',
+            data:'(Data)',
+            arquivos:eduardo1
+        },
+    ],[//Clarissa
         {
             titulo:'Aula 1',
             status:'Feito',

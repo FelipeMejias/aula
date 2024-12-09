@@ -1,19 +1,20 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { gaveta, listaAlunos } from "../aulas/gaveta"
+import { gaveta, listaAlunos, listaLinguagens } from "../aulas/gaveta"
 import set from '../_imgs/setaback.png'
+import CodeBlock from "../Cursos/CodeBox"
 export default function Arquivo({}){
   const navigate=useNavigate()
-  const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado'
+    const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado-js'
+    const linguagemAluno=listaLinguagens[listaAlunos.indexOf(aluno)]
+    console.log(linguagemAluno)
     const params=useParams()
     const aula=params.aula
     const arquivo=params.arquivo
     const infoAula=gaveta[listaAlunos.indexOf(aluno)]
     const infoArquivo=infoAula[aula-1].arquivos[arquivo-1]
     const [copiado, setCopiado] = useState(false);
-    
-
   
   function copiarTexto(){
     navigator.clipboard.writeText(texto)
@@ -41,10 +42,7 @@ export default function Arquivo({}){
               </Heder>
               <HolderCode>
               {texto?<Copiar onClick={copiarTexto}><p>{copiado ? 'Texto copiado!' : 'Copiar Texto'}</p></Copiar>:<></>}
-              <img style={{
-              width: 'calc( 100% )',
-              objectFit: 'cover' 
-            }} src={infoArquivo.img}/>
+              <CodeBlock mat={linguagemAluno} texto={texto} />
               </HolderCode>
             
             {infoArquivo.coment?<Balao>{infoArquivo.coment.map(p=><p>{p}</p>)}</Balao>:<></>}
@@ -52,25 +50,18 @@ export default function Arquivo({}){
             <Janela >
             {infoAula?.map((a,iAula)=>
                 <Aula >
-                  
                     <Cab>
                         <p>{a.titulo}</p>
                         <p><small>{a.data}</small></p>
                     </Cab>
                     <Caixa>
                         {a.arquivos.map((arq,iArquivo)=>
-                            <Arq 
-                            onClick={()=>navigate(`/aulas/${iAula+1}/${iArquivo+1}`)}
-                            sel={aula==iAula+1&&arquivo==iArquivo+1}
-                            >
-                              {console.log(aula,iAula,arquivo,iArquivo)}
+                            <Arq onClick={()=>navigate(`/aulas/${iAula+1}/${iArquivo+1}`)} sel={aula==iAula+1&&arquivo==iArquivo+1}>
                                 <img src={arq.icone}></img>
                                 <p>{arq.titulo}</p>
                             </Arq>)}
-                        
                     </Caixa>
-                </Aula>
-            )}
+                </Aula>)}
             </Janela>
         </Tudo>
     )
@@ -151,11 +142,10 @@ border-radius:10px;
 box-sizing:border-box;
 `
 
-
 const HolderCode=styled.div`padding-top:16px;
-flex-direction:column;height:100%;width:100%;
+flex-direction:column;max-height:calc(100% - 70px);width:100%;
 justify-content:flex-start;background-color:;
-position:relative;align-items:center;
+position:relative;
 `
 const Bolinha=styled.div`
 cursor:pointer;
@@ -198,7 +188,7 @@ display:flex;
 flex-direction:column;
 padding:6px;
 position:absolute;
-top:-17px;right:0;
+top:-10px;right:0;
 background-color: #D9DBAD;
 p{margin:0;
 color:black;

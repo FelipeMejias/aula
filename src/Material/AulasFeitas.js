@@ -10,7 +10,7 @@ import Arquivo from "./Arquivo"
 
 export default function AulasFeitas(){
     const navigate=useNavigate()
-    const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado'
+    const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado-js'
     const info=gaveta[listaAlunos.indexOf(aluno)]
    
     return (

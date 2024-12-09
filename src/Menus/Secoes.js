@@ -17,11 +17,29 @@ export default function Secoes({align}){
     const navigate=useNavigate()
     const {aba,setAba}=useContext(MyContext)
     const {pathname} = useLocation();
+    function mandarWpp(){
+        const telefone = 5521984636151;
+        const horaStr=dayjs().format('HH:mm')
+        const hora=parseInt(`${horaStr[0]}${horaStr[1]}`)
+        let texto
+        if(hora<5){
+            texto='Boa noite! Cheguei através do site Portal Aulas'
+        }else if(hora<12){
+            texto='Bom dia! Cheguei através do site Portal Aulas'
+        }else if(hora<18){
+            texto='Boa tarde! Cheguei através do site Portal Aulas'
+        }else{
+            texto='Boa noite! Cheguei através do site Portal Aulas'
+        }
+        const encodedText = encodeURIComponent(texto);
+        const urlWhatsapp = `https://wa.me/${telefone}?text=${encodedText}`;
+        window.open(urlWhatsapp);
+    }
     return (
         <Tudo align={align}>
 
             <h1>Conteúdo</h1>
-            <Botao tex={'FrontEnd vs BackEnd'} sel={pathname=='/'} path={`/linguagens`} /> 
+            <Botao tex={'FrontEnd vs BackEnd'} sel={pathname.includes('linguagens')} path={`/linguagens`} /> 
             <Botao tex={'Javascript'} sel={pathname.includes(`javascript`)} path={`/cursos/javascript`} img={js} />
             <Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} />
 
@@ -30,27 +48,10 @@ export default function Secoes({align}){
             <Botao tex={'Minhas Perguntas'} sel={pathname.includes(`perguntas`)} path={`/perguntas`} />
 
             <h1>Agendamento</h1>
-            <Botao tex={'Horários Disponíveis'} sel={pathname.includes(`horarios`)} path={`/horarios`} />
+            {/*<Botao tex={'Horários Disponíveis'} sel={pathname.includes(`horarios`)} path={`/horarios`} />*/}
             {/*<Botao tex={'Valor de Pacotes'} sel={pathname.includes(`pacotes`)} path={`/pacotes`} />*/}
 
-            <BtWpp onClick={()=>{
-                const telefone = 5521984636151;
-                const horaStr=dayjs().format('HH:mm')
-                const hora=parseInt(`${horaStr[0]}${horaStr[1]}`)
-                let texto
-                if(hora<5){
-                    texto='Boa noite! Cheguei através do site Portal Aulas'
-                }else if(hora<12){
-                    texto='Bom dia! Cheguei através do site Portal Aulas'
-                }else if(hora<18){
-                    texto='Boa tarde! Cheguei através do site Portal Aulas'
-                }else{
-                    texto='Boa noite! Cheguei através do site Portal Aulas'
-                }
-                const encodedText = encodeURIComponent(texto);
-                const urlWhatsapp = `https://wa.me/${telefone}?text=${encodedText}`;
-                window.open(urlWhatsapp);
-            }}>
+            <BtWpp onClick={mandarWpp}>
                 <img src={wpp} />
                 <p>Enviar Mensagem</p>
             </BtWpp>
