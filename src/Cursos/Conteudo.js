@@ -25,6 +25,7 @@ export default function Topicos(){
         const n=[]
         for(let k=0;k<qtdTopicos;k++)n.push(i==k?!ab[k]:ab[k])
         setAbertos(n)
+        localStorage.setItem(`ab-${materia}`, JSON.stringify(n))
     }
     function setarChecks(iTop,iSubtop){
         const n=[]
