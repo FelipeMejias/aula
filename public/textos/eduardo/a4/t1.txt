@@ -1,0 +1,32 @@
+'''
+def printar( aSerPrintado , etiqueta = False ):
+    if(etiqueta):
+        print(f'{etiqueta}: {aSerPrintado}')
+    else:
+        print(aSerPrintado)
+
+printar( [5,7,9] )
+'''
+datasProvaDeFisica=['12/02/24','25/05/24','04/08/24','29/11/24']
+datasProvaDeIngles=['25/02/24','03/06/24','16/08/24','20/11/24']
+'''
+Dada uma lista de strings no formato:
+"13/10/97"
+Faça uma função que imprima uma lista de dicionários no formato:
+{ "dia":12 , "mes":2 , "ano":24 }
+'''
+def criarData(lista):
+    vazia=[]
+    for data in lista:
+        listinha=data.split('/')
+        dia=listinha[0]
+        mes=listinha[1]
+        ano=listinha[2]
+        dic = {"dia": dia, "mes": mes, "ano":ano}
+        vazia.append(dic)
+    resposta=vazia
+    return resposta
+dicionarioFisica=criarData(datasProvaDeFisica)
+dicionarioIngles=criarData(datasProvaDeIngles)
+print(dicionarioFisica)
+print(dicionarioIngles)

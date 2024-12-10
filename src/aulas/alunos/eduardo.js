@@ -28,22 +28,26 @@ const aula3=[
     {titulo:'Ex- Feito em aula',icone:py,texto:formarTexto(3,5)},
     {titulo:'Diferença Front e Back',img:i6,icone:notas},
 ]
+const aula4=[
+    {titulo:'DatasPprovas com Split',icone:py,texto:formarTexto(4,1)},
+]
 export const eduardo=[//Eduardo
     {
         titulo:'Aula 1',
-        status:'Feito',
         data:'Terça 12/11',
         arquivos:aula1
     },{
         titulo:'Aula 2',
-        status:'Feito',
         data:'Terça 19/11',
         arquivos:aula2
     },{
         titulo:'Aula 3',
-        status:'Feito',
         data:'Terça 26/11',
         arquivos:aula3
+    },{
+        titulo:'Aula 4',
+        data:'Terça 05/12',
+        arquivos:aula4
     },
 ]
 
