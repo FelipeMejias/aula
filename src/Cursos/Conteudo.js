@@ -7,24 +7,25 @@ import ch from '../_imgs/check.png'
 import setaBaixo from '../_imgs/seta.png'
 import setaCima from '../_imgs/setacima.png'
 import Subtopico from "./Subtopico"
-const listaFalses = Array.from({ length: 9 }, () => Array(5).fill(false));
+const listaDeListasFalses = Array.from({ length: 9 }, () => Array(5).fill(false));
+const listaFalses=[true,false,false,false,false,false,false,false,false]
 export default function Topicos(){
+    const navigate=useNavigate()
     const {materia}=useParams()
     const materiaEscolhida=(
         materia=='python'?python:
         materia=='javascript'?javascript:[]
     )
     const qtdTopicos=materiaEscolhida.length
-    const [ab,setAbertos]=useState([true,false,false,false,false,false,false,false,false])
+
+    const [ab,setAbertos]=useState(JSON.parse(localStorage.getItem(`ab-${materia}`))||listaFalses)
+    const [checks,setChecks]=useState(JSON.parse(localStorage.getItem(`check-${materia}`))||listaDeListasFalses)
     
-    const navigate=useNavigate()
     function setarAb(i){
         const n=[]
         for(let k=0;k<qtdTopicos;k++)n.push(i==k?!ab[k]:ab[k])
         setAbertos(n)
     }
-
-    const [checks,setChecks]=useState(JSON.parse(localStorage.getItem(`check-${materia}`))||listaFalses)
     function setarChecks(iTop,iSubtop){
         const n=[]
         for(let k=0;k<qtdTopicos;k++){
@@ -35,6 +36,7 @@ export default function Topicos(){
         setChecks(n)
         localStorage.setItem(`check-${materia}`, JSON.stringify(n))
     }
+
     const vazio=true
     return (
         <Tudo vazio={vazio}>
