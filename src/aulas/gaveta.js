@@ -2,20 +2,14 @@ import js from '../_imgs/js.png'
 import re from '../_imgs/react.png'
 import nd from '../_imgs/node.png'
 import py from '../_imgs/python.png'
-import hc from '../_imgs/html3.jpg'
 import sq from '../_imgs/sql.jpg'
 
-import { clarissa1 } from "./clarissa/clarissa1";
-import { clarissa2 } from "./clarissa/clarissa2";
-
-import { victoria1 } from "./victoria/victoria1";
-import { victoria2 } from "./victoria/victoria2";
-
-import { antonio1 } from "./antonio/antonio1";
-
-import { eduardo1 } from "./eduardo/eduardo1";
-import { eduardo2 } from './eduardo/eduardo2'
-import { eduardo3 } from './eduardo/eduardo3'
+import { victoria } from './alunos/victoria'
+import { eduardo } from './alunos/eduardo'
+import { convidadoJS } from './alunos/convidadoJS'
+import { convidadoPY } from './alunos/convidadoPY'
+import { antonio } from './alunos/antonio'
+import { clarissa } from './alunos/clarissa'
 
 
 export const genericos=[
@@ -74,78 +68,11 @@ export const listaLinguagens=[
     'python',
 ]
 export const gaveta=[
-    [//Convidado = Javascript
-        {
-            titulo:'Aula 1 (Demonstração)',
-            status:'Feito',
-            data:'(Data)',
-            arquivos:victoria1
-        },
-    ],[//Convidado = Python
-        {
-            titulo:'Aula 1 (Demonstração)',
-            status:'Feito',
-            data:'(Data)',
-            arquivos:eduardo1
-        },
-    ],[//Clarissa
-        {
-            titulo:'Aula 1',
-            status:'Feito',
-            data:'Quinta 24/10',
-            arquivos:clarissa1
-        },{
-            titulo:'Aula 2',
-            status:'Feito',
-            data:'Quinta 31/10',
-            arquivos:clarissa2
-        },,{
-            titulo:'Aula 2',
-            status:'Feito',
-            data:'Quinta 31/10',
-            arquivos:clarissa2
-        },,{
-            titulo:'Aula 2',
-            status:'Feito',
-            data:'Quinta 31/10',
-            arquivos:clarissa2
-        },
-    ],[//Antonio
-        {
-            titulo:'Aula 1',
-            status:'Feito',
-            data:'Terça 5/11',
-            arquivos:antonio1
-        },
-    ],[//Victoria
-        {
-            titulo:'Aula 1',
-            status:'Feito',
-            data:'Quinta 7/11',
-            arquivos:victoria1
-        },{
-            titulo:'Aula 2 - Próxima',
-            status:'Solta',
-            data:'Sem data',
-            arquivos:victoria2
-        },
-    ],[//Eduardo
-        {
-            titulo:'Aula 1',
-            status:'Feito',
-            data:'Terça 12/11',
-            arquivos:eduardo1
-        },{
-            titulo:'Aula 2',
-            status:'Feito',
-            data:'Terça 19/11',
-            arquivos:eduardo2
-        },{
-            titulo:'Aula 3',
-            status:'Feito',
-            data:'Terça 26/11',
-            arquivos:eduardo3
-        },
-    ]
+    convidadoJS,
+    convidadoPY,
+    clarissa,
+    antonio,
+    victoria,
+    eduardo
 ]
 

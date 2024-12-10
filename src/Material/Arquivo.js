@@ -8,7 +8,6 @@ export default function Arquivo({}){
   const navigate=useNavigate()
     const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado-js'
     const linguagemAluno=listaLinguagens[listaAlunos.indexOf(aluno)]
-    console.log(linguagemAluno)
     const params=useParams()
     const aula=params.aula
     const arquivo=params.arquivo
@@ -42,7 +41,7 @@ export default function Arquivo({}){
               </Heder>
               <HolderCode>
               {texto?<Copiar onClick={copiarTexto}><p>{copiado ? 'Texto copiado!' : 'Copiar Texto'}</p></Copiar>:<></>}
-              <CodeBlock mat={linguagemAluno} texto={texto} />
+              {infoArquivo.img?<img src={infoArquivo.img}/>:<CodeBlock mat={linguagemAluno} texto={texto} />}
               </HolderCode>
             
             {infoArquivo.coment?<Balao>{infoArquivo.coment.map(p=><p>{p}</p>)}</Balao>:<></>}

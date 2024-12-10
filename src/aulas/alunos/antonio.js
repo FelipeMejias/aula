@@ -1,60 +1,28 @@
 import js from '../../_imgs/js.png'
 import nd from '../../_imgs/node.png'
 import re from '../../_imgs/react.png'
-import i1 from './a1/i1.png'
-import i2 from './a1/i2.png'
-import i3 from './a1/i3.png'
-import i4 from './a1/i4.png'
-
-import i5 from './a1/i5.png'
-import i6 from './a1/i6.png'
-import i7 from './a1/i7.png'
-import i8 from './a1/i8.png'
-import i9 from './a1/i9.png'
-
-export const antonio1=[
-{   
-    titulo:'package.json',
-    icone:nd,img:i1,texto:'',coment:[
-'Adicionar o texto da 1ª linha',
-'Adicionar o texto da 8ª linha e a vírgula no final da 7ª',
-'Instalar as dependências: npm install express cors nodemon',
-'Rodar o código: npm start'
-    ]
-},{
-    titulo:'index.js',
-    icone:nd,img:i2,texto:'/textos/antonio/a1/t2.txt'
-},{
-    titulo:'funcoes.js',
-    icone:nd,img:i3,texto:'/textos/antonio/a1/t3.txt'
-},{
-    titulo:'cardapio.js',
-    icone:nd,img:i4,texto:'/textos/antonio/a1/t4.txt'
-},{
-    titulo:'App.css',
-    icone:re,img:i5,texto:'',coment:[
-'Só colei o que estava no index.css',
-'Instalar as dependências: npm install styled-components axios',
-'Rodar o código: npm start'
-    ]
-},{
-    titulo:'index.js',
-    icone:re,img:i6,texto:'/textos/antonio/a1/t6.txt'
-},{
-    titulo:'App.js',
-    icone:re,img:i7,texto:'/textos/antonio/a1/t7.txt'
-},{
-    titulo:'Item.js',
-    icone:re,img:i8,texto:'/textos/antonio/a1/t8.txt'
-},{
-    titulo:'api.js',
-    icone:re,img:i9,texto:'/textos/antonio/a1/t9.txt'
+function formarTexto(aula,num){
+    return `/textos/antonio/a${aula}/t${num}.txt`
 }
+const aula1=[
+    {titulo:'index.js',icone:nd,texto:formarTexto(1,2)},
+    {titulo:'funcoes.js',icone:nd,texto:formarTexto(1,3)},
+    {titulo:'cardapio.js',icone:nd,texto:formarTexto(1,4)},
+    {titulo:'index.js',icone:re,texto:formarTexto(1,6)},
+    {titulo:'App.js',icone:re,texto:formarTexto(1,7)},
+    {titulo:'Item.js',icone:re,texto:formarTexto(1,8)},
+    {titulo:'api.js',icone:re,texto:formarTexto(1,9)},
+    ]
+export const antonio=[
+    {
+        titulo:'Aula 1',
+        status:'Feito',
+        data:'Terça 5/11',
+        arquivos:aula1
+    },
 ]
 
-
-
-   /* {
+/* {
         titulo:'função',
         icone:js,
 texto:`
