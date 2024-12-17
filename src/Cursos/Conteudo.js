@@ -30,7 +30,7 @@ export default function Topicos(){
             n.push(m)
         }
         setChecks(n)
-        localStorage.setItem(`check-${materia}`, JSON.stringify(n))
+        localStorage.setItem(`checky-${materia}`, JSON.stringify(n))
     }
 /*useEffect(()=>{
     localStorage.setItem(`check-python`, JSON.stringify(listaDeListasFalses))
