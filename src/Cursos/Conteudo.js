@@ -32,11 +32,13 @@ export default function Topicos(){
         setChecks(n)
         localStorage.setItem(`checky-${materia}`, JSON.stringify(n))
     }
-/*useEffect(()=>{
-    localStorage.setItem(`check-python`, JSON.stringify(listaDeListasFalses))
-    localStorage.setItem(`check-javascript`, JSON.stringify(listaDeListasFalses))
-    localStorage.setItem(`check-react`, JSON.stringify(listaDeListasFalses))
-},[])*/
+useEffect(()=>{
+    const antigo=JSON.parse(localStorage.getItem(`checky-javascript`))
+    if(antigo.length>=0)return
+    localStorage.setItem(`checky-python`, JSON.stringify(listaDeListasFalses))
+    localStorage.setItem(`checky-javascript`, JSON.stringify(listaDeListasFalses))
+    localStorage.setItem(`checky-react`, JSON.stringify(listaDeListasFalses))
+},[])
     
     return (
         <Tudo >

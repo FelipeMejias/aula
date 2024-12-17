@@ -12,11 +12,10 @@ export default function Botao({sel,tex,img,path}){
         <Bt sel={sel} 
         onClick={()=>{
             setAba(false);
-            
             navigate(path)
             const palavras=path.split('/')
             if(palavras[1]=='cursos'){
-                setChecks(JSON.parse(localStorage.getItem(`check-${palavras[2]}`)))
+                setChecks(JSON.parse(localStorage.getItem(`checky-${palavras[2]}`)))
             }
             }}>
             {img?<img src={img}/>:<></>}
