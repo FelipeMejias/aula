@@ -12,9 +12,14 @@ import { useContext } from "react"
 import MyContext from "../utils/context"
 const listaFalses=Array(9).fill(true)
 export default function Topicos(){
-    const {aba,setAba,checks,setChecks}=useContext(MyContext)
-    const navigate=useNavigate()
+    const {aba,setAba,
+        checksP,setChecksP,checksR,setChecksR,checksJ,setChecksJ
+    }=useContext(MyContext)
     const {materia}=useParams()
+    const checks=materia=='python'?checksP:materia=='javascript'?checksJ:materia=='react'?checksR:null
+    const setChecks=materia=='python'?setChecksP:materia=='javascript'?setChecksJ:materia=='react'?setChecksR:null
+    const navigate=useNavigate()
+    
     const materiaEscolhida=(
         materia=='python'?python:
         materia=='javascript'?javascript:
@@ -30,16 +35,8 @@ export default function Topicos(){
             n.push(m)
         }
         setChecks(n)
-        localStorage.setItem(`checky-${materia}`, JSON.stringify(n))
+        localStorage.setItem(`ch-${materia}`, JSON.stringify(n))
     }
-useEffect(()=>{
-    const antigo=JSON.parse(localStorage.getItem(`checky-javascript`))
-    if(antigo.length>=0)return
-    localStorage.setItem(`checky-python`, JSON.stringify(listaDeListasFalses))
-    localStorage.setItem(`checky-javascript`, JSON.stringify(listaDeListasFalses))
-    localStorage.setItem(`checky-react`, JSON.stringify(listaDeListasFalses))
-},[])
-    
     return (
         <Tudo >
             <Janela >

@@ -20,9 +20,11 @@ import Principal from './SQL/Principal';
 
 function App() {
   const listaDeListasFalses = Array.from({ length: 9 }, () => Array(9).fill(false));
-  const [checks,setChecks]=useState(listaDeListasFalses)
+  const [checksP,setChecksP]=useState(JSON.parse(localStorage.getItem(`ch-python`))||listaDeListasFalses)
+  const [checksJ,setChecksJ]=useState(JSON.parse(localStorage.getItem(`ch-javascript`))||listaDeListasFalses)
+  const [checksR,setChecksR]=useState(JSON.parse(localStorage.getItem(`ch-react`))||listaDeListasFalses)
   const [aba,setAba]=useState(false)
-  const valorContexto={aba,setAba,checks,setChecks}
+  const valorContexto={aba,setAba,checksP,setChecksP,checksR,setChecksR,checksJ,setChecksJ}
   return (
     <div className="App">
       <MyContext.Provider value={valorContexto}>
