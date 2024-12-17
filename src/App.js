@@ -15,10 +15,14 @@ import MenuPc from './Menus/MenuPc'
 import Linguagens from './Linguagens/Linguagens';
 import Inicial from './Menus/Inicial';
 import FEvsBE from './Linguagens/FEvsBE';
+import Principal from './SQL/Principal';
+
+
 function App() {
-  
+  const listaDeListasFalses = Array.from({ length: 9 }, () => Array(9).fill(false));
+  const [checks,setChecks]=useState(listaDeListasFalses)
   const [aba,setAba]=useState(false)
-  const valorContexto={aba,setAba}
+  const valorContexto={aba,setAba,checks,setChecks}
   return (
     <div className="App">
       <MyContext.Provider value={valorContexto}>
@@ -32,6 +36,7 @@ function App() {
 <Route path='/' element={<Linguagens />}/>
 <Route path='/linguagens' element={<FEvsBE/>}/>
 
+<Route path='/bancos' element={<Principal/>}/>
 <Route path='/cursos/:materia' element={<Topicos/>}/>
 <Route path='/cursos/:materia/:topico/:subtopico' element={<Subtopico/>} />
                 

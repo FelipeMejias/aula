@@ -69,7 +69,7 @@ flex-direction:column;
 align-items:flex-start;
 
 width:90%;max-width:450px;
-margin:15px 0 0 calc(50% - 225px);
+margin:15px 0 0 0;
 background-color:white;
 border-radius:15px;
 
@@ -82,7 +82,6 @@ flex-wrap:wrap;
 margin:15px 0 0 5%;
 }
 @media(min-width:750px){
-margin:15px 0 0 0;
 max-width:${p=>p.vazio?'450px':'320px'};
 }
 `

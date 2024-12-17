@@ -4,9 +4,16 @@ import dayjs from 'dayjs'
 import styled from 'styled-components'
 import Board from './Board'
 import Preco from './Preco'
-import { disponiveis2, eventos2, listaAlunos } from '../aulas/gaveta'
-import Identifique from '../utils/Identifique'
-import { disponiveis, eventos } from "../aulas/gaveta";
+const disponiveis=[
+    '108','110','114','116','118','120',
+    '208','210','214','216','218','220',
+    '308','310','314','316','318','320',
+    '408','410','414','416','418','420',
+    '508','510','514','516',
+] 
+const eventos=[
+        '218','318','320','416','510'
+    ]
 export default function Agendar({page}){
     const navigate=useNavigate()
     const [now,setNow]=useState({day:null})

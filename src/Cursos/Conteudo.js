@@ -1,52 +1,51 @@
 import styled from "styled-components"
 import { python } from "../aulas/python"
 import { javascript } from "../aulas/javascript"
+import { react } from "../aulas/react"
 import { useNavigate, useParams } from "react-router-dom"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import ch from '../_imgs/check.png'
 import setaBaixo from '../_imgs/seta.png'
 import setaCima from '../_imgs/setacima.png'
 import Subtopico from "./Subtopico"
-const listaDeListasFalses = Array.from({ length: 9 }, () => Array(5).fill(false));
-const listaFalses=[true,false,false,false,false,false,false,false,false]
+import { useContext } from "react"
+import MyContext from "../utils/context"
+const listaFalses=Array(9).fill(true)
 export default function Topicos(){
+    const {aba,setAba,checks,setChecks}=useContext(MyContext)
     const navigate=useNavigate()
     const {materia}=useParams()
     const materiaEscolhida=(
         materia=='python'?python:
-        materia=='javascript'?javascript:[]
+        materia=='javascript'?javascript:
+        materia=='react'?react:[]
     )
     const qtdTopicos=materiaEscolhida.length
 
-    const [ab,setAbertos]=useState(JSON.parse(localStorage.getItem(`ab-${materia}`))||listaFalses)
-    const [checks,setChecks]=useState(JSON.parse(localStorage.getItem(`check-${materia}`))||listaDeListasFalses)
-    
-    function setarAb(i){
-        const n=[]
-        for(let k=0;k<qtdTopicos;k++)n.push(i==k?!ab[k]:ab[k])
-        setAbertos(n)
-        localStorage.setItem(`ab-${materia}`, JSON.stringify(n))
-    }
     function setarChecks(iTop,iSubtop){
         const n=[]
-        for(let k=0;k<qtdTopicos;k++){
+        for(let k=0;k<9;k++){
             const m=[]
-            for(let j=0;j<4;j++)m.push(checks[k]?(k==iTop&&j==iSubtop?!checks[k][j]:checks[k][j]):false)
+            for(let j=0;j<9;j++)m.push(checks[k]?(k==iTop&&j==iSubtop?!checks[k][j]:checks[k][j]):false)
             n.push(m)
         }
         setChecks(n)
         localStorage.setItem(`check-${materia}`, JSON.stringify(n))
     }
-
-    const vazio=true
+/*useEffect(()=>{
+    localStorage.setItem(`check-python`, JSON.stringify(listaDeListasFalses))
+    localStorage.setItem(`check-javascript`, JSON.stringify(listaDeListasFalses))
+    localStorage.setItem(`check-react`, JSON.stringify(listaDeListasFalses))
+},[])*/
+    
     return (
-        <Tudo vazio={vazio}>
-            <Janela vazio={vazio}>
+        <Tudo >
+            <Janela >
             {materiaEscolhida.map((top,index)=>
-            <Topico vazio={vazio} ab={ab[index]?50+50*top.subtopicos.length:60} ult={index==materiaEscolhida.lenth-1}>
-                <Cab onClick={()=>setarAb(index)}><h6>{top.nome}</h6></Cab>
-                <aside onClick={()=>setarAb(index)}><img src={ab[index]?setaCima:setaBaixo}/></aside>
-                {ab[index]?<Caixa>
+            <Topico ult={index==materiaEscolhida.lenth-1}>
+                <Cab ><h6>{top.nome}</h6></Cab>
+                {/*<aside onClick={()=>setarAb(index)}><img src={ab[index]?setaCima:setaBaixo}/></aside>*/}
+                <Caixa>
                 {top.subtopicos.map(
                     (sub,ind)=>{
                         const {bonus,nome}=sub
@@ -62,7 +61,7 @@ export default function Topicos(){
                     </HoldSub>
                     )}
                 )
-                }</Caixa>:<></>}
+                }</Caixa>
                 
             </Topico>
             )}
@@ -91,10 +90,12 @@ align-items:center;
 width:100%;
 height:100%;
 flex-direction:column;
+padding:0px 0 20px 0;
+box-sizing:border-box;
 @media(min-width:750px){
 display:flex;
 overflow:auto;
-width:${p=>p.vazio?'100%;':'280px;'}
+width:100%;
 }
 
 
@@ -127,7 +128,7 @@ margin:15px 0 0 5%;
 }
 @media(min-width:750px){
 margin:15px 0 0 0;
-max-width:${p=>p.vazio?'370px':'320px'};
+max-width:320px
 }
 
 `

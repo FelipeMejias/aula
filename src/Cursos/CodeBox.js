@@ -6,8 +6,15 @@ import { useParams } from 'react-router-dom';
 export default function CodeBlock({texto,mat}) {
   const params=useParams()
     const materia=mat||params.materia
+    const materiaEscolhida=(
+            materia=='python'?'python':
+            materia=='javascript'?'javascript':
+            materia=='react'?(
+              params.topico=='1'?'html':'css'
+            ):''
+        )
   return (
-  <SyntaxHighlighter style={vscDarkPlus} language={materia} >
+  <SyntaxHighlighter style={vscDarkPlus} language={materiaEscolhida} >
     {texto}
   </SyntaxHighlighter>
   );

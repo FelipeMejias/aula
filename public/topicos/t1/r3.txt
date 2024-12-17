@@ -1,0 +1,23 @@
+<div class="continente">
+    <h2>América do Sul</h2>
+    <ul>
+        <div class="clube">
+            <h3>Boca Juniors</h3>
+        </div>
+        <div class="clube">
+            <h3>Botafogo</h3>
+        </div>
+        <div class="clube">
+            <h3>Flamengo</h3>
+        </div>
+        <div class="clube">
+            <h3>Fluminense</h3>
+        </div>
+        <div class="clube">
+            <h3>Palmeiras</h3>
+        </div>
+        <div class="clube">
+            <h3>River Plate</h3>
+        </div>
+    </ul>
+</div>

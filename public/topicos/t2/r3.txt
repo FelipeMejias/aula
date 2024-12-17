@@ -1,0 +1,6 @@
+.clube{
+    display:flex; /* define que a div utilizará o modo flex */
+    flex-direction:column; /* valor padrão = row */
+    align-items:center; /* valor padrão = flex-start */
+    justify-content:space-evenly; /* valor padrão = flex-start */
+}

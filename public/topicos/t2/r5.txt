@@ -1,0 +1,24 @@
+ul{
+    overflow:auto;
+    padding:0
+}
+
+::-webkit-scrollbar { /* tamanho do scroll */
+    width: 12px; 
+    height: 12px; 
+}
+
+::-webkit-scrollbar-track { /* fundo do scroll */
+    background-color: transparent; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb { /* segurador do scroll */
+    background-color: #1d5b06; 
+    border-radius: 10px;
+    cursor:pointer
+} 
+
+::-webkit-scrollbar-thumb:hover { /* segurador quando clicado */
+    background-color: #144403; 
+}

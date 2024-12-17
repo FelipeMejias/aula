@@ -1,0 +1,9 @@
+.continente{
+    padding:20px;
+    margin-top:20px;
+    
+    /* Quando usamos padding, o espaço dele não é considerado
+    na altura e na largura, normalmente não é o que buscamos 
+    Então pode ser indicado usar: */
+    box-sizing:border-box; 
+}

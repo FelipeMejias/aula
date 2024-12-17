@@ -6,6 +6,7 @@ import CodeBlock from "./CodeBox"
 import { useEffect, useState } from "react"
 import set from '../_imgs/setaback.png'
 import ch from '../_imgs/check.png'
+import { react } from "../aulas/react"
 const listaFalses = Array.from({ length: 9 }, () => Array(5).fill(false));
 export default function Subtopico({}){
     const params=useParams()
@@ -13,9 +14,10 @@ export default function Subtopico({}){
     const topico=params.topico
     const subtopico=params.subtopico
     const materiaEscolhida=(
-        materia=='python'?python:
-        materia=='javascript'?javascript:[]
-    )
+            materia=='python'?python:
+            materia=='javascript'?javascript:
+            materia=='react'?react:[]
+        )
     const checks=JSON.parse(localStorage.getItem(`check-${materia}`))||listaFalses
     const top=materiaEscolhida[topico-1]
     const subtop=top?.subtopicos[subtopico-1]
@@ -32,14 +34,14 @@ export default function Subtopico({}){
     };
     const [texto,setTexto]=useState('')
     useEffect(() => {
-        const letraLing=materia=='python'?'p':materia=='javascript'?'j':''
+        const letraLing=materia[0]
         if(letraLing){
           const promise=fetch(`/topicos/t${topico}/${letraLing}${subtopico}.txt`)
           const promise2=promise.then((response) => response.text())
-          promise2.then((data) => setTexto(data));  
+          promise2.then((data) => {console.log(data);setTexto(data)});  
         }
       }, [topico,subtopico,materia]);
-  
+  console.log(subtop)
     return (!subtop?<Tudo vazio={true}></Tudo>:
         <Tudo >
           <Meio>
@@ -53,11 +55,12 @@ export default function Subtopico({}){
                 </Escolhas>
                 
               </Heder>*/}
-
+              {subtop.texto?<Coment>{subtop.texto}</Coment>:<></>}
               <HolderCode>
               {texto?<Copiar onClick={copiarTexto}><p>{copiado ? 'Texto copiado!' : 'Copiar Texto'}</p></Copiar>:<></>}
               <CodeBlock texto={texto} />
               </HolderCode>
+              {subtop.img?<img src={subtop.img}/>:<></>}
             </Meio>
             <Janela>
             {materiaEscolhida.map((top,index)=>
@@ -86,10 +89,21 @@ export default function Subtopico({}){
         </Tudo>
     )
 }
+const Coment=styled.div`
+margin-bottom:20px;
+border-radius:10px;
+padding:0 20px 0 20px;
+flex-direction:column;width:100%;
+justify-content:flex-start;background-color:white;
+position:relative;
+white-space: pre-wrap;
+text-align: left;
+word-wrap: break-word;
+`
 const HolderCode=styled.div`padding-top:16px;
 flex-direction:column;height:100%;width:100%;
 justify-content:flex-start;background-color:;
-position:relative;
+position:relative; 
 `
 const Bolinha=styled.div`
 cursor:pointer;
@@ -101,12 +115,12 @@ margin:0 5px 0 5px;
 const Escolhas=styled.div`
 `
 const Heder=styled.div`
-;position:sticky;top:0;
+;position:sticky;top:0;z-index:2;
 height:50px;width:100%;justify-content:space-between;
 h1{
 font-size:18px;font-weight:500;
 }p{color:#35A5AD};
-background-color:;
+background-color:#f0f2b8;
 padding:0 15px 0 15px;
 box-sizing:border-box;
 display:flex;align-items:center;
@@ -117,12 +131,13 @@ display:flex;align-items:center;
 
 `
 const Meio=styled.div`background-color:;
-padding:0 30px 0 45px;
+padding:0 30px 20px 45px;
 width:100%;
 height:100%;
 flex-direction:column;
 justify-content:flex-start;
 align-items:center;
+img{width:100%;max-width:600px;}
 @media(max-width:1050px){
 width:100%
 }

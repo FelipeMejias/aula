@@ -8,7 +8,7 @@ import js from '../_imgs/js.png'
 import re from '../_imgs/react.png'
 import nd from '../_imgs/node.png'
 import py from '../_imgs/python.png'
-import hc from '../_imgs/html3.jpg'
+import hc from '../_imgs/react.png'
 import sq from '../_imgs/sql.jpg'
 import wpp from '../_imgs/wpp.png'
 import dayjs from 'dayjs'
@@ -42,6 +42,8 @@ export default function Secoes({align}){
             <Botao tex={'FrontEnd vs BackEnd'} sel={pathname.includes('linguagens')} path={`/linguagens`} /> 
             <Botao tex={'Javascript'} sel={pathname.includes(`javascript`)} path={`/cursos/javascript`} img={js} />
             <Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} />
+            {/*<Botao tex={'SQL'} sel={pathname.includes(`bancos`)} path={`/bancos`} img={sq} />*/}
+            <Botao tex={'React'} sel={pathname.includes(`react`)} path={`/cursos/react`} img={re} />
 
             <h1>Meu Material</h1>
             <Botao tex={'Arquivos de aulas'} sel={pathname.includes(`aulas`)} path={`/aulas`} />

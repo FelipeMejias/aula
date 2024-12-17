@@ -1,0 +1,21 @@
+body {
+    font-family: 'Segoe UI',sans-serif; /* escolhendo a fonte */
+    margin: 0;
+    height:100vh; /* altura ( 100% da altura da tela ) */
+    width:100vw; /* largura ( 100% da largura da tela ) */
+    background-color:#3ac613;
+}
+
+article{
+    height:100px; /* altura ( px ou % ) */
+    width:95%; /* largura ( px ou % ) */
+    background-color:#257709; /* cor do fundo ( código da cor, ou nome em inglês ) */
+    border-radius:20px; /* raio da borda ( px, 50% faz ficar redondo ) */
+}
+
+h2{
+    margin:10px;
+    font-size:20px; /* tamanho da fonte ( px ) */
+    font-weight:500; /* grossura da fonte (  ) */
+    color:white; /* cor da fonte */
+}
