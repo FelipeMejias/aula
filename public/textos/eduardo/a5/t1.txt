@@ -1,0 +1,22 @@
+'''
+Transforme as duas funçoes em uma só
+'''
+def calcularPreco(pedido):
+    if pedido == 1 or pedido == 2 or pedido == 3:
+        objeto = infos[pedido-1]
+        return objeto["preço"]
+    else:
+        return None
+    
+def nomeProduto(pedido):
+    if pedido == 1 or pedido == 2 or pedido == 3:
+        objeto = infos[pedido-1]
+        return objeto["nome"]
+    else:
+        return None
+
+buscarItem(1,"preco")
+buscarItem(2,"preco")
+buscarItem(3,"nome)
+
+#buscarItem(2)

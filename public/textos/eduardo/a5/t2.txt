@@ -1,0 +1,6 @@
+'''
+Crie uma função para adicionar itens no cardapio
+'''
+
+adicionarAoCardapio("Milkshake",9)
+adicionarAoCardapio("Hamburger Duplo",18)

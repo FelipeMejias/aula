@@ -24,7 +24,9 @@ function App() {
   const [checksJ,setChecksJ]=useState(JSON.parse(localStorage.getItem(`ch-javascript`))||listaDeListasFalses)
   const [checksR,setChecksR]=useState(JSON.parse(localStorage.getItem(`ch-react`))||listaDeListasFalses)
   const [aba,setAba]=useState(false)
-  const valorContexto={aba,setAba,checksP,setChecksP,checksR,setChecksR,checksJ,setChecksJ}
+  const valorContexto={aba,setAba,
+    checksP,setChecksP,checksR,setChecksR,checksJ,setChecksJ
+  }
   return (
     <div className="App">
       <MyContext.Provider value={valorContexto}>

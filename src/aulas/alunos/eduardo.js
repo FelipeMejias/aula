@@ -31,6 +31,11 @@ const aula3=[
 const aula4=[
     {titulo:'DatasPprovas com Split',icone:py,texto:formarTexto(4,1)},
 ]
+const aula5=[
+    {titulo:'Exercicio 1',icone:py,texto:formarTexto(5,1)},
+    {titulo:'Exercicio 2',icone:py,texto:formarTexto(5,2)},
+    {titulo:'Exercicio 3',icone:py,texto:formarTexto(5,3)},
+]
 export const eduardo=[//Eduardo
     {
         titulo:'Aula 1',
@@ -48,6 +53,9 @@ export const eduardo=[//Eduardo
         titulo:'Aula 4',
         data:'Terça 05/12',
         arquivos:aula4
+    },{
+        titulo:'Próxima aula',
+        arquivos:aula5
     },
 ]
 

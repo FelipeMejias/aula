@@ -1,0 +1,8 @@
+'''
+Crie uma função para obter a lista com os clientes mais fiéis
+Existem 2 critérios
+-Gastos
+-Visitas
+Devolva uma lista de dicionários ordenados por maior gasto
+'''
+
