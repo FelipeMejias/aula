@@ -5,7 +5,6 @@ import js from '../_imgs/js.png'
 import re from '../_imgs/react.png'
 import nd from '../_imgs/node.png'
 import py from '../_imgs/python.png'
-import hc from '../_imgs/html3.jpg'
 import sq from '../_imgs/sql.jpg'
 export default function Linguagens({}){
     const navigate=useNavigate()

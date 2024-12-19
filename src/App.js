@@ -24,8 +24,13 @@ function App() {
   const [checksJ,setChecksJ]=useState(JSON.parse(localStorage.getItem(`ch-javascript`))||listaDeListasFalses)
   const [checksR,setChecksR]=useState(JSON.parse(localStorage.getItem(`ch-react`))||listaDeListasFalses)
   const [aba,setAba]=useState(false)
+  const centralChecks={
+    "python":[checksP,setChecksP],
+    "javascript":[checksJ,setChecksJ],
+    "react":[checksR,setChecksR],
+  }
   const valorContexto={aba,setAba,
-    checksP,setChecksP,checksR,setChecksR,checksJ,setChecksJ
+    centralChecks
   }
   return (
     <div className="App">
@@ -51,11 +56,7 @@ function App() {
 <Route path='/horarios' element={<Agendar page={2}/>}/>
 
                 {/* ativar código aluno */}
-<Route path='/clarissa' element={<SalvarNome nome='clarissa' />}/>
-<Route path='/antonio' element={<SalvarNome nome='antonio' />}/>
-<Route path='/victoria' element={<SalvarNome nome='victoria' />}/>
-<Route path='/eduardo' element={<SalvarNome nome='eduardo' />}/>
-<Route path='/isaac' element={<SalvarNome nome='isaac' />}/>
+<Route path='/usuario/:nome' element={<SalvarNome />}/>
               </Routes>
             </Resto>
           </Tudo>

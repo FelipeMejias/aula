@@ -2,14 +2,8 @@ import { useLocation, useNavigate, useParams } from "react-router-dom"
 import styled, { ThemeConsumer } from "styled-components"
 import { useState } from "react"
 import { useContext } from "react"
-import menu from '../_imgs/menu.png'
 import MyContext from '../utils/context'
-import js from '../_imgs/js.png'
-import re from '../_imgs/react.png'
-import nd from '../_imgs/node.png'
-import py from '../_imgs/python.png'
-import hc from '../_imgs/html3.jpg'
-import sq from '../_imgs/sql.jpg'
+
 import Botao from "./Botao"
 import Secoes from "./Secoes"
 export default function Aba(){

@@ -5,25 +5,24 @@ function formarTexto(aula,num){
     return `/textos/antonio/a${aula}/t${num}.txt`
 }
 const aula1=[
-    {titulo:'index.js',icone:nd,texto:formarTexto(1,2)},
-    {titulo:'funcoes.js',icone:nd,texto:formarTexto(1,3)},
-    {titulo:'cardapio.js',icone:nd,texto:formarTexto(1,4)},
-    {titulo:'index.js',icone:re,texto:formarTexto(1,6)},
-    {titulo:'App.js',icone:re,texto:formarTexto(1,7)},
-    {titulo:'Item.js',icone:re,texto:formarTexto(1,8)},
-    {titulo:'api.js',icone:re,texto:formarTexto(1,9)},
+    {nome:'index.js',icone:nd,texto:formarTexto(1,2)},
+    {nome:'funcoes.js',icone:nd,texto:formarTexto(1,3)},
+    {nome:'cardapio.js',icone:nd,texto:formarTexto(1,4)},
+    {nome:'index.js',icone:re,texto:formarTexto(1,6)},
+    {nome:'App.js',icone:re,texto:formarTexto(1,7)},
+    {nome:'Item.js',icone:re,texto:formarTexto(1,8)},
+    {nome:'api.js',icone:re,texto:formarTexto(1,9)},
     ]
 export const antonio=[
     {
-        titulo:'Aula 1',
-        status:'Feito',
+        nome:'Aula 1',
         data:'Terça 5/11',
         arquivos:aula1
     },
 ]
 
 /* {
-        titulo:'função',
+        nome:'função',
         icone:js,
 texto:`
 // Funcao e um bloco de codigo executado quando seu nome e chamado
@@ -41,7 +40,7 @@ function minhaFuncao(){
 
 minhaFuncao()
     `},{
-        titulo:'função-parâmetro',
+        nome:'função-parâmetro',
         icone:js,
 texto:`
 // Os parametros sao escolhidos na criacao da funcao
@@ -70,7 +69,7 @@ compareOsDois( 7 , 5 )
 compareOsDois( 4 , 4 )
         `
     },{
-        titulo:'variáveis',
+        nome:'variáveis',
         icone:js,
 texto:`
 // Varaveis são criadas para guardarem um valor
@@ -96,7 +95,7 @@ const minhaFruta = 'melancia'
 const statusAtivo = True
         `
     },{
-        titulo:'condicionais',
+        nome:'condicionais',
         icone:js,
 texto:`
 // If executa o bloco de código caso a condicao seja True
@@ -134,7 +133,7 @@ if( qua_1_idade > 10 ){
 }
         `
     },{
-        titulo:'Funções dentro de funções',
+        nome:'Funções dentro de funções',
         icone:js,
 texto:`
 function calcularMedia(p1,p2){
@@ -158,7 +157,7 @@ const media=calcularMedia(notaDaP1, notaDaP2 )
 console.log(media)
         `
     },{
-        titulo:'Componente React',
+        nome:'Componente React',
         icone:re,
         texto:`
 import styled from "styled-components"
@@ -175,7 +174,7 @@ const Conteudo=styled.div'
 '
         `
     },{
-        titulo:'Rect-index.js',
+        nome:'Rect-index.js',
         icone:re,
 texto:`
 import React, { useEffect, useState } from 'react';
@@ -229,7 +228,7 @@ overflow:auto;
 '  
         
         `
-    },{titulo:'React-Item.js',
+    },{nome:'React-Item.js',
     icone:re,    texto:`
 import styled from "styled-components"
 
@@ -257,7 +256,7 @@ Ou seja,
 se a condição der True é usada a resposta1, se der False é usada a resposta2
         `
     },{
-        titulo:'React- api.js',
+        nome:'React- api.js',
         icone:re,
 texto:`
 import axios from "axios"
@@ -271,7 +270,7 @@ export const getComidas = async () => {
 /* Nao se preocupe em entender esse arquivo, veja apenas que voce coloca a url do back-end
 e coloca dentro de cada função o nome da rota igual o que voce escolheu no back-end: /comidas
         `
-    },{titulo:'Node',
+    },{nome:'Node',
     icone:re,    texto:`
 import cors from 'cors'
 import Express, {json} from 'express'

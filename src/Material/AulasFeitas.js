@@ -1,36 +1,22 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
-import Identifique from "../utils/Identifique"
-import { gaveta, listaAlunos } from "../aulas/gaveta"
+import { alunos } from "../aulas/gaveta"
 import { useEffect, useState } from "react"
 import novoExercicio from '../_imgs/novo.png'
-import file from '../_imgs/file.png'
 import Arquivo from "./Arquivo"
+import AulaG from "./AulaG"
 //const exercicios=JSON.parse(localStorage.getItem('exercicios'))||[]
 
 export default function AulasFeitas(){
     const navigate=useNavigate()
     const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado-js'
-    const info=gaveta[listaAlunos.indexOf(aluno)]
+    const {linguagem,aulas}=alunos[aluno]
    
     return (
         <Tudo>
             <Janela vazio={true}>
-            {info.map((aula,iAula)=>
-                <Aula vazio={true}>
-                    <Cab>
-                        <p>{aula.titulo}</p>
-                        <p><small>{aula.data}</small></p>
-                    </Cab>
-                    <section>
-                        {aula.arquivos.map((arquivo,iArquivo)=>
-                            <Arq onClick={()=>navigate(`/aulas/${iAula+1}/${iArquivo+1}`)}>
-                                <img src={arquivo.icone}></img>
-                                <h3>{arquivo.titulo}</h3>
-                            </Arq>)}
-                        
-                    </section>
-                </Aula>
+            {aulas.map((aula,iAula)=>
+                <AulaG a={aula}iAula={iAula}/>
             )}
             </Janela>
         </Tudo>
@@ -52,62 +38,8 @@ width:${p=>p.vazio?'100%;':'370px;'}
 const Tudo=styled.div`
 width:100%;height:100%;
 `
-const Cab=styled.div`
-align-items:center;
-background-color:#d9dbad;width:100%;
-border-top-left-radius:15px;
-border-top-right-radius:15px;
-justify-content:space-between;
-padding:0 10px 0 10px;
-p{small{13px}
-font-size:18px;margin:5px 0 7px 0px;
-}
-`
-const Aula=styled.div`
-display:flex;
-flex-direction:column;
-align-items:flex-start;
 
-width:90%;max-width:450px;
-margin:15px 0 0 0;
-background-color:white;
-border-radius:15px;
 
-section{width:100%;background-color:;
-display:flex;min-height:80px;
-align-items:center;margin:5px 0 5px 0;
-flex-wrap:wrap;
-}
-@media(max-width:500px){
-margin:15px 0 0 5%;
-}
-@media(min-width:750px){
-max-width:${p=>p.vazio?'450px':'320px'};
-}
-`
-
-const Arq=styled.article`background-color:;
-display:flex;
-align-items:center;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-cursor:pointer;
-width:25%;
-height:100px;
-border-radius:15px;
-margin-left:10px;
-img{
-height:40px;margin-bottom:5px;
-}
-h3{margin:0 0 0 0;line-height:14px;height:30px;
-font-size:14px;font-weight:300;min-width:100%;
-strong{
-color:green;font-weight:300;
-}
-}
-
-`
 
 
 

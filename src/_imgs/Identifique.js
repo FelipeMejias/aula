@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { listaAlunos } from "../aulas/gaveta"
+import { alunos } from "../aulas/gaveta"
 export default function Identifique({nomeTentado}){
     const navigate=useNavigate()
     const tentativa=nomeTentado
@@ -13,7 +13,7 @@ export default function Identifique({nomeTentado}){
         }
       };
     function principal(){
-        if(title&&listaAlunos.includes(title)){
+        if(title&&Object.keys(alunos).includes(title)){
             localStorage.setItem(`usuario`, JSON.stringify(title.toLowerCase()))
             navigate(`/aulas/${title.toLowerCase()}`)
         }else{

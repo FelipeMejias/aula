@@ -4,23 +4,22 @@ import { javascript } from "../aulas/javascript"
 import { useNavigate, useParams } from "react-router-dom"
 import CodeBlock from "./CodeBox"
 import { useEffect, useState } from "react"
-import set from '../_imgs/setaback.png'
 import ch from '../_imgs/check.png'
 import { react } from "../aulas/react"
+import AulaP from "../Material/AulaP"
 const listaFalses = Array.from({ length: 9 }, () => Array(5).fill(false));
-export default function Subtopico({}){
-    const params=useParams()
-    const materia=params.materia
-    const topico=params.topico
-    const subtopico=params.subtopico
+export default function Subtopico(){
+    const {materia,topico,subtopico}=useParams()
+
     const materiaEscolhida=(
             materia=='python'?python:
             materia=='javascript'?javascript:
             materia=='react'?react:[]
         )
-    const checks=JSON.parse(localStorage.getItem(`check-${materia}`))||listaFalses
+    const checks=JSON.parse(localStorage.getItem(`ch-${materia}`))||listaFalses
     const top=materiaEscolhida[topico-1]
-    const subtop=top?.subtopicos[subtopico-1]
+    const temTop=top?.subtopicos
+    const subtop=temTop?temTop[subtopico-1]:top.arquivos[subtopico-1]
     const navigate=useNavigate()
 
     const [copiado, setCopiado] = useState(false);
@@ -47,23 +46,17 @@ export default function Subtopico({}){
           <Meio>
               <Heder>
                 <h1>{subtop.nome}</h1>
+                {texto?<Copiar onClick={copiarTexto}><p>{copiado ? 'Código copiado!' : 'Copiar código'}</p></Copiar>:<></>}
               </Heder>
-              {/*<Heder>
-                <Escolhas>
-                    <Bolinha>Resumo</Bolinha>
-                    <Bolinha>Ex 1</Bolinha>
-                </Escolhas>
-                
-              </Heder>*/}
-              {subtop.texto?<Coment>{subtop.texto}</Coment>:<></>}
-              <HolderCode>
-              {texto?<Copiar onClick={copiarTexto}><p>{copiado ? 'Texto copiado!' : 'Copiar Texto'}</p></Copiar>:<></>}
-              <CodeBlock texto={texto} />
-              </HolderCode>
+              
+              {subtop.texto?<Coment><p>{subtop.texto}</p></Coment>:<></>}
+              
+              
+              {subtop.noCode?<></>:<HolderCode><CodeBlock texto={texto} mat={subtop.linguagem} /></HolderCode>}
               {subtop.img?<img src={subtop.img}/>:<></>}
             </Meio>
             <Janela>
-            {materiaEscolhida.map((top,index)=>
+            {materiaEscolhida.map((top,index)=>!top.modoAulas?
             <Topico  ult={index==materiaEscolhida.lenth-1}>
                 <Cab ><h6>{top.nome}</h6></Cab>
                 <Caixa>
@@ -83,97 +76,80 @@ export default function Subtopico({}){
                 )
                 }</Caixa>
                 
-            </Topico>
+            </Topico>:<AulaP a={top}iAula={index} aula={topico}arquivo={subtopico}path={true}/>
             )}
             </Janela>
         </Tudo>
     )
 }
 const Coment=styled.div`
-margin-bottom:20px;
+margin-bottom:5px;
 border-radius:10px;
-padding:0 20px 0 20px;
+padding:0 20px 0px 20px;
 flex-direction:column;width:100%;
 justify-content:flex-start;background-color:white;
-position:relative;
+position:sticky;top:50px;
 white-space: pre-wrap;
 text-align: left;
 word-wrap: break-word;
-`
-const HolderCode=styled.div`padding-top:16px;
-flex-direction:column;height:100%;width:100%;
-justify-content:flex-start;background-color:;
-position:relative; 
-`
-const Bolinha=styled.div`
-cursor:pointer;
-padding:5px;
-background-color:#4787B2;color:white;
-border-radius:5px;
-margin:0 5px 0 5px;
-`
-const Escolhas=styled.div`
+p{
+margin:0;
+font-size:15px;
+}
 `
 const Heder=styled.div`
-;position:sticky;top:0;z-index:2;
-height:50px;width:100%;justify-content:space-between;
+background-color:#F0F2B8;
+position:sticky;top:0;
+min-height:50px;width:100%;
+justify-content:space-between;
 h1{
 font-size:18px;font-weight:500;
 }p{color:#35A5AD};
-background-color:#f0f2b8;
+background-color:;
 padding:0 15px 0 15px;
 box-sizing:border-box;
 display:flex;align-items:center;
-  main{
-  display:flex;
-  align-items:center;
-  }
-
 `
+const HolderCode=styled.div`padding-top:16px;
+flex-direction:column;width:100%;
+justify-content:flex-start;background-color:;
+position:relative;
+border-radius:10px;
+overflow:auto;
+`
+
 const Meio=styled.div`background-color:;
-padding:0 30px 20px 45px;
+padding:0 30px 0 45px;
 width:100%;
-height:100%;
+height: 100%;
 flex-direction:column;
 justify-content:flex-start;
 align-items:center;
-img{width:100%;max-width:600px;}
-@media(max-width:1050px){
-width:100%
-}
 @media(min-width:1050px){
 width:calc(100% - 240px)
 }
 `
 const Tudo=styled.div`
 width:100%;height:100%;
-
 flex-direction:row;
 justify-content:flex-start;
 align-items:center;
-
 overflow:auto;
-
 `
 const Copiar=styled.section`cursor:pointer;
 align-items:center;
 display:flex;
 flex-direction:column;
 padding:6px;
-position:absolute;
-top:-10px;right:0;
-background-color: #D9DBAD;
+background-color:#03B654;
 p{margin:0;
-color:black;
+color:white;
 display: inline-block;
 }
-border-top-left-radius:10px;
-border-top-right-radius:10px;
+border-radius:10px;
 width:130px;
 box-sizing:border-box;
 `
-
-
 const Janela=styled.article`
 display:flex;
 background-color:;
@@ -226,9 +202,9 @@ width:150px;position:relative;
 border-radius:4px;padding:6px;
 display:flex;align-items:center;
 background:${p=>p.sel?'#4787B2': 'transparent'};color:${p=>p.sel?'white': 'black'} ;
-border-radius: 4px;margin-left:15px;
+border-radius: 12px;margin-left:15px;
 transition: background-color 0.2s ease;
-img{height:20px;position:absolute;left:-20px;top:7.5px;}
+img{height:28px;position:absolute;left:-28px;top:4px;}
 :hover {
 
 }

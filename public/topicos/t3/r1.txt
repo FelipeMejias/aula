@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header><h1>Mundial 2025</h1></header>
+    <main>
+        <div class="continente">
+            <h2>Europa</h2>
+            <ul>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Atlhletico Madrid</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Bayern</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Benfica</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Borussia Dortmund</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Chelsea</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Internazionalle</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Juventus</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Manchester City</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Porto</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>PSG</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Real Madrid</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Salzburg</h3>
+                </div>
+            </ul>
+        </div>
+        <div class="continente">
+            <h2>América do Sul</h2>
+            <ul>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Boca Juniors</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Botafogo</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Flamengo</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Fluminense</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Palmeiras</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>River Plate</h3>
+                </div>
+            </ul>
+        </div>
+        <div class="continente">
+            <h2>América do Norte</h2>
+            <ul>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Monterrey</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Seattle Sounders</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>León</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Pachuca</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Inter Miami</h3>
+                </div>
+            </ul>
+        </div>
+        <div class="continente">
+            <h2>Ásia</h2>
+            <ul>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Al Hilal</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Urawa Red Diamonds</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Al Ain</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Ulsan</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Auckland City</h3>
+                </div>
+            </ul>
+        </div>
+        <div class="continente">
+            <h2>África</h2>
+            <ul>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Al Ahly</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Wydad Casablanca</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Espérance</h3>
+                </div>
+                <div class="clube">
+                    <aside><div></div></aside>
+                    <h3>Mamelodi Sundowns</h3>
+                </div>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

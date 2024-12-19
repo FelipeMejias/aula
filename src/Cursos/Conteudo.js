@@ -10,14 +10,14 @@ import setaCima from '../_imgs/setacima.png'
 import Subtopico from "./Subtopico"
 import { useContext } from "react"
 import MyContext from "../utils/context"
-const listaFalses=Array(9).fill(true)
+import AulaP from "../Material/AulaP"
+import AulaG from "../Material/AulaG"
 export default function Topicos(){
     const {aba,setAba,
-        checksP,setChecksP,checksR,setChecksR,checksJ,setChecksJ
+        centralChecks
     }=useContext(MyContext)
     const {materia}=useParams()
-    const checks=materia=='python'?checksP:materia=='javascript'?checksJ:materia=='react'?checksR:null
-    const setChecks=materia=='python'?setChecksP:materia=='javascript'?setChecksJ:materia=='react'?setChecksR:null
+    const [checks,setChecks]=centralChecks[materia]
     const navigate=useNavigate()
     
     const materiaEscolhida=(
@@ -25,7 +25,6 @@ export default function Topicos(){
         materia=='javascript'?javascript:
         materia=='react'?react:[]
     )
-    const qtdTopicos=materiaEscolhida.length
 
     function setarChecks(iTop,iSubtop){
         const n=[]
@@ -40,14 +39,15 @@ export default function Topicos(){
     return (
         <Tudo >
             <Janela >
-            {materiaEscolhida.map((top,index)=>
-            <Topico ult={index==materiaEscolhida.lenth-1}>
+            {materiaEscolhida.map((top,index)=>!top.modoAulas?
+            <Topico>
                 <Cab ><h6>{top.nome}</h6></Cab>
                 {/*<aside onClick={()=>setarAb(index)}><img src={ab[index]?setaCima:setaBaixo}/></aside>*/}
                 <Caixa>
                 {top.subtopicos.map(
                     (sub,ind)=>{
                         const {bonus,nome}=sub
+                        console.log(checks)
                         const marcado=checks[index][ind]
                     return(
                     <HoldSub>
@@ -62,7 +62,7 @@ export default function Topicos(){
                 )
                 }</Caixa>
                 
-            </Topico>
+            </Topico>:<AulaG a={top}iAula={index}path={true}/>
             )}
             </Janela>
            

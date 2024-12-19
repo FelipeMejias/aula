@@ -1,7 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom"
 import styled, { ThemeConsumer } from "styled-components"
 import { useContext, useState } from "react"
-import menu from '../_imgs/menu.png'
 import MyContext from '../utils/context'
 import Secoes from "./Secoes"
 export default function Inicial(){

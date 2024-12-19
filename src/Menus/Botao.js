@@ -25,14 +25,14 @@ cursor:pointer;
 background-color:${p=>!p.sel?'transparent':'#6c6d36'};
 color:${p=>!p.sel?'white':'white'};
 margin:8px 0px 0 0px;
-border-radius:5px;
+border-radius:50px;
 max-width:180px;
 min-width:180px;
-p{margin:5px;}
+p{margin:5px 5px 5px 9px;}
 transition: background-color 0.2s ease;
-img{
-    height:25px;border-radius:5px;
-    margin:3px 7px 3px 3px;
+img{padding:5px;background-color:white;
+    height:20px;border-radius:50%;
+    margin:3px;
 }
 `
 

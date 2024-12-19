@@ -4,14 +4,13 @@ function formarTexto(aula,num){
 }
 
 const aula1=[
-    {titulo:'Var - Int e Float',icone:js,texto:formarTexto(1,1)},
-    {titulo:'Var - String',icone:js,texto:formarTexto(1,2)},
-    {titulo:'Var - Booleano',icone:js,texto:formarTexto(1,3)},
+    {nome:'Var - Int e Float',icone:js,texto:formarTexto(1,1)},
+    {nome:'Var - String',icone:js,texto:formarTexto(1,2)},
+    {nome:'Var - Booleano',icone:js,texto:formarTexto(1,3)},
 ]
 export const convidadoJS=[
     {
-        titulo:'Aula 1 (Demonstração)',
-        status:'Feito',
+        nome:'Demonstração',
         data:'(Data)',
         arquivos:aula1
     },

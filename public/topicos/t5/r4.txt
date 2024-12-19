@@ -1,0 +1,25 @@
+import continentes from "./continentes";
+
+export function App(){
+  
+    return(
+        <div class="tela">
+            <header><h1>Mundial 2025</h1></header>
+            <main>
+            {continentes.map( continente=>
+                <div class="continente">
+                    <h2>{continente.nome}</h2>
+                    <ul>
+                    {continente.clubes.map( clube=>
+                        <div class="clube">
+                            <aside><div></div></aside>
+                            <h3>{clube}</h3>
+                        </div>
+                        )}
+                    </ul>
+                </div>
+            )}
+            </main>
+        </div>
+    )
+}
