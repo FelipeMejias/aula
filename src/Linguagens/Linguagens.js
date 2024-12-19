@@ -34,7 +34,6 @@ export default function Linguagens({}){
         },{
             passe:'sql',
             area:'Banco de Dados',
-            usadas:'Utiliza: Javascript ou Python',
             titulo:'SQL',
             img:sq,
             desc:`Faz a modelagem das tabelas. E recebe 'querys' do back-end para buscar, adicionar, alterar ou deletar itens de cada tabela.`
@@ -87,18 +86,19 @@ export default function Linguagens({}){
 function Option({titulo,img,desc,func,area,usadas}){
     const pequeno=titulo=='Python'||titulo=='Javascript'
     //onClick={func}
+    const navigate=useNavigate()
     return(
         <Ope  tam={pequeno?48:100} max={pequeno?230:450}>
             <Cab>
                 <h6>{area}</h6>
             </Cab>
-            <section>
+            <Nov util={titulo=='React'} onClick={()=>{if(titulo=='React'){navigate(`/cursos/react`)}}}>
                 <img src={img}/>
                 <article>
                     <h1>{titulo}</h1>
                     <h2>{usadas}</h2>
                 </article>
-            </section>
+            </Nov>
             <p>{desc}</p>
         </Ope>
     )
@@ -110,25 +110,32 @@ width:${p=>p.tam}%;max-width:${p=>p.max}px;
 min-height:150px;border-radius:10px;
 flex-direction:column;
 display:flex;cursor:pointer;
-align-items:center;
+align-items:;
 margin-top:15px;
-img{width:40px;margin:0 15px 0 15px}
 h1{margin:0;font-size:16px;font-weight:500;}
 h2{margin:0;font-size:14px;font-weight:300;color:#31330c;}
 
-article{
+article{background-color:;
 display:flex;flex-direction:column;
 align-items:flex-start;
 }
-section{
-display:flex;align-items:center;width:100%;
-    margin:15px 0 0 0;background-color:;
-    }
+
+img{width:40px;margin:0 0px 0 0px}
+`
+const Nov=styled.div`
+background-color:${p=>p.util?'#dbdbdb':'transparent'};
+display:flex;align-items:center;
+border-radius:5px;
+    margin:15px 0 0 0;padding:7px;
+     h1{margin:0 15px 0 15px;}
+     h2{margin:0 15px 0 15px;}
 `
 const Novo=styled.div`
-    display:flex;align-items:center;150px;
-    margin:15px 0 0 0;background-color:#dbdbdb;
-    padding:7px;border-radius:5px;
+background-color:#dbdbdb;
+display:flex;align-items:center;
+border-radius:5px;
+    margin:15px 0 0 0;
+    padding:7px;
     h1{margin:0 15px 0 15px;}
 `
 const Especial=styled.div`
@@ -139,7 +146,7 @@ padding:0 10px 0 10px;
 p{
 font-size:14px;margin:5px 0 7px 0px;
 }
-img{width:40px;margin:0 0px 0 0px}
+
 `
 const Cab=styled.div`
 align-items:center;
