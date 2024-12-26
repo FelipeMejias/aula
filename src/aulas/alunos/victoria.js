@@ -1,19 +1,19 @@
 import js from '../../_imgs/js.png'
 import re from '../../_imgs/react.png'
 function formarTexto(aula,num){
-    return `/textos/victoria/a${aula}/t${num}.txt`
+    return `/alunos/victoria/a${aula}/t${num}.txt`
 }
 
 const aula1=[
-    {nome:'Var - Int e Float',icone:js,texto:formarTexto(1,1)},
-    {nome:'Var - String',icone:js,texto:formarTexto(1,2)},
-    {nome:'Var - Booleano',icone:js,texto:formarTexto(1,3)},
+    {nome:'Var - Int e Float',icone:js,caminho:formarTexto(1,1)},
+    {nome:'Var - String',icone:js,caminho:formarTexto(1,2)},
+    {nome:'Var - Booleano',icone:js,caminho:formarTexto(1,3)},
 ]
 const aula2=[
-    {nome:'index.html',icone:re,texto:formarTexto(2,1)},
-    {nome:'App.js',icone:re,texto:formarTexto(2,2)},
-    {nome:'loja.js',icone:re,texto:formarTexto(2,3)},
-    {nome:'portes.js',icone:re,texto:formarTexto(2,4)},
+    {nome:'index.html',icone:re,caminho:formarTexto(2,1)},
+    {nome:'App.js',icone:re,caminho:formarTexto(2,2)},
+    {nome:'loja.js',icone:re,caminho:formarTexto(2,3)},
+    {nome:'portes.js',icone:re,caminho:formarTexto(2,4)},
 ]
 export const victoria=[
     {

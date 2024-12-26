@@ -11,13 +11,13 @@ export default function Linguagens({}){
     const {aluno}=useParams()||'convidado'
     const rodagem=`As linguagens de rodagem são essenciais para qualquer programa. Reúnem as lógicas de programação e fazem o código funcionar. `
     const opcoes=[
-        /*{
-            passe:'html-css',
-            area:'',
-            titulo:'HTML + CSS',
-            img:hc,
-            desc:``
-        },*/{
+        {
+            passe:'',
+            area:'Rodagem',
+            titulo:'',
+            duo:true,
+            desc:rodagem
+        },{
             passe:'react',
             area:'Front-End',
             usadas:'Utiliza: Javascript + HTML + CSS',
@@ -54,51 +54,44 @@ export default function Linguagens({}){
     },*/
     return (
         <Tudo>
-                <main>
-                    <Ope>
-                        <Cab><h6>Rodagem</h6></Cab>
-                        <Especial>
-                            <Novo onClick={()=>navigate(`/cursos/javascript`)}>
-                                <img src={js}/>
-                                <article>
-                                    <h1>Javascript</h1>
-                                </article>
-                            </Novo>
-                            <Novo onClick={()=>navigate(`/cursos/python`)}>
-                                <article>
-                                    <h1>Python</h1>
-                                </article>
-                                <img src={py}/>
-                            </Novo>
-                        </Especial>
-                        <p>{rodagem}</p>
-                    </Ope>
-                {opcoes.map(({usadas,titulo,area,img,desc,passe})=><Option 
-                titulo={titulo} img={img} 
+                
+                {opcoes.map(({duo,usadas,titulo,area,img,desc,passe})=><Option 
+                titulo={titulo} img={img} duo={duo}
                 desc={desc} area={area}
-                usadas={usadas}
-                func={()=>{navigate(`/cursos/${passe}`)}} />
+                usadas={usadas}/>
                 )}
-                </main>
         </Tudo>
     )
 }
-function Option({titulo,img,desc,func,area,usadas}){
-    const pequeno=titulo=='Python'||titulo=='Javascript'
-    //onClick={func}
-    const navigate=useNavigate()
+function Option({duo,titulo,img,desc,func,area,usadas}){
     return(
-        <Ope  tam={pequeno?48:100} max={pequeno?230:450}>
+        <Ope  >
             <Cab>
                 <h6>{area}</h6>
             </Cab>
-            <Nov util={titulo=='React'} onClick={()=>{if(titulo=='React'){navigate(`/cursos/react`)}}}>
+            {duo?
+                <Especial>
+                    <Novo >
+                        <img src={js}/>
+                        <article>
+                            <h1>Javascript</h1>
+                        </article>
+                    </Novo>
+                    <Novo>
+                        <article>
+                            <h1>Python</h1>
+                        </article>
+                        <img src={py}/>
+                    </Novo>
+                </Especial>:
+            <Nov>
                 <img src={img}/>
                 <article>
                     <h1>{titulo}</h1>
                     <h2>{usadas}</h2>
                 </article>
-            </Nov>
+            </Nov>}
+            
             <p>{desc}</p>
         </Ope>
     )
@@ -106,10 +99,10 @@ function Option({titulo,img,desc,func,area,usadas}){
 
 const Ope=styled.div`
 background-color:white;
-width:${p=>p.tam}%;max-width:${p=>p.max}px;
-min-height:150px;border-radius:10px;
+width:100%;max-width:450px;
+min-height:210px;border-radius:10px;
 flex-direction:column;
-display:flex;cursor:pointer;
+display:flex;
 align-items:;
 margin-top:15px;
 h1{margin:0;font-size:16px;font-weight:500;}
@@ -123,7 +116,6 @@ align-items:flex-start;
 img{width:40px;margin:0 0px 0 0px}
 `
 const Nov=styled.div`
-background-color:${p=>p.util?'#dbdbdb':'transparent'};
 display:flex;align-items:center;
 border-radius:5px;
     margin:15px 0 0 0;padding:7px;
@@ -131,7 +123,6 @@ border-radius:5px;
      h2{margin:0 15px 0 15px;}
 `
 const Novo=styled.div`
-background-color:#dbdbdb;
 display:flex;align-items:center;
 border-radius:5px;
     margin:15px 0 0 0;
@@ -172,28 +163,6 @@ p{
     font-size:15px;margin:20px 0 25px 0;
     width:90%;
 }
-    justify-content:space-evenly;
-main{
-    width:90%;max-width:450px;
-    flex-direction:row;
-    flex-wrap:wrap;
-    display:flex;
-    align-items:center;
-    background-color:;
-    justify-content:space-between;
-    padding-bottom:30px;box-sizing:border-box;
-}
-@media(min-width:750px){
-height:100%;
-}
-`
-const Resto=styled.div`
-width:100%;height:calc(100% - 75px);
-flex-direction:column;
-flex-wrap:wrap;
 overflow:auto;
-display:flex;
-align-items:center;
-background-color:;
 
 `

@@ -1,0 +1,35 @@
+// String (conjunto de caracteres: textos, datas...)
+const fruta1 = 'abacaxi'
+const fruta2 = 'laranja'
+
+const palavra = fruta1[3] + fruta2[5] // 'cj'
+
+const frase = fruta1 + ' & ' + fruta2 // 'abacaxi & laranja
+
+// String dinâmica fechadas por crase permitem inserir código javascript através do ${} Além de permitir pular linha
+const fraseStringDinamica = `minha fruta preferida é: ${fruta}`
+
+
+const nome = "Rogerio"
+
+// Transformar maiúsculas e minúsculas
+nome.toUpperCase() // ROGERIO
+nome.toLowerCase() // rogerio
+
+// Substituir uma parte da string.
+nome.replace('o', 'k') // Rkgerik 
+nome.replace('o', '') // Rgeri
+
+// Verificar se String contém certa string em seu valor
+nome.includes('glu') // false
+nome.includes('ger') // true
+
+// Converter de String para (Int ou Float)
+const stringNum ='12'
+const num = parseInt(stringNum) // 12
+const stringNumQuebrado = '5.5'
+const numQuebrado = parseFloat(stringNumQuebrado) // 5.5
+
+// Converter de (Int ou Float) para String
+const numero = 4
+const numeroString=numero.toString() // '4'

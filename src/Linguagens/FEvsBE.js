@@ -95,7 +95,6 @@ height:100%;
 min-width:160vh;
 min-width:1090px;
 h2{margin:10px 0 10px 0;font-size:18px;font-weight:500;
-width:100%;
 }
 `
 const Tudao=styled.div`
@@ -109,8 +108,9 @@ width:42%;height:30%;max-width:300px;
 justify-content:space-between;
 `
 const Back=styled.div`
+flex-direction:column;
 width:740px;height:40%;
-border-radius:10px;
+border-radius:10px;padding:0 0 0 25px;box-sizing:border-box;
 background-color:#eaa63f;
 position:absolute;bottom:30px;left:300px;
 `
@@ -127,6 +127,8 @@ align-items:center;
 background-color:#74ea6e;
 `
 const Banco=styled.div`
+align-items:center;
+flex-direction:column;
 width:200px;height:100%;
 border-radius:10px;
 background-color:#45d1d8;

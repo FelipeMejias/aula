@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './_imgs/App.css';
+import './App.css';
 import styled from 'styled-components';
-import AulasFeitas from './Material/AulasFeitas';
-import Arquivo from './Material/Arquivo';
-import Topicos from './Cursos/Conteudo';
+import AulasFeitas from './AulasFeitas';
+import Topicos from './Conteudo';
 import Agendar from './Agendamento/Agendar';
 import SalvarNome from './utils/SalvarNomes';
-import Subtopico from './Cursos/Subtopico';
 import Aba from './Menus/Aba';
 import MyContext from './utils/context';
 import MenuCel from './Menus/MenuCel'
@@ -16,6 +14,7 @@ import Linguagens from './Linguagens/Linguagens';
 import Inicial from './Menus/Inicial';
 import FEvsBE from './Linguagens/FEvsBE';
 import Principal from './SQL/Principal';
+import Arquivo from './Mostrador/Arquivo';
 
 
 function App() {
@@ -46,11 +45,12 @@ function App() {
 <Route path='/linguagens' element={<FEvsBE/>}/>
 
 <Route path='/bancos' element={<Principal/>}/>
+
 <Route path='/cursos/:materia' element={<Topicos/>}/>
-<Route path='/cursos/:materia/:topico/:subtopico' element={<Subtopico/>} />
+<Route path='/cursos/:materia/:pasta/:arquivo' element={<Arquivo/>} />
                 
 <Route path='/aulas' element={<AulasFeitas />}/>
-<Route path='/aulas/:aula/:arquivo' element={<Arquivo />}/>
+<Route path='/aulas/:pasta/:arquivo' element={<Arquivo />}/>
                 
 <Route path='/pacotes' element={<Agendar page={3}/>}/>
 <Route path='/horarios' element={<Agendar page={2}/>}/>

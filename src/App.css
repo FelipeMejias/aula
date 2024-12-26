@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --html: #e34c26;
+  --css: #264de4;
+  --js: #f7df1e;
+  --json: #E8A32A;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+
+.folder {
+    display:flex;
+    flex-direction:column;
+    margin: 0.5rem 0;
+    position: relative;
+  
+}
+
+.folder .folder-name {
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.folder .folder-name::before {
+    content: '\f078'; /* Ícone de seta para indicar pasta */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 0.5rem;
+}
+
+.folder-contents {
+  display:flex;
+  flex-direction:column;
+    margin-left: 1.5rem;
+}
+
+
+
+

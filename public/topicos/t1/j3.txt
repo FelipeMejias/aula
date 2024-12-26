@@ -1,5 +1,0 @@
-// Booleano armazena um valor lógico, podendo ser true ou false
-let isAtivo = true;  // True é um valor lógico verdadeiro
-let isAdulto = false;  // False é um valor lógico falso
-console.log(isAtivo);  // Saída: true
-console.log(isAdulto);  // Saída: false

@@ -1,0 +1,13 @@
+// Booleano ( true ou false)
+const idade = 45
+const altura = 1.75
+
+const mentira = idade == altura // false
+const verdade = idade != altura // true
+
+// AND é representado por && (se 1 for false, tudo é false)
+// OR é representado por || (se 1 for true, tudo é true)
+
+const combinado1 = mentira && verdade // false
+const combinado2 = mentira || verdade // true
+const combinado3 = verdade && ( mentira || verdade ) // true

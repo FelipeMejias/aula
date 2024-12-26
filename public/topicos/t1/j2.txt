@@ -1,4 +1,0 @@
-// String armazena texto, que pode ser manipulado e exibido
-let nome = "João";
-let saudacao = "Olá, " + nome + "!";
-console.log(saudacao);  // Saída: Olá, João!

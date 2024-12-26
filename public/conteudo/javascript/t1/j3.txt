@@ -1,0 +1,33 @@
+// Int (números inteiros) & Float (números quebrados)
+const moedas = 30
+const preco = 5
+const taxa = 4.7
+
+const adic = moedas + preco // 35
+const subt = moedas - preco // 25
+const mult = moedas * preco // 150
+const divi = moedas / preco // 6
+const rest = moedas % 7     // 2
+// Resto da Divisão 
+// 30 / 7 = 28  
+// 30 - 28 = 2
+
+const dizima = moedas / taxa // 6.382978723404255
+
+// Arredondar para 3 casas decimais 
+const arred1 = dizima.toFixed(2) //6.38
+
+// Arredondar para o inteiro mais próximo
+const arred2 = Math.round(dizima) // 6
+
+// Arredondar para o inteiro acima
+const arred3 = Math.ceil(dizima)  // 7
+
+// Arredondar para o inteiro abaixo
+const arred4 = Math.floor(dizima) // 6 
+
+let variavel= 4
+// Verificar se o valor é não-numérico
+isNaN(variavel) // false
+variavel= 'Brasil'
+isNaN(variavel) // true

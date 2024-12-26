@@ -44,7 +44,7 @@ export default function Arrow({ x1, y1, x2, y2 }) {
     <div
       ref={containerRef}
       style={{
-        zIndex:13,
+        zIndex:1,
         position: "absolute",
         width: "100%",
         height: "100%",

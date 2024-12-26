@@ -1,0 +1,31 @@
+/* Exercício: Calculadora
+Crie uma função chamada calculadora que receba três parâmetros:
+
+-O primeiro número (num1)
+-O segundo número (num2)
+-A operação (operacao) como uma string, que pode ser:
+   'soma', 'subtracao', 'multiplicacao' ou 'divisao'.
+
+A função deve retornar e printar o resultado da operação solicitada entre os dois números.
+
+Requisitos:
+-Valide que a operação é uma das quatro mencionadas.
+-Se a operação não for válida, retorne uma mensagem de erro.
+-Evite a divisão por zero. Caso o usuário tente dividir por zero, retorne um aviso.
+*/
+
+
+//Tente chamar dessa forma para testar se deu certo:
+
+calculadora(4,7,'soma') // 11
+calculadora(9,5,'subtracao') // 4
+calculadora(2,6,'subtracao') // -2
+
+calculadora(1,2,'palavra que deve gerar um erro') // 'essa operação não existe'
+
+calculadora(4,7,'multiplicacao') // 28
+calculadora(8,2,'divisao') // 4
+calculadora(10,3,'divisao') // 3.3333333333333
+calculadora(5,10,'divisao') // 0.5
+
+calculadora(1,0,'divisao') // 'essa operação não existe'

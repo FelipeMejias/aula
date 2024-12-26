@@ -2,16 +2,16 @@ import js from '../../_imgs/js.png'
 import nd from '../../_imgs/node.png'
 import re from '../../_imgs/react.png'
 function formarTexto(aula,num){
-    return `/textos/antonio/a${aula}/t${num}.txt`
+    return `/alunos/antonio/a${aula}/t${num}.txt`
 }
 const aula1=[
-    {nome:'index.js',icone:nd,texto:formarTexto(1,2)},
-    {nome:'funcoes.js',icone:nd,texto:formarTexto(1,3)},
-    {nome:'cardapio.js',icone:nd,texto:formarTexto(1,4)},
-    {nome:'index.js',icone:re,texto:formarTexto(1,6)},
-    {nome:'App.js',icone:re,texto:formarTexto(1,7)},
-    {nome:'Item.js',icone:re,texto:formarTexto(1,8)},
-    {nome:'api.js',icone:re,texto:formarTexto(1,9)},
+    {nome:'index.js',icone:nd,caminho:formarTexto(1,2)},
+    {nome:'funcoes.js',icone:nd,caminho:formarTexto(1,3)},
+    {nome:'cardapio.js',icone:nd,caminho:formarTexto(1,4)},
+    {nome:'index.js',icone:re,caminho:formarTexto(1,6)},
+    {nome:'App.js',icone:re,caminho:formarTexto(1,7)},
+    {nome:'Item.js',icone:re,caminho:formarTexto(1,8)},
+    {nome:'api.js',icone:re,caminho:formarTexto(1,9)},
     ]
 export const antonio=[
     {
@@ -24,7 +24,7 @@ export const antonio=[
 /* {
         nome:'função',
         icone:js,
-texto:`
+caminho:`
 // Funcao e um bloco de codigo executado quando seu nome e chamado
 
  
@@ -42,7 +42,7 @@ minhaFuncao()
     `},{
         nome:'função-parâmetro',
         icone:js,
-texto:`
+caminho:`
 // Os parametros sao escolhidos na criacao da funcao
 
 // E sao passados na hora de chamar a funcao, a ordem importa
@@ -71,7 +71,7 @@ compareOsDois( 4 , 4 )
     },{
         nome:'variáveis',
         icone:js,
-texto:`
+caminho:`
 // Varaveis são criadas para guardarem um valor
 
 // As 3 variáveis simples são:
@@ -97,7 +97,7 @@ const statusAtivo = True
     },{
         nome:'condicionais',
         icone:js,
-texto:`
+caminho:`
 // If executa o bloco de código caso a condicao seja True
 
 // Esse bloco e definido pelo que tem 1 Tab a mais que ele
@@ -135,7 +135,7 @@ if( qua_1_idade > 10 ){
     },{
         nome:'Funções dentro de funções',
         icone:js,
-texto:`
+caminho:`
 function calcularMedia(p1,p2){
     const somaTotal=soma(p1,p2)
     const resposta=divide(somaTotal,2)
@@ -159,7 +159,7 @@ console.log(media)
     },{
         nome:'Componente React',
         icone:re,
-        texto:`
+        caminho:`
 import styled from "styled-components"
 
 export default function Item({}){
@@ -176,7 +176,7 @@ const Conteudo=styled.div'
     },{
         nome:'Rect-index.js',
         icone:re,
-texto:`
+caminho:`
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './App.css';
@@ -229,7 +229,7 @@ overflow:auto;
         
         `
     },{nome:'React-Item.js',
-    icone:re,    texto:`
+    icone:re,    caminho:`
 import styled from "styled-components"
 
 export default function Item({nome,descricao,preco}){
@@ -258,7 +258,7 @@ se a condição der True é usada a resposta1, se der False é usada a resposta2
     },{
         nome:'React- api.js',
         icone:re,
-texto:`
+caminho:`
 import axios from "axios"
 
 const api = axios.create({
@@ -271,7 +271,7 @@ export const getComidas = async () => {
 e coloca dentro de cada função o nome da rota igual o que voce escolheu no back-end: /comidas
         `
     },{nome:'Node',
-    icone:re,    texto:`
+    icone:re,    caminho:`
 import cors from 'cors'
 import Express, {json} from 'express'
 

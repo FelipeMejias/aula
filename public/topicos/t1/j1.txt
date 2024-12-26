@@ -1,5 +1,0 @@
-// int e float são usados para armazenar números inteiros e decimais
-let idade = 25;  // int: um número inteiro
-let altura = 1.75;  // float: um número com casas decimais
-console.log(idade);  // Saída: 25
-console.log(altura);  // Saída: 1.75

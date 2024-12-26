@@ -40,10 +40,12 @@ export default function Secoes({align}){
 
             <h1>Conteúdo</h1>
             <Botao tex={'FrontEnd vs BackEnd'} sel={pathname.includes('linguagens')} path={`/linguagens`} /> 
-            <Botao tex={'Javascript'} sel={pathname.includes(`javascript`)} path={`/cursos/javascript`} img={js} />
-            <Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} />
+            <Botao tex={'Javascript'} sel={pathname.includes(`javascript`)} path={`/cursos/javascript`} img={js} inativo={true} />
+            <Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} inativo={true} />
             {/*<Botao tex={'SQL'} sel={pathname.includes(`bancos`)} path={`/bancos`} img={sq} />*/}
             <Botao tex={'React'} sel={pathname.includes(`react`)} path={`/cursos/react`} img={re} />
+            <Botao tex={'Node'} sel={pathname.includes(`node`)} path={`/cursos/node`} img={nd} inativo={true} />
+            <Botao tex={'SQL'} sel={pathname.includes(`sql`)} path={`/cursos/sql`} img={sq} inativo={true}/>
 
             <h1>Meu Material</h1>
             <Botao tex={'Arquivos de aulas'} sel={pathname.includes(`aulas`)} path={`/aulas`} />

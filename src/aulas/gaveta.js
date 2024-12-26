@@ -5,6 +5,7 @@ import { victoria } from './alunos/victoria'
 import { eduardo } from './alunos/eduardo'
 import { antonio } from './alunos/antonio'
 import { clarissa } from './alunos/clarissa'
+import { erica } from './alunos/erica'
 
 export const alunos={
     'convidado-js':{linguagem:'javascript',aulas:convidadoJS},
@@ -14,7 +15,7 @@ export const alunos={
     'antonio':{linguagem:'javascript',aulas:antonio},// javascript + react + node
     'victoria':{linguagem:'javascript',aulas:victoria}, // javascript + react
     'eduardo':{linguagem:'python',aulas:eduardo},// python + banco
-    'erica':{linguagem:'javascript',aulas:convidadoJS},
+    'erica':{linguagem:'javascript',aulas:erica},
     'matheus':{linguagem:'javascript',aulas:convidadoJS},
 }
 
