@@ -4,15 +4,20 @@ import { useState } from "react"
 import { useContext } from "react"
 import MyContext from '../utils/context'
 import { RiQuestionnaireFill } from "react-icons/ri";
-export default function Botao({inativo,sel,tex,img,path}){
+export default function Botao({transport,inativo,sel,tex,img,path}){
     const aluno=JSON.parse(localStorage.getItem('usuario'))||'sem-usuario'
     const navigate=useNavigate()
     const {aba,setAba}=useContext(MyContext)
     return (
         <Bt sel={sel} inativo={inativo}
         onClick={()=>{if(!inativo){
-            setAba(false);
+            if(transport){
+                window.location.href = `https://${transport}.vercel.app`;
+            }else{
+                setAba(false);
             navigate(path)
+            }
+            
         }
             }}>
             {img?<img src={img}/>:<></>}
