@@ -54,7 +54,7 @@ export default function Secoes({align}){
             <Botao tex={'Arquivos de aulas'} sel={pathname.includes(`aulas`)} path={`/aulas`} />
             <Botao tex={'Minhas Perguntas'} sel={pathname.includes(`perguntas`)} path={`/perguntas`} inativo={true}/>
 
-            <h1>Agendamento</h1>
+            <h1>Contato</h1>
             {/*<Botao tex={'Horários Disponíveis'} sel={pathname.includes(`horarios`)} path={`/horarios`} />*/}
             {/*<Botao tex={'Valor de Pacotes'} sel={pathname.includes(`pacotes`)} path={`/pacotes`} />*/}
 
