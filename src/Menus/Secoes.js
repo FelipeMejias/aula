@@ -12,7 +12,7 @@ import hc from '../_imgs/react.png'
 import sq from '../_imgs/sql.jpg'
 import wpp from '../_imgs/wpp.png'
 import dayjs from 'dayjs'
-export default function Secoes({align}){
+export default function Secoes({align,height}){
     const aluno=JSON.parse(localStorage.getItem('usuario'))||'sem-usuario'
     const navigate=useNavigate()
     const {aba,setAba}=useContext(MyContext)
@@ -36,9 +36,9 @@ export default function Secoes({align}){
         window.open(urlWhatsapp);
     }
     return (
-        <Tudo align={align}>
-
-            <h1>Conteúdo</h1>
+        <Tudo height={height} align={align}>
+<Parte>
+            <h1>Conteúdos</h1>
             <Botao tex={'FrontEnd vs BackEnd'} sel={pathname.includes('linguagens')} path={`/linguagens`} /> 
             <Botao tex={'Javascript'} sel={pathname.includes(`javascript`)} path={`/cursos/javascript`} img={js}  />
             {/*<Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} inativo={true} />*/}
@@ -46,22 +46,22 @@ export default function Secoes({align}){
             <Botao tex={'React'} sel={pathname.includes(`react`)} path={`/cursos/react`} img={re} />
             {/*<Botao tex={'Node'} sel={pathname.includes(`node`)} path={`/cursos/node`} img={nd} inativo={true} />*/}
             
-            <h1>Ferramentas</h1>
-            <Botao tex={'SQL'} sel={pathname.includes(`sql`)} transport={`portalsql`} img={sq}/>
-            <Botao tex={'FrontEnd'} sel={pathname.includes(`front`)} transport={`portalreact`} img={re}/>
-            
             <h1>Meu Material</h1>
             <Botao tex={'Arquivos de aulas'} sel={pathname.includes(`aulas`)} path={`/aulas`} />
             <Botao tex={'Minhas Perguntas'} sel={pathname.includes(`perguntas`)} path={`/perguntas`} inativo={true}/>
-
+            </Parte>
+            <Parte>
+            <h1>Ferramentas</h1>
+            <Botao subtex={'Treinar SQL'} tex={'Banco de Dados'} sel={pathname.includes(`banco`)} transport={`portalsql`} img={sq}/>
+            <Botao subtex={'Treinar HTML + CSS'}tex={'Front End'} sel={pathname.includes(`front`)} transport={`portalreact`} img={re}/>
+            </Parte>
+           
+            {/*
             <h1>Contato</h1>
-            {/*<Botao tex={'Horários Disponíveis'} sel={pathname.includes(`horarios`)} path={`/horarios`} />*/}
-            {/*<Botao tex={'Valor de Pacotes'} sel={pathname.includes(`pacotes`)} path={`/pacotes`} />*/}
-
-            <BtWpp onClick={mandarWpp}>
-                <img src={wpp} />
-                <p>Enviar Mensagem</p>
-            </BtWpp>
+            <Botao tex={'Horários Disponíveis'} sel={pathname.includes(`horarios`)} path={`/horarios`} />
+            <Botao tex={'Valor de Pacotes'} sel={pathname.includes(`pacotes`)} path={`/pacotes`} />
+            <BtWpp onClick={mandarWpp}><img src={wpp} /><p>Enviar Mensagem</p></BtWpp>
+            */}
         </Tudo>
     )}
 const BtLing=styled.div`
@@ -80,8 +80,12 @@ img{
     margin:3px 7px 3px 3px;
 }
 `
+const Parte=styled.div`
+flex-direction:column;width:100%;align-items:center;background:;
+padding:20px 0 20px 0;
+`
 const Tudo=styled.div`background-color:;
-flex-direction:column;
+flex-direction:column;justify-content:space-between;
 align-items:center;
 h1{
     font-size:20px;
@@ -90,6 +94,7 @@ h1{
     color:#53541d
 }
 width:100%;
+height:${p=>p.height};
 align-items:${p=>p.align?'center;':';'};
 `
 const BtWpp=styled.div`

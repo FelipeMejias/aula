@@ -40,7 +40,11 @@ export default function Meio({}){
         if(car!=' ')tem=true
       }return tem
     }
-    const formatText = (text) => text.split('\n').map((line) =>temAlgoNaString(line)? <span><Bolinha/><p>{line}</p></span>:<span></span>);
+    
+    const formatText = (text) => text.split('\n').map((line) =>temAlgoNaString(line)? (line[0]=='-'?
+      <span><Triangulinho/><p>{line.slice(1)}</p></span>:
+      <span><Bolinha/><p>{line}</p></span>
+    ):<span></span>)
     return(
         <Tudo>
             <Heder>
@@ -54,14 +58,20 @@ export default function Meio({}){
         </Tudo>
     )
 }
-
-const Bolinha = styled.div`
-margin-top:6px;
+const Triangulinho = styled.div`
+margin:7px 6px 0 15px;
   width: 0;
   height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 10px solid #6C6D36;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 8px solid brown;
+`;
+const Bolinha = styled.div`
+margin-top:6px;
+  width: 6.5px;
+  height: 6.5px;
+  border-radius:50%;
+background: blue;
 `;
 
 const Copiar=styled.section`

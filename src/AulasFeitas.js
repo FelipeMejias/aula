@@ -76,12 +76,7 @@ display:flex;min-height:80px;
 align-items:center;margin:5px 0 5px 0;
 flex-wrap:wrap;
 }
-@media(max-width:500px){
-margin:15px 0 0 5%;
-}
-@media(min-width:750px){
-max-width:${p=>p.vazio?'450px':'320px'};
-}
+
 `
 
 const Arq=styled.article`background-color:;
@@ -99,7 +94,8 @@ img{
 height:40px;margin-bottom:5px;
 }
 h3{margin:0 0 0 0;line-height:14px;
-font-size:14px;font-weight:300;
+font-size:14px;font-weight:300;height:20px;
+text-align: center;
 strong{
 color:green;font-weight:300;
 }

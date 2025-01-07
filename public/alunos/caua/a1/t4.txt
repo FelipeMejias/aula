@@ -1,0 +1,14 @@
+// EXERCÍCIO VALIDAR SENHAS
+
+const minimoCaracteres=8
+const minimoLetras=2
+const minimoNumeros=4
+
+// escreva sua fução aqui
+
+// TESTES
+console.log( validar('443bhh') )     // Console: 'Erro: menos de 8 caracteres'  
+console.log( validar('rkh56741') )   // Console: 'Senha válida!'
+console.log( validar('4739204328') ) // Console: 'Erro: menos de 2 letras'  
+console.log( validar('dqdjqwjk12') ) // Console: 'Erro: menos de 4 números' 
+console.log( validar('43bl54334b') ) // Console: 'Senha válida!' 

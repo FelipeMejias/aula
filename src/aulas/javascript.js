@@ -4,28 +4,29 @@ function formarCaminho(topico,sub){
 export const javascript=[
 {
   nome:'Variáveis Simples',
+  existe:true,
   arquivos:[
     {nome:'Criar e Alterar valor',caminho:formarCaminho(1,1),texto:`
 As variáveis armazenam um valor. Com elas, podemos usar o valor varias vezes digitando apenas seu nome.
-Criamos usando let se vamos mudar o valor depois
-E criamos com const para o valor ser constante
+-Criamos usando let se vamos mudar o valor depois
+-Criamos usando const para o valor ser constante
 Diferenciamos as duas para manter o código mais legível e evitar mudanças indesejadas.
       `},
     {nome:'Tipos',caminho:formarCaminho(1,2),texto:`
 Existem 3 tipos de variáveis Simples:
-Numeral ( int ou float )
-Palavra ( string )
-Verdadeiro/Falso ( boolean )
+-Numeral ( Number )
+-Palavra ( String )
+-Verdadeiro/Falso ( Boolean )
 São Simples pois possuem um valor único. As 2 Complexas são Lista e Objeto que guardam um conjunto de valores, veremos mais para frente.
       `},
-    {nome:'Int e Float',caminho:formarCaminho(1,3),texto:`
-
+    {nome:'Number',caminho:formarCaminho(1,3),texto:`
+Texto a inserir...
       `},
     {nome:'String',caminho:formarCaminho(1,4),texto:`
-
+Texto a inserir...
       `},
     {nome:'Boolean',caminho:formarCaminho(1,5),texto:`
-
+Texto a inserir...
       `},]
 },{
   nome:'Condicionais',

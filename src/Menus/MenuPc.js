@@ -16,9 +16,7 @@ export default function MenuPc(){
     }
     return (
         <Abafixa>
-            <Folga>
-            </Folga>
-            <Secoes/>
+            <Secoes height={'100%'}/>
            </Abafixa>
     )
 }
@@ -35,8 +33,4 @@ width:260px;
 display:none;
 }
 
-`
-const Folga=styled.div`
-height:15px;
-padding-left:20px;
 `

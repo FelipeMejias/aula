@@ -1,16 +1,32 @@
-const moedas = 30
-const taxa = 4.7
+const valor=5.765865
+console.log( valor.toFixed(2) )
 
-const dizima = moedas / taxa // 6.382978723404255
+const str=`ceqlcmlewcmew ${valor} dnkenqwklcewk
+vdsceffeqw
+`
+const bool=0 //falsy ou truly
+function funcao(altura,peso=16){
+    if(bool){
+        console.log('entrei')
+    }else if(bool>5){
+        console.log('vim do elif')
+    }else{
 
-const arred1 = dizima.toFixed(2)  // 6.38
-// Arredonda para X casas decimais 
+    }
+}
 
-const arred2 = Math.round(dizima) // 6
-// Arredonda para o inteiro mais próximo
+setTimeout( ()=>{
 
-const arred3 = Math.ceil(dizima)  // 7
-// Arredonda para o inteiro acima
+    console.log('oi')
+}, 5*1000)
 
-const arred4 = Math.floor(dizima) // 6 
-// Arredonda para o inteiro abaixo
+const minhaLista=[4,6,7,3]
+
+let c=0
+const nova=[]
+while(c < minhaLista.length ){
+    const novoNumero=minhaLista[c]
+    nova.push(novoNumero)
+    c++
+}
+console.log(nova)

@@ -1,15 +1,25 @@
-const fruta = 'abacaxi'
-const frase = `minha fruta preferida é: ${fruta}`
-// String dinâmica fechadas por crase permitem inserir código javascript
-// através do ${} Além de permitir pular linha
+const pais='Egito'
+const indiceLetraT=pais.indexOf('t') // 3
+//                 pais.find('t')
+const tamanhoDaString=pais.length    // 5
+//                    len(pais)
 
 
-// Conversão de String para (Int ou Float)
-const stringNum ='12'
-const num = parseInt(stringNum) // 12
-const stringNumQuebrado = '5.5'
-const numQuebrado = parseFloat(stringNumQuebrado) // 5.5
+const inteira='camarada'
+const fatiada=inteira.slice(2,6)  // 'mara'
+//            inteira[2:6]
 
-// Conversão de (Int ou Float) para String
-const numero = 4
-const numeroString=numero.toString() // '4'
+
+const afirmacao=false
+if(!afirmacao){
+// not afirmacao
+    console.log('Entrei pois negar um false, é true')
+}
+
+
+const palavra='abacate'
+if(palavra.includes('t')){
+// 't' in palavra
+    console.log('Entrei pois a letra está incluida na string')
+}
+

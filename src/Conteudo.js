@@ -32,6 +32,13 @@ export default function Topicos(){
         setChecks(n)
         localStorage.setItem(`ch-${materia}`, JSON.stringify(n))
     }
+    function temAlgoNaString(str){
+        for(let car of str){
+          if(car!=' ' && car!='\n'){
+            return true
+        }
+        }return false
+      }
     return (
         <Tudo >
             <Janela >
@@ -41,15 +48,16 @@ export default function Topicos(){
                 <Caixa>
                 {top.arquivos.map(
                     (sub,ind)=>{
-                        const {bonus,nome}=sub
-                        console.log(checks)
+                        const {nome}=sub
+                        const bonus=false
+                        const ativo=temAlgoNaString(sub.texto)
                         const marcado=checks[index][ind]
                     return(
                     <HoldSub>
                         <Quadrado func={()=>setarChecks(index,ind)} marcado={marcado}/>
-                        <Sub onClick={()=>{navigate(`/cursos/${materia}/${index+1}/${ind+1}`)}}
-                        color={bonus&&false?(marcado?'b2e8b8':'B4D4EA'):(marcado?'46af48':'4787b2')} 
-                        tex={bonus&&false?'black':'white'}>
+                        <Sub onClick={()=>{if(ativo){navigate(`/cursos/${materia}/${index+1}/${ind+1}`)}}}
+                        color={ativo?(bonus?(marcado?'b2e8b8':'B4D4EA'):(marcado?'46af48':'4787b2')):marcado?'b2e8b8':'d6d6d6'} 
+                        tex={!ativo?'black':'white'}>
                         <p>{nome}</p>
                         </Sub>
                     </HoldSub>

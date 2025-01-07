@@ -20,11 +20,18 @@ export default function Canto({}){
       const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado-js'
       const {linguagem,aulas}=alunos[aluno]
       const referencia=materiaEscolhida||aulas
+      function temAlgoNaString(str){
+        for(let car of str){
+          if(car!=' ' && car!='\n'){
+            return true
+        }
+        }return false
+      }
     return(materiaEscolhida?
         <Tudo>
             {referencia.map((top,index)=>
             top.pastas?
-            <Pastas pasta={index}/>:
+            <Pastas pasta={index}/>:top.existe?
             <Topico >
                 <Cab ><h6>{top.nome}</h6></Cab>
                 <Caixa>
@@ -32,8 +39,9 @@ export default function Canto({}){
                     (arq,ind)=>{
                         const {nome}=arq
                         const marcado=checks[index][ind]
+                        const ativo=temAlgoNaString(arq.texto)
                     return(
-                        <Sub checkado={true} onClick={()=>{navigate(`/cursos/${materia}/${index+1}/${ind+1}`)}}
+                        <Sub checkado={true} onClick={()=>{if(ativo){navigate(`/cursos/${materia}/${index+1}/${ind+1}`)}}}
                         sel={pasta==index+1&&arquivo==ind+1}>
                         {marcado?<img style={{height:'28px',position:'absolute',left:'-28px',top:'4px'}} src={ch}/>:<></>}
                         <p>{nome}</p>
@@ -42,7 +50,7 @@ export default function Canto({}){
                 )
                 }</Caixa>
                 
-            </Topico>
+            </Topico>:<></>
             )}
         </Tudo>:
         <Tudo>

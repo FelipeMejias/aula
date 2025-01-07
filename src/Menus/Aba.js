@@ -19,12 +19,7 @@ export default function Aba(){
         <Tudo>
             <Barrinha/>
             <Janela>
-            <Folga>
-                {/*<BtVoltar onClick={()=>setAba(false)}>
-                    <img src={menu}></img>
-                </BtVoltar>*/}
-            </Folga>
-            <Secoes/>
+            <Secoes height={'calc(100% - 15px)'}/>
            </Janela>
            <Clicavel onClick={()=>setAba(false)}>
 
