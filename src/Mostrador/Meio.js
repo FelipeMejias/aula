@@ -44,7 +44,7 @@ export default function Meio({}){
     return(
         <Tudo>
             <Heder>
-            <Copiar cor={'#eda12f'} onClick={copiarTexto}><p>Fazer pergunta</p></Copiar>
+            <Copiar cor={'#eda12f'} inativo={true} ><p>Fazer pergunta</p></Copiar>
             <h1>{infos.nome}</h1>
             {texto?<Copiar cor={'#03B654'} onClick={copiarTexto}><p>{copiado ? 'Código copiado!' : 'Copiar código'}</p></Copiar>:<FakeButton/>}
             </Heder>
@@ -64,7 +64,9 @@ margin-top:6px;
   border-left: 10px solid #6C6D36;
 `;
 
-const Copiar=styled.section`cursor:pointer;
+const Copiar=styled.section`
+opacity:${p=>p.inativo?' 0.3':'1'};
+cursor:${p=>p.inativo?'':'pointer'};
 align-items:center;
 display:flex;
 flex-direction:column;

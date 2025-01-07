@@ -1,0 +1,16 @@
+const moedas = 30
+const taxa = 4.7
+
+const dizima = moedas / taxa // 6.382978723404255
+
+const arred1 = dizima.toFixed(2)  // 6.38
+// Arredonda para X casas decimais 
+
+const arred2 = Math.round(dizima) // 6
+// Arredonda para o inteiro mais próximo
+
+const arred3 = Math.ceil(dizima)  // 7
+// Arredonda para o inteiro acima
+
+const arred4 = Math.floor(dizima) // 6 
+// Arredonda para o inteiro abaixo

@@ -9,7 +9,7 @@ export default function AulasFeitas(){
     const navigate=useNavigate()
     const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado-js'
     const {linguagem,aulas}=alunos[aluno]
-   
+   console.log(aluno)
     return (
         <Tudo>
             <Janela vazio={true}>
@@ -21,7 +21,7 @@ export default function AulasFeitas(){
                 </Cab>
                 <section>
                     {a.arquivos.map((arquivo,iArquivo)=>
-                        <Arq onClick={()=>navigate(`/cursos/react/${iAula+1}/${iArquivo+1}`)}>
+                        <Arq onClick={()=>navigate(`/aulas/${iAula+1}/${iArquivo+1}`)}>
                             <img src={arquivo.icone}></img>
                             <h3>{arquivo.nome}</h3>
                         </Arq>)}
