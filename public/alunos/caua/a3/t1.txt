@@ -1,0 +1,11 @@
+const listaTropas=[
+    {nome:'Magos',tempo:10},
+    {nome:'Guerreiros',tempo:15},
+    {nome:'Arqueiros',tempo:20},
+    {nome:'Catapultas',tempo:30},
+    {nome:'Navios',tempo:45},
+]
+
+// Escreva aqui sua função
+
+funcao(listaTropas)

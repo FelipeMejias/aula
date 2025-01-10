@@ -40,6 +40,27 @@ const aula2=[
 
     {nome:'Ternário',icone:js,caminho:formarTexto(2,10)},
 ]
+const aula2ex=[
+    {nome:'Treinamento Tropas',icone:js,caminho:formarTexto(3,1),texto:`
+A partir de uma lista com objetos com:
+-nome
+-tempo (duração do treinamento em segundos)
+Faça uma função que, para cada objeto, imprima, por exemplo:
+-Magos em treinamento. Em 10 segundos estarão prontos para combate!
+        `},
+    {nome:'Moldar Tropas',icone:js,caminho:formarTexto(3,2),texto:`
+A partir de 5 listas de tamanhos iguais, são elas:
+-nomes, velocidades, forcas, inteligencias, resistencias
+Faça uma função que retorne uma lista de objetos no formato:
+-{nome,velocidade,forca,inteligencia,resistencia}
+        `},
+    {nome:'Poder do Açúcar',icone:js,caminho:formarTexto(3,3),texto:`
+Um jogador ativou um poder temporário onde todas as tropas com a palavra "Açúcar" no nome, terão o atributo "força" em dobro.
+Faça uma função que receba a lista de tropas que o jogador escolheu para combate e, para cada tropa, imprima:
+-Deuses do Açúcar atacam com 16 de força!
+        `},
+    
+]
 export const caua=[
     {
         nome:'Aula 1',
@@ -48,5 +69,8 @@ export const caua=[
     {
         nome:'Aula 2',
         arquivos:aula2
+    },{
+        nome:'Aula 2 - Exercicios',
+        arquivos:aula2ex
     },
 ]

@@ -1,0 +1,11 @@
+const tropasEscolhidas=[
+    {nome:'Deuses do Açúcar',forca:8},
+    {nome:'Sereias do Bombom',forca:12},
+    {nome:'Açúcar Mascavo',forca:7},
+    {nome:'Sopro de Açúcar',forca:14},
+    {nome:'Fúria da Ganache',forca:6},
+]
+
+// Escreva sua função aqui
+
+funcao(tropasEscolhidas)
