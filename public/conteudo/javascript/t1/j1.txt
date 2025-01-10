@@ -1,0 +1,10 @@
+let saldo = 100
+console.log( saldo ) // 100
+
+saldo = saldo - 20 // valor alterado 
+console.log( saldo ) // 80
+
+const nome = "Ana"
+
+// Tentar alterar uma const causa um erro
+nome = "Carlos" // nesse momento seu código parará de rodar

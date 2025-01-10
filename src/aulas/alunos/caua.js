@@ -26,11 +26,27 @@ EXTRA: Tente passar o valor mínimo de caracteres como parâmetro da função
     
 ]
 const aula2=[
-    {nome:'Calculadora',icone:js,caminho:formarTexto(2,1)},
+    {nome:'Lista',icone:js,caminho:formarTexto(2,1)},
+    {nome:'Slice',icone:js,caminho:formarTexto(2,2)},
+    {nome:'forEach',icone:js,caminho:formarTexto(2,3)},
+    {nome:'Loop',icone:js,caminho:formarTexto(2,4)},
+    {nome:'Nativas Loop',icone:js,caminho:formarTexto(2,5)},
+    {nome:'Ordenar',icone:js,caminho:formarTexto(2,6)},
+    
+
+    {nome:'Objetos & Importar',icone:js,caminho:formarTexto(2,7)},
+    {nome:'Exportar',icone:js,caminho:formarTexto(2,8)},
+    {nome:'Spread',icone:js,caminho:formarTexto(2,9)},
+
+    {nome:'Ternário',icone:js,caminho:formarTexto(2,10)},
 ]
 export const caua=[
     {
         nome:'Aula 1',
         arquivos:aula1
+    },
+    {
+        nome:'Aula 2',
+        arquivos:aula2
     },
 ]

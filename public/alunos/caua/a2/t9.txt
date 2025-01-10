@@ -1,0 +1,19 @@
+const lista1=[4,8,6]
+
+const lista2=[1,3,9]
+
+const nova=[...lista1,5,...lista2]
+
+//console.log(nova)
+
+const obj={
+    idade:16,
+    nome:'andre',
+    popntos:114
+}
+
+const novo={...obj,ativo:true}
+const novoAlterando={...obj,pontos:44}
+
+console.log(novo)
+console.log(novoAlterando)

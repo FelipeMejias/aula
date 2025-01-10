@@ -1,0 +1,13 @@
+
+
+export const resposta={
+    qtdd:55,
+    lista:[432,543,64],
+    cor:true
+}
+
+export const resposta2={
+    qtdd:55,
+    lista:[432,543,64],
+    cor:false
+}

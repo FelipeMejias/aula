@@ -1,0 +1,6 @@
+// Exemplo de slice com arrays: copia do índice 1 ao 3 (não inclui o 3)
+const frutas = ['maçã', 'banana', 'laranja', 'uva'];
+const subArray = frutas.slice(1, 3); // ['banana', 'laranja']
+
+const texto = "programação";
+const subTexto = texto.slice(0, 5); // 'progr'

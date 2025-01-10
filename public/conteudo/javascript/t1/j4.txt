@@ -17,8 +17,8 @@ nome.toUpperCase() // ROGERIO
 nome.toLowerCase() // rogerio
 
 // Substituir uma parte da string.
-nome.replace('o', 'k') // Rkgerik 
-nome.replace('o', '') // Rgeri
+nome.replaceAll('o', 'k') // Rkgerik 
+nome.replace('o', '') // Rgerio
 
 // Verificar se String contém certa string em seu valor
 nome.includes('glu') // false

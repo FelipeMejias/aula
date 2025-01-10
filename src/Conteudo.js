@@ -56,7 +56,7 @@ export default function Topicos(){
                     <HoldSub>
                         <Quadrado func={()=>setarChecks(index,ind)} marcado={marcado}/>
                         <Sub onClick={()=>{if(ativo){navigate(`/cursos/${materia}/${index+1}/${ind+1}`)}}}
-                        color={ativo?(bonus?(marcado?'b2e8b8':'B4D4EA'):(marcado?'46af48':'4787b2')):marcado?'b2e8b8':'d6d6d6'} 
+                        color={ativo?(bonus?(marcado?'b2e8b8':'B4D4EA'):(marcado?'46af48':'4787b2')):marcado?'d6d6d6':'d6d6d6'} 
                         tex={!ativo?'black':'white'}>
                         <p>{nome}</p>
                         </Sub>

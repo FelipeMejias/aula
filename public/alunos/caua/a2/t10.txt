@@ -1,0 +1,15 @@
+const idade=5
+
+
+/*
+let frase
+if(idade>18){
+    frase='pode ir'
+}else{
+    frase='nao pode ir'
+}
+*/
+
+const frase2= idade > 18 ? 'pode ir' : 'nao pode ir'
+
+console.log(frase2)

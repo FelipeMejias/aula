@@ -1,0 +1,12 @@
+const desordenada=[3,6,37,5,383,5,43]
+const ordenada1 = desordenada.sort((a, b) => {
+    if (a < b) {
+        return -1; // a deve vir antes de b
+    } else if (a > b) {
+        return 1; // a deve vir depois de b
+    } else {
+        return 0; // a e b são iguais
+    }
+});
+const ordenada2 = desordenada.sort((a, b) => a - b);
+// Retorna negativo, zero ou positivo automaticamente com base na subtração

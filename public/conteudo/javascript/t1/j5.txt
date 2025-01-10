@@ -7,7 +7,9 @@ const verdade = idade != altura // true
 
 // AND é representado por && (se 1 for false, tudo é false)
 // OR é representado por || (se 1 for true, tudo é true)
+// NOT é representado por ! (inverte o valor)
 
 const combinado1 = mentira && verdade // false
 const combinado2 = mentira || verdade // true
-const combinado3 = verdade && ( mentira || verdade ) // true
+const combinado3 = mentira || !verdade // false
+const combinado4 = verdade && ( mentira || verdade ) // true

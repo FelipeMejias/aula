@@ -1,0 +1,37 @@
+const lista=[5423,754,765,67,5,34,78]
+const numero=lista[3]
+/*
+lista.push(45)
+lista.unshift(15)
+lista.pop()
+
+console.log(lista.length)
+*/
+console.log(lista.slice(1,4))
+
+if( lista.includes(75544)){
+    console.log('entrei')
+}
+
+const str='11/05/1995'
+
+//const listaGerada=str.split('/')
+const listaGerada=str.replaceAll('/','-')
+
+console.log(listaGerada)
+
+/*
+select 
+post {}
+put {}
+delete 
+*/
+function andar(){
+    console.log('andei') 
+}
+const meuDicionario={
+    andar:andar,
+    cavalos:17
+}
+meuDicionario.andar
+meuDicionario.cavalos

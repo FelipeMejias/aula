@@ -1,0 +1,12 @@
+let idade = 25 
+const pi = 3.14 
+
+const saudacao = "Olá, mundo!"
+
+let maiorDeIdade = true
+
+
+console.log( idade )         // number
+console.log( pi )            // number
+console.log( saudacao )      // string
+console.log( maiorDeIdade )  // boolean

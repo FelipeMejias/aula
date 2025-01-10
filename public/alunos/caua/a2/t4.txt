@@ -1,0 +1,17 @@
+let c=0
+while(c<8){
+    console.log(c)
+    c++
+}
+const lista=[432,532,65,65]
+
+for( let k=0 ; k<lista.length ; k++ ){
+    const item=lista[k]
+    
+}
+
+for(let item of lista){
+
+}
+
+// break pass continue

@@ -1,0 +1,25 @@
+const lista=[54,75,86,88,23,64]
+/*
+for(let item of lista){
+    console.log(item)
+}
+
+
+lista.forEach((elemento,indice)=>{
+    novaLista.push(elemento*2)
+})
+
+*/
+
+const listaMapeada=lista.map((elem,indice)=>{
+
+    return elem*2
+})
+const listaFiltrada=lista.filter(elem=>elem%2==0)
+
+const listaOrdenada=lista.sort((a, b) => b.data-a.data)
+
+[{data:'64832'}]
+console.log(listaMapeada)
+console.log(listaFiltrada)
+console.log(listaOrdenada)

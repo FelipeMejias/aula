@@ -1,0 +1,29 @@
+import {resposta} from './outro.js'
+
+const obj={
+    amigos:['alex','joao'],
+    velocidade:16,
+    forca:34
+}
+
+//console.log(obj.velocidade)
+//console.log(obj['velocidade'])
+
+obj.forca=45
+
+//console.log(obj)
+
+
+//console.log(Object.keys(obj))
+
+const variavel=obj.inimigos?.pior?.fogo
+
+//console.log(variavel)
+
+
+const {qtdd,lista,cor}=resposta
+
+const [numero1,numero2]=lista
+
+console.log(numero1)
+

@@ -14,19 +14,24 @@ Diferenciamos as duas para manter o código mais legível e evitar mudanças ind
       `},
     {nome:'Tipos',caminho:formarCaminho(1,2),texto:`
 Existem 3 tipos de variáveis Simples:
--Numeral ( Number )
--Palavra ( String )
+-Número ( Number )
+-Texto ( String )
 -Verdadeiro/Falso ( Boolean )
 São Simples pois possuem um valor único. As 2 Complexas são Lista e Objeto que guardam um conjunto de valores, veremos mais para frente.
       `},
     {nome:'Number',caminho:formarCaminho(1,3),texto:`
-Texto a inserir...
-      `},
+Operações básicas são feitas com números inteiros (Int) ou quebrados (Float).
+Métodos da biblioteca Math ajudam em cálculos mais complexos, como arredondamento    `},
     {nome:'String',caminho:formarCaminho(1,4),texto:`
-Texto a inserir...
-      `},
+Strings permitem manipulação de texto.
+Podemos acessar partes específicas ou transformar seu conteúdo.      `},
     {nome:'Boolean',caminho:formarCaminho(1,5),texto:`
-Texto a inserir...
+Booleanos representam verdadeiro ou falso. 
+São úteis para Condicionais.
+Usamos operadores para combinar valores lógicos. São eles:
+-AND ( escrevemos com && )
+-OR ( escrevemos com || )
+-NOT ( escrevemos com ! )
       `},]
 },{
   nome:'Condicionais',
