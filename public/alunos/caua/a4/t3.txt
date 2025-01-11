@@ -1,0 +1,17 @@
+import styled from "styled-components"
+
+export default function Clube({time}){
+    return(
+        <Clubinho  destacado={time=='Botafogo'} >
+            <p>{time}</p>
+        </Clubinho>
+    )
+}
+const Clubinho=styled.div`
+width:130px;height:80px;
+
+background: ${props=>props.destacado?'purple':'white'};
+
+border-radius:10px;margin-right:10px;
+
+`

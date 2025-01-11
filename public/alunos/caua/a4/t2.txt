@@ -1,0 +1,18 @@
+export const continentes=[
+    {
+        nome:'Europa',
+        clubes:[ 'Atlhletico Madrid','Bayern','Benfica','Borussia Dortmund','Chelsea','Internazionalle','Juventus','Manchester City','Porto','PSG','Real Madrid','Salzburg'],
+    },{
+        nome:'América do Sul',
+        clubes:[ 'Boca Juniors','Botafogo','Flamengo','Fluminense','Palmeiras','River Plate'],
+    },{
+        nome:'América do Norte',
+        clubes:['Monterrey','Seattle Sounders','León','Pachuca','Inter Miami'],
+    },{
+        nome:'Ásia',
+        clubes:['Al Hilal','Urawa Red Diamonds','Al Ain','Ulsan','Auckland City'],
+    },{
+        nome:'África',
+        clubes:['Al Ahly','Wydad Casablanca','Espérance','Mamelodi Sundowns'],
+    }
+]

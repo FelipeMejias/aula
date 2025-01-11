@@ -72,8 +72,8 @@ Para estilizar o scroll podemos utilizar essas 4 propriedades
         nome:'Ex: Mundial 2025',
         pastas:true,
         arquivos:[
-            {nome:'index.html',icone:ht,linguagem:'html'},
-            {nome:'estilos.css',icone:cs,linguagem:'css'},
+            {nome:'index.html',icone:ht,linguagem:'html',caminho:formarCaminho(3,1)},
+            {nome:'estilos.css',icone:cs,linguagem:'css',caminho:formarCaminho(3,2)},
         ]
     },{
         nome:'Iniciar React',
@@ -132,7 +132,7 @@ Um atributo "nome" que é do tipo String
 E um atributo "clubes" que é uma Lista de Strings
 
                         `},
-                {nome:'App.css',icone:cs,linguagem:'css',caminho:formarCaminho(5,1),texto:`
+                {nome:'App.css',icone:cs,linguagem:'css',caminho:formarCaminho(5,6),texto:`
 Ficou igual o do tópico anterior com uma excessão:
 O body ficou apenas com os atributos iniciais
 O que tinhamos antes no body, foi para uma Div de classe "tela"

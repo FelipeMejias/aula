@@ -61,6 +61,11 @@ Faça uma função que receba a lista de tropas que o jogador escolheu para comb
         `},
     
 ]
+const aula3=[
+    {nome:'App.js',icone:js,caminho:formarTexto(4,1)},
+    {nome:'infos.js',icone:js,caminho:formarTexto(4,2)},
+    {nome:'Clube.js',icone:js,caminho:formarTexto(4,3)},
+]
 export const caua=[
     {
         nome:'Aula 1',
@@ -72,5 +77,8 @@ export const caua=[
     },{
         nome:'Aula 2 - Exercicios',
         arquivos:aula2ex
+    },{
+        nome:'Aula 3',
+        arquivos:aula3
     },
 ]
