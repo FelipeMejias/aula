@@ -1,0 +1,15 @@
+# Booleano (True ou False)
+idade = 45
+altura = 1.75
+
+mentira = idade == altura  # False
+verdade = idade != altura  # True
+
+# AND (se 1 for False, tudo é False)
+# OR (se 1 for True, tudo é True)
+# NOT (inverte o valor)
+
+combinado1 = mentira and verdade  # False
+combinado2 = mentira or verdade   # True
+combinado3 = mentira or not verdade  # False
+combinado4 = verdade and (mentira or verdade)  # True

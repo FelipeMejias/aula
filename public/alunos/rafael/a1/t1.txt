@@ -1,0 +1,38 @@
+import math
+
+''' variaveis simples
+numeral (int e float)
+string
+boolean
+
+    variaveis compostas
+lista
+dicionario
+'''
+# +-/* %resto
+
+idade=17
+idade += 1
+
+numero= 12.532
+arredondado=math.floor(numero)
+
+#print(numero)
+#print(arredondado)
+
+#      0123456
+fruta='abacaxi'
+
+tamanho=len(fruta)
+
+#print(fruta[tamanho-1])
+
+# fruta = fruta + ' fresco'
+fruta += ' fresco'
+
+
+print(fruta)
+
+
+# terça   10h
+# quinta  9h

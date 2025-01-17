@@ -1,0 +1,17 @@
+# CONTA A
+num1A=None
+num2A=None
+operacaoA='soma'
+resultadoA=None
+fraseA=None
+
+# CONTA B:
+num1B=None
+num2B=None
+operacaoB='multiplicação'
+resultadoB=None
+fraseB=None
+
+# PRINTS:
+print(fraseA)
+print(fraseB)

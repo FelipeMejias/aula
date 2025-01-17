@@ -1,0 +1,34 @@
+# Int (números inteiros) & Float (números quebrados)
+moedas = 30
+preco = 5
+taxa = 4.7
+
+adic = moedas + preco  # 35
+subt = moedas - preco  # 25
+mult = moedas * preco  # 150
+divi = moedas / preco  # 6.0
+rest = moedas % 7      # 2
+
+# Resto da Divisão
+# 30 / 7 = 28  
+# 30 - 28 = 2
+
+dizima = moedas / taxa  # 6.382978723404255
+
+# Arredondar para 2 casas decimais
+arred1 = round(dizima, 2)  # 6.38
+
+# Arredondar para o inteiro mais próximo
+arred2 = round(dizima)     # 6
+
+# Arredondar para o inteiro acima
+arred3 = -(-dizima // 1)   # 7
+
+# Arredondar para o inteiro abaixo
+arred4 = dizima // 1       # 6
+
+variavel = 4
+# Verificar se o valor é não-numérico
+print(isinstance(variavel, (int, float)))  # True
+variavel = 'Brasil'
+print(isinstance(variavel, (int, float)))  # False

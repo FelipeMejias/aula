@@ -1,0 +1,34 @@
+# String (conjunto de caracteres: textos, datas...)
+fruta1 = 'abacaxi'
+fruta2 = 'laranja'
+
+palavra = fruta1[3] + fruta2[5]  # 'cj'
+
+frase = fruta1 + ' & ' + fruta2  # 'abacaxi & laranja'
+
+# String dinâmica usando f-string para inserção de código
+frase_dinamica = f"minha fruta preferida é: {fruta1}"
+
+nome = "Rogerio"
+
+# Transformar maiúsculas e minúsculas
+print(nome.upper())  # ROGERIO
+print(nome.lower())  # rogerio
+
+# Substituir uma parte da string
+print(nome.replace('o', 'k'))  # Rkgerik
+print(nome.replace('o', '', 1))  # Rgerio
+
+# Verificar se String contém certa string em seu valor
+print('glu' in nome)  # False
+print('ger' in nome)  # True
+
+# Converter de String para (Int ou Float)
+string_num = '12'
+num = int(string_num)  # 12
+string_num_quebrado = '5.5'
+num_quebrado = float(string_num_quebrado)  # 5.5
+
+# Converter de (Int ou Float) para String
+numero = 4
+numero_string = str(numero)  # '4'

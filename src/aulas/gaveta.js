@@ -7,6 +7,7 @@ import { antonio } from './alunos/antonio'
 import { clarissa } from './alunos/clarissa'
 import { erica } from './alunos/erica'
 import { caua } from './alunos/caua'
+import { rafael } from './alunos/rafael'
 
 export const alunos={
     'convidado-js':{linguagem:'javascript',aulas:convidadoJS},
@@ -19,5 +20,6 @@ export const alunos={
     'erica':{linguagem:'javascript',aulas:erica},
     'matheus':{linguagem:'javascript',aulas:convidadoJS},
     'caua':{linguagem:'javascript',aulas:caua},
+    'rafael':{linguagem:'python',aulas:rafael},
 }
 

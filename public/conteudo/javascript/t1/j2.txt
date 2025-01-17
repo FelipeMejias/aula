@@ -6,7 +6,7 @@ const saudacao = "Olá, mundo!"
 let maiorDeIdade = true
 
 
-console.log( idade )         // number
-console.log( pi )            // number
-console.log( saudacao )      // string
-console.log( maiorDeIdade )  // boolean
+console.log( typeof idade )         // number
+console.log( typeof pi )            // number
+console.log( typeof saudacao )      // string
+console.log( typeof maiorDeIdade )  // boolean

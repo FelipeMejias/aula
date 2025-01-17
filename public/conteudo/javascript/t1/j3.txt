@@ -14,7 +14,7 @@ const rest = moedas % 7     // 2
 
 const dizima = moedas / taxa // 6.382978723404255
 
-// Arredondar para 3 casas decimais 
+// Arredondar para 2 casas decimais 
 const arred1 = dizima.toFixed(2) //6.38
 
 // Arredondar para o inteiro mais próximo

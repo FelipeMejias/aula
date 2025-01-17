@@ -1,0 +1,17 @@
+# Variáveis Simples e seus Tipos
+saldo = 100
+print(saldo)  # 100
+
+saldo = saldo - 20  # valor alterado
+print(saldo)  # 80
+
+idade = 25
+pi = 3.14  # constante por convenção
+
+saudacao = "Olá, mundo!"
+maior_de_idade = True
+
+print(type(idade))          # <class 'int'>
+print(type(pi))             # <class 'float'>
+print(type(saudacao))       # <class 'str'>
+print(type(maior_de_idade)) # <class 'bool'>
