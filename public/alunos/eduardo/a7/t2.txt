@@ -1,0 +1,18 @@
+from openpyxl import Workbook
+
+
+# Criando um novo arquivo Excel
+wb = Workbook()
+ws = wb.active
+
+# Adicionando dados na planilha ativa
+ws['A1'] = 'Nome'
+ws['B1'] = 'Idade'
+
+ws.append(['Ana', 25])
+ws.append(['Carlos', 30])
+
+# Salvando o arquivo
+wb.save('arquivo_customizado.xlsx')
+
+print("Arquivo Excel customizado criado com sucesso!")

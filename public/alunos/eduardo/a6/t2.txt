@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Criando um DataFrame de exemplo
+dados = {
+    'Produto': ['Caneta', 'Lápis', 'Borracha'],
+    'Quantidade': [10, 20, 5],
+    'Preço Unitário': [1.50, 0.75, 2.00]
+}
+df = pd.DataFrame(dados)
+
+# Exibindo o DataFrame no terminal
+print(df)
+print(df.to_string(index=False))  # Remove o índice para deixar mais limpo

@@ -1,0 +1,28 @@
+from openpyxl import Workbook
+
+# Criando um novo arquivo Excel
+wb = Workbook()
+ws = wb.active
+
+# Adicionando cabeçalhos
+ws['A1'] = 'Produto'
+ws['B1'] = 'Quantidade'
+ws['C1'] = 'Preço Unitário'
+ws['D1'] = 'Total'
+
+# Adicionando dados
+ws.append(['Caneta', 10, 1.50])
+ws.append(['Lápis', 20, 0.75])
+ws.append(['Borracha', 5, 2.00])
+
+# Adicionando fórmula na coluna "Total"
+for row in range(2, 5):  # Linha 2 até 4
+    ws[f'D{row}'] = f'=B{row}*C{row}'  # Multiplica Quantidade pelo Preço Unitário
+
+# Adicionando fórmula para somar valores da coluna "Total"
+ws['D5'] = '=SUM(D2:D4)'  # Soma os valores das células D2 até D4
+ws['C5'] = 'Total Geral:'  # Adiciona um rótulo para identificação
+
+# Salvando o arquivo
+wb.save('arquivo_com_soma.xlsx')
+print("Arquivo com soma na coluna criado com sucesso!")

@@ -1,0 +1,33 @@
+from openpyxl import load_workbook
+
+wb = load_workbook('arquivo.xlsx') 
+ws = wb.active  # Seleciona a planilha ativa
+
+# Verificando o nome da planilha ativa
+print(f"Planilha ativa: {ws.title}")
+
+
+
+# celula especifica
+print(ws['A1'].value)  # Valor da célula A1
+print(ws.cell(row=2, column=3).value)  # Valor da célula na linha 2, coluna 3 (C2)
+
+
+
+# Iterando por todas as células
+for row in ws.iter_rows(min_row=1, max_row=4, min_col=1, max_col=4):  # Define o intervalo
+    for cell in row:
+        print(f"Célula {cell.coordinate}: {cell.value}")
+
+
+# Lendo linha por linha
+for row in ws.rows:
+    valores = [cell.value for cell in row]  # Cria uma lista com os valores da linha
+    print(valores)
+
+
+# Lendo os valores de uma coluna (exemplo: coluna B)
+for row in ws.iter_rows(min_row=2, max_row=4, min_col=2, max_col=2):
+    for cell in row:
+        print(f"Valor na coluna B: {cell.value}")
+

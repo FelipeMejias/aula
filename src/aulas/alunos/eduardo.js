@@ -36,6 +36,17 @@ const aula5=[
     {nome:'Exercicio 2',icone:py,caminho:formarTexto(5,2)},
     {nome:'Exercicio 3',icone:py,caminho:formarTexto(5,3)},
 ]
+const panda=[
+    {nome:'Ler inteiro',icone:py,caminho:formarTexto(6,1)},
+    {nome:'Exibir com DataFrame',icone:py,caminho:formarTexto(6,2)},
+    {nome:'Escrever',icone:py,caminho:formarTexto(6,3)},
+]
+const openpyxl=[
+    {nome:'Ler células',icone:py,caminho:formarTexto(7,1)},
+    {nome:'Escrever',icone:py,caminho:formarTexto(7,2)},
+    {nome:'Fórmulas',icone:py,caminho:formarTexto(7,3)},
+    {nome:'SUM',icone:py,caminho:formarTexto(7,4)},
+]
 export const eduardo=[//Eduardo
     {
         nome:'Aula 1',
@@ -54,8 +65,15 @@ export const eduardo=[//Eduardo
         data:'Terça 05/12',
         arquivos:aula4
     },{
-        nome:'Próxima aula',
+        nome:'Exercícios Lanchonete',
         arquivos:aula5
+    },{
+        nome:'Panda',
+        arquivos:panda
+    },
+    {
+        nome:'openpyxl',
+        arquivos:openpyxl
     },
 ]
 

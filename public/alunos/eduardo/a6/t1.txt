@@ -1,0 +1,7 @@
+import pandas as pd
+
+# Lendo o arquivo Excel inteiro
+df = pd.read_excel('dados.xlsx')
+
+# Exibindo o DataFrame
+print(df)
