@@ -5,7 +5,6 @@ const saudacao = "Olá, mundo!"
 
 let maiorDeIdade = true
 
-
 console.log( typeof idade )         // number
 console.log( typeof pi )            // number
 console.log( typeof saudacao )      // string

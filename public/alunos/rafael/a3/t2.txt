@@ -1,0 +1,21 @@
+def calculadora(n1,n2,operacao):
+    resultado=None
+    if operacao=='soma':
+        resultado=n1+n2
+    elif operacao=='multiplicação':
+        resultado=n1*n2
+    elif operacao=='subtração':
+        resultado=n1-n2
+    elif operacao=='divisão':
+        resultado=n1/n2
+    else:
+        print('Operação nao existe')
+        return
+    frase=f'A {operacao} de {n1} com {n2} é {resultado}'
+    print(frase)
+
+
+calculadora(4,5,'soma')
+calculadora(2,3,'multiplicação')
+calculadora(2,3,'subtração')
+calculadora(2,3,'capitaçao')

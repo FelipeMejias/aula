@@ -1,0 +1,30 @@
+# Funções
+def printarFrase(comida,qtd=200):
+    print(f'tenho {qtd} {comida}s')
+
+
+printarFrase('bala',5)
+printarFrase('doce')
+
+
+# Condicionais
+idade=16
+altura=1.75
+
+if not idade>=18 or altura>1.70:
+    print('pode entrar')
+else:
+    print('barrado!')
+    
+
+
+False #Falsy
+True #Truly
+
+var=None
+idade=4
+nome=''
+
+if idade:
+    print('entrei')
+

@@ -10,7 +10,6 @@ const aula1=[
 Troque o valor das variaveis para que os prints imprimam frases como:
 -A soma entre 4 e 5 resulta em 9
 -A multiplicação entre 3 e 2 resulta em 6
--dois números e uma string representando a operação desejada.
 Após conseguir que os prints estejam certos, tente trocar alguns dos valores para testar se o codigo inteiro está certo
 -OBS: Sempre quevocê trocar a operação, voce deve trocar o resultado para eles corresponderem
         `},
@@ -23,6 +22,12 @@ const resumos=[
     {nome:'String',icone:py,caminho:formarTexto(2,3)},
     {nome:'Boolean',icone:py,caminho:formarTexto(2,4)},
 ]
+const aula2=[
+    {nome:'Função e Condicional',icone:py,caminho:formarTexto(3,1)},
+    {nome:'Calculadora em função',icone:py,caminho:formarTexto(3,2)},
+    {nome:'Retorno de funções',icone:py,caminho:formarTexto(3,3)},
+    {nome:'Aninhamento',icone:py,caminho:formarTexto(3,4)},
+]
 
 export const rafael=[
     {
@@ -32,6 +37,9 @@ export const rafael=[
     {
         nome:'Resumos',
         arquivos:resumos
+    },{
+        nome:'Aula 2',
+        arquivos:aula2
     },
     
 ]

@@ -1,0 +1,27 @@
+# Condicionais Aninhadas
+idade=15
+temCNH=True
+
+if idade>=18:
+    if temCNH:
+        print('voce pode dirigir')
+    else:
+        print('para dirigir, va ao detran')
+else:
+    print('voce nao pode dirigir')
+
+
+# Funções Aninhadas
+def soma(n1,n2):
+    return n1+n2
+
+def divisao(n1,n2):
+    return n1/n2
+
+def mediaDoisNumeros(n1,n2):
+    parte1=soma(n1,n2)
+    resultado=divisao(parte1,2)
+    print(resultado)
+
+
+mediaDoisNumeros(4,7)
