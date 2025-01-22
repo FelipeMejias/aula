@@ -29,15 +29,34 @@ const aula2=[
     {nome:'Aninhamento',icone:py,caminho:formarTexto(3,4)},
 ]
 const exAula2=[
-    {nome:'Preço aparelho',icone:py,caminho:formarTexto(4,1),texto:`
+    {nome:'Preço aparelho com/sem plano',icone:py,caminho:formarTexto(4,1),texto:`
 Defina a função calcularPreco que recebe dois parametros:
 -um id ( vai de 1 a 3 )
 -se o plano na operadora está sendo assinado (True ou False) 
-Regra: Caso o segundo parametro não seja passado, deve ser considerado o valor false
+Regra: Caso o segundo parametro não seja passado, deve ser considerado o valor False
 Use como dados do exercício:
 -o preço é 20% maior que de seu respectivo valor de mercado
 -o desconto dado ao assinar o plano da operadora é 30%
-Imprima o valor final no console no formato: U$ 800
+Imprima o valor final no console no formato: 
+-O preço do aparelho com plano é U$ 1060
+        `},
+    {nome:'Planos diferentes',icone:py,caminho:formarTexto(4,1),texto:`
+Agora terão dois planos com descontos diferentes:
+-Mensal ( dá 20% de desconto )
+-Anual ( dá 40% de desconto )
+Se o parâmetro plano receber 0 ou nao receber o parâmetro, nao há plano
+Imprima o valor final no console no formato: 
+-O preço do aparelho com este plano é U$ 960
+        `},
+    {nome:'Extras',icone:py,caminho:formarTexto(4,1),texto:`
+Adicione o nome do aparelho na frase final, no formato:
+-O preço do Galaxy Flip com este plano é U$ 960
+
+Adicionar casos de erro para imprimir avisos como:
+-Este aparelho não existe!
+-Este plano não existe!
+
+Crie um quarto aparelho, com "nome" e "preco"
         `},
 ]
 

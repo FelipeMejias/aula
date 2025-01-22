@@ -1,0 +1,29 @@
+# valores de mercado:
+
+# id:1
+precoGalaxy=1300
+nomeGalaxy='Galaxy Flip'
+
+# id:2
+precoIphone=2500
+nomeIphone='Iphone Max Pro'
+
+# id:3
+precoNokia=1600  
+nomeNokia='Nokia Brick'
+
+
+descontoPlanoMensal=0.2 # id:1
+descontoPlanoAnual=0.4  # id:2
+
+
+# Crie aqui sua função
+
+
+# Chamadas de teste da função:
+
+calcularPreco(1,1) # Terminal: O preço do Galaxy Flip com este plano é U$ 1248
+
+calcularPreco(2)   # Terminal: O preço do Iphone Max Pro sem plano é U$ 3000
+
+calcularPreco(3)   # Terminal: O preço do Nokia Brick sem plano é U$ 1920

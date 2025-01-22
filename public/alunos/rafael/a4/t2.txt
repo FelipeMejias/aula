@@ -1,0 +1,18 @@
+# valores de mercado:
+precoGalaxy=1300 # id:1
+precoIphone=2500 # id:2
+precoNokia=1600  # id:3
+
+descontoPlanoMensal=0.2 # id:1
+descontoPlanoAnual=0.4  # id:2
+
+# Crie aqui sua função
+
+
+# Chamadas de teste da função:
+
+calcularPreco(1,2) # Terminal: O preço do aparelho com este plano é U$ 936
+
+calcularPreco(1,1) # Terminal: O preço do aparelho com este plano é U$ 1248
+
+calcularPreco(1)   # Terminal: O preço do aparelho sem plano é U$ 1560
