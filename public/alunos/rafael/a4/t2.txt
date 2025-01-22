@@ -1,4 +1,3 @@
-# valores de mercado:
 precoGalaxy=1300 # id:1
 precoIphone=2500 # id:2
 precoNokia=1600  # id:3

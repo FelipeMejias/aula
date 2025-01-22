@@ -1,5 +1,3 @@
-# valores de mercado:
-
 # id:1
 precoGalaxy=1300
 nomeGalaxy='Galaxy Flip'
@@ -11,7 +9,6 @@ nomeIphone='Iphone Max Pro'
 # id:3
 precoNokia=1600  
 nomeNokia='Nokia Brick'
-
 
 descontoPlanoMensal=0.2 # id:1
 descontoPlanoAnual=0.4  # id:2
