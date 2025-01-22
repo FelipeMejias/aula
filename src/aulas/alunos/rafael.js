@@ -28,6 +28,18 @@ const aula2=[
     {nome:'Retorno de funções',icone:py,caminho:formarTexto(3,3)},
     {nome:'Aninhamento',icone:py,caminho:formarTexto(3,4)},
 ]
+const exAula2=[
+    {nome:'Preço aparelho',icone:py,caminho:formarTexto(4,1),texto:`
+Defina a função calcularPreco que recebe dois parametros:
+-um id ( vai de 1 a 3 )
+-se o plano na operadora está sendo assinado (True ou False) 
+Regra: Caso o segundo parametro não seja passado, deve ser considerado o valor false
+Use como dados do exercício:
+-o preço é 20% maior que de seu respectivo valor de mercado
+-o desconto dado ao assinar o plano da operadora é 30%
+Imprima o valor final no console no formato: U$ 800
+        `},
+]
 
 export const rafael=[
     {
@@ -40,6 +52,9 @@ export const rafael=[
     },{
         nome:'Aula 2',
         arquivos:aula2
+    },{
+        nome:'Exercícios',
+        arquivos:exAula2
     },
     
 ]

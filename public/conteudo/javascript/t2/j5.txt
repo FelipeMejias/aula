@@ -1,0 +1,13 @@
+// Criando uma função arrow básica
+const multiplicar = (a, b) => a * b // Retorna o produto de dois números
+
+// Chamando a função
+const resultado = multiplicar(6, 7) // 42
+console.log(resultado) // Imprime o valor retornado
+
+// Funções arrow com mais de uma linha precisam de {}
+const saudacao = (nome) => {
+  return `Olá, ${nome}!` // Retorna uma string de saudação
+}
+
+console.log(saudacao("Ana")) // 'Olá, Ana!'

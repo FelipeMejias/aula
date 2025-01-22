@@ -1,5 +1,0 @@
-// Função com parâmetro fixo (valor padrão)
-function saudacao(nome = "Visitante") {
-    console.log(`Olá, ${nome}!`);
-}
-saudacao();  // Saída: Olá, Visitante!

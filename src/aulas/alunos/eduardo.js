@@ -3,6 +3,7 @@ import py from '../../_imgs/python.png'
 import flet from '../../_imgs/flet.png'
 import sql from '../../_imgs/sql.jpg'
 import notas from '../../_imgs/notass.jpg'
+import excel from '../../_imgs/excel.png'
 function formarTexto(aula,num){
     return `/alunos/eduardo/a${aula}/t${num}.txt`
 }

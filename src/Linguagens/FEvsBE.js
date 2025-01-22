@@ -22,10 +22,10 @@ export default function FEvsBE({}){
     
       <Back >
         <h2>Back-end</h2>
-        <Rota t={100} l={30}>
+        <Rota t={120} l={30}>
           Rota: POST publicacoes
         </Rota>
-        <Rota t={27} l={465}>
+        <Rota t={38} l={465}>
         Rota: GET publicacoes
         </Rota>
       </Back>
@@ -108,10 +108,10 @@ width:42%;height:30%;max-width:300px;
 justify-content:space-between;
 `
 const Back=styled.div`
-flex-direction:column;
 width:740px;height:40%;
-border-radius:10px;padding:0 0 0 25px;box-sizing:border-box;
+border-radius:10px;
 background-color:#eaa63f;
+justify-content:center;
 position:absolute;bottom:30px;left:300px;
 `
 const Fronts=styled.div`

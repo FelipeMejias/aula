@@ -53,7 +53,7 @@ export default function Meio({}){
             {texto?<Copiar cor={'#03B654'} onClick={copiarTexto}><p>{copiado ? 'Código copiado!' : 'Copiar código'}</p></Copiar>:<FakeButton/>}
             </Heder>
             {infos.texto?<Coment>{formatText(infos.texto)}</Coment>:<></>}
-            {infos.noCode?<></>:<HolderCode><CodeBlock texto={texto} mat={infos.linguagem||linguagem} /></HolderCode>}
+            {infos.noCode?<></>:<HolderCode><CodeBlock texto={texto} mat={infos.linguagem||materia} /></HolderCode>}
             {infos.img?<img src={infos.img}/>:(infos.noCode===15?<Pastas />:<></>)}
         </Tudo>
     )

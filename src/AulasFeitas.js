@@ -12,124 +12,108 @@ export default function AulasFeitas(){
    console.log(aluno)
     return (
         <Tudo>
-            <Janela vazio={true}>
-            {aulas.map((a,iAula)=>
-                <Aula >
-                <Cab>
-                    <p>{a.nome}</p>
-                    <p><small>{a.data}</small></p>
-                </Cab>
-                <section>
-                    {a.arquivos.map((arquivo,iArquivo)=>
-                        <Arq onClick={()=>navigate(`/aulas/${iAula+1}/${iArquivo+1}`)}>
-                            <img src={arquivo.icone}></img>
-                            <h3>{arquivo.nome}</h3>
-                        </Arq>)}
-                    
-                </section>
-            </Aula>
-            )}
-            </Janela>
+            <Janela >
+            {aulas.map((a,iAula)=><Topico>
+                <Cab ><h6>{a.nome}</h6></Cab>
+                <Caixa>
+                {a.arquivos.map((arquivo,iArquivo)=>
+                    <HoldSub>
+                        <HoldImg><img src={arquivo.icone}/></HoldImg>
+                        <Sub onClick={()=>navigate(`/aulas/${iAula+1}/${iArquivo+1}`)}>
+                        <p>{arquivo.nome}</p>
+                        </Sub>
+                    </HoldSub>
+                    )}
+                </Caixa>
+                
+            </Topico>)}
+              
+           </Janela>
         </Tudo>
     )
 }
-const Janela=styled.div`background-color:;
+const Tudo=styled.div`
+align-items:center;
+width:100%;
+height:calc(100% - 75px);
+position:relative;
+@media(min-width:750px){height:100%;}
+`
+const Janela=styled.article`
+display:flex;
 align-items:center;
 width:100%;
 height:100%;
+padding:0px 0 20px 0;
+box-sizing:border-box;
 flex-direction:column;
-h6{
-    margin:0 0 5px 0px;font-size:19px;font-weight:500;
-}
-@media(min-width:750px){
-overflow:auto;
-width:${p=>p.vazio?'100%;':'370px;'}
-}
-`
-const Tudo=styled.div`
-width:100%;height:100%;
-`
 
-const Cab=styled.div`
-align-items:center;
-background-color:#d9dbad;width:100%;
-border-top-left-radius:15px;
-border-top-right-radius:15px;
-justify-content:space-between;
-padding:0 10px 0 10px;
-p{small{13px}
-font-size:18px;margin:5px 0 7px 0px;
+@media(min-width:750px){
+display:flex;
+overflow:auto;
+width:100%;
+flex-direction:row;
+align-items:flex-start;
 }
+
 `
-const Aula=styled.div`
+const Topico=styled.article`
+align-items:flex-start;
 display:flex;
 flex-direction:column;
-align-items:flex-start;
-
-width:90%;max-width:450px;
+cursor:pointer;
+position:relative;
 margin:15px 0 0 0;
 background-color:white;
+width:90%;max-width:400px;
+min-width:250px;
+max-width:250px;
 border-radius:15px;
-
-section{width:100%;background-color:;
-display:flex;min-height:80px;
-align-items:center;margin:5px 0 5px 0;
-flex-wrap:wrap;
+p{
+margin:0px 0 0 0px;text-align:left;
+}
+h6{
+margin:0 0 5px 0px;font-size:19px;font-weight:500;
+}
+aside{
+display:flex;align-items:flex-end;justify-content:flex-start;
+position:absolute;top:0px;right:0px;
+height:40px;width:40px;img{height:18px;}
+}
+@media(max-width:500px){
+margin:15px 0 0 5%;
+}
+@media(min-width:750px){
+margin:15px 0 0 25px;
+min-width:270px;
+max-width:270px;
 }
 
 `
+const Sub=styled.article`
+background-color:#${p=>p.color};
+color:${p=>p.tex};
+width:180px;
+padding:9px;
+border-radius:4px;position:relative;
+display:flex;align-items:center;
 
-const Arq=styled.article`background-color:;
+`
+
+const HoldSub=styled.div`background-color:;
 display:flex;
-align-items:center;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-cursor:pointer;
-width:25%;
-height:100px;
-border-radius:15px;
-margin-left:10px;
-img{
-height:40px;margin-bottom:5px;
-}
-h3{margin:0 0 0 0;line-height:14px;
-font-size:14px;font-weight:300;height:20px;
-text-align: center;
-strong{
-color:green;font-weight:300;
-}
-}
-
+margin:0px 0 10px 5px;
+`
+const HoldImg=styled.div`
+height:48px;width:48px;
+justify-content:flex-end;align-items:center;
+img{height:30px;}
 `
 
-
-
-/*
-{aluno=='clarissa'?<Aula ab={20+tamanho(exercicios.length+1)*120}>
-            <Cab>
-                <p>Exercícios</p>
-            </Cab>
-            <section>
-                <Arq onClick={()=>navigate(`/aulas/adicionar`)}>
-                    <img src={novoExercicio}></img>
-                    <h3>Adicionar exercício</h3> 
-                </Arq>
-                {exercicios.map((arquivo,iArquivo)=>
-                    <Arq onClick={()=>navigate(`/aulas/exercicios/arquivo${iArquivo+1}`)}>
-                        <img src={file}></img>
-                        <h3>{arquivo.titulo}</h3>
-                    </Arq>)}
-            </section>
-        </Aula>:<></>}
-        */
-
-/*[][iAula].map((arquivo,iArquivo)=><Arq onClick={()=>navigate(`/${aluno}/aula${iAula+1}/arquivo${iArquivo+1}`)}>
-                    <img src={papel}></img>
-                    <h3>{arquivo.titulo}</h3>
-                </Arq>)}
-                <Arq onClick={()=>navigate(`/`)}>
-                    <img src={novo}></img>
-                    <h3><strong></strong></h3>
-                </Arq>*/
+const Cab=styled.div`width:100%;background-color:;
+height:60px;padding-left:15px;align-items:center;
+`
+const Caixa=styled.div`background-color:;
+flex-direction:column;
+`
 

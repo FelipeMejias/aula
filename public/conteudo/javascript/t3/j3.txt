@@ -1,10 +1,4 @@
-// Função que chama outra para realizar uma operação
-function multiplica(x, y) {
-    return x * y;
-}
-
-function quadrado(z) {
-    return multiplica(z, z);  // Chama a função multiplica
-}
-
-console.log(quadrado(4));  // Saída: 16
+// Usando operador ternário
+const nota = 7
+const resultado = nota >= 6 ? "Aprovado" : "Reprovado"
+console.log(resultado) // 'Aprovado' se a nota for >= 6

@@ -1,5 +1,10 @@
-// Função que imprime uma saudação
-function saudacao() {
-    console.log("Olá, mundo!");
+// Verificando condições com if, else if e else
+const idade = 18
+
+if (idade < 18) {
+  console.log("Menor de idade") // Executado se a condição for verdadeira
+} else if (idade === 18) {
+  console.log("Recém maior de idade") // Executado se a segunda condição for verdadeira
+} else {
+  console.log("Maior de idade") // Executado se nenhuma condição anterior for verdadeira
 }
-saudacao();  // Chama a função saudacao

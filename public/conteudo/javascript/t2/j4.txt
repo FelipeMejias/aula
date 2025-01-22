@@ -1,0 +1,8 @@
+// Função retornando um valor
+function quadrado(n) {
+  return n * n // Retorna o número ao quadrado
+}
+
+const num = 4
+const resultado = quadrado(num) // 16
+console.log(resultado) // Imprime o valor retornado pela função

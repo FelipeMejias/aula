@@ -1,0 +1,15 @@
+# valores de mercado:
+galaxy=1300 # id:1
+iphone=2500 # id:2
+nokia=1600  # id:3
+
+# Crie aqui sua função
+
+
+# Chamadas de teste da função:
+
+calcularPreco(1,True)  # Terminal: U$ 1092
+
+calcularPreco(2,False) # Terminal: U$ 3000
+
+calcularPreco(3)       # Terminal: U$ 1344

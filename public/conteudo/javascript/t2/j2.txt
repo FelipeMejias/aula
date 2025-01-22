@@ -1,14 +1,13 @@
-// Exemplo de uso do else if
-let nota = 85;
+// Função com parâmetro para saudação personalizada
+function saudacao(nome) {
+    console.log(`Olá, ${nome}!`);
+}
+saudacao("João");  // Terminal: Olá, João!
 
-// Testando múltiplas condições
-if (nota >= 90) {
-    console.log("Aprovado com distinção");
-} else if (nota >= 70) {
-    console.log("Aprovado");
-} else {
-    console.log("Reprovado");
+
+// Funções com mais de 1 parâmetros
+function subtracao(a, b) {
+    console.log( a - b );
 }
 
-// Explicação: A condição é avaliada sequencialmente. 
-// Se nota >= 90
+subtracao(10, 3) // Terminal: 7

@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-export default function Pastas({topico,top}){
+export default function Pastas({topico,top,small}){
     const navigate=useNavigate()
     return (
         topico==2?
-        <Tudo>
+        <Tudo small={small}>
             <h1>{top.nome}</h1>
             <File onClick={()=>{navigate(`/cursos/react/3/1`)}}> 
             <Bolinha cor="var(--html)"/>
@@ -17,7 +17,7 @@ export default function Pastas({topico,top}){
             </File>
         </Tudo>
         :topico==4?
-        <Tudo>
+        <Tudo small={small}>
             <h1>{top.nome}</h1>
             <div className="folder">
                 <div className="folder-name">public</div>
@@ -63,9 +63,10 @@ h1{
 color:white;margin:0;font-size:18px;font-weight:500;
 }
 width:90%;max-width:400px;
-min-width:220px;
+min-width:${p=>p.small?200:220}px;
 max-width:270px;
-margin:15px 0 0 15px;
+margin:${p=>p.small?'15px 0 0 0px':'15px 0 0 15px'};
+
  display:flex;
   flex-direction:column;
     text-align: left;

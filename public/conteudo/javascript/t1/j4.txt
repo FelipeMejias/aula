@@ -4,7 +4,8 @@ const fruta2 = 'laranja'
 
 const palavra = fruta1[3] + fruta2[5] // 'cj'
 
-const frase = fruta1 + ' & ' + fruta2 // 'abacaxi & laranja
+let frase = fruta1 + ' & ' + fruta2 // 'abacaxi & laranja'
+frase += ' & limão ' // 'abacaxi & laranja & limão'
 
 // String dinâmica fechadas por crase permitem inserir código javascript através do ${} Além de permitir pular linha
 const fraseStringDinamica = `minha fruta preferida é: ${fruta1}`

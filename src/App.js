@@ -41,8 +41,7 @@ function App() {
             {aba?<Aba/>:<></>}
             <Resto>
               <Routes>
-<Route path='/' element={<Linguagens />}/>
-<Route path='/linguagens' element={<FEvsBE/>}/>
+<Route path='/' element={<FEvsBE/>}/>
 
 <Route path='/bancos' element={<Principal/>}/>
 

@@ -31,7 +31,7 @@ export default function Canto({}){
         <Tudo>
             {referencia.map((top,index)=>
             top.pastas?
-            <Pastas pasta={index}/>:top.existe?
+            <Pastas small={true} topico={index} top={top}/>:
             <Topico >
                 <Cab ><h6>{top.nome}</h6></Cab>
                 <Caixa>
@@ -50,7 +50,7 @@ export default function Canto({}){
                 )
                 }</Caixa>
                 
-            </Topico>:<></>
+            </Topico>
             )}
         </Tudo>:
         <Tudo>
