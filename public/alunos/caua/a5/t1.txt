@@ -1,0 +1,26 @@
+// Propriedade Imutável
+
+const obj = {};
+Object.defineProperty(obj, 'fixo', {
+  value: 'Eu não mudo',
+  writable: false, // Não permite alterar o valor
+  configurable: false, // Não permite deletar ou reconfigurar a propriedade
+});
+
+console.log(obj.fixo); // "Eu não mudo"
+
+obj.fixo = 'Vou tentar mudar'; // Silenciosamente ignorado em modo normal ou lança erro em modo estrito
+console.log(obj.fixo); // "Eu não mudo"
+
+
+// Congelar o Objeto inteiro
+
+const obj = Object.freeze({
+  fixo: 'Eu não mudo',
+  outro: 'Também sou fixo',
+});
+
+console.log(obj.fixo); // "Eu não mudo"
+
+obj.fixo = 'Vou tentar mudar'; // Ignorado ou erro em modo estrito
+console.log(obj.fixo); // "Eu não mudo"

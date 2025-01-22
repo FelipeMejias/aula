@@ -27,7 +27,7 @@ const aula3=[
     {nome:'Back-end com Flet',icone:flet,caminho:formarTexto(3,3)},
     {nome:'Conexão ao banco',icone:sql,caminho:formarTexto(3,4)},
     {nome:'Ex- Feito em aula',icone:py,caminho:formarTexto(3,5)},
-    {nome:'Diferença Front e Back',img:i6,icone:notas},
+    {nome:'Diferença Front e Back',img:i6,icone:notas,noCode:true},
 ]
 const aula4=[
     {nome:'DatasPprovas com Split',icone:py,caminho:formarTexto(4,1)},
@@ -38,15 +38,15 @@ const aula5=[
     {nome:'Exercicio 3',icone:py,caminho:formarTexto(5,3)},
 ]
 const panda=[
-    {nome:'Ler inteiro',icone:py,caminho:formarTexto(6,1)},
-    {nome:'Exibir com DataFrame',icone:py,caminho:formarTexto(6,2)},
-    {nome:'Escrever',icone:py,caminho:formarTexto(6,3)},
+    {nome:'Ler inteiro',icone:excel,caminho:formarTexto(6,1)},
+    {nome:'Exibir com DataFrame',icone:excel,caminho:formarTexto(6,2)},
+    {nome:'Escrever',icone:excel,caminho:formarTexto(6,3)},
 ]
 const openpyxl=[
-    {nome:'Ler células',icone:py,caminho:formarTexto(7,1)},
-    {nome:'Escrever',icone:py,caminho:formarTexto(7,2)},
-    {nome:'Fórmulas',icone:py,caminho:formarTexto(7,3)},
-    {nome:'SUM',icone:py,caminho:formarTexto(7,4)},
+    {nome:'Ler células',icone:excel,caminho:formarTexto(7,1)},
+    {nome:'Escrever',icone:excel,caminho:formarTexto(7,2)},
+    {nome:'Fórmulas',icone:excel,caminho:formarTexto(7,3)},
+    {nome:'SUM',icone:excel,caminho:formarTexto(7,4)},
 ]
 export const eduardo=[//Eduardo
     {

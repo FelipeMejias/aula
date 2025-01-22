@@ -154,4 +154,6 @@ align-items:center;
 @media(min-width:1050px){
 width:calc(100% - 240px)
 }
+
+img{max-width:100%;max-height:100%}
 `

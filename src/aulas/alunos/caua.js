@@ -1,5 +1,7 @@
 import js from '../../_imgs/js.png'
 import re from '../../_imgs/react.png'
+import i1 from '../../_imgs/caua1.png'
+import notas from '../../_imgs/notass.jpg'
 function formarTexto(aula,num){
     return `/alunos/caua/a${aula}/t${num}.txt`
 }
@@ -62,9 +64,13 @@ Faça uma função que receba a lista de tropas que o jogador escolheu para comb
     
 ]
 const aula3=[
-    {nome:'App.js',icone:js,caminho:formarTexto(4,1)},
-    {nome:'infos.js',icone:js,caminho:formarTexto(4,2)},
-    {nome:'Clube.js',icone:js,caminho:formarTexto(4,3)},
+    {nome:'App.js',icone:re,caminho:formarTexto(4,1)},
+    {nome:'infos.js',icone:re,caminho:formarTexto(4,2)},
+    {nome:'Clube.js',icone:re,caminho:formarTexto(4,3)},
+]
+const extras=[
+    {nome:'Congelar objeto',icone:js,caminho:formarTexto(5,1)},
+    {nome:'Estrutura backend middlewares',img:i1,icone:notas,noCode:true},
 ]
 export const caua=[
     {
@@ -80,5 +86,8 @@ export const caua=[
     },{
         nome:'Aula 3',
         arquivos:aula3
+    },{
+        nome:'Extras',
+        arquivos:extras
     },
 ]
