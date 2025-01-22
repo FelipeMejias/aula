@@ -40,7 +40,7 @@ Use como dados do exercício:
 Imprima o valor final no console no formato: 
 -O preço do aparelho com plano é U$ 1060
         `},
-    {nome:'Planos diferentes',icone:py,caminho:formarTexto(4,1),texto:`
+    {nome:'Planos diferentes',icone:py,caminho:formarTexto(4,2),texto:`
 Agora terão dois planos com descontos diferentes:
 -Mensal ( dá 20% de desconto )
 -Anual ( dá 40% de desconto )
@@ -48,7 +48,7 @@ Se o parâmetro plano receber 0 ou nao receber o parâmetro, nao há plano
 Imprima o valor final no console no formato: 
 -O preço do aparelho com este plano é U$ 960
         `},
-    {nome:'Extras',icone:py,caminho:formarTexto(4,1),texto:`
+    {nome:'Extras',icone:py,caminho:formarTexto(4,3),texto:`
 Adicione o nome do aparelho na frase final, no formato:
 -O preço do Galaxy Flip com este plano é U$ 960
 
