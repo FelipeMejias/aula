@@ -59,7 +59,39 @@ Adicionar casos de erro para imprimir avisos como:
 Crie um quarto aparelho, com "nome" e "preco"
         `},
 ]
-
+const aula4=[
+    {nome:'Listas no ex Aparelhos',icone:py,caminho:formarTexto(5,1)},
+    {nome:'Resumo Listas',icone:py,caminho:formarTexto(5,2),texto:`
+Aquele lista.unshift(item) para adicionar o item no início da lista, em Python é feito com:
+-lista.insert(0,item)
+`},
+    {nome:'Resumo Loops',icone:py,caminho:formarTexto(5,3)},
+]
+const exAula4=[
+    {nome:'Aparelhos Lista de Listas',icone:py,caminho:formarTexto(6,1),texto:`
+A partir do arquivo "Listas no ex Aparelhos" visto em aula
+Transforme as duas listas (nomes e precos) em uma lista aparelhos
+Onde cada item (cada aparelho) é uma mini lista nesse formato:
+-['Galaxy Flip',1300]
+        `},
+    {nome:'Loop Parcelas',icone:py,caminho:formarTexto(6,2),texto:`
+Faça uma função que recebe
+-preço inteiro do plano
+-quantidade de parcelas
+-dia do mes 
+E printe textos de cada parcela no formato
+-Parcela 1 a ser paga 12 de Janeiro. O valor é U$ 137.50
+A 1a parcela pode ser sempre em Janeiro, para facilitar
+        `},
+    {nome:'Contar palavras',icone:py,caminho:formarTexto(6,3),texto:`
+Faça uma função que conte quantas vezes a palavra "você" aparece em seu texto. 
+Imagine que alguem precisa para evitar colocar erros em um documento
+Existirão 3 contagens, uma da forma correta e uma de cada tipo de erro:
+-você 
+-voce
+-vc
+        `},
+]
 export const rafael=[
     {
         nome:'Aula 1',
@@ -74,6 +106,12 @@ export const rafael=[
     },{
         nome:'Exercícios',
         arquivos:exAula2
+    },{
+        nome:'Aula 4',
+        arquivos:aula4
+    },{
+        nome:'Exercícios',
+        arquivos:exAula4
     },
     
 ]

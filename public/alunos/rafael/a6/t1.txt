@@ -1,0 +1,31 @@
+precos=[1300 , 2500 , 1600 ] 
+nomes=['Galaxy Flip' , 'Iphone Pro Max' , 'Nokia Brick'  ] 
+
+# PREENCHER LISTA APARELHOS #
+aparelhos=[]
+# ------------------------- #
+
+def calcularPreco(id, plano=False):
+    fator = 20/100
+    desconto = 30/100
+
+    # PARTE QUE PRECISA SER ALTERADA ---------- #
+    if id > len(precos): 
+        print ('Esse aparelho não existe!')
+        return
+    precoMercado=precos[id-1]
+    nome_aparelho =nomes[id-1]
+    preco = precoMercado * fator + precoMercado
+    # ----------------------------------------- #
+
+    complemento='sem plano'
+    if plano:
+        preco = preco - preco * desconto
+        complemento='com plano'
+    print(f'O preço do {nome_aparelho} {complemento} é U$ {preco}')
+
+
+calcularPreco(1,True)  # Terminal: O preço do aparelho com plano é U$ 1092
+calcularPreco(2,False) # Terminal: O preço do aparelho sem plano é U$ 3000
+calcularPreco(3)       # Terminal: O preço do aparelho sem plano é U$ 1344
+calcularPreco(4)       # Terminal: Esse aparelho não existe

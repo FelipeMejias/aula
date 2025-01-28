@@ -1,0 +1,37 @@
+lista=[ 'manga' , 'abacate' , 'maracujá','melancia','mamão','banana','maçã' ]
+
+ultimoElemento=lista[len(lista)-1]
+
+lista.append('uva') # Insere no final
+lista.insert(0, 'limão') # Insere no índice do 1º parâmetro
+print(lista)
+
+lista.pop() # Remove o último
+print(lista)
+
+nova=[]
+nova.append(lista[1])
+nova.append(lista[0])
+print(nova)
+
+# SLICE
+
+parte=lista[1:4] 
+print(parte)
+
+# SPLIT
+
+data='2025-01-28'
+listinha=data.split('-')
+print(listinha)
+novaData=f'{listinha[2]}/{listinha[1]}/{listinha[0]}'
+print(novaData)
+
+frase='ola estou programando em python'
+palavras=frase.split(' ')
+print(palavras)
+
+# INCLUDES
+existe= 56 in lista
+# existe será True caso a lista possua um item 56
+# caso contrário, será False

@@ -1,0 +1,23 @@
+meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
+
+# Altere a função:
+def gerarPrazosParcelas(preco,parcelas,dia):
+    print('Parcela X , valor $ X , dia X de X')
+
+
+gerarPrazosParcelas(1540 , 5 , 12)
+# Parcela 1 , valor $ 308.0 , dia 12 de Janeiro
+# Parcela 2 , valor $ 308.0 , dia 12 de Fevereiro
+# Parcela 3 , valor $ 308.0 , dia 12 de Março
+# Parcela 4 , valor $ 308.0 , dia 12 de Abril
+# Parcela 5 , valor $ 308.0 , dia 12 de Maio
+
+gerarPrazosParcelas(4780 , 8 , 1)
+# Parcela 1 , valor $ 597.5 , dia 1 de Janeiro
+# Parcela 2 , valor $ 597.5 , dia 1 de Fevereiro
+# Parcela 3 , valor $ 597.5 , dia 1 de Março
+# Parcela 4 , valor $ 597.5 , dia 1 de Abril
+# Parcela 5 , valor $ 597.5 , dia 1 de Maio
+# Parcela 6 , valor $ 597.5 , dia 1 de Junho
+# Parcela 7 , valor $ 597.5 , dia 1 de Julho
+# Parcela 8 , valor $ 597.5 , dia 1 de Agosto

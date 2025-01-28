@@ -1,0 +1,39 @@
+# WHILE
+
+lista=[5,4,7,2,1,43,6,22,11,10,98]
+
+tamanho=len(lista)
+indice=0
+pares=[]
+impares=[]
+while indice < tamanho:
+
+    item=lista[indice]
+    if item % 2 == 0:
+        pares.append(item)
+    else:
+        impares.append(item)
+
+    indice=indice+1
+
+print(pares)
+print(impares)
+
+
+# FOR
+
+lista=[5,4,7,2,1,43,6,22,11,10,98]
+
+pares=[]
+impares=[]
+for item in lista:
+    if item % 2 == 0:
+        pares.append(item)
+    else:
+        impares.append(item)
+
+#print(pares)
+#print(impares)
+
+for num in range(0,10):
+    print(num)

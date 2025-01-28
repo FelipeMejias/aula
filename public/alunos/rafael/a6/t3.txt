@@ -1,0 +1,19 @@
+# Mensagens que o estagiário enviou e quer fazer a contagem
+texto1='''
+Sabe quando você tá fazendo alguma coisa e você acha que vc tá arrasando, mas aí vc percebe que você esqueceu de salvar e tudo some? Pois é, aconteceu comigo. Eu juro que tava tudo pronto, mas aí voce olha e vê que o código não rodou porque você esqueceu de um ponto e vírgula! E, nossa, vc fica pensando: "Como que você fez isso, você mesmo?" Mas tudo bem, porque no final você aprende, e eu acho que é isso que importa, né? Quer dizer, voce erra, você aprende, e depois você ensina alguém a não errar do mesmo jeito. Só espero que você, tipo, tenha paciência comigo, porque eu juro que eu tô tentando!
+'''
+texto2='''
+você já passou por aquela situação em que voce acha que tá entendendo tudo, mas aí você percebe que vc tava olhando o arquivo errado? Porque foi exatamente isso que aconteceu comigo. Eu tava todo confiante, explicando o que fazer, e o arquivo que eu tava usando nem era o certo. Aí vc pensa: "você tá de brincadeira comigo, né?" Mas no final, você dá aquela risadinha nervosa, conserta e segue em frente. Porque, sabe, voce não pode deixar esses errinhos te derrubarem. você aprende e, quem sabe, no futuro, voce até dá risada disso. você entende, né?
+'''
+
+# Faça aqui sua função
+def contarPalavras(texto):
+    print('Certas: X , voce: X , vc: X')
+
+# Chamadas
+
+contarPalavras(texto1)
+# certas: 9 , voce: 2 , vc: 3
+
+contarPalavras(texto2)
+# certas: 4 , voce: 3 , vc: 2
