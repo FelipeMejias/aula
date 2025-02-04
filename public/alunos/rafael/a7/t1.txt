@@ -1,0 +1,32 @@
+aparelhos=[
+    {   'id':1, 'nome':'Galaxy Flip',       'preco':1600  },
+    {   'id':2, 'nome':'Iphone Pro Max',    'preco':2500  },
+    {   'id':3, 'nome':'Nokia Brick',       'preco':1600  },
+]
+
+def calcularPreco(id, plano=False):
+    fator = 20/100
+    desconto = 30/100
+
+    if id > len(aparelhos): 
+        print ('Esse aparelho não existe!')
+        return
+    aparelho=aparelhos[id-1] # aparelho={   'id':1,    'nome':'Galaxy Flip',      'preco':1600  }
+
+    nome_aparelho = aparelho['nome']
+    precoMercado=aparelho['preco']
+
+
+    preco = precoMercado * fator + precoMercado
+
+    complemento='sem plano'
+    if plano:
+        preco = preco - preco * desconto
+        complemento='com plano'
+    print(f'O preço do {nome_aparelho} {complemento} é U$ {preco}')
+
+
+calcularPreco(1,True)  # Terminal: O preço do aparelho com plano é U$ 1092
+calcularPreco(2,False) # Terminal: O preço do aparelho sem plano é U$ 3000
+calcularPreco(3)       # Terminal: O preço do aparelho sem plano é U$ 1344
+calcularPreco(4)       # Terminal: Esse aparelho não existe

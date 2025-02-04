@@ -1,0 +1,8 @@
+def buscar():
+    resposta = await axios.get(' https://api.football-data.org/v4/competitions/2013/matches',
+        {'headers': {'X-Auth-Token':'numero_do_token'}
+    })
+    print(resposta['data'])
+
+
+asyncio.run( buscar() )

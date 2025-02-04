@@ -1,5 +1,11 @@
 import js from '../../_imgs/js.png'
+import rafa1 from '../../_imgs/rafa1.png'
+import rafa2 from '../../_imgs/rafa2.png'
 import py from '../../_imgs/python.png'
+import flet from '../../_imgs/flet.png'
+import sql from '../../_imgs/sql.jpg'
+import notas from '../../_imgs/notass.jpg'
+import excel from '../../_imgs/excel.png'
 function formarTexto(aula,num){
     return `/alunos/rafael/a${aula}/t${num}.txt`
 }
@@ -92,6 +98,19 @@ Existirão 3 contagens, uma da forma correta e uma de cada tipo de erro:
 -vc
         `},
 ]
+const aula5=[
+    {nome:'Ex Aparelhos com dicionário',icone:py,caminho:formarTexto(7,1)},
+    {nome:'Biblioteca vs Framework',icone:notas,img:rafa1,noCode:true,texto:`
+-Biblioteca é usada para obter valores e usá-los em seu programa Python, que executa um serviço.
+
+-Framework é usado para entregar o serviço inteiro. Fazemos o código em python, mas o produto final é um programa ReactJS/NodeJS/FlaskPY ...
+        `},
+    {nome:'Resumo tópicos Python',icone:notas,img:rafa2,noCode:true},
+    {nome:'API request',icone:py,caminho:formarTexto(7,4),texto:`
+Só para você dar uma olhada. 
+Ainda transformarei para Python certinho, importando o asyncio e o axios, para você poder testar   
+        `},
+]
 export const rafael=[
     {
         nome:'Aula 1',
@@ -112,6 +131,9 @@ export const rafael=[
     },{
         nome:'Exercícios',
         arquivos:exAula4
+    },{
+        nome:'Aula 5',
+        arquivos:aula5
     },
     
 ]

@@ -155,5 +155,5 @@ align-items:center;
 width:calc(100% - 240px)
 }
 
-img{max-width:100%;max-height:100%}
+img{max-width:100%;max-height:70%;margin-top:10px;}
 `
