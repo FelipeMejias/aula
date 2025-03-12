@@ -1,0 +1,15 @@
+frutas=['maracujá','morango','melancia','banana','pêra','melão']
+
+
+print(frutas[2]+frutas[5])
+print(frutas[len(frutas)-1])
+
+
+
+
+frutas=['maracujá','morango','melancia','banana','pêra','melão']
+
+
+frutas.append('mamão')
+
+print(frutas)

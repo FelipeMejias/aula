@@ -1,0 +1,12 @@
+
+skuProduto1=5
+skuProduto2=3.46
+skuProduto3=10
+
+
+# Mais tarde atualizarei com o novo modo de usar a biblioteca Math (biblioteca nativa do python)
+
+print(round(skuProduto2))
+print(math.floor(skuProduto2))
+print(math.ceil(skuProduto2))
+print(skuProduto2.tofixed(2))

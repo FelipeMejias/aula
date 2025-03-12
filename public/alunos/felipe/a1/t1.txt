@@ -1,0 +1,16 @@
+# Variaveis
+'''
+-inteiros e float
+-string
+-booleanos
+
+-listas
+-dicionarios
+
+pedido1='Entregue'
+pedido2='Não Entregue'
+pedido3='Entregue'
+pedido4='Não Entregue'
+
+
+print(pedido1=='Entregue' and pedido2=='Entregue' and pedido3=='Entregue' and pedido4=='Entregue')

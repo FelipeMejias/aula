@@ -1,0 +1,5 @@
+frutas=['maracujá','morango','melancia','banana','pêra','melão']
+
+for fruta in frutas:
+    if fruta[0]=='m':
+        print(fruta)
