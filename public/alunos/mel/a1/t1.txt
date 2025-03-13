@@ -1,0 +1,5 @@
+// Variaveis simples
+const string="12/05/1998"
+const int=6
+const float=6.78787
+const boolean=true

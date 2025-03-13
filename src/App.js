@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import AulasFeitas from './AulasFeitas';
 import Topicos from './Conteudo';
 import Agendar from './Agendamento/Agendar';
-import SalvarNome from './utils/SalvarNomes';
 import Aba from './Menus/Aba';
 import MyContext from './utils/context';
 import MenuCel from './Menus/MenuCel'
@@ -15,6 +14,7 @@ import Inicial from './Menus/Inicial';
 import FEvsBE from './Linguagens/FEvsBE';
 import Principal from './SQL/Principal';
 import Arquivo from './Mostrador/Arquivo';
+import SalaEspera from './utils/SalaEspera';
 
 
 function App() {
@@ -49,13 +49,12 @@ function App() {
 <Route path='/cursos/:materia/:pasta/:arquivo' element={<Arquivo/>} />
                 
 <Route path='/aulas' element={<AulasFeitas />}/>
-<Route path='/aulas/:pasta/:arquivo' element={<Arquivo />}/>
+<Route path='/aulas/:pasta/:arquivo/:formato' element={<Arquivo />}/>
                 
 <Route path='/pacotes' element={<Agendar page={3}/>}/>
 <Route path='/horarios' element={<Agendar page={2}/>}/>
 
                 {/* ativar código aluno */}
-<Route path='/usuario/:nome' element={<SalvarNome />}/>
               </Routes>
             </Resto>
           </Tudo>

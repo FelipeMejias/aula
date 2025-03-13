@@ -9,19 +9,16 @@ import { erica } from './alunos/erica'
 import { caua } from './alunos/caua'
 import { rafael } from './alunos/rafael'
 import { felipe } from './alunos/felipe'
-
-export const alunos={
-    'convidado-js':{linguagem:'javascript',aulas:convidadoJS},
-    'convidado-js':{linguagem:'javascript',aulas:convidadoJS},
-    'convidado-py':{linguagem:'python',aulas:convidadoPY},
-    'clarissa':{linguagem:'python',aulas:clarissa},// python
-    'antonio':{linguagem:'javascript',aulas:antonio},// javascript + react + node
-    'victoria':{linguagem:'javascript',aulas:victoria}, // javascript + react
-    'eduardo':{linguagem:'python',aulas:eduardo},// python + banco
-    'erica':{linguagem:'javascript',aulas:erica},
-    'matheus':{linguagem:'javascript',aulas:convidadoJS},
-    'caua':{linguagem:'javascript',aulas:caua},
-    'rafael':{linguagem:'python',aulas:rafael},
-    'felipe':{linguagem:'python',aulas:felipe},
-}
+import { mel } from './alunos/mel'
+const mateus=0
+export const alunos=[
+    {nome:'antonio',    senha:'6079',aulas:antonio},
+    {nome:'caua',       senha:'4167',aulas:caua},
+    {nome:'eduardo',    senha:'7700',aulas:eduardo},
+    {nome:'felipe',     senha:'7057',aulas:felipe},
+    {nome:'mel',        senha:'2821',aulas:mel},
+    {nome:'mateus',     senha:'1268',aulas:mateus},
+    {nome:'rafael',     senha:'6593',aulas:rafael},
+    {nome:'victoria',   senha:'9781',aulas:victoria}, 
+]
 

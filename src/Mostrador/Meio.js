@@ -9,9 +9,10 @@ import style from "react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark"
 import CodeBlock from "./CodeBox"
 import { alunos } from "../aulas/gaveta"
 import { useEffect, useState } from "react"
+import { user } from "../utils/storageDict"
 
 export default function Meio({}){
-    const {materia,pasta,arquivo}=useParams()
+    const {formato,pasta,arquivo,materia}=useParams()
     const navigate=useNavigate()
     const [copiado, setCopiado] = useState(false);
     const [texto,setTexto]=useState('')
@@ -20,8 +21,8 @@ export default function Meio({}){
       materia=='javascript'?javascript:
       materia=='react'?react:null
   )
-  const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado-js'
-  const {linguagem,aulas}=alunos[aluno]
+  const aluno=JSON.parse(localStorage.getItem(user))||{nome:'convidado',aulas:[]}
+  const {ling,aulas}=aluno
   const referencia=materiaEscolhida||aulas
   const infos=referencia[pasta-1].arquivos[arquivo-1]
 
@@ -32,7 +33,7 @@ export default function Meio({}){
       const promise=fetch(infos.caminho)
       const promise2=promise.then((response) => response.text())
       promise2.then((data) => {setTexto(data)});  
-    }, [pasta,arquivo,materia]);
+    }, [pasta,arquivo]);
     
     function temAlgoNaString(str){
       let tem=false
@@ -53,7 +54,7 @@ export default function Meio({}){
             {texto?<Copiar cor={'#03B654'} onClick={copiarTexto}><p>{copiado ? 'Código copiado!' : 'Copiar código'}</p></Copiar>:<FakeButton/>}
             </Heder>
             {infos.texto?<Coment>{formatText(infos.texto)}</Coment>:<></>}
-            {infos.noCode?<></>:<HolderCode><CodeBlock texto={texto} mat={infos.linguagem||materia} /></HolderCode>}
+            {infos.noCode?<></>:<HolderCode><CodeBlock texto={texto} mat={infos.linguagem||formato} /></HolderCode>}
             {infos.img?<img src={infos.img}/>:(infos.noCode===15?<Pastas />:<></>)}
         </Tudo>
     )

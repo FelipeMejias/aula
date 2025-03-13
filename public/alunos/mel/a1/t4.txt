@@ -1,0 +1,15 @@
+const nome1="Fabio"
+const nome2="Gerson"
+
+let dupla=''
+dupla=dupla+nome1
+dupla=dupla+' & '
+dupla=dupla+nome2
+
+const titulo=`
+Aventuras de ${dupla}
+Um livro otimo de ser lido
+`
+
+
+console.log(titulo)

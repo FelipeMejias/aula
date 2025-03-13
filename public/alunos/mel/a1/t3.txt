@@ -1,0 +1,18 @@
+/*
+pagina=(45+6)-(5*8/2)
+
+numero=8
+
+ehPar = numero % 2 == 0
+
+console.log(ehPar)
+*/
+
+numero=3.14285325302
+
+/*
+round 
+ceil
+floor
+*/
+console.log(numero.toFixed(2))

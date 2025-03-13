@@ -2,15 +2,17 @@ import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import { alunos } from "./aulas/gaveta"
 import { useEffect, useState } from "react"
-import novoExercicio from './_imgs/novo.png'
+import SalaEspera from "./utils/SalaEspera"
+import { user } from "./utils/storageDict"
 //const exercicios=JSON.parse(localStorage.getItem('exercicios'))||[]
 
 export default function AulasFeitas(){
-    const navigate=useNavigate()
-    const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado-js'
-    const {linguagem,aulas}=alunos[aluno]
-   console.log(aluno)
-    return (
+    const aluno=JSON.parse(localStorage.getItem(user))||{nome:'convidado',aulas:[]}  
+      const navigate=useNavigate()
+    const {aulas}=aluno
+    return (aluno.nome=='convidado'?
+
+        <SalaEspera />:
         <Tudo>
             <Janela >
             {aulas.map((a,iAula)=><Topico>
@@ -19,7 +21,7 @@ export default function AulasFeitas(){
                 {a.arquivos.map((arquivo,iArquivo)=>
                     <HoldSub>
                         <HoldImg><img src={arquivo.icone}/></HoldImg>
-                        <Sub onClick={()=>navigate(`/aulas/${iAula+1}/${iArquivo+1}`)}>
+                        <Sub onClick={()=>navigate(`/aulas/${iAula+1}/${iArquivo+1}/${arquivo.linguagem}`)}>
                         <p>{arquivo.nome}</p>
                         </Sub>
                     </HoldSub>

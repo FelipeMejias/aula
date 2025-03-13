@@ -5,13 +5,13 @@ function formarTexto(aula,num){
     return `/alunos/antonio/a${aula}/t${num}.txt`
 }
 const aula1=[
-    {nome:'index.js',icone:nd,caminho:formarTexto(1,2)},
-    {nome:'funcoes.js',icone:nd,caminho:formarTexto(1,3)},
-    {nome:'cardapio.js',icone:nd,caminho:formarTexto(1,4)},
-    {nome:'index.js',icone:re,caminho:formarTexto(1,6)},
-    {nome:'App.js',icone:re,caminho:formarTexto(1,7)},
-    {nome:'Item.js',icone:re,caminho:formarTexto(1,8)},
-    {nome:'api.js',icone:re,caminho:formarTexto(1,9)},
+    {ling:'javascript',nome:'index.js',icone:nd,caminho:formarTexto(1,2)},
+    {ling:'javascript',nome:'funcoes.js',icone:nd,caminho:formarTexto(1,3)},
+    {ling:'javascript',nome:'cardapio.js',icone:nd,caminho:formarTexto(1,4)},
+    {ling:'javascript',nome:'index.js',icone:re,caminho:formarTexto(1,6)},
+    {ling:'javascript',nome:'App.js',icone:re,caminho:formarTexto(1,7)},
+    {ling:'javascript',nome:'Item.js',icone:re,caminho:formarTexto(1,8)},
+    {ling:'javascript',nome:'api.js',icone:re,caminho:formarTexto(1,9)},
     ]
 export const antonio=[
     {

@@ -1,0 +1,15 @@
+notaMat=756
+notaPor=324
+notaHum=756
+notaNat=542
+notaRed=756
+
+pesoMat=2
+pesoPor=1
+pesoHum=1
+pesoNat=3
+pesoRed=4
+
+notaFinal=(notaMat * pesoMat + notaPor * pesoPor + notaHum * pesoHum + notaNat * pesoNat + notaRed * pesoRed) / 5
+
+console.log(notaFinal)

@@ -6,6 +6,7 @@ import { react } from "../aulas/react"
 import ch from '../_imgs/check.png'
 import Pastas from "./Pastas"
 import { alunos } from "../aulas/gaveta"
+import { user } from "../utils/storageDict"
 const listaFalses = Array.from({ length: 9 }, () => Array(5).fill(false));
 
 export default function Canto({}){
@@ -17,8 +18,8 @@ export default function Canto({}){
         materia=='javascript'?javascript:
         materia=='react'?react:null
     )
-      const aluno=JSON.parse(localStorage.getItem('usuario'))||'convidado-js'
-      const {linguagem,aulas}=alunos[aluno]
+    const aluno=JSON.parse(localStorage.getItem(user))||{nome:'convidado',aulas:[]}
+      const {aulas}=aluno
       const referencia=materiaEscolhida||aulas
       function temAlgoNaString(str){
         for(let car of str){
@@ -64,7 +65,7 @@ export default function Canto({}){
                 (arq,ind)=>{
                     const {nome}=arq
                 return(
-                    <Arq onClick={()=>navigate(`/aulas/${index+1}/${ind+1}`)}
+                    <Arq onClick={()=>navigate(`/aulas/${index+1}/${ind+1}/${arq.ling}`)}
                     sel={pasta==index+1&&arquivo==ind+1}>
                     <img style={{padding:'5px',backgroundColor:'white',height:'20px',borderRadius:'50%',marginRight:'7px'}} src={arq.icone}></img>
                     <p>{nome}</p>

@@ -1,0 +1,23 @@
+const textoDoLivroChato=`
+Esse livro é chato nao segue pontuação era melhor ter sido menos longo"
+`
+
+const livroLegal={
+    texto:"Esse livro é muito legal, porem muito curto. Já acabou.",
+    titulo:'Livro Legal',
+
+}
+const livroChato={
+    texto:textoDoLivroChato,
+    titulo:'Livro Chato',
+
+}
+const livroMedio={
+    texto:"Um livro médio, nada fala, fim",
+    titulo:'Livro Médio',
+
+}
+
+const livros=[livroLegal,livroChato,livroMedio]
+
+console.log(livros)

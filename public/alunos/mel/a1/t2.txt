@@ -1,0 +1,14 @@
+const chovendo=true
+const calor=false
+const noite=true
+/*
+console.log(`chuva: ${chovendo}`)
+console.log(`calor: ${calor}`)
+console.log(`noite: ${noite}`)
+*/
+console.log(`sairei de casa: ${chovendo && (calor || noite)}` )
+
+/*
+OR  (ou)  ||
+AND (e )  &&
+*/
