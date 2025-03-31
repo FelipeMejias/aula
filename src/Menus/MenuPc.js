@@ -24,7 +24,7 @@ const Abafixa=styled.article`
 flex-direction:column;
 align-items:center;
 color:white;
-background-color:#999b57;
+background-color:transparent;
 height:100%;
 
 max-width:260px;

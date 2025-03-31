@@ -107,15 +107,15 @@ position:relative;
 width:90%;max-width:350px;
 max-width:200px;
 margin:15px 0 0 0;
-background-color:#dbdda1;
+background-color:#5b0099;
 min-height:${p=>p.alt}px;
 padding-bottom:7px;
 border-radius:15px;
-p{
+p{color:white;
 margin:0px 0 0 0px;text-align:left;
 }
 h6{
-color:#535528;
+color:#a233e8;
 margin:0 0 5px 0px;font-size:19px;font-weight:500;
 }
 aside{

@@ -66,15 +66,15 @@ flex-direction:column;
 cursor:pointer;
 position:relative;
 margin:15px 0 0 0;
-background-color:white;
+background-color:#5B0099;
 width:90%;max-width:400px;
 min-width:250px;
 max-width:250px;
 border-radius:15px;
-p{
+p{color:white;
 margin:0px 0 0 0px;text-align:left;
 }
-h6{
+h6{color:white;
 margin:0 0 5px 0px;font-size:19px;font-weight:500;
 }
 aside{

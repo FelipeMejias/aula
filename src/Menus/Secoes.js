@@ -91,7 +91,7 @@ h1{
     font-size:20px;
     margin:19px 0 0 0px;
     text-align:${p=>p.align?';':'left;'} ;
-    color:#53541d
+    color:#8600e0
 }
 width:100%;
 height:${p=>p.height};

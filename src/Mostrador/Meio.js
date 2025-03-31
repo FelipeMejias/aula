@@ -126,8 +126,8 @@ const Coment = styled.div`
     }
 `;
 const Heder=styled.div`
-background-color:#F0F2B8;
-position:sticky;top:0;
+background-color:#2A0145;
+position:sticky;top:0;color:white;
 min-height:50px;width:100%;
 justify-content:space-between;
 h1{
