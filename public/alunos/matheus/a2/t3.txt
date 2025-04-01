@@ -1,0 +1,15 @@
+/*
+2a tem peso 3
+6 é a nota minima
+*/
+
+export function aprovacao(nome,p1,p2){
+    const media=( p1 + p2 * 3 )/4
+
+    if(media>=6){
+        console.log(`Aprovado - ${nome} - ${media.toFixed(1)}`)
+    }else{
+        console.log(`Reprovado - ${nome} - ${media.toFixed(1)}`)
+    }
+}
+

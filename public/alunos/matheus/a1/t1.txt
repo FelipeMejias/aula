@@ -1,0 +1,15 @@
+import { movimentarJogadores } from "./movimentos.js"
+import { aprovacao } from "./notas.js"
+
+
+movimentarJogadores(`Bragantino` , true)
+movimentarJogadores('Vitoria',true)
+movimentarJogadores('Bahia',false)
+movimentarJogadores('Sport',false)
+
+aprovacao('julia',4,8)
+aprovacao('hugo',1,5)
+aprovacao('tacio',7,8)
+aprovacao('nubia',3,8)
+aprovacao('carlos',4,6)
+aprovacao('andre',2,10)

@@ -10,7 +10,8 @@ import { caua } from './alunos/caua'
 import { rafael } from './alunos/rafael'
 import { felipe } from './alunos/felipe'
 import { mel } from './alunos/mel'
-const mateus=0
+import { matheus } from './alunos/matheus'
+
 export const alunos=[
     // Finalizados
     {nome:'eduardo',    senha:'7700',aulas:eduardo},    // Enviar senha
@@ -22,7 +23,7 @@ export const alunos=[
 
     // Buscando
     {nome:'antonio',    senha:'6079',aulas:antonio},    // Enviar senha
-    {nome:'mateus',     senha:'1268',aulas:mateus},     // Enviar senha
+    {nome:'matheus',     senha:'1268',aulas:matheus},     // Enviar senha
 
     // Atuais
     {nome:'felipe',     senha:'7057',aulas:felipe},     

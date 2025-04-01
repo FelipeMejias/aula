@@ -1,0 +1,11 @@
+console.log('inicio de jogo')
+
+export function movimentarJogadores(time , vitoria){
+    if(vitoria){
+        console.log(`aplaudir torcida do ${time}`)
+    }else{
+        console.log(`sair triste e vaiado pela torcida do ${time}`)
+    }
+}
+
+console.log('pontape inicial 2o tempo')

@@ -1,0 +1,22 @@
+/*const dia=3
+const mes=7
+const mesString=mes.toString()
+//const codigo= parseInt(inicio) +67
+
+const inicio = "45" 
+//const codigo= parseInt(inicio) +67
+
+console.log(codigo)
+*/
+
+// convertendo de int para string
+let numero=65
+numero=numero.toString()
+
+// convertendo de string para int
+let codigo="12.5"
+codigo=parseFloat(codigo)
+
+// arrendondamentos
+const dizima=12.33333333333333333333333333333333333333
+const arredondada=dizima.toFixed(2)
