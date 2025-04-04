@@ -1,0 +1,40 @@
+console.log('bem vindo a M2 Imports')
+
+const precoNike=899
+const precoAdidas=650
+const precoPuma=1100
+const  precoNewBalance=2000
+
+ function buscarValor(precoOriginal, qtd){
+    const desconto= 20/100 * Math.floor(qtd/2) *precoOriginal
+    return precoOriginal*qtd-desconto
+ }
+
+ function buscarValorOriginal(nome){
+    let valorChuteira 
+    if(nome=='Nike'){
+        valorChuteira=precoNike
+    }else if(nome=='Adidas'){
+        valorChuteira=precoAdidas
+    }else if(nome=='Puma'){
+        valorChuteira=precoPuma
+    }else if(nome=='New Balance'){
+        valorChuteira=precoNewBalance
+    }else{
+        return 0
+    }
+    return valorChuteira
+}
+
+function M2(nome,qtd){
+    const valorO=buscarValorOriginal(nome)
+    if(!valorO){
+       return `Não existe ${nome} na nossa loja! Escolha outra`
+    }
+    const valor=buscarValor(valorO,qtd)
+    return `A conta é de R$ ${valor}`
+}
+
+const recebido=M2('Puma', 4)
+
+console.log(recebido)

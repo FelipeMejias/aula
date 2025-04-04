@@ -1,0 +1,33 @@
+console.log('bem vindo a frutaria')
+
+const precoBanana=3
+const precoManga=5
+const precoMelancia=5
+const precoKiwi=8
+
+export function lojaDeFrutas(nome,qtd){
+    let valorFruta
+    if(nome=='banana'){
+        valorFruta=precoBanana
+    }else if(nome=='manga'){
+        valorFruta=precoManga
+    }else if(nome=='melancia'){
+        valorFruta=precoMelancia
+    }else if(nome=='kiwi'){
+        valorFruta=precoKiwi
+    }else{
+        console.log(`Não existe a fruta "${nome}" na nossa loja! Escolha outra`)
+        return
+    }
+    const desconto= 1* Math.floor(qtd/5)
+
+    console.log(`
+        O valor de cada ${nome} é ${valorFruta}.
+        Sua conta sai a R$ ${valorFruta*qtd-desconto},
+        Pois voce ganhou um desconto de ${desconto} reais`)
+}
+lojaDeFrutas('banana' , 2 )
+lojaDeFrutas('manga' , 9 )
+lojaDeFrutas('kiwi' , 8 )
+lojaDeFrutas('melancia', 25 )
+lojaDeFrutas('abacaxi', 13 )

@@ -1,0 +1,40 @@
+console.log('bem vindo a frutaria')
+
+const precoBanana=3
+const precoManga=5
+const precoMelancia=5
+const precoKiwi=8
+
+function buscarValor(precoOriginal, qtd){
+    const desconto= 1* Math.floor(qtd/5)
+    return precoOriginal*qtd-desconto
+}
+
+function buscarValorOriginal(nome){
+    let valorFruta
+    if(nome=='banana'){
+        valorFruta=precoBanana
+    }else if(nome=='manga'){
+        valorFruta=precoManga
+    }else if(nome=='melancia'){
+        valorFruta=precoMelancia
+    }else if(nome=='kiwi'){
+        valorFruta=precoKiwi
+    }else{
+        return 0
+    }
+    return valorFruta
+}
+
+function frutaria(nome,qtd){
+    const valorOrig=buscarValorOriginal(nome)
+    if(!valorOrig){
+        return `Não existe a fruta "${nome}" na nossa loja! Escolha outra`
+    }
+    const valor=buscarValor(valorOrig,qtd)
+    return `A conta é de R$ ${valor}`
+}
+
+const recebido=frutaria('kiwi' , 6)
+
+console.log(recebido)

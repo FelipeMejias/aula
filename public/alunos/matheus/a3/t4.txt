@@ -1,0 +1,22 @@
+function somar(n1,n2){
+    return n1+n2
+}
+function dividir(n1,n2){
+    return n1/n2
+}
+
+
+function media(nota1,nota2){
+    const soma= somar(nota1,nota2)
+    const resposta=dividir(soma,2)
+    return resposta.toFixed(1)
+}
+
+let mediaFinal=media( 8.3 , 6.1 )
+console.log(`A média final do aluno foi de ${mediaFinal}`)
+
+ mediaFinal=media( 10 , 4.5 )
+console.log(`A média final do aluno foi de ${mediaFinal}`)
+
+ mediaFinal=media( 7.5 , 6.2 )
+console.log(`A média final do aluno foi de ${mediaFinal}`)
