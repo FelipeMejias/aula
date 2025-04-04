@@ -1,11 +1,7 @@
-import { convidadoJS } from './alunos/convidadoJS'
-import { convidadoPY } from './alunos/convidadoPY'
 
 import { victoria } from './alunos/victoria'
 import { eduardo } from './alunos/eduardo'
 import { antonio } from './alunos/antonio'
-import { clarissa } from './alunos/clarissa'
-import { erica } from './alunos/erica'
 import { caua } from './alunos/caua'
 import { rafael } from './alunos/rafael'
 import { felipe } from './alunos/felipe'
@@ -23,7 +19,7 @@ export const alunos=[
 
     // Buscando
     {nome:'antonio',    senha:'6079',aulas:antonio},    // Enviar senha
-    {nome:'matheus',     senha:'1268',aulas:matheus},     // Enviar senha
+    {nome:'matheus',    senha:'1268',aulas:matheus},
 
     // Atuais
     {nome:'felipe',     senha:'7057',aulas:felipe},     

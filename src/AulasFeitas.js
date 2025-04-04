@@ -5,17 +5,17 @@ import { useEffect, useState } from "react"
 import SalaEspera from "./utils/SalaEspera"
 import { user } from "./utils/storageDict"
 //const exercicios=JSON.parse(localStorage.getItem('exercicios'))||[]
+const alunoGenerico={nome:'convidado',aulas:[]}
 
 export default function AulasFeitas(){
-    const aluno=JSON.parse(localStorage.getItem(user))||{nome:'convidado',aulas:[]}  
+    const [aluno,setAluno]=useState(JSON.parse(localStorage.getItem(user))||alunoGenerico  )
       const navigate=useNavigate()
-    const {aulas}=aluno
     return (aluno.nome=='convidado'?
 
-        <SalaEspera />:
+        <SalaEspera setAluno={setAluno}/>:
         <Tudo>
             <Janela >
-            {aulas.map((a,iAula)=><Topico>
+            {aluno.aulas.map((a,iAula)=><Topico>
                 <Cab ><h6>{a.nome}</h6></Cab>
                 <Caixa>
                 {a.arquivos.map((arquivo,iArquivo)=>
@@ -29,11 +29,20 @@ export default function AulasFeitas(){
                 </Caixa>
                 
             </Topico>)}
-              
+              <ButSair onClick={()=>{
+                 localStorage.setItem(user, JSON.stringify(alunoGenerico));
+                 setAluno(alunoGenerico)
+              }}>Sair</ButSair>
            </Janela>
         </Tudo>
     )
 }
+const ButSair=styled.div`
+background-color:black;color:yellow;
+width:100px;height:70px;border-radius:15px;
+justify-content:center;align-items:center;
+margin:15px 0 0 15px;cursor:pointer;
+`
 const Tudo=styled.div`
 align-items:center;
 width:100%;
@@ -66,15 +75,15 @@ flex-direction:column;
 cursor:pointer;
 position:relative;
 margin:15px 0 0 0;
-background-color:#5B0099;
+background-color:#9fbf3f;
 width:90%;max-width:400px;
 min-width:250px;
 max-width:250px;
 border-radius:15px;
-p{color:white;
+p{
 margin:0px 0 0 0px;text-align:left;
 }
-h6{color:white;
+h6{
 margin:0 0 5px 0px;font-size:19px;font-weight:500;
 }
 aside{

@@ -9,7 +9,10 @@ body {
   --css: #264de4;
   --js: #f7df1e;
   --json: #E8A32A;
-  
+
+  --fundo:#7F9F22;
+  --caixa:#9FBF3F;
+  --h1Menu:#cbe577;
 }
 
 code {

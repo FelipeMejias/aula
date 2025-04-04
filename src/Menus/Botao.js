@@ -32,8 +32,8 @@ export default function Botao({transport,inativo,sel,tex,img,path,subtex}){
 const Bt=styled.div`
 opacity:${p=>p.inativo?' 0.3':'1'};
 cursor:${p=>p.inativo?'':'pointer'};
-background-color:${p=>!p.sel?'transparent':'white'};
-color:${p=>!p.sel?'white':'#2A0145'};
+background-color:${p=>!p.sel?'transparent':'var(--caixa)'};
+color:${p=>!p.sel?'var(--h1Menu)':'#2A0145'};
 margin:8px 0px 0 0px;
 border-radius:50px;
 max-width:180px;

@@ -30,6 +30,7 @@ export default function Meio({}){
       navigator.clipboard.writeText(texto).then(() => {setCopiado(true);setTimeout(() => setCopiado(false), 2000)}).catch(err => console.error('Erro ao copiar o texto: ', err));
     };
     useEffect(() => {
+      if(!infos.caminho)return
       const promise=fetch(infos.caminho)
       const promise2=promise.then((response) => response.text())
       promise2.then((data) => {setTexto(data)});  
@@ -48,14 +49,16 @@ export default function Meio({}){
     ):<span></span>)
     return(
         <Tudo>
+          <Container>
             <Heder>
             <Copiar cor={'#eda12f'} inativo={true} ><p>Fazer pergunta</p></Copiar>
             <h1>{infos.nome}</h1>
             {texto?<Copiar cor={'#03B654'} onClick={copiarTexto}><p>{copiado ? 'Código copiado!' : 'Copiar código'}</p></Copiar>:<FakeButton/>}
             </Heder>
             {infos.texto?<Coment>{formatText(infos.texto)}</Coment>:<></>}
-            {infos.noCode?<></>:<HolderCode><CodeBlock texto={texto} mat={infos.linguagem||formato} /></HolderCode>}
+            {infos.caminho?<HolderCode><CodeBlock texto={texto} mat={infos.linguagem||formato} /></HolderCode>:<></>}
             {infos.img?<img src={infos.img}/>:(infos.noCode===15?<Pastas />:<></>)}
+            </Container>
         </Tudo>
     )
 }
@@ -65,14 +68,14 @@ margin:7px 6px 0 15px;
   height: 0;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  border-left: 8px solid brown;
+  border-left: 8px solid #2C0047;
 `;
 const Bolinha = styled.div`
 margin-top:6px;
   width: 6.5px;
   height: 6.5px;
   border-radius:50%;
-background: blue;
+background: #2C0047;
 `;
 
 const Copiar=styled.section`
@@ -102,7 +105,7 @@ const Coment = styled.div`
   flex-direction: column;
   width: 100%;
   justify-content: flex-start;
-  background-color: white;
+  background-color: #cbdb9b;
   position: sticky;
   top: 50px;
 
@@ -126,7 +129,7 @@ const Coment = styled.div`
     }
 `;
 const Heder=styled.div`
-background-color:#2A0145;
+background-color:var(--fundo);
 position:sticky;top:0;color:white;
 min-height:50px;width:100%;
 justify-content:space-between;
@@ -146,9 +149,10 @@ overflow:auto;
 `
 
 const Tudo=styled.div`background-color:;
-padding:0 15px 0 15px;
+padding:0 15px 0 30px;
 width:100%;
 height: 100%;
+
 flex-direction:column;
 justify-content:flex-start;
 align-items:center;
@@ -157,4 +161,13 @@ width:calc(100% - 240px)
 }
 
 img{max-width:100%;max-height:70%;margin-top:10px;}
+`
+
+const Container=styled.div`
+max-width:760px;
+width:100%;
+height: 100%;
+flex-direction:column;
+justify-content:flex-start;
+align-items:center;
 `

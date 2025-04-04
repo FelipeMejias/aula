@@ -65,7 +65,7 @@ function App() {
 }
 
 const Tudo=styled.div`
-background-color:#2A0145;
+background-color:var(--fundo);
 height:100vh;
 width:100vw;
 display:flex;

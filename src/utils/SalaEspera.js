@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { user } from "./storageDict"
 
-export default function SalaEspera(){
+export default function SalaEspera({setAluno}){
     const [tentando,setTentando]=useState(false)
     const [escolhido,setEscolhido]=useState(-1)
     const [texto,setTexto]=useState('')
@@ -13,7 +13,7 @@ export default function SalaEspera(){
         const objAlunoDesafiante=alunos[escolhido]
         if(objAlunoDesafiante.senha==texto){
             localStorage.setItem(user, JSON.stringify(objAlunoDesafiante));
-            navigate('/aulas')
+            setAluno(objAlunoDesafiante)
             console.log('oi')
         }else{
             console.log('tchau')
@@ -56,7 +56,7 @@ input{
 const Al=styled.div`margin:15px 0 0 0;cursor:pointer;
 width:70%;max-width:300px;text-align:center;
 height:50px;border-radius:100px;
-background:#3749ad;color:white;
+background:#5D7219;color:white;
 font-size:17px;font-weight:500;
 display:flex;justify-content:space-evenly;
 align-items:center;
