@@ -1,0 +1,59 @@
+console.log('Bem vindo a M2 Imports')
+
+// estoque principal
+let size39= 2
+let size40= 3
+let size41= 1
+
+// função para diminuir 1 do estoque
+function atualizarEstoque(numero){
+    if(numero=='39'){
+        size39=size39-1
+    }else if(numero=='40'){
+        size40=size40-1
+    }else if(numero=='41'){
+        size41=size41-1
+    }
+}
+
+// função para processar a compra
+function buscarNoEstoque(numero){
+    let estoqueDoNumero
+    if(numero=='39'){
+        estoqueDoNumero=size39
+    }else if(numero=='40'){
+        estoqueDoNumero=size40
+    }else if(numero=='41'){
+        estoqueDoNumero=size41
+    }else{
+        return null
+    }
+    const existeProduto=estoqueDoNumero>0
+    return existeProduto
+}
+
+// função principal
+function m2(numero){
+    let resposta
+    const existeNoEstoque=buscarNoEstoque(numero)
+    if(existeNoEstoque===null){
+        resposta= `Não temos ${numero} na nossa loja! Escolha outra`
+    }
+
+    if(existeNoEstoque){
+        atualizarEstoque(numero)
+        resposta= `Temos o número ${numero}! Compra realizada com sucesso`
+    }else{
+        resposta= `Infelizmente o número ${numero} esgotou!`
+    }
+    console.log(resposta)
+    return resposta
+}
+
+m2('39')
+m2('40')
+m2('40')
+m2('41')
+m2('39')
+m2('39')
+m2('41')

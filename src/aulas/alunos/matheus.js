@@ -42,7 +42,8 @@ Se não houver a chuteira no estoque:
 -Retorna 0
 Em cada chamada da função principal, voce deve adicionar o valor retornado à variável caixa 
 Ao final de todas as chamadas, printe o valor acumulado e veja se corresponde ao esperado (500 para cada vendida com sucesso)   
-`,caminho:''},
+`,caminho:''},    
+    {linguagem:'javascript',nome:'RESOLUÇÃO 1',icone:js,caminho:formarTexto(3,7)},
     ]
 export const matheus=[
     {
