@@ -1,6 +1,24 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-
+const parte2={
+    titulo:'React - Mundial 2025',
+    filhos:[
+        {
+            titulo:'public',
+            filhos:[
+                {titulo:'index',ling:'html'}
+            ]
+        }, {
+            titulo:'src',
+            filhos:[
+                {titulo:'App',ling:'css'},
+                {titulo:'App',ling:'js'},
+                {titulo:'continentes',ling:'js'},
+                {titulo:'index',ling:'js'},
+            ]
+        },{titulo:'package',ling:'json'}
+    ]
+}
 export default function Pastas({topico,top,small}){
     const navigate=useNavigate()
     return (

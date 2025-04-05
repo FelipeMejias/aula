@@ -87,14 +87,21 @@ width:100%;
 height:100%;
 flex-direction:column;
 padding-bottom:10px;box-sizing:border-box;
+
+
+
+
 @media(min-width:750px){
 position:absolute;right:0;
 display:flex;
 overflow:auto;
-width:240px}
+width:240px
+
+}
 
 @media(max-width:1050px){
 display:none;}
+
 
 `
 

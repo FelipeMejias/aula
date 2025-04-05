@@ -75,7 +75,7 @@ margin-top:6px;
   width: 6.5px;
   height: 6.5px;
   border-radius:50%;
-background: #2C0047;
+background:transparent;
 `;
 
 const Copiar=styled.section`
@@ -146,9 +146,23 @@ justify-content:flex-start;background-color:;
 position:relative;
 border-radius:10px;
 overflow:auto;
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background:transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 `
 
-const Tudo=styled.div`background-color:;
+const Tudo=styled.div`background-color:var(--fundo);
 padding:0 15px 0 30px;
 width:100%;
 height: 100%;

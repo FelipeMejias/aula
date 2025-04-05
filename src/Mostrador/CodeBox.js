@@ -7,7 +7,14 @@ export default function CodeBlock({texto,mat}) {
   const params=useParams()
     const linguagem=mat||params.materia
   return (
-  <SyntaxHighlighter style={vscDarkPlus} language={linguagem} >
+  <SyntaxHighlighter 
+  customStyle={{
+      margin: 0,
+      padding: '1em',
+      borderRadius: '10px',
+      overflow: 'auto',
+    }}
+  style={vscDarkPlus} language={linguagem} >
     {texto}
   </SyntaxHighlighter>
   );

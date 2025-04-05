@@ -19,4 +19,5 @@ export default function Arquivo(){
 }
 const Tudo=styled.div`
 width:100%;height:100%;
+
 `

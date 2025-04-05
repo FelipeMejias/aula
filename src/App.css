@@ -13,6 +13,22 @@ body {
   --fundo:#7F9F22;
   --caixa:#9FBF3F;
   --h1Menu:#cbe577;
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background:transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color:rgb(86, 109, 17);
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background:rgb(64, 82, 12);
+  }
 }
 
 code {
