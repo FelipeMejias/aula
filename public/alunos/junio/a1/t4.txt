@@ -1,0 +1,9 @@
+// Booleano
+
+// e = &&
+// ou= ||
+const chovendo=false
+const temperatura=25
+
+const vouApraia= !chovendo && temperatura==25 
+console.log(vouApraia)

@@ -1,0 +1,21 @@
+// Variaveis: Number , String , Boolean
+
+let idade=27
+const temperatura=19.4
+
+const nome='Eduardo'
+const senha='43jk654jk'
+const telefone='2492-4455'
+
+const chovendo=false
+const aulaEmAndamento=true
+
+const gyt=idade+temperatura
+
+console.log(idade);
+idade=idade+1
+console.log(idade)
+idade=idade+1
+console.log(idade)
+idade=idade+1
+console.log(idade)

@@ -1,0 +1,22 @@
+// String
+
+const peso1='27.2'
+const peso2='19.4'
+
+const peso= parseFloat(peso1) + parseInt(peso2)
+//console.log(peso)
+
+let salada=''
+const fruta1='maçã'
+salada=salada+fruta1
+
+salada=salada+' & '
+const fruta2='morango'
+salada=salada+fruta2
+//const minhaSalada=fruta1 + ' & ' + fruta2
+
+//const salada=`Eu amo ${fruta1} & ${fruta2}!`
+console.log(salada)
+console.log(salada[2])
+console.log(salada.length)
+console.log(salada[salada.length-1])

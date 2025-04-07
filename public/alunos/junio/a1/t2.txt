@@ -1,0 +1,21 @@
+// Number
+
+const peso1=27.2
+const peso2=19.4
+
+const soma=peso1.toString() + peso2.toString()
+console.log(soma)
+/*
+const pesoTotal=Math.round( peso1+peso2)
+const pesoTotal2=Math.ceil( peso1+peso2)
+const pesoTotal3=Math.floor( peso1+peso2)
+const pesoTotal4=( peso1+peso2).toFixed(3)
+*/
+const restoEntre30e7=30 % 7
+console.log(restoEntre30e7)
+/*
+console.log(pesoTotal)
+console.log(pesoTotal2)
+console.log(pesoTotal3)
+console.log(pesoTotal4)
+*/

@@ -40,6 +40,7 @@ export default function Secoes({align,height}){
 <Parte>
             <h1>Conteúdos</h1>
             <Botao tex={'FrontEnd vs BackEnd'} sel={pathname=='/'} path={`/`} /> 
+            <Botao tex={'Grade Js / Py'} sel={pathname=='/grade'} path={`/grade`} /> 
             <Botao tex={'Javascript'} sel={pathname.includes(`javascript`)} path={`/cursos/javascript`} img={js}  />
             {/*<Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} inativo={true} />*/}
             {/*<Botao tex={'SQL'} sel={pathname.includes(`bancos`)} path={`/bancos`} img={sq} />*/}

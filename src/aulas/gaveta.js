@@ -1,12 +1,13 @@
 
-import { victoria } from './alunos/victoria'
-import { eduardo } from './alunos/eduardo'
-import { antonio } from './alunos/antonio'
-import { caua } from './alunos/caua'
-import { rafael } from './alunos/rafael'
-import { felipe } from './alunos/felipe'
-import { mel } from './alunos/mel'
-import { matheus } from './alunos/matheus'
+import { victoria } from    './alunos/victoria'
+import { eduardo } from     './alunos/eduardo'
+import { antonio } from     './alunos/antonio'
+import { caua } from        './alunos/caua'
+import { rafael } from      './alunos/rafael'
+import { felipe } from      './alunos/felipe'
+import { mel } from         './alunos/mel'
+import { matheus } from     './alunos/matheus'
+import { junio } from       './alunos/junio'
 
 export const alunos=[
     // Finalizados
@@ -23,6 +24,7 @@ export const alunos=[
 
     // Atuais
     {nome:'felipe',     senha:'7057',aulas:felipe},     
-    {nome:'mel',        senha:'2821',aulas:mel},        
+    {nome:'mel',        senha:'2821',aulas:mel},  
+    {nome:'junio',      senha:'1651',aulas:junio},        
 ]
 
