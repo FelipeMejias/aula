@@ -1,4 +1,5 @@
 import js from '../../_imgs/js.png'
+import notass from '../../_imgs/notass.jpg'
 function formarTexto(aula,num){
     return `/alunos/raffos/a${aula}/t${num}.txt`
 }
@@ -12,7 +13,7 @@ Crie 2 variáveis (notas do aluno):
 -nota2
 Crie uma função que calcula a média que ficou cada aluno da seguinte forma:
 -Dentro da função, crie uma variável soma, que armazenará o valor da soma das duas notas
--Depois, crie uma variável média, que aramazenará o valor da divisão da soma por 2
+-Ainda dentro da função, crie uma variável média, que aramazenará o valor da divisão da soma por 2
 -Por fim, faça aparecer no console uma frase como: Você ficou com média 7.2
     `},{linguagem:'javascript',nome:'EXERCÍCIO 2',icone:notass,texto:`
 Crie uma função que recebe 1 parâmetro:

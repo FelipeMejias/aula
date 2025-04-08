@@ -21,6 +21,7 @@ export default function SalaEspera({setAluno}){
     }
     return (
         <Tela>
+            <Quadro>
             {alunos.map((al,i)=><Al onClick={()=>{
                 setEscolhido(i)
                 setTentando(true)
@@ -35,6 +36,7 @@ export default function SalaEspera({setAluno}){
                     OK
                 </Botao>:<></>):<></>}
             </Al>)}
+            </Quadro>
         </Tela>
     )
 }
@@ -52,10 +54,17 @@ input{
     padding-left:6px
 }
 `
-
-const Al=styled.div`margin:15px 0 0 0;cursor:pointer;
-width:70%;max-width:300px;text-align:center;
-height:50px;border-radius:100px;
+const Quadro=styled.article`
+height:calc(100% - 30px);
+width:calc(100% - 30px);
+flex-wrap:wrap;display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:flex-start;
+`
+const Al=styled.div`margin:20px 0 0 20px;cursor:pointer;
+width:250px;text-align:center;
+height:80px;border-radius:100px;
 background:#5D7219;color:white;
 font-size:17px;font-weight:500;
 display:flex;justify-content:space-evenly;
