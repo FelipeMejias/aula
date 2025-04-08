@@ -8,6 +8,7 @@ import { felipe } from      './alunos/felipe'
 import { mel } from         './alunos/mel'
 import { matheus } from     './alunos/matheus'
 import { junio } from       './alunos/junio'
+import { raffos } from      './alunos/raffos'
 
 export const alunos=[
     // Finalizados
@@ -25,6 +26,7 @@ export const alunos=[
     // Atuais
     {nome:'felipe',     senha:'7057',aulas:felipe},     
     {nome:'mel',        senha:'2821',aulas:mel},  
-    {nome:'junio',      senha:'1651',aulas:junio},        
+    {nome:'junio',      senha:'1651',aulas:junio},    
+    {nome:'raffos',     senha:'2468',aulas:raffos},      
 ]
 

@@ -1,0 +1,19 @@
+
+function calcular(n1,n2){
+    const media=(n1+n2)/2
+    if(media>=6){
+        console.log(`Aprovado, média ${media}. Férias!!!`)
+        return true
+    }else{
+        console.log(`Reprovado, média ${media}. Faça recuperação`)
+        return false 
+    }
+}
+
+const passei= calcular(2,5)
+
+if(passei){
+    console.log('viajar')
+}else{
+    console.log('chorar')
+}
