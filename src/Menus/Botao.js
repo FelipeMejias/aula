@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useContext } from "react"
 import MyContext from '../utils/context'
 import { RiQuestionnaireFill } from "react-icons/ri";
-export default function Botao({transport,inativo,sel,tex,img,path,subtex}){
+export default function Botao({transport,inativo,sel,tex,img,path,subtext}){
     const aluno=JSON.parse(localStorage.getItem('usuario'))||'sem-usuario'
     const navigate=useNavigate()
     const {aba,setAba}=useContext(MyContext)
@@ -23,7 +23,7 @@ export default function Botao({transport,inativo,sel,tex,img,path,subtex}){
             {img?<img src={img}/>:<></>}
             <Resto>
             <p>{tex}</p>
-            <h6>{subtex}</h6>
+            <h6>{subtext}</h6>
             </Resto>
             
             
@@ -34,10 +34,9 @@ opacity:${p=>p.inativo?' 0.3':'1'};
 cursor:${p=>p.inativo?'':'pointer'};
 background-color:${p=>!p.sel?'transparent':'var(--caixa)'};
 color:${p=>!p.sel?'var(--h1Menu)':'#2A0145'};
-margin:8px 0px 0 0px;
+margin:0px 0px 4px 0px;
 border-radius:50px;
-max-width:180px;
-min-width:180px;
+max-width:180px;width:calc(100% - 20px);
 
 transition: background-color 0.2s ease;
 img{padding:5px;background-color:white;

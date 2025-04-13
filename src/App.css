@@ -14,7 +14,8 @@ body {
   --caixa:#9FBF3F;
   --h1Menu:#cbe577;
   ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
+    height: 10px;
   }
   
   ::-webkit-scrollbar-track {

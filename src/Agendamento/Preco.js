@@ -2,14 +2,12 @@ import { useState } from "react"
 import styled from "styled-components"
 
 export default function Preco(){
-    const tem= [1,2]
     const aul=[4,6,8,10,12,14]
-    const sem= ['3 meses','2 meses','1 mês','2 semanas']
-    const [tempo,setTempo]=useState(1)
+    const sem= ['3x','2x','À vista']
     const [aulas,setAulas]=useState(6)
-    const [semanas,setSemanas]=useState('1 mês')
-    const tabela=[ 0.6 , 0.9 ,  1.2 , 1.6  ,]
-    const precoAula=tempo==1?70:90
+    const [semanas,setSemanas]=useState('À vista')
+    const tabela=[ 0.5 , 0.9 ,  1.5 ]
+    const precoAula=70
     const d_aulas=0.022*(aulas)
     const d_semanas=tabela[sem.indexOf(semanas)]
     const desconto=(d_aulas*d_semanas)*100
@@ -17,35 +15,39 @@ export default function Preco(){
     const descontoTotal=Math.ceil((total*d_aulas*d_semanas))
     const pacote=total-descontoTotal
     const preco=pacote/aulas
-    
+    function pode(i){
+        if(i==2){
+            return true
+        }else if(i==1){
+            if(aulas>7)return true
+        }else{
+            if(aulas>11)return true
+        }
+        return false
+    }
     return (
         <Tudo>
-                <h2>Tempo de Aula</h2>
-                <Listinha wid={110}>
-                    {tem.map((a,i)=><Option wid={40} numero={a+'h'} selec={tempo==a} funcao={()=>setTempo(a)}/> )}
-                </Listinha>
-     
-                <h2>Quantidade de Aulas</h2>
-                <Listinha wid={250}>
-                    {aul.map((a,i)=><Option wid={30} numero={a} selec={aulas==a} funcao={()=>setAulas(a)} />)}
-                </Listinha>
+            <h2>Quantidade de Aulas</h2>
+            <Listinha wid={250}>
+                {aul.map((a,i)=><Option wid={30} numero={a} selec={aulas==a} funcao={()=>setAulas(a)} />)}
+            </Listinha>
+            
+            <h2>Pagamento</h2>
+            <Listinha wid={390}>
+                {sem.map((a,i)=>pode(i)?<Option wid={85} numero={a} selec={semanas==a} funcao={()=>setSemanas(a)}/>:<></>)}
+            </Listinha>
+            <Quadro>
+                <h4>desconto: {desconto.toFixed(0)}%</h4>
+                <h3>valor cada aula: <small>${precoAula}</small> ${(preco).toFixed(0)}</h3>
+                <h3>valor pacote: <small>${total}</small> ${pacote}</h3>
                 
-                <h2>Duração</h2>
-                <Listinha wid={390}>
-                    {sem.map((a,i)=><Option wid={85} numero={a} selec={semanas==a} funcao={()=>setSemanas(a)}/>)}
-                </Listinha>
-                <Quadro>
-                    <h4>desconto: {desconto.toFixed(0)}%</h4>
-                    <h3>valor cada aula: <small>${precoAula}</small> ${(preco).toFixed(0)}</h3>
-                    <h3>valor pacote: <small>${total}</small> ${pacote}</h3>
-                    
-                </Quadro>
-                <Quadro color={'#b5edad'}>
-                    <p>O valor é pago:</p> 
-                    <p><strong>metade</strong> após a primeira aula</p>
-                    <p><strong>metade</strong> após o prazo de duração</p>
-                    <p><small>O prazo é apenas para o pagamento, as aulas podem ser realizadas sem tempo limite</small></p> 
-                </Quadro>
+            </Quadro>
+            <Quadro color={'#b5edad'}>
+                <p>O valor é pago:</p> 
+                <p><strong>metade</strong> após a primeira aula</p>
+                <p><strong>metade</strong> após o prazo de duração</p>
+                <p><small>O prazo é apenas para o pagamento, as aulas podem ser realizadas sem tempo limite</small></p> 
+            </Quadro>
         </Tudo>
     )
 }//{}

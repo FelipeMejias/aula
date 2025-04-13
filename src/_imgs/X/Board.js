@@ -1,6 +1,6 @@
 import { useState,useEffect, useContext } from "react"
 import styled from 'styled-components'
-import { graphicMark } from "./timeUtils"
+import { graphicMark } from "../Agendamento/timeUtils"
 
 
 export default function Board({now,big,disponiveis,eventos}){

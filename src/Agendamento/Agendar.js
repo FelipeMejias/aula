@@ -1,72 +1,46 @@
 import {useState,useEffect,useContext} from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import dayjs from 'dayjs'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import Board from './Board'
 import Preco from './Preco'
-const disponiveis=[
-    '108','110','114','116','118','120',
-    '208','210','214','216','218','220',
-    '308','310','314','316','318','320',
-    '408','410','414','416','418','420',
-    '508','510','514','516',
-] 
-const eventos=[
-        '218','318','320','416','510'
-    ]
-export default function Agendar({page}){
+
+export default function Agendar({pag}){
     const navigate=useNavigate()
-    const [now,setNow]=useState({day:null})
-    const [now2,setNow2]=useState({day:null})
-    function defineNow(){
-        const nh=dayjs().format('HH:mm-d');
-        const day=parseInt(nh[6])
-        const level=parseInt(nh[0]+nh[1])+parseInt(nh[3]+nh[4])/60-7
-        const h = dayjs();
-        const weeks=[]
-        for(let k=1;k<6;k++){
-            if(k<day){
-                const criado=h.subtract(day-k, 'day')
-                const d = criado.date(); // Dia do mês
-                const m = criado.month() + 1;
-                weeks.push({d,m})
-            }else if(k>day){
-                const criado=h.add(k-day, 'day')
-                const d = criado.date(); // Dia do mês
-                const m = criado.month() + 1;
-                weeks.push({d,m})
-            }else{
-                const d = h.date(); // Dia do mês
-                const m = h.month() + 1;
-                weeks.push({d,m})
-            }
-        }
-        const weeks2=[]
-        for(let k=8;k<13;k++){
-            const criado=h.add(k-day, 'day')
-            const d = criado.date(); // Dia do mês
-            const m = criado.month() + 1;
-            weeks2.push({d,m})
-        }
-        setNow({level,day,weeks})
-        setNow2({day:0,level:0,weeks:weeks2})
-    }
-    
-    useEffect(()=>{
-        defineNow();
-    },[])
     return(
-        page==2?
+        pag==0?
         <Content>
-                <Board now={now} disponiveis={disponiveis} eventos={eventos} big={true} />
-        </Content>:
-        <Content>
-                <Preco/>
+            <h1>Escolha um dos tipos de pacote:</h1>
+            <Tipos>
+                <Tipo onClick={()=>navigate(`/pacotes/mensal`)} >
+                    <h2>Mensal</h2>
+                    <h3>Você escolhe a frequência semanal de aulas</h3>
+                    <h4>(Quanto maior a frequência, maior o desconto)</h4>
+                </Tipo>
+                <Tipo onClick={()=>navigate(`/pacotes/quantidade`)} >
+                    <h2>Quantidade</h2>
+                    <h3>Você escolhe quantas aulas quer no pacote</h3>
+                    <h4>(Quanto mais aulas, maior o desconto)</h4>
+                </Tipo>
+                <Tipo onClick={()=>navigate(`/pacotes/cursos`)} >
+                    <h2>Cursos</h2>
+                    <h3>O valor é fixo para você aprender cada tecnologia</h3>
+                    <h4>(Encerramos cada curso quando você decidir que aprendeu)</h4>
+                </Tipo>
+            </Tipos>
+           
         </Content>
-    //):(listaAlunos.includes(aluno)?
-   
-     //   :
-      //  <Identifique nomeTentado={aluno}/>)
+        :pag==1?
+        <Content>
+            <Preco/>
+        </Content>
+        :pag==2?
+        <Content>
+            <Preco/>
+        </Content>
+        :
+        <Content>
+            <Preco/>
+        </Content>
+        
     )
 }
 
@@ -76,35 +50,24 @@ display: flex;flex-direction:column;
 justify-content:space-evenly;
 button{cursor:pointer}
     align-items: center;
+h1{color:#404F11;margin:10px 0 10px 0;font-size:22px;}
 `
-const Resto=styled.div`
-width:100%;height:calc(100% - 75px);
-flex-direction:column;overflow:auto;
-display:flex;
+const Tipos=styled.div`
+width:100%;height:80%;
+flex-direction:column;
 align-items:center;
 justify-content:flex-start;
-}
-button{width:300px;border:0;font-size:16px;
-height:100px;margin-top:50px;background-color:#D9DBAD;
-border-radius:50px;
-}
-@media(min-width:750px){
-height:100%
-}
+
 `
-
-
-//background-color:#ba7f2e;
-/*
-<Passador>
-                    <button onClick={()=>{if(page>1)setPage(page-1)}}>{'<'}</button>
-                    <p>semana {page}</p>
-                    <button onClick={()=>{if(page<3)setPage(page+1)}}>{'>'}</button>
-                </Passador>
-const Passador=styled.div`
-width: 100%;height:50px;
-display: flex;flex-direction:row;
-justify-content:space-evenly;
-button{cursor:pointer}
-    align-items: center;
-`*/
+const Tipo=styled.div`
+margin-bottom:15px;cursor:pointer;
+border-radius:15px;
+width:90%;height:120px;
+flex-direction:column;
+align-items:center;background:var(--caixa);
+justify-content:flex-start;
+max-width:600px;
+h2{color:white;;margin:10px 0 10px 0}
+h3{color:#404F11;margin:0;font-weight:500;}
+h4{color:#404F11;margin:0;font-weight:400;font-size:}
+`

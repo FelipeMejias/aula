@@ -1,16 +1,10 @@
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import js from '../_imgs/js.png'
-import re from '../_imgs/react.png'
-import nd from '../_imgs/node.png'
-import py from '../_imgs/python.png'
-import fe from '../_imgs/posts.png'
-import fe2 from '../_imgs/posts2.png'
-import fe3 from '../_imgs/posts3.png'
-import fe4 from '../_imgs/posts4.png'
-import sq from '../_imgs/sql.jpg'
-import Arrow from './Arrow'
+/*/
+Pedir ao chat:
+lista de nativas js traduzida para python
+*/
 
 export default function Grade({}){
 
@@ -23,6 +17,8 @@ export default function Grade({}){
             <Rota t={120} l={30}>Number</Rota>
             <Rota t={120} l={30}>String</Rota>
             <Rota t={120} l={30}>Boolean</Rota>
+            <Rota t={120} l={30}>Lista</Rota>
+            <Rota t={120} l={30}>Objeto</Rota>
         </Bloco>
         <Bloco>
             <h1>Função</h1>
@@ -39,7 +35,11 @@ export default function Grade({}){
     </Tudo>
   )
 }
-
+/*
+16 - declara variável implícito
+21 - dicionario
+31 - asyncio
+*/
 const Tudo=styled.div`
 position:;background:;border-radius:70px;
 left:0;

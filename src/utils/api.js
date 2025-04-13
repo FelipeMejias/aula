@@ -9,3 +9,4 @@ export const api = axios.create({
 export const postarExercicio = async (habitData)=> {
   return api.post(`/exercicio`, habitData );
 }
+// --h1Menu:#cbe577;

@@ -51,9 +51,9 @@ export default function Meio({}){
         <Tudo>
           <Container>
             <Heder>
-            <Copiar cor={'#eda12f'} inativo={true} ><p>Fazer pergunta</p></Copiar>
+            {/*<Copiar cor={'#eda12f'} inativo={true} ><p>Fazer pergunta</p></Copiar>*/}
             <h1>{infos.nome}</h1>
-            {texto?<Copiar cor={'#03B654'} onClick={copiarTexto}><p>{copiado ? 'Código copiado!' : 'Copiar código'}</p></Copiar>:<FakeButton/>}
+            {texto?<Copiar cor={'#136dc6'} onClick={copiarTexto}><p>{copiado ? 'Código copiado!' : 'Copiar código'}</p></Copiar>:<FakeButton/>}
             </Heder>
             {infos.texto?<Coment>{formatText(infos.texto)}</Coment>:<></>}
             {infos.caminho?<HolderCode><CodeBlock texto={texto} mat={infos.linguagem||formato} /></HolderCode>:<></>}
@@ -99,7 +99,7 @@ width:110px;
 `
 
 const Coment = styled.div`
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   border-radius: 10px;
   padding: 0 20px 0px 10px;
   flex-direction: column;
@@ -131,7 +131,7 @@ const Coment = styled.div`
 const Heder=styled.div`
 background-color:var(--fundo);
 position:sticky;top:0;color:white;
-min-height:50px;width:100%;
+min-height:70px;width:100%;align-items:center;
 justify-content:space-between;
 h1{
 font-size:18px;font-weight:500;
@@ -140,14 +140,15 @@ background-color:;
 box-sizing:border-box;
 display:flex;align-items:center;
 `
-const HolderCode=styled.div`padding-top:16px;
+const HolderCode=styled.div`;
 flex-direction:column;width:100%;
 justify-content:flex-start;background-color:;
 position:relative;
 border-radius:10px;
 overflow:auto;
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-track {
   background:transparent;

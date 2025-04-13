@@ -11,51 +11,52 @@ import py from '../_imgs/python.png'
 import hc from '../_imgs/react.png'
 import sq from '../_imgs/sql.jpg'
 import wpp from '../_imgs/wpp.png'
-import dayjs from 'dayjs'
+
+import Secao from "./Secao"
 export default function Secoes({align,height}){
     const aluno=JSON.parse(localStorage.getItem('usuario'))||'sem-usuario'
     const navigate=useNavigate()
     const {aba,setAba}=useContext(MyContext)
     const {pathname} = useLocation();
-    function mandarWpp(){
-        const telefone = 5521984636151;
-        const horaStr=dayjs().format('HH:mm')
-        const hora=parseInt(`${horaStr[0]}${horaStr[1]}`)
-        let texto
-        if(hora<5){
-            texto='Boa noite! Cheguei através do site Portal Aulas'
-        }else if(hora<12){
-            texto='Bom dia! Cheguei através do site Portal Aulas'
-        }else if(hora<18){
-            texto='Boa tarde! Cheguei através do site Portal Aulas'
-        }else{
-            texto='Boa noite! Cheguei através do site Portal Aulas'
-        }
-        const encodedText = encodeURIComponent(texto);
-        const urlWhatsapp = `https://wa.me/${telefone}?text=${encodedText}`;
-        window.open(urlWhatsapp);
-    }
+    
     return (
-        <Tudo height={height} align={align}>
-<Parte>
-            <h1>Conteúdos</h1>
-            <Botao tex={'FrontEnd vs BackEnd'} sel={pathname=='/'} path={`/`} /> 
-            <Botao tex={'Grade Js / Py'} sel={pathname=='/grade'} path={`/grade`} /> 
-            <Botao tex={'Javascript'} sel={pathname.includes(`javascript`)} path={`/cursos/javascript`} img={js}  />
-            {/*<Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} inativo={true} />*/}
-            {/*<Botao tex={'SQL'} sel={pathname.includes(`bancos`)} path={`/bancos`} img={sq} />*/}
-            <Botao tex={'React'} sel={pathname.includes(`react`)} path={`/cursos/react`} img={re} />
-            {/*<Botao tex={'Node'} sel={pathname.includes(`node`)} path={`/cursos/node`} img={nd} inativo={true} />*/}
-            
-            <h1>Meu Material</h1>
-            <Botao tex={'Arquivos de aulas'} sel={pathname.includes(`aulas`)} path={`/aulas`} />
-            <Botao tex={'Minhas Perguntas'} sel={pathname.includes(`perguntas`)} path={`/perguntas`} inativo={true}/>
-            </Parte>
-            <Parte>
-            <h1>Ferramentas</h1>
-            <Botao subtex={'Treinar SQL'} tex={'Banco de Dados'} sel={pathname.includes(`banco`)} transport={`portalsql`} img={sq}/>
-            <Botao subtex={'Treinar HTML + CSS'}tex={'Front End'} sel={pathname.includes(`front`)} transport={`portalreact`} img={re}/>
-            </Parte>
+    <Tudo height={height} align={align}>
+    <Leva>
+
+        <Secao
+        titulo={'Conteudos'}
+        filhos={[
+            {tex:'FrontEnd vs BackEnd',sel:pathname=='/',path:`/`},
+            {tex:'Grade Js / Py',sel:pathname=='/grade',path:`/grade`,inativo:true},
+            {tex:'Javascript',sel:pathname.includes(`javascript`),path:`/cursos/javascript`,img:js},
+            {tex:'React',sel:pathname.includes(`react`),path:`/cursos/react`,img:re},
+            //<Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} inativo={true} />
+            //<Botao tex={'SQL'} sel={pathname.includes(`bancos`)} path={`/bancos`} img={sq} />
+            //<Botao tex={'Node'} sel={pathname.includes(`node`)} path={`/cursos/node`} img={nd} inativo={true} />
+        ]}
+        />
+        <Secao puro={true}
+        titulo={'Meu Material'}
+        filhos={
+            {tex:'Arquivos das aulas',sel:pathname.includes(`aulas`),path:`/aulas`}
+            //{tex:'Perguntas',sel:pathname=='/perguntas',path:`/peguntas`,inativo:true},
+        }
+        />
+    </Leva>
+    <Leva>
+        {/*<Secao puro={true}
+        titulo={'Valor pacotes'}
+        filhos={
+            {tex:'Valor pacotes',sel:pathname=='/pacotes',path:`/pacotes`}
+        }
+        />*/}
+         <Secao eterno={true}
+        titulo={''}
+        filhos={[
+            {tex:'Banco de Dados',sel:pathname.includes(`banco`),img:sq,subtext:'Treinar SQL',transport:`portalsql`,},
+            {tex:'Front End',sel:pathname.includes(`front`),img:re,subtext:'Treinar HTML + CSS',transport:`portalreact`,},
+        ]}
+        />
            
             {/*
             <h1>Contato</h1>
@@ -63,54 +64,30 @@ export default function Secoes({align,height}){
             <Botao tex={'Valor de Pacotes'} sel={pathname.includes(`pacotes`)} path={`/pacotes`} />
             <BtWpp onClick={mandarWpp}><img src={wpp} /><p>Enviar Mensagem</p></BtWpp>
             */}
-        </Tudo>
+    </Leva>
+    </Tudo>
     )}
-const BtLing=styled.div`
-flex-direction:column;
-cursor:pointer;
-background-color:${p=>!p.sel?'#278389':'#096368'};
-color:white;
-margin:7px 0px 0 0px;
-border-radius:5px;
-max-width:180px;
-min-width:180px;
-padding:5px;
-p{width:100%;display:flex;margin:0px;}
-img{
-    height:25px;border-radius:5px;
-    margin:3px 7px 3px 3px;
-}
-`
-const Parte=styled.div`
-flex-direction:column;width:100%;align-items:center;background:;
-padding:20px 0 20px 0;
+
+const Leva=styled.div`
+width:100%;flex-direction:column;
 `
 const Tudo=styled.div`background-color:;
-flex-direction:column;justify-content:space-between;
-align-items:center;
+flex-direction:column;
+justify-content:space-between;
 h1{
     font-size:20px;
-    margin:19px 0 0 0px;
+    margin:0;
     text-align:${p=>p.align?';':'left;'} ;
     color:var(--h1Menu)
-}
+};
+
 width:100%;
 height:${p=>p.height};
 align-items:${p=>p.align?'center;':';'};
 `
-const BtWpp=styled.div`
-cursor:pointer;
-background-color:#29AD17;
-color:white;
-margin:8px 0px 0 0px;
-border-radius:5px;
-max-width:180px;
-min-width:180px;
-p{margin:5px;}
-img{
-    height:25px;border-radius:5px;
-    margin:3px 7px 3px 3px;
-}
-`
 
+/*
+overflow-x:hidden;
+overflow-y:scroll;
+*/
 

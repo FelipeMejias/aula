@@ -51,9 +51,10 @@ function App() {
 <Route path='/aulas' element={<AulasFeitas />}/>
 <Route path='/aulas/:pasta/:arquivo/:formato' element={<Arquivo />}/>
                 
-<Route path='/pacotes' element={<Agendar page={3}/>}/>
-<Route path='/horarios' element={<Agendar page={2}/>}/>
-
+<Route path='/pacotes' element={<Agendar pag={0}/>}/>
+<Route path='/pacotes/mensal' element={<Agendar pag={1}/>}/>
+<Route path='/pacotes/quantidade' element={<Agendar pag={2}/>}/>
+<Route path='/pacotes/cursos' element={<Agendar pag={3}/>}/>
                 {/* ativar código aluno */}
               </Routes>
             </Resto>

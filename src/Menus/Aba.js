@@ -19,7 +19,8 @@ export default function Aba(){
         <Tudo>
             <Barrinha/>
             <Janela>
-            <Secoes height={'calc(100% - 15px)'}/>
+                <h4>{'<PC>'}</h4>
+                <Secoes height={'calc(100% - 70px)'}/>
            </Janela>
            <Clicavel onClick={()=>setAba(false)}>
 
@@ -46,12 +47,12 @@ img{height:80%;}
 const Barrinha=styled.article`
 width:calc(50vw - 250px);height:100%;
 position:fixed;left:0;
-background-color:#2a0145;
+background-color:#5d7219;
 `
 const Janela=styled.div`
 flex-direction:column;
 position:absolute;
-background-color:#2a0145;
+background-color:#5d7219;
 height:100%;max-width:440px;
 left:calc(50vw - 260px);
 width:280px;
@@ -68,6 +69,10 @@ justify-content:center;
 background-color:rgb(0,0,0,0.7);
 @media(min-width:750px){
 display:none;
+}
+h4{color:var(--h1Menu);
+font-size:45px;margin:10px 0 0 0;width:100%;text-align:center;
+font-family: "Roboto Mono", monospace;
 }
 `
 
