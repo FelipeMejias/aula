@@ -1,0 +1,17 @@
+let soma=0
+
+function nota(nome,media){
+    if(nome && media>=6){
+        soma+=1
+        console.log(`${nome} passou de ano`)
+    }else if(nome && media<6){
+        console.log(`${nome} foi reprovado`)
+    }
+}
+
+nota('bruno', 5)
+nota('Maria', 8)
+nota('Matheus', 7)
+nota('João', 6)
+
+console.log('Alunos aprovados: '+soma)

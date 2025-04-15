@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import styled from "styled-components"
 
 export default function Preco(){
@@ -25,6 +25,13 @@ export default function Preco(){
         }
         return false
     }
+    useEffect(()=>{
+        if(semanas=='3x'){
+            if(aulas<11){
+                
+            }
+        }
+    },[aulas])
     return (
         <Tudo>
             <h2>Quantidade de Aulas</h2>

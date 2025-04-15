@@ -1,0 +1,58 @@
+console.log('Bem vindo a M2 Imports')
+
+// estoque principal
+const estoque=[
+    ['Nike'     , 2 , 0 , 1], // 0
+    ['Adidas'   , 0 , 1 , 2]  // 1
+]//              39  40  41
+
+
+// função para processar a compra
+function buscarNoEstoque(numero,marca){
+    let indiceMarca
+    if(marca=='Nike'){
+        indiceMarca=0
+    }else if(marca=='Adidas'){
+        indiceMarca=1
+    }else{
+        return null
+    }
+    let indiceNumero
+    if(numero=='39'){
+        indiceNumero=1
+    }else if(numero=='40'){
+        indiceNumero=2
+    }else if(numero=='41'){
+        indiceNumero=3
+    }else{
+        return null
+    }
+    const estoqueDoNumero=estoque[indiceMarca][indiceNumero]
+    const existeProduto=estoqueDoNumero>0
+    return existeProduto
+}
+
+// função principal
+function m2(numero,marca){
+    let resposta
+    const existeNoEstoque= buscarNoEstoque(numero,marca)
+    if(existeNoEstoque===null){
+        resposta= `Não temos ${numero} ou ${marca} na nossa loja! Escolha outra`
+    }
+
+    if(existeNoEstoque){
+        resposta= `Temos o número ${numero} da ${marca}! Compra realizada com sucesso`
+    }else{
+        resposta= `Infelizmente o número ${numero} da ${marca} esgotou!`
+    }
+    console.log(resposta)
+    return resposta
+}
+
+m2('39','Nike')
+m2('40','Adidas')
+m2('40','Nike')
+m2('41','Adidas')
+m2('39','Adidas')
+m2('39','Nike')
+m2('41','Nike')

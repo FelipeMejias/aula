@@ -15,6 +15,8 @@ import FEvsBE from './Linguagens/FEvsBE';
 import Principal from './SQL/Principal';
 import Arquivo from './Mostrador/Arquivo';
 import SalaEspera from './utils/SalaEspera';
+import Prof from './Controle/Prof';
+import Adm from './Controle/Adm';
 
 
 function App() {
@@ -55,6 +57,11 @@ function App() {
 <Route path='/pacotes/mensal' element={<Agendar pag={1}/>}/>
 <Route path='/pacotes/quantidade' element={<Agendar pag={2}/>}/>
 <Route path='/pacotes/cursos' element={<Agendar pag={3}/>}/>
+
+<Route path='/prof' element={<Prof/>}/>
+<Route path='/adm' element={<Adm/>}/>
+<Route path='/adm/:aluno' element={<Adm/>}/>
+
                 {/* ativar código aluno */}
               </Routes>
             </Resto>

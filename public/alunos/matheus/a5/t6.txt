@@ -1,0 +1,11 @@
+const cores=['verde','amarelo','azul','verde','amarelo','laranja','vermelho','verde','amarelo','roxo']
+
+let pontos=0
+for(let item of cores){
+    if(item=='amarelo'){
+        continue
+    }else if(item=='vermelho'){
+        break
+    }
+    console.log(item)
+}

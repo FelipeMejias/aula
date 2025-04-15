@@ -1,0 +1,17 @@
+/*
+const frutas=['banana','maçã','pêra','melancia','açaí']
+const verduras=['nabo','alface','cenoura','salsa','cebolinha']
+
+for(let k=0 ; k<5 ; k++ ){
+    console.log(`${frutas[k]} com ${verduras[k]}`)
+}
+*/
+
+const times=['flamengo','vasco','gremio','palmeiras']
+const cores=['vermelho e preto','preto e branco','azul e branco','palmeiras']
+
+function coresTime(numero){
+    console.log(`${times[numero]} veste ${cores[numero]}`)
+}
+coresTime(2)
+

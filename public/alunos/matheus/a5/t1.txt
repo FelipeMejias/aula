@@ -1,0 +1,18 @@
+/*const minhaLista=['melao','banana','morango','melancia','mamão','pêra','maçã','kiwi']
+function excluiMs(){
+    return minhaLista.filter( fruta=> fruta[0]!='m' )
+}
+console.log(excluiMs())
+*/
+const minhaLista=['Iphone','mp3','Itouch','Ipod','sansung','galaxy','Ipad']
+
+function filterApple(){
+    const novaLista=[]
+    for(let item of minhaLista){
+        if(item[0]=='I')novaLista.push(item)
+    }
+    console.log(novaLista)   
+}
+
+filterApple()
+

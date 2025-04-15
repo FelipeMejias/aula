@@ -1,0 +1,20 @@
+const minhaLista=['melao','banana','morango','melancia']
+
+const tamanho=minhaLista.length
+//console.log(minhaLista[tamanho-1])
+
+minhaLista.push('laranja') //adiciona ao final
+minhaLista.unshift('goiaba') //adiciona ao inicio
+
+//minhaLista.pop() // remove do final
+
+let c=0
+while(c<tamanho){
+    const item=minhaLista[c]
+    console.log(item)
+    c=c+1
+}
+
+for(let item of minhaLista){
+    console.log(item)
+}

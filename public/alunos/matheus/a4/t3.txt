@@ -1,0 +1,23 @@
+const lista=[49,59,37,399,709,54,21,899,32]
+
+function acharMaior(lista){
+    let maior=-Infinity
+    for(let item of lista){
+        if(item>maior){
+            maior=item
+        }
+    }
+    console.log(maior)
+}
+acharMaior(lista)
+
+function acharMenor(lista){
+    let menor=Infinity
+    for(let item of lista){
+        if(item<menor){
+            menor=item
+        }
+    }
+    console.log(menor)
+}
+acharMenor(lista)

@@ -1,0 +1,14 @@
+const gravidade=8
+const antijogo=8
+
+function cartao(){
+    if(gravidade>7 && antijogo>7){
+        console.log('cartao vermelho')
+    }else if(gravidade>7 || antijogo>7){
+        console.log('cartao amarelo')
+    }else{
+        console.log('sem cartao')
+    }
+}
+
+cartao()

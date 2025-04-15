@@ -41,14 +41,14 @@ export default function SalaEspera({setAluno}){
             }, 1.5*1000);
         }
     }
-    useEffect(()=>{
+    {/*useEffect(()=>{
         const input = document.getElementById("meu-input");       
         input?.addEventListener("keydown", function(event) {
             if (event.key === "Enter") {
                 enviar()
             }
             })
-    },[escolhido])
+    },[escolhido])*/}
     return (
         <Tela>
             <Quadro>

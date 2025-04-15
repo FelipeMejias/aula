@@ -1,0 +1,25 @@
+const lista=[543,54,544,323,32,567,78]
+
+function contaMaiores(list,base){
+    let contador=0
+    for(let numero of list){
+        if(numero>base){
+            contador++
+        }
+    }
+    console.log(contador)
+}
+
+function contaMaioresQue100(list){
+    let contador=0
+    for(let numero of list){
+        if(numero>100){
+            contador++
+        }
+    }
+    console.log(contador)
+}
+
+contaMaioresQue100(lista)
+
+contaMaiores(lista,50)

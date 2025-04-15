@@ -45,6 +45,45 @@ Ao final de todas as chamadas, printe o valor acumulado e veja se corresponde ao
 `,caminho:''},    
     {linguagem:'javascript',nome:'RESOLUÇÃO 1',icone:js,caminho:formarTexto(3,7)},
     ]
+const aula4=[
+    {linguagem:'javascript',nome:'listas',icone:js,caminho:formarTexto(4,1)},
+    {linguagem:'javascript',nome:'exemplo letra M',icone:js,caminho:formarTexto(4,2)},
+    {linguagem:'javascript',nome:'exemplo maior e menor',icone:js,caminho:formarTexto(4,3)},
+    {linguagem:'javascript',nome:'estoque',icone:js,caminho:formarTexto(4,4)},
+    ]
+const aula5=[
+    {linguagem:'javascript',nome:'resolução - apple',icone:js,caminho:formarTexto(5,1)},
+    {linguagem:'javascript',nome:'resolução - maioresQue100',icone:js,caminho:formarTexto(5,2)},
+    {linguagem:'javascript',nome:'if - cartão amarelo/vermelho',icone:js,caminho:formarTexto(5,3)},
+    {linguagem:'javascript',nome:'parâmetro em funções',icone:js,caminho:formarTexto(5,4)},
+    {linguagem:'javascript',nome:'for com índices de listas',icone:js,caminho:formarTexto(5,5)},
+    {linguagem:'javascript',nome:'auxiliadores - break/continue',icone:js,caminho:formarTexto(5,6)},
+    ]
+const exFut=[
+    {linguagem:'javascript',nome:'EXERCICIO 1',icone:notass,texto:`
+Escreva uma função que recebe 3 parâmetros:
+-time
+-gols pro
+-gols contra
+A função deve imprimir uma frase como:
+-Bragantino teve -4 de saldo de gols
+`},{linguagem:'javascript',nome:'EXERCICIO 2',icone:notass,texto:`
+Escreva uma função que recebe 3 parâmetros:
+-vitorias
+-empates
+-derrotas
+A função deve fazer o cálculo de pontos conquistados e quantos pontos eram possíveis (caso ganhasse todas)
+Em seguida, deve imprimir uma frase como:
+-O time fez 17 pontos, de 33 possíveis
+`},{linguagem:'javascript',nome:'EXERCICIO 3',icone:notass,texto:`
+Escreva uma função que recebe 2 parâmetros:
+-duas listas contendo: time, pontos, saldo
+Exemplo: ['Vasco',18,8] e ['Grêmio','22,4]
+A função deve calcular qual time fica a frente na tabela, incluindo o critério de desempate
+Em seguida deve imprimir uma frase como:
+-Grêmio fica na frante de Vasco na tabela
+`},
+    ]
 export const matheus=[
     {
         nome:'Aula 1',
@@ -56,5 +95,14 @@ export const matheus=[
     },{
         nome:'Aula 3',
         arquivos:aula3
+    },{
+        nome:'Aula 4',
+        arquivos:aula4
+    },{
+        nome:'Aula 5',
+        arquivos:aula5
+    },{
+        nome:'Exs Futebol',
+        arquivos:exFut
     },
 ]
