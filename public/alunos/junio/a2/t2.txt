@@ -1,0 +1,14 @@
+function fazerAniversario(nome,idade){
+    idade=idade+1
+    console.log(`Parabens ${nome}! Você fez ${idade} anos`)
+}
+
+
+function virarAno(){
+    fazerAniversario('Gabriel',30)
+    fazerAniversario('João',40)
+    fazerAniversario('Pedro',25)
+    emitirCalendario()
+}
+
+virarAno()

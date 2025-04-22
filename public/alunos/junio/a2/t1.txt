@@ -1,0 +1,22 @@
+// Booleano
+
+// e = &&
+// ou= ||
+const chovendo=true
+const temperatura=22
+
+const vouApraia= !chovendo && temperatura>25
+
+if(vouApraia){
+    console.log('Vou sair de casa para praia')
+}else if(temperatura>25){
+    console.log('Vou sair de guarda-chuva')
+}else{
+    console.log('Vou ficar em casa')
+}
+
+
+
+//true   truly
+//false  falsy string('') numero(0) null undefined
+

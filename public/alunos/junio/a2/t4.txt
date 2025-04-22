@@ -1,0 +1,18 @@
+function fazerAniversario(nome,idade){
+    idade=idade+1
+    console.log(`Parabens ${nome}! Você fez ${idade} anos`)
+    return idade
+}
+
+function checarIdade(nome,idade){
+    const novaIdade=fazerAniversario(nome,idade)
+    if(novaIdade>=18){
+        return 'Aproveite a montanha-russa'
+    }else{
+        return 'Desculpe, volte no próximo ano'
+    }
+}
+
+const podeIrNoBrinquedo=checarIdade('Gabriel',17)
+console.log(`O valor retornado pela função, que agora é o valor da variável é: ${podeIrNoBrinquedo}`)
+

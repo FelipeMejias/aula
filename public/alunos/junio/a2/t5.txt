@@ -1,0 +1,29 @@
+function calcularMedia(nota1,nota2) {
+    var soma = nota1 + nota2;
+    var media = soma/2;
+    console.log ('Cálculo: ' + media);
+    return media
+}
+
+function principal(p1,p2,p3){
+    const media1=calcularMedia(p1,p2)
+    if(media1>=6){
+        console.log('já passou! tenta só melhorar')
+        const notaMelhorada=calcularMedia(media1,p3)
+        if(notaMelhorada>media1){
+            console.log(`parabens, melhorou, nova media final: ${notaMelhorada}`)
+        }else{
+            console.log(`nao melhorou, segue com media final: ${media1}`)
+        }
+    }else{
+        console.log('caiu em recuperação na p3')
+        const notaRecuperada=calcularMedia(media1,p3)
+        if(notaRecuperada>=6){
+            console.log(`parabens, recuperou, media final: ${notaRecuperada}`)
+        }else{
+            console.log(`reprovou, media final: ${notaRecuperada}`)
+        }
+    }
+}
+
+principal(6.3 , 2.9 , 10)

@@ -1,0 +1,11 @@
+
+function fazerAniversario(nome,idade){
+    idade=idade+1
+    console.log(`Parabens ${nome}! Você fez ${idade} anos`)
+    return idade
+}
+
+const idadeAtual=fazerAniversario('Gabriel',30)
+
+console.log(`O valor retornado pela função, que agora é o valor da variável é: ${idadeAtual}`)
+

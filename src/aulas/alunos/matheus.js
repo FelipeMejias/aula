@@ -84,6 +84,25 @@ Em seguida deve imprimir uma frase como:
 -Grêmio fica na frante de Vasco na tabela
 `},
     ]
+const exNova=[
+    {linguagem:'javascript',nome:'EXERCICIO 1',icone:notass,texto:`
+Imagine que você trabalha em um jornal de futebol
+Seu chefe pede para escrever as manchetes do mês, e todas seguem o mesmo padrão:
+-Gigante europeu contrata JOGADOR, veja qual é o clube.
+A lista de jogadores que ele passou é:
+-Wesley, Estevão e Pedro
+Você decide fazer uma função para não precisar escrever todas as frases
+Ela deve imprimir a frase desejada, com o nome do jogador que você passar como parâmetro
+
+Dicas: Use apenas 1 parâmetro: nome. E escreva uma chamada de função para cada jogador da lista
+`},{linguagem:'javascript',nome:'EXERCICIO 2',icone:notass,texto:`
+Dessa vez, o jornal já recebeu o dia do mês que cada jogador será apresentado
+A frase que o chefe te pede agora segue o padrão:
+-Divulgada a data de apresentação de JOGADOR, dia NUMERO ele chega ao clube.
+A lista de dias é:
+-15, 30 e 20
+`},
+    ]
 export const matheus=[
     {
         nome:'Aula 1',
@@ -104,5 +123,8 @@ export const matheus=[
     },{
         nome:'Exs Futebol',
         arquivos:exFut
+    },{
+        nome:'Exs Nova Lista',
+        arquivos:exNova
     },
 ]
