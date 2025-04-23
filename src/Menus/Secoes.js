@@ -22,25 +22,24 @@ export default function Secoes({align,height}){
     return (
     <Tudo height={height} align={align}>
     <Leva>
-
-        <Secao
-        titulo={'Conteudos'}
-        filhos={[
-            {tex:'FrontEnd vs BackEnd',sel:pathname=='/',path:`/`},
-            {tex:'Grade Js / Py',sel:pathname=='/grade',path:`/grade`,inativo:true},
-            {tex:'Javascript',sel:pathname.includes(`javascript`),path:`/cursos/javascript`,img:js},
-            {tex:'React',sel:pathname.includes(`react`),path:`/cursos/react`,img:re},
-            //<Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} inativo={true} />
-            //<Botao tex={'SQL'} sel={pathname.includes(`bancos`)} path={`/bancos`} img={sq} />
-            //<Botao tex={'Node'} sel={pathname.includes(`node`)} path={`/cursos/node`} img={nd} inativo={true} />
-        ]}
-        />
         <Secao puro={true}
         titulo={'Meu Material'}
         filhos={
             {tex:'Arquivos das aulas',sel:pathname.includes(`aulas`),path:`/aulas`}
             //{tex:'Perguntas',sel:pathname=='/perguntas',path:`/peguntas`,inativo:true},
         }
+        />
+        <Secao
+        titulo={'Conteúdos'}
+        filhos={[
+            {tex:'FrontEnd vs BackEnd',sel:pathname=='/',path:`/`},
+            //{tex:'Grade Js / Py',sel:pathname=='/grade',path:`/grade`,inativo:true},
+            {tex:'Javascript',sel:pathname.includes(`javascript`),path:`/cursos/javascript`,img:js},
+            {tex:'React',sel:pathname.includes(`react`),path:`/cursos/react`,img:re},
+            //<Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} inativo={true} />
+            //<Botao tex={'SQL'} sel={pathname.includes(`bancos`)} path={`/bancos`} img={sq} />
+            //<Botao tex={'Node'} sel={pathname.includes(`node`)} path={`/cursos/node`} img={nd} inativo={true} />
+        ]}
         />
     </Leva>
     <Leva>
@@ -51,7 +50,7 @@ export default function Secoes({align,height}){
         }
         />*/}
          <Secao eterno={true}
-        titulo={''}
+        titulo={'Plataformas'}
         filhos={[
             {tex:'Banco de Dados',sel:pathname.includes(`banco`),img:sq,subtext:'Treinar SQL',transport:`portalsql`,},
             {tex:'Front End',sel:pathname.includes(`front`),img:re,subtext:'Treinar HTML + CSS',transport:`portalreact`,},

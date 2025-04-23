@@ -21,12 +21,13 @@ export const alunos=[
 
     // Buscando
     {nome:'antonio',    senha:'6079',aulas:antonio},    // Enviar senha
-    {nome:'matheus',    senha:'1268',aulas:matheus},
 
     // Atuais
+    {nome:'matheus',    senha:'1268',aulas:matheus},
+    {nome:'junio',      senha:'1651',aulas:junio},
+
     {nome:'felipe',     senha:'7057',aulas:felipe},     
     {nome:'mel',        senha:'2821',aulas:mel},  
-    {nome:'junio',      senha:'1651',aulas:junio},    
     {nome:'raffos',     senha:'2468',aulas:raffos},      
 ]
 

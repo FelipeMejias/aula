@@ -39,9 +39,9 @@ export default function AulasFeitas(){
 }
 const ButSair=styled.div`
 background-color:black;color:yellow;
-width:100px;height:70px;border-radius:15px;
+min-width:100px;height:70px;border-radius:15px;
 justify-content:center;align-items:center;
-margin:15px 0 0 15px;cursor:pointer;
+margin:15px 15px 0 15px;cursor:pointer;
 `
 const Tudo=styled.div`
 align-items:center;
