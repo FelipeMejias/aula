@@ -103,6 +103,12 @@ A lista de dias é:
 -15, 30 e 20
 `},
     ]
+const aula6=[
+    {linguagem:'javascript',nome:'Manchete 1 parâmetro',icone:js,caminho:formarTexto(6,1)},
+    {linguagem:'javascript',nome:'Manchete 2 parâmetros',icone:js,caminho:formarTexto(6,2)},
+    {linguagem:'javascript',nome:'Manchete If Else',icone:js,caminho:formarTexto(6,3)},
+    {linguagem:'javascript',nome:'Exercício Votação',icone:js,caminho:formarTexto(6,4)},
+    ]
 export const matheus=[
     {
         nome:'Aula 1',
@@ -126,5 +132,8 @@ export const matheus=[
     },{
         nome:'Exs Nova Lista',
         arquivos:exNova
+    },{
+        nome:'Aula 6',
+        arquivos:aula6
     },
 ]

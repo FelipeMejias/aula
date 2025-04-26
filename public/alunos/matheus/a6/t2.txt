@@ -1,0 +1,15 @@
+function fazerManchete(nome,data){
+    console.log(`Divulgada a data de apresentação de ${nome}, dia ${data} ele chega ao clube.`)
+}
+
+fazerManchete('Wesley',15) 
+fazerManchete('Estevão', 30)
+fazerManchete('Pedro',20)
+
+
+
+//Valor padrão no parâmetro (parâmetro fixo)
+function fazerMancheteValorPadrao(nome,data=5){
+    console.log(`Gigante europeu contrata ${nome}, ele chega dia ${data}.`)
+}
+fazerMancheteValorPadrao('Ryan')

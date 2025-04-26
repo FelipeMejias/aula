@@ -1,0 +1,28 @@
+const variavel=15
+function condecerAcesso(usuario,servico){
+    if(servico=='produto'){
+        return true
+    }else if(servico=='estoque'){
+        return usuario=='gerente' || usuario=='funcionario'
+    }else if(servico=='financas'){
+        return usuario=='gerente'
+    }
+}
+let permissao
+
+permissao=condecerAcesso('cliente','produto')
+console.log(permissao)
+permissao=condecerAcesso('funcionario','estoque')
+console.log(permissao)
+permissao=condecerAcesso('gerente','financas')
+console.log(permissao)
+permissao=condecerAcesso('funcionario','produto')
+console.log(permissao)
+permissao=condecerAcesso('cliente','estoque')
+console.log(permissao)
+
+if(permissao){
+
+}else{
+    
+}

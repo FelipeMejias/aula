@@ -1,0 +1,8 @@
+const bmw = [
+    "M2 Competition","M3 Touring","M4 CSL","M5 CS",
+    "X5 M Competition","i8 Roadster","Z4 M40i"
+]
+const ferrari = [
+    "488 GTB","F8 Tributo","Roma","SF90 Stradale",
+    "Portofino","812 Superfast","LaFerrari"
+]

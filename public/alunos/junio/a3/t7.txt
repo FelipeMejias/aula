@@ -1,0 +1,18 @@
+const numeros=[
+    54,54,6,87,5,34,34,2,3,54,45,54,54,65,4,646,344,464,46,46,34,43,555,5,565,
+    54,65,45,42,32,32,43,32
+]
+
+function contarQuantos(alvo){
+    let contador=0
+    for(let caso of numeros){
+        if(caso==alvo){
+            contador=contador+1
+        }
+    }
+    console.log(`O número ${alvo} apareceu ${contador} vezes`)
+}
+
+contarQuantos(54)
+contarQuantos(65)
+contarQuantos(34)

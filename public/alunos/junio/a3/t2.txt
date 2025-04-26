@@ -1,0 +1,16 @@
+let idade=1
+while(idade<=18 ){
+    console.log(`Feliz aniversário de ${idade} anos`)
+    idade=idade+1
+}
+console.log('terminei')
+
+
+/*
+let continua=true
+while(continua){
+    if(){
+        continua=false
+    }
+}
+*/

@@ -1,0 +1,10 @@
+function apresentar(nome,idade,cidade="São Paulo"){
+    console.log(`Olá, sou ${nome}, tenho ${idade} anos e moro no ${cidade}`)
+}
+
+apresentar("Daniel",32,"Pernambuco")
+apresentar("Ana",45,"Rio de Janeiro")
+apresentar("Bruno",19,"São Paulo")
+apresentar("Pedro",59)
+
+

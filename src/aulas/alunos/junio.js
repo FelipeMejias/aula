@@ -59,6 +59,33 @@ Caso o cliente receba false como parâmetro, é sua primeira compra, ele não te
 Os clientes A têm 30%, os clientes B têm 20%, e os clientes C têm 10% de desconto
     `},
     ]
+const aula3=[
+    {linguagem:'javascript',nome:'Condicional aninhada',icone:js,caminho:formarTexto(3,1)},
+    {linguagem:'javascript',nome:'Loops while',icone:js,caminho:formarTexto(3,2)},
+    {linguagem:'javascript',nome:'Parâmetro fixo',icone:js,caminho:formarTexto(3,3)},
+    {linguagem:'javascript',nome:'Índices: strings e listas',icone:js,caminho:formarTexto(3,4)},
+    {linguagem:'javascript',nome:'Loops em listas',icone:js,caminho:formarTexto(3,5)},
+    {linguagem:'javascript',nome:'Includes',icone:js,caminho:formarTexto(3,6)},
+    {linguagem:'javascript',nome:'For em contagem',icone:js,caminho:formarTexto(3,7)},
+    {linguagem:'javascript',nome:'Operações em listas',icone:js,caminho:formarTexto(3,8)},
+    {linguagem:'javascript',nome:'EXERCÍCIO 1',icone:notass,caminho:formarTexto(3,9),texto:`
+Você tem a lista das 6 pessoas que estão em um grupo 
+Escreva uma função que recebe um nome como parâmetro
+Caso a lista não esteja com seu número máximo, 10 integrantes, a função deve:
+-Adicionar o integrante novo à lista
+-printar no console um aviso de sucesso
+Caso a lista já contenha 10 integrantes, a função avisa no console que o grupo está cheio
+-Envolva o nome do participante nas mensagens de console
+    `},{linguagem:'javascript',nome:'EXERCÍCIO 2',icone:notass,caminho:formarTexto(3,10),texto:`
+Você tem 2 listas de carros: Bmw e Ferrari
+Eles estão na mesma ordem na fila do estabelecimento, que estão na lista. Logo, quando alguém pede um carro de determinada marca, deve sair o primeiro. Depois o segundo e assim sucessivamente
+Escreva uma função que receba a marca como parâmetro e printa no console o carro que saiu do estabelecimento
+    `},{linguagem:'javascript',nome:'EXERCÍCIO 3',icone:notass,texto:`
+Use a função que você fez ne EXERCÍCIO 1
+Altere a mensagem de sucesso que é exibida no console, para:
+-exibir a lista de integrantes incluindo o novo integrante
+    `},
+    ]
 export const junio=[
     {
         nome:'Aula 1',
@@ -66,5 +93,8 @@ export const junio=[
     },{
         nome:'Aula 2',
         arquivos:aula2
+    },{
+        nome:'Aula 3',
+        arquivos:aula3
     },
 ]

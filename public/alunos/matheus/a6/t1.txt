@@ -1,0 +1,9 @@
+
+function fazerManchete(nome){
+    console.log(`Gigante europeu contrata ${nome}, veja qual é o clube.`)
+}
+
+fazerManchete('Wesley') 
+fazerManchete('Estevão')
+fazerManchete('Pedro')
+

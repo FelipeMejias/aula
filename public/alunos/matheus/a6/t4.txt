@@ -1,0 +1,20 @@
+// if e else ---- 3 variáveis let (1 para cada jogador)
+// Cada vez que a função recebe o nome do jogador, ela adiciona 1 na variavel dele
+
+let votosWesley=0
+
+function votar(nome){
+
+}
+
+
+
+
+votar('Wesley')
+votar('Pedro')
+votar('Wesley')
+votar('Estevão')
+votar('Wesley')
+votar('Estevão')
+votar('Wesley')
+votar('Pedro')

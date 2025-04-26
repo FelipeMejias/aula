@@ -1,0 +1,19 @@
+const string="Mar"
+
+console.log(string[0])
+console.log(string.length)
+console.log(string[string.length-1])
+
+const lista=["Oceano","Areia","Vento"]
+
+console.log(lista[0])
+console.log(lista.length)
+console.log(lista[lista.length-1])
+
+//lista.push("Céu") //adiciona ao final !!MAIS IMPORTANTE
+
+lista.unshift(1)//adiociona ao inicio
+
+lista.pop()//remove do final
+
+console.log(lista)

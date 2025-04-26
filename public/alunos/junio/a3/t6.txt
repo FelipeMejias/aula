@@ -1,0 +1,26 @@
+const lista=['melancia','kiwi','pera','maça','banana','morango']
+/*
+if(lista.includes('abacate')){
+    console.log('ta na lista')
+}
+*/
+
+function adicionaAlista(fruta){
+    if(lista.includes(fruta)){ // resulta em true caso exista na lista, e false caso não exista
+        console.log(fruta+' já está na lista')
+    }else{
+        lista.push(fruta)
+        console.log(fruta+' adicionado')
+    }
+    
+}
+
+
+adicionaAlista('pera')
+adicionaAlista('kiwi')
+adicionaAlista('abacate')
+adicionaAlista('abacaxi')
+adicionaAlista('banana')
+adicionaAlista('maça')
+
+console.log(lista)

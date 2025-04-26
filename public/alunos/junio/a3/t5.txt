@@ -1,0 +1,14 @@
+const lista=["Oceano","Areia","Vento","Barco","Surf"]
+
+//c=contador
+let c=0
+while(c<lista.length){
+    const item = lista[c]
+    //console.log(item)
+    c=c+1
+}
+
+for(let item of lista){
+    //console.log(item)
+}
+

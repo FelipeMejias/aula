@@ -1,0 +1,26 @@
+const lista=[43,76,34,76,67,34,23,98]
+
+let maior=-1
+for(let item of lista){
+    if(item>maior){
+        maior=item
+    }
+}
+
+// Filtragem
+const pares=[] 
+for(let item of lista){
+    if(item%2==0){
+        pares.push(item)
+    }
+}
+console.log(pares)
+
+
+// Mapeamento: para cada item, um item novo
+const palavras=["Oceano","Areia","Vento","Barco","Surf"]
+const novaLista=[] 
+for(let item of palavras){
+    novaLista.push(item[0])
+}
+console.log(novaLista)

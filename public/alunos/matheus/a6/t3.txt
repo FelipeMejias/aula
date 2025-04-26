@@ -1,0 +1,13 @@
+// if/ else
+// caso o dia seja maior que 20, ele nao deve ser divulgado
+function fazerManchete(nome,data){
+    if(data<20){
+        console.log(`A data de apresentação de ${nome} é dia ${data}.`)
+    }else if(data>=20){
+        console.log(`A data de apresentação de ${nome} ainda não foi divulgada.`)
+    }
+}
+
+fazerManchete('Wesley',7) 
+fazerManchete('Estevão', 28)
+fazerManchete('Pedro',14)
