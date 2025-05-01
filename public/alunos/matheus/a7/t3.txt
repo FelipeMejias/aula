@@ -1,0 +1,9 @@
+
+resultado('Catar'   ,0,2, 'Equador')
+resultado('Senegal' ,0,2, 'Holanda')
+
+resultado('Catar'   ,1,1, 'Senegal')
+resultado('Holanda' ,1,1, 'Equador')
+
+resultado('Holanda' ,0,2, 'Catar')
+resultado('Equador' ,0,2, 'Senegal')

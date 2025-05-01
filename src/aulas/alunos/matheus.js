@@ -109,6 +109,16 @@ const aula6=[
     {linguagem:'javascript',nome:'Manchete If Else',icone:js,caminho:formarTexto(6,3)},
     {linguagem:'javascript',nome:'Exercício Votação',icone:js,caminho:formarTexto(6,4)},
     ]
+const aula7=[
+    {linguagem:'javascript',nome:'return',icone:js,caminho:formarTexto(7,1)},
+    {linguagem:'javascript',nome:'time à frente',icone:js,caminho:formarTexto(7,2)},
+    {linguagem:'javascript',nome:'EXERCICIO',icone:notass,texto:`
+As chamadas da função já estão feitas, são os 6 jogos do grupo A da copa de 2022
+Você deve criar a função resultado, para que receba essa partida e:
+-Calcule quem venceu ou se houve empate
+-Printe no console quantos pontos cada time ganhou
+        `,caminho:formarTexto(7,3)},
+    ]
 export const matheus=[
     {
         nome:'Aula 1',
@@ -135,5 +145,9 @@ export const matheus=[
     },{
         nome:'Aula 6',
         arquivos:aula6
+    },{
+        nome:'Aula 7',
+        arquivos:aula7
     },
+
 ]

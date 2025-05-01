@@ -1,0 +1,18 @@
+function receberInfosTime(vitorias,empates,derrotas){
+    const pontos=3*vitorias + empates
+    return pontos
+}
+function quemEstaNaFrente(time1,time2){
+    if(time1>time2){
+        console.log('o time1 está na frente')
+    }else if(time1<time2){
+        console.log('o time2 está na frente')
+    }else{
+        console.log('os times estão empatados')
+    }
+}
+const pontosInter=receberInfosTime(5,3,4)
+const pontosGremio=receberInfosTime(2,7,3)
+
+quemEstaNaFrente(pontosInter,pontosGremio)
+

@@ -1,0 +1,11 @@
+function minhaFuncao(numero){
+    return numero*3
+}
+
+const numeroSorte=minhaFuncao(2)
+
+const numeroAzar=minhaFuncao(numeroSorte)
+
+
+console.log(`numero sorte: ${numeroSorte}`)
+console.log(`numero azar: ${numeroAzar}`)
