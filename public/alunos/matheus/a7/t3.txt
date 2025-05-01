@@ -2,8 +2,8 @@
 resultado('Catar'   ,0,2, 'Equador')
 resultado('Senegal' ,0,2, 'Holanda')
 
-resultado('Catar'   ,1,1, 'Senegal')
+resultado('Catar'   ,1,3, 'Senegal')
 resultado('Holanda' ,1,1, 'Equador')
 
-resultado('Holanda' ,0,2, 'Catar')
-resultado('Equador' ,0,2, 'Senegal')
+resultado('Holanda' ,2,0, 'Catar')
+resultado('Equador' ,1,2, 'Senegal')

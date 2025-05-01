@@ -114,6 +114,11 @@ const aula7=[
     {linguagem:'javascript',nome:'time à frente',icone:js,caminho:formarTexto(7,2)},
     {linguagem:'javascript',nome:'EXERCICIO',icone:notass,texto:`
 As chamadas da função já estão feitas, são os 6 jogos do grupo A da copa de 2022
+os 4 parâmetros indicam :
+-time A
+-gols time A
+-gols time B
+-time B
 Você deve criar a função resultado, para que receba essa partida e:
 -Calcule quem venceu ou se houve empate
 -Printe no console quantos pontos cada time ganhou
