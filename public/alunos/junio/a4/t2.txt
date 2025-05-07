@@ -1,0 +1,21 @@
+const grupo=['Ana','Fábio','Lúcia','Erick','Pedro','Maria']
+
+function adicionar(nome){
+    if(grupo.length>=10){
+        console.log(`Já está cheio, ${nome} ficou de fora`)
+    }else{
+        grupo.push(nome)
+        console.log(`Novo grupo:`)
+        for(let integrante of grupo){
+            console.log(integrante)
+        }
+    }
+}
+
+adicionar('Ana')
+adicionar('Bruna')
+adicionar('Marcos')
+adicionar('Daniel')
+adicionar('Luiz')
+adicionar('Flávia')
+adicionar('João')

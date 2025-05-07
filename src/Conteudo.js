@@ -50,7 +50,7 @@ export default function Topicos(){
                     (sub,ind)=>{
                         const {nome}=sub
                         const bonus=false
-                        const ativo=temAlgoNaString(sub.texto)
+                        const ativo=false//temAlgoNaString(sub.texto)
                         const marcado=checks[index][ind]
                     return(
                     <HoldSub>

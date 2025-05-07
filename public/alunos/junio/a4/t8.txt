@@ -1,0 +1,29 @@
+const numeros=[45,23,88,40,12,33]
+
+const ordenada=numeros.sort((a,b)=>{
+    if(a>b){
+        return -1
+    }else{
+        return true
+    }
+})
+console.log(ordenada)
+/*
+const ordenada=[]
+const usados=[]
+for(let k=0;k<numeros.length;k++){
+    let indiceEscolhido
+    let numeroEscolhido=-1
+    for(let p=0;p<numeros.length;p++){
+        if(usados.includes(p))continue
+        const caso=numeros[p]
+        if(caso>numeroEscolhido){
+            numeroEscolhido=caso
+            indiceEscolhido=p
+        }
+    }
+    usados.push(indiceEscolhido)
+    ordenada.push(numeroEscolhido)
+}
+console.log(ordenada)
+*/

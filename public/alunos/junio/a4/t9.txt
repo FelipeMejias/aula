@@ -1,0 +1,29 @@
+/*
+//Adição e remoção de itens
+lista.push(item)// adiciona no final
+lista.pop()// remove o último item
+lista.unshift(item)// adiciona no início
+lista.shift()// remove o primeiro item
+
+//Leitura
+lista.includes(item)// verifica se o item existe
+lista.slice(início, fim)// retorna uma fatia da lista
+lista.indexOf(item)// retorna o índice do item (ou -1)
+lista.lastIndexOf(item)// índice da última ocorrência
+
+//Iteração
+lista.forEach(callback)// percorre os itens (sem retorno)
+lista.map(callback)// cria uma nova lista transformada
+lista.filter(callback)// cria uma nova lista filtrada
+lista.sort(callback)// ordena os itens 
+lista.reverse()// inverte a ordem
+*/
+
+const lista=['bruno','ana','leo','hugo','pedro']
+console.log(lista.slice(2,4))
+
+const nova=[]
+for(let k=0;k<lista.length;k++){
+    if(k>=2 && k<4)nova.push(lista[k])
+}
+console.log(nova)

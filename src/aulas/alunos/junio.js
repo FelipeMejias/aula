@@ -86,6 +86,32 @@ Altere a mensagem de sucesso que é exibida no console, para:
 -exibir a lista de integrantes incluindo o novo integrante
     `},
     ]
+const aula4=[
+    {linguagem:'javascript',nome:'RESOLUÇÃO 2',icone:js,caminho:formarTexto(4,1)},
+    {linguagem:'javascript',nome:'RESOLUÇÃO 3',icone:js,caminho:formarTexto(4,2)},
+    {linguagem:'javascript',nome:'For com números',icone:js,caminho:formarTexto(4,3)},
+    {linguagem:'javascript',nome:'Auxiliadores',icone:js,caminho:formarTexto(4,4)},
+    {linguagem:'javascript',nome:'Anônimas - map e filter',icone:js,caminho:formarTexto(4,5)},
+    {linguagem:'javascript',nome:'Anônimas - forEach',icone:js,caminho:formarTexto(4,6)},
+    {linguagem:'javascript',nome:'Map com índice',icone:js,caminho:formarTexto(4,7)},
+    {linguagem:'javascript',nome:'Ordenar lista',icone:js,caminho:formarTexto(4,8)},
+    {linguagem:'javascript',nome:'Nativas',icone:js,caminho:formarTexto(4,9)},
+    {linguagem:'javascript',nome:'EXERCÍCIO 1',icone:notass,caminho:formarTexto(4,10),texto:`
+Faça uma função que recebe uma lista de palavras como parâmetro
+Ela deve percorrer a lista contando quantas palavras possui, com duas regras:
+-As palavras que começam por vogal não são contadas
+-Quando aparece uma palavra que comece com "z" a contagem para
+Ao final, retorne a quantidade de palavras contadas
+Tente usar os auxiliadores break e continue
+    `},{linguagem:'javascript',nome:'EXERCÍCIO 2',icone:notass,caminho:formarTexto(4,11),texto:`
+Uma empresa de jogos quer dar prêmios aos 5 melhores jogadores
+As listas possuem os nomes e as pontuações correspondentes dos jogadores
+A empresa está na dúvida se dá 10 ou 20 reais por ponto e te pede os relatórios para saber:
+-Quanto cada jogador receberá
+-Custo total
+Complete a função com o loop "for" necessário para gerar o relatório conforme o exemplo
+    `},
+    ]
 export const junio=[
     {
         nome:'Aula 1',
@@ -96,5 +122,8 @@ export const junio=[
     },{
         nome:'Aula 3',
         arquivos:aula3
+    },{
+        nome:'Aula 4',
+        arquivos:aula4
     },
 ]

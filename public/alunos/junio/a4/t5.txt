@@ -1,0 +1,28 @@
+const cores=['verde','azul','amarelo','azul','roxo','vermelho','laranja','verde']
+
+const filtrada=cores.filter(cor=>cor[0]=='a')
+console.log(filtrada)
+
+const mapeada=cores.map(cor=>cor[0])
+console.log(mapeada)
+/*
+const filtrada=cores.filter(
+    cor=>{
+        if(cor[0]=='a'){
+            return true
+        }else{
+            return false
+        }
+    }
+)
+console.log(filtrada)
+
+const mapeada=cores.map(
+    cor=>{
+        return cor[0]
+    }
+)
+*/
+
+
+

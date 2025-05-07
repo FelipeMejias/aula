@@ -1,0 +1,7 @@
+const grupo=['Ana','Fábio','Lúcia','Erick','Pedro','Maria']
+
+const callback = (nome,indice)=>{
+    console.log(`O aluno ${nome} foi o ${indice+1}º a entrar no grupo`)
+}
+
+grupo.forEach(callback)

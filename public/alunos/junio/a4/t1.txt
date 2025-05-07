@@ -1,0 +1,26 @@
+const bmw = [
+    "M2 Competition","M3 Touring","M4 CSL","M5 CS",
+    "X5 M Competition","i8 Roadster","Z4 M40i"
+]
+const ferrari = [
+    "488 GTB","F8 Tributo","Roma","SF90 Stradale",
+    "Portofino","812 Superfast","LaFerrari"
+]
+let indiceBmw=0
+let indiceFerrari=0
+function retirar(marca){
+    if(marca=='Ferrari'){
+        console.log(ferrari[indiceFerrari])
+        indiceFerrari=indiceFerrari+1
+    }else if('Bmw'){
+        console.log(bmw[indiceBmw])
+        indiceBmw=indiceBmw+1
+    }
+}
+retirar('Ferrari')
+retirar('Bmw')
+retirar('Ferrari')
+retirar('Ferrari')
+retirar('Bmw')
+retirar('Ferrari')
+retirar('Bmw')

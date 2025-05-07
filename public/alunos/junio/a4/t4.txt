@@ -1,0 +1,8 @@
+const cores=['verde','azul','amarelo','azul','roxo','vermelho','laranja','verde']
+
+for(let cor of cores){
+    if(cor=='amarelo')continue
+    if(cor=='vermelho')break
+    console.log(cor)
+}
+console.log('continuando...')

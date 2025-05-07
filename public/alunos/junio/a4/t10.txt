@@ -1,0 +1,17 @@
+const palavras1 = [
+    "sol", "arca", "lua", "rio", "céu","paz", "ilha", "fim", "bom", "uivo",
+    "dia", "flor", "nuvem", "vento", "luz"
+]
+const palavras2 = [
+    "sol", "ar", "nuvem", "pão", "ele","céu", "voz", "óleo", "noz", "mel",
+    "dia", "zoo", "fim", "paz", "lua"
+]
+  
+
+const contagem1=contarPalavras(palavras1)
+console.log(contagem1)
+// deve aparecer 12
+
+const contagem2=contarPalavras(palavras2)
+console.log(contagem2)
+// deve aparecer 9

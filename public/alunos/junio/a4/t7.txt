@@ -1,0 +1,13 @@
+const cores=['verde','azul','amarelo','azul','roxo','vermelho','laranja','verde']
+
+const mapeada=cores.map((cor,i)=>{
+        if(i%2==0){
+            return cor[0]
+        }else{
+            return cor[0]+cor[1]
+        }
+    }
+)
+
+
+console.log(mapeada)
