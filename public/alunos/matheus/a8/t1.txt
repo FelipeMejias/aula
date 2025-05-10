@@ -1,0 +1,19 @@
+const equipes = [
+    { nome: "Corinthians", vitorias: 10, empates: 8, derrotas: 6 },
+    { nome: "São Paulo", vitorias: 11, empates: 8, derrotas: 5 },
+    { nome: "Vasco", vitorias: 8, empates: 6, derrotas: 10 },
+    { nome: "Flamengo", vitorias: 13, empates: 6, derrotas: 5 },
+    { nome: "Botafogo", vitorias: 14, empates: 7, derrotas: 3 },
+    { nome: "Fluminense", vitorias: 9, empates: 10, derrotas: 5 },
+    { nome: "Grêmio", vitorias: 12, empates: 7, derrotas: 5 },
+    { nome: "Internacional", vitorias: 11, empates: 7, derrotas: 6 },
+    { nome: "Atlético-MG", vitorias: 13, empates: 8, derrotas: 3 },
+    { nome: "Palmeiras", vitorias: 15, empates: 4, derrotas: 5 },
+    { nome: "Cruzeiro", vitorias: 9, empates: 6, derrotas: 9 },
+    { nome: "Santos", vitorias: 7, empates: 7, derrotas: 10 }
+];
+
+// Escreva a função aqui
+
+const campeao=encontrarCampeao()
+console.log(campeao)
