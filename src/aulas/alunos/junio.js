@@ -112,6 +112,13 @@ A empresa está na dúvida se dá 10 ou 20 reais por ponto e te pede os relatór
 Complete a função com o loop "for" necessário para gerar o relatório conforme o exemplo
     `},
     ]
+const aula5=[
+    {linguagem:'javascript',nome:'Objeto',icone:js,caminho:formarTexto(5,1)},
+    {linguagem:'javascript',nome:'Ex. Relatório',icone:js,caminho:formarTexto(5,2)},
+    {linguagem:'javascript',nome:'Ex. Relatório com objetos',icone:js,caminho:formarTexto(5,3)},
+    {linguagem:'javascript',nome:'Desestruturação',icone:js,caminho:formarTexto(5,4)},
+    {linguagem:'javascript',nome:'Split',icone:js,caminho:formarTexto(5,5)},
+]
 export const junio=[
     {
         nome:'Aula 1',
@@ -125,5 +132,8 @@ export const junio=[
     },{
         nome:'Aula 4',
         arquivos:aula4
+    },{
+        nome:'Aula 5',
+        arquivos:aula5
     },
 ]
