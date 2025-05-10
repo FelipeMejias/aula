@@ -124,6 +124,19 @@ Você deve criar a função resultado, para que receba essa partida e:
 -Printe no console quantos pontos cada time ganhou
         `,caminho:formarTexto(7,3)},
     ]
+const listaUlt=[
+    {linguagem:'javascript',nome:'EXERCICIO 1',icone:notass,texto:`
+A variável equipes contem uma lista com 12 times e seus pontos
+Faça uma função que percorra a lista e retorne o nome do time com mais pontos
+Obs: a chamada da função já está escrita abaixo
+        `,caminho:formarTexto(8,1)},
+        {linguagem:'javascript',nome:'EXERCICIO 2',icone:notass,texto:`
+A variável equipes contem uma lista com 6 times e suas vitórias empates e derrotas
+Faça um loop que percorra a lista e printe uma frase para cada equipe, da seguinte forma:
+-Aproveitamento Palmeiras: 68% 
+Utilize a função calcular, para conseguir cada aproveitamento
+        `,caminho:formarTexto(8,2)},
+]
 export const matheus=[
     {
         nome:'Aula 1',
@@ -153,6 +166,9 @@ export const matheus=[
     },{
         nome:'Aula 7',
         arquivos:aula7
+    },{
+        nome:'Lista final',
+        arquivos:listaUlt
     },
 
 ]
