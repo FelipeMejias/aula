@@ -1,0 +1,18 @@
+
+
+//Criar e alterar propriedades
+const jogador={nome:"Fábio",pontuacao:52}
+//jogador.pontuacao=76
+//jogador.nascimento="04/07/1996"
+
+
+const nomeJogador=jogador.prop
+const pontosJogador=jogador['pontuacao']
+
+const prop='pontuacao'
+const pontosJogador2=jogador[prop]
+console.log(nomeJogador)
+
+const chaves=Object.keys(jogador)
+console.log(chaves)
+

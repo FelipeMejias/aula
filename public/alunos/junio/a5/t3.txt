@@ -1,0 +1,22 @@
+const nomes = ["Fábio", "Bruno", "Carla", "David", "Elisa"];
+const pontuacoes = [52, 74, 60, 81, 55];
+
+const melhores=[
+    
+]
+for(let k=0;k<5;k++){
+    const nome=nomes[k]
+    const pontuacao=pontuacoes[k]
+    const jogador={nome,pontuacao}
+    melhores.push(jogador)
+}
+console.log(melhores)
+/*
+[
+  { nome: 'Fábio', pontuacao: 52 },
+  { nome: 'Bruno', pontuacao: 74 },
+  { nome: 'Carla', pontuacao: 60 },
+  { nome: 'David', pontuacao: 81 },
+  { nome: 'Elisa', pontuacao: 55 }
+]
+*/

@@ -1,0 +1,33 @@
+// Desestruturação
+
+const melhores=[
+  { nome: 'Fábio', pontuacao: 52 },
+  { nome: 'Bruno', pontuacao: 74 },
+  { nome: 'Carla', pontuacao: 60 },
+  { nome: 'David', pontuacao: 81 },
+  { nome: 'Elisa', pontuacao: 55 }
+]
+
+function relatorio(valor){
+    console.log(`__ Relatório - ${valor} reais por ponto`)
+    let total=0
+    for(let jogador of melhores){
+        /*
+        const nome=jogador.nome
+        const pontuacao=jogador.pontuacao
+        */
+        const {nome,pontuacao}=jogador
+        const premio=pontuacao*valor
+        console.log(`${nome} recebe ${premio}`)
+        total+=premio
+    }
+    console.log(`__ Custo total ${total}`)
+}
+
+relatorio(10)
+relatorio(20)
+
+// Desestruturação de listas
+
+const notas=[4,7,8]
+const [p1,p2,p3]=notas

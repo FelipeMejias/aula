@@ -1,0 +1,18 @@
+const registros=[
+    {nome:'Ana',nascimento:'03/10/1952'},
+    {nome:'Pedro',nascimento:'04/10/1967'},
+    {nome:'João',nascimento:'01/10/1981'},
+    {nome:'Paulo',nascimento:'03/09/1978'},
+]
+const final=[]
+for(let registro of registros){
+    const {nome,nascimento}=registro
+    const listinha=nascimento.split('/')
+    const [dia,mes,ano]=listinha
+    final.push({nome,dia,mes,ano})
+}
+console.log(final)
+
+const texto="Olá eu sou o programa feito em javascript"
+const palavras=texto.split(' ')
+console.log(palavras)

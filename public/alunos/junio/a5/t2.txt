@@ -1,0 +1,36 @@
+const nomes = ["Fábio", "Bruno", "Carla", "David", "Elisa"];
+const pontuacoes = [52, 74, 60, 81, 55];
+
+function relatorio(valor){
+    console.log(`__ Relatório - ${valor} reais por ponto`)
+    let total=0
+    for(let k=0;k<5;k++){
+        const nome=nomes[k]
+        const premio=pontuacoes[k]*valor
+        console.log(`${nome} recebe ${premio}`)
+        total+=premio
+    }
+    console.log(`__ Custo total ${total}`)
+}
+
+relatorio(10)
+relatorio(20)
+
+/* RESULTADO ESPERADO
+
+__ Relatório - 10 reais por ponto
+Fábio recebe 520
+Bruno recebe 740
+Carla recebe 600
+David recebe 810
+Elisa recebe 550
+__ Custo total 3220
+__ Relatório - 20 reais por ponto
+Fábio recebe 1040
+Bruno recebe 1480
+Carla recebe 1200
+David recebe 1620
+Elisa recebe 1100
+__ Custo total 6440
+
+*/
