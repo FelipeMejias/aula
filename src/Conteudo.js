@@ -56,7 +56,7 @@ export default function Topicos(){
                     <HoldSub>
                         <Quadrado func={()=>setarChecks(index,ind)} marcado={marcado}/>
                         <Sub onClick={()=>{if(ativo){navigate(`/cursos/${materia}/${index+1}/${ind+1}`)}}}
-                        color={ativo?(bonus?(marcado?'b2e8b8':'B4D4EA'):(marcado?'46af48':'4787b2')):marcado?'d6d6d6':'d6d6d6'} 
+                        color={'b8d660'}//ativo?(bonus?(marcado?'b2e8b8':'B4D4EA'):(marcado?'46af48':'4787b2')):marcado?'d6d6d6':'d6d6d6'} 
                         tex={!ativo?'black':'white'}>
                         <p>{nome}</p>
                         </Sub>
@@ -160,7 +160,7 @@ img{height:48px;}
 button{
 cursor:pointer;background-color:transparent;
     border-radius:50%;width:30px;height:30px;
-    border: 4px #d3d3d3 solid;margin:0;
+    border: 4px #b8d660 solid;margin:0;
 }
 `
 const HoldSub=styled.div`background-color:;
