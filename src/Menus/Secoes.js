@@ -49,7 +49,7 @@ export default function Secoes({align,height}){
             {tex:'Valor pacotes',sel:pathname=='/pacotes',path:`/pacotes`}
         }
         />*/}
-         <Secao eterno={true}
+        {/*} <Secao eterno={true}
         titulo={'Plataformas'}
         filhos={[
             {tex:'Banco de Dados',sel:pathname.includes(`banco`),img:sq,subtext:'Treinar SQL',transport:`portalsql`,inativo:true},

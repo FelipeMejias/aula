@@ -16,7 +16,7 @@ export default function MenuPc(){
     }
     return (
         <Abafixa>
-            <h4>{'<PC>'}</h4>
+            <h4>Portal Code</h4>
             <Secoes height={'calc(100% - 70px)'}/>
            </Abafixa>
     )
@@ -27,9 +27,9 @@ align-items:center;
 color:white;
 background-color:#5d7219;
 height:100%;
-h4{color:var(--h1Menu);
-font-size:45px;margin:10px 0 0 0;width:100%;text-align:center;
-font-family: "Roboto Mono", monospace;
+h4{color:white;
+font-size:26px;margin:10px 0 20px 0;width:100%;text-align:center;
+font-family: "Audiowide", sans-serif;
 }
 
 width:260px;max-width:260px;

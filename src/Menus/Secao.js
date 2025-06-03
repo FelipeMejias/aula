@@ -27,7 +27,7 @@ export default function Secao({titulo,filhos,puro,eterno}){
         <Tudo height={filhos.length*40+50}>
             <Etiqueta onClick={()=>setAberto(false)}>
             <h1 style={puro?{}:{color:'#404f11'}}>{titulo}</h1>
-            {eterno?<></>:<h1 style={{color:'#404f11'}} >{'^'}</h1>}
+            {true?<></>:<h1 style={{color:'#404f11'}} >{'^'}</h1>}
             </Etiqueta>
             {filhos.map(bot=> <Botao
              tex={bot.tex}
