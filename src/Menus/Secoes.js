@@ -35,7 +35,7 @@ export default function Secoes({align,height}){
             {tex:'FrontEnd vs BackEnd',sel:pathname=='/',path:`/`},
             //{tex:'Grade Js / Py',sel:pathname=='/grade',path:`/grade`,inativo:true},
             {tex:'Javascript',sel:pathname.includes(`javascript`),path:`/cursos/javascript`,img:js},
-            {tex:'React',sel:pathname.includes(`react`),path:`/cursos/react`,img:re,inativo:true},
+            {tex:'React',sel:pathname.includes(`react`),path:`/cursos/react`,img:re,inativo:false},
             //<Botao tex={'Python'} sel={pathname.includes(`python`)} path={`/cursos/python`} img={py} inativo={true} />
             //<Botao tex={'SQL'} sel={pathname.includes(`bancos`)} path={`/bancos`} img={sq} />
             //<Botao tex={'Node'} sel={pathname.includes(`node`)} path={`/cursos/node`} img={nd} inativo={true} />

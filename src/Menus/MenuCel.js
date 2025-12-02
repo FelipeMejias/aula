@@ -36,7 +36,7 @@ display:flex;align-items:center;
 const Tudo=styled.article`
 width:100%;height:60px;
 justify-content:center;
-background-color:#5D7219;
+background-color:var(--menu);
 display:none;
 
 @media(max-width:750px){

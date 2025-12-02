@@ -47,12 +47,12 @@ img{height:80%;}
 const Barrinha=styled.article`
 width:calc(50vw - 250px);height:100%;
 position:fixed;left:0;
-background-color:#5d7219;
+background-color:var(--menu);
 `
 const Janela=styled.div`
 flex-direction:column;
 position:absolute;
-background-color:#5d7219;
+background-color:var(--menu);
 height:100%;max-width:440px;
 left:calc(50vw - 260px);
 width:280px;
